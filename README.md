@@ -67,11 +67,11 @@ The Test Strategy addresses the following topics in detail:
 
 ## Constraints
 
-| 	| Constraints	| Impact of Constraint on testing effort	| Owners	| Update
-| ---	| ---	| ---	| ---	| ---
-| 1	| Sprint Duration	| Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items.	| 	| A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
-| 2	| Tester Availability	| Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week.	| 	| 
-| 3	| 	| 	| 	| 
+|  | Constraints | Impact of Constraint on testing effort | Owners | Update
+| --- | --- | --- | --- | ---
+| 1 | Sprint Duration | Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items. |  | A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
+| 2 | Tester Availability | Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week. |  | 
+| 3 |  |  |  | 
  
 
 # Test Process in an Agile Context
@@ -202,18 +202,18 @@ Test planning will not be just an activity at the beginning of the sprint, it wi
 This is the activity that describes the \"who, what, when, where, and how\" of the test. Test plans can be developed at a variety of levels, for instance for a whole project, a sprint or even a specific testing activity in a sprint. The high-level test plan will show which functions and quality attributes of the application are to be tested. In the PPR Project, we create test plans per Sprint.
 
 **Planning Tasks**
-| 	| Task	| Description	| Outcome	|  Frequency
-| ---	| ---	| ---	| ---	| ---
-| 1	| Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
-| 2	| Identify Needed Resources	| Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis.	| Dependable resource planning 	| Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
-| 3	| Plan Test Environment 	| Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work.	| Prepared environment	| Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
-| 4	| Define Test Procedures/Suites	| Based on scope and objectives we will plan the test procedures. In our test management tool, we will use the test suite concept to capture this. | High level organization/scope of our testing	| First cut at pre-Sprint during the planning. The final cut during the first week of the Sprint.
-| 5	| Identify Functions to be Tested	| We identify the functions to be tested by reviewing our test base (documentation, discussion etc.) and map the functions to be tested to our test suites	| Specific identification of application and system functions that will be tested	| Developed starting with the sprint but will most likely change depending on changes
-| 6	| Identify Interfaces to be Tested	| We identify the interfaces to be tested by reviewing our test base (technical documentation) and map the interfaces to be tested to our test suites	| Specific identification of interfaces and integration points that will be tested	| Developed starting with the sprint but will most likely change depending on changes
-| 7	| Write Test Scripts / Define Tests Cases / Define Exploratory Testing sessions	| Individual scripts and tests cases will be written. A test case is the lowest level of test that is intended to test one thing and one thing only. During this exercise we will also identify test automation candidates. | Test Scripts/Cases and exploratory testing sessions which are ready to be executed	| These will be developed, maintained and pruned during the sprint.
-| 8	| Design Test Data 	| Every test case needs test data, this data is either identified in the already present data or needs to be created from scratch	| Test data is identified and/or created	| This will be developed, maintained and pruned during the sprint.
-| 9	| Build Test Matrix	| The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools.	| Traceability matrix is present and will allow for management of progress and coverage	| This will be developed, maintained and pruned during the sprint.
-| 10	| Determine Test Schedules	| Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule.	| Defined schedule will allow us to start the effort with reasonable confidence.	| First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.
+|  | Task | Description | Outcome |  Frequency
+| --- | --- | --- | --- | ---
+| 1 | Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
+| 2 | Identify Needed Resources | Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis. | Dependable resource planning  | Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
+| 3 | Plan Test Environment  | Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work. | Prepared environment | Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
+| 4 | Define Test Procedures/Suites | Based on scope and objectives we will plan the test procedures. In our test management tool, we will use the test suite concept to capture this. | High level organization/scope of our testing | First cut at pre-Sprint during the planning. The final cut during the first week of the Sprint.
+| 5 | Identify Functions to be Tested | We identify the functions to be tested by reviewing our test base (documentation, discussion etc.) and map the functions to be tested to our test suites | Specific identification of application and system functions that will be tested | Developed starting with the sprint but will most likely change depending on changes
+| 6 | Identify Interfaces to be Tested | We identify the interfaces to be tested by reviewing our test base (technical documentation) and map the interfaces to be tested to our test suites | Specific identification of interfaces and integration points that will be tested | Developed starting with the sprint but will most likely change depending on changes
+| 7 | Write Test Scripts / Define Tests Cases / Define Exploratory Testing sessions | Individual scripts and tests cases will be written. A test case is the lowest level of test that is intended to test one thing and one thing only. During this exercise we will also identify test automation candidates. | Test Scripts/Cases and exploratory testing sessions which are ready to be executed | These will be developed, maintained and pruned during the sprint.
+| 8 | Design Test Data  | Every test case needs test data, this data is either identified in the already present data or needs to be created from scratch | Test data is identified and/or created | This will be developed, maintained and pruned during the sprint.
+| 9 | Build Test Matrix | The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools. | Traceability matrix is present and will allow for management of progress and coverage | This will be developed, maintained and pruned during the sprint.
+| 10 | Determine Test Schedules | Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule. | Defined schedule will allow us to start the effort with reasonable confidence. | First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.
 
 ### Test Design Process
 
@@ -257,20 +257,16 @@ Test case design is based on:
 -   The constraints imposed on the behavior of that feature
 
 **Test Case Design Techniques**
-Of all the test case design techniques which are available, the most
-effective for the PPR project are:
+Of all the test case design techniques which are available, the most effective for the PPR project are:
 
--   Specification-based technique.  This technique derives test cases
-    from the documented specifications of the system's behavior.
+-   Specification-based technique.  This technique derives test cases from the documented specifications of the system's behavior.
 -   Functional analysis (functional specification-based testing).
--   Sampling techniques.  These techniques identify small samples of
-    high-potential test cases from large populations of possible
+-   Sampling techniques.  These techniques identify small samples of high-potential test cases from large populations of possible
     conditions.
 -   Equivalence
 -   Boundary value (BV)
 -   Combinatorial methods, such as pair-wise and n-wise testing
--   Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in
-    prior similar situations. 
+-   Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in prior similar situations. 
     -   Exploratory testing
     -   User scenarios
     -   Checklists
@@ -279,17 +275,17 @@ effective for the PPR project are:
 **Process**
 Test Design approach is indicated by the following steps:
 
-| Activity	| Technique Used	| Description		
-| ---	| ---	| ---		
-| 1	| Test Basis Analysis	| Review documentation and other test basis artifacts.		
-| 2	| First Identification of major test areas	| Sprint Scope/Schedule, Risk Analysis and prioritization		
-| 3	| Test Idea generation	| Risk Analysis		
-| 4	| Drafting of test cases/exploratory sessions	| All previously obtained information is used		
-| 5	| Adding detail to test cases	| All design techniques		
-| 6	| Identify test steps for each test case	| Review of the actual functionality		
-| 7	| Identify candidacy for test automation	| See Test Automation Strategy		
-| 8	| Review Test Cases	| Peer review		
-| 9	| Consolidate Test Cases in Test Suites	| Functional Analysis and Risk Analysis		
+| Activity | Technique Used | Description  
+| --- | --- | ---  
+| 1 | Test Basis Analysis | Review documentation and other test basis artifacts.  
+| 2 | First Identification of major test areas | Sprint Scope/Schedule, Risk Analysis and prioritization  
+| 3 | Test Idea generation | Risk Analysis  
+| 4 | Drafting of test cases/exploratory sessions | All previously obtained information is used  
+| 5 | Adding detail to test cases | All design techniques  
+| 6 | Identify test steps for each test case | Review of the actual functionality  
+| 7 | Identify candidacy for test automation | See Test Automation Strategy  
+| 8 | Review Test Cases | Peer review  
+| 9 | Consolidate Test Cases in Test Suites | Functional Analysis and Risk Analysis  
 
 These steps will be repeated several times based on the following triggers:
 
