@@ -1,4 +1,4 @@
-**Introduction**
+# Introduction
 
 The Test Strategy for the PPR project aims to lay the appropriate QA and Test management foundation by implementing the tools, processes and governance to support the release plan for PPR.
 
@@ -13,7 +13,7 @@ This approach does not preclude us from applying a level of rigor and good testi
 
 For our project we are working with a set of Testing Principles, which contain good (some would say best) practices for QA and testing.
 
-1.1 Content
+## Content
 
 The Test Strategy addresses the following topics in detail:
 -   Risks, Dependencies, Assumptions, and Constraints
@@ -41,7 +41,7 @@ The Test Strategy addresses the following topics in detail:
 -   Responsibilities, Staffing, and Training Needs
 -   Continuous Improvement Process (CIP)
 
-1.2 Key Scope Statements
+## Key Scope Statements
 
 -   The Test Strategy describes an approach for QA and Testing
     > activities during the project with the intent to provide a
@@ -51,9 +51,9 @@ The Test Strategy addresses the following topics in detail:
 -   Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
 -   Test plans will continue to evolve throughout the life of the PPR project. 
 
-Risks, Dependencies, Assumptions and Constraints
+# Risks, Dependencies, Assumptions and Constraints
 
-Dependencies
+## Dependencies
 
   ** **   **Dependency Between**   **Potential Impact of Dependency**   **Owners**
   ------- ------------------------ ------------------------------------ ------------
@@ -61,7 +61,7 @@ Dependencies
   2                                                                      
   3                                                                      
 
-Assumptions
+## Assumptions
 
   ** **   **Assumption to be proven**                                                                                                                                                                                                                                                           **Impact of Assumption being incorrect**   **Status**   **Owners**
   ------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------ ------------ ------------
@@ -75,7 +75,7 @@ Assumptions
   8       The start of the on boarding for the Business Testers will happen mid-July 2019                                                                                                                                                                                                       Schedule, Preparation                                    
   9       User Experience Focus Groups: This activity is the responsibility of PPR and will involve engaging with the member community to obtain their feedback on the new solution. These sessions will start once several pieces of functionality have been developed and can demonstrated.   Schedule, Coverage, Quality                              
 
-Constraints
+## Constraints
 
   ** **   **Constraints**       **Impact of Constraint on testing effort**                                                                                                                   **Owners**   **Update**
   ------- --------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------ ------------ ------------------------------------------------------------------------------------------------------------------
@@ -89,11 +89,7 @@ Constraints
 
  
 
-Test Process in an Agile Context
-
-June 24, 2019
-
-3:00 PM
+# Test Process in an Agile Context
 
 ![Machine generated alternative text: Planning Design Development Start
 Planning • Define scope and boundaries for development Implementation
@@ -103,43 +99,23 @@ Testing • Validate that developed system addresses requirements • Finish
 Implementation Deploy to production environment
 ](media/image1.png){width="7.35625in" height="4.1305555555555555in"}
 
-As PPR has adopted the agile software development paradigm, testing
-processes have to evolve accordingly.
+As PPR has adopted the agile software development paradigm, testing processes have to evolve accordingly.
 
-The key characteristics of agile testing will align with the key
-characteristics of agile development:
+The key characteristics of agile testing will align with the key characteristics of agile development:
 
--   Working closely with developers, business analysts, testers and
-    > other stakeholders.
-
+-   Working closely with developers, business analysts, testers and other stakeholders.
 -   Testers are an integrated part of agile team.
-
--   Testing on an ongoing basis during sprints and not at the end of
-    > project.
-
+-   Testing on an ongoing basis during sprints and not at the end of project.
 -   Focus on test automation.
-
 -   Shorter test and release cycles.
 
-An agile context would perhaps suggest foregoing any process. This is
-not the case. What we will be doing is using \"just enough\" process and
-guidelines to add value to the cooperation during the sprints.
+An agile context would perhaps suggest foregoing any process. This is not the case. What we will be doing is using \"just enough\" process and guidelines to add value to the cooperation during the sprints.
 
-In the following chapters we describe a set of processes to guide our
-approach. It is certain that these processes will evolve during the
-first few sprints until the best fit for PPR is found.
+In the following chapters we describe a set of processes to guide our approach. It is certain that these processes will evolve during the first few sprints until the best fit for PPR is found.
 
- 
+# Test Process Introduction
 
- 
-
-Test Process Introduction
-
-June 24, 2019
-
-3:01 PM
-
-Testing Pyramid
+## Testing Pyramid
 
 Testing for PPR is represented below.
 
@@ -148,100 +124,55 @@ Testing Exploratory Testing Manual Testing Unit/lntegration Testing
 ](media/image2.png){width="6.790972222222222in"
 height="3.973611111111111in"}
 
- 
-
 The pyramid gives an indication of the relative importance of the
 different test activities and the dependencies. We\'ll discuss this
 pyramid from the bottom upwards.
 
 First Layer
 -----------
-
-The basis for all testing is intensive unit testing (and integration
-testing) by CGI that is executed during development. Unit testing has
-the potential of eradicating most of the easy to find defects and many
-more complex ones. As almost every defect found after unit testing needs
-about the same amount of time in documentation, discussion and tracking,
-it would make sense to clear out the \"easy\" defects as soon as
-possible. It has been proven in practice and widely documented that a
-solid unit test effort has the largest impact on overall solution
-quality.
+The basis for all testing is intensive unit testing (and integration testing) by the developers that is executed during development. Unit testing has the potential of eradicating most of the easy to find defects and many more complex ones. As almost every defect found after unit testing needs about the same amount of time in documentation, discussion and tracking, it would make sense to clear out the \"easy\" defects as soon as possible. It has been proven in practice and widely documented that a solid unit test effort has the largest impact on overall solution quality.
 
 Unit testing is the sturdy foundation for our testing pyramid.
 
 Second Layer
 ------------
-
 The next layer is a trifecta of 3 types of testing:
-
 -   Exploratory testing
-
 -   Manual testing
-
 -   Automated Testing
 
-Both Exploratory Testing and Manual (Functional) Testing are pre-cursors
-for Automated Testing. They are the main mechanisms to obtain test ideas
-and identify regression test scenarios that can be (should be)
-automated.
+Both Exploratory Testing and Manual (Functional) Testing are pre-cursors for Automated Testing. They are the main mechanisms to obtain test ideas and identify regression test scenarios that can be (should be) automated.
 
-As the pyramid indicates, automated testing will grow in scope during
-the sprint and exploratory testing and manual testing will shrink in
-scope. At the end of the sprint, the objective is that no more manual or
-exploratory tests are required for the Sprint\'s deliverables.
+As the pyramid indicates, automated testing will grow in scope during the sprint and exploratory testing and manual testing will shrink in scope. At the end of the sprint, the objective is that no more manual or exploratory tests are required for the Sprint\'s deliverables.
 
 Third layer
 -----------
+User Acceptance testing follows the previous activities and build on the information already obtained. Contrary to popular belief, user
+acceptance testing is not so much a testing activity as a verification/confirmation one. The activities in user acceptance are complementary to the previous testing activities and not a repeat.
 
-User Acceptance testing follows the previous activities and build on the
-information already obtained. Contrary to popular belief, user
-acceptance testing is not so much a testing activity as a
-verification/confirmation one. The activities in user acceptance are
-complementary to the previous testing activities and not a repeat.
- The verification and validation of fit to business and ability to
-support the business processes (be it the application ones or the manual
-ones) will lead to the ability to answer the question: \"Would this new
-solution be able to support us and our members in the work that we need
-to do?\".
+The verification and validation of fit to business and ability to support the business processes (be it the application ones or the manual ones) will lead to the ability to answer the question: \"Would this new solution be able to support us and our clients in the work that we need to do?\".
 
-Test Processes
-
+## Test Processes
 After the Test Initiation each of the test activities contains the
 following processes:
 
+-   Test Initiation
 -   Test Planning
-
 -   Test Design
-
 -   Test Execution
-
 -   Defect Management
-
 -   Test Closure
 
-These process are described to provide guidance to the team(s). It is
-expected that processes will change, mature and otherwise evolve during
-the course of the sprints and the project.
+These process are described to provide guidance to the team. It is expected that processes will change, mature and otherwise evolve during the course of the sprints and the project. 
 
- 
+### Test Initiation Process
 
- 
+Test Initiation is the first stage of software testing life-cycle process. In this stage, the Test Strategy information will be created. This is a business level document which informs the Managers, Developers and Testers about the testing process, the approach and direction. 
 
-Test Initiation Process
+**RASCI**
 
-June 24, 2019
-
-3:01 PM
-
-Test Initiation is the first stage of software testing life-cycle
-process. In this stage, the Test Strategy information will be created.
-This is a business level document which informs the Managers, Developers
-and Testers about the testing process, the approach and direction. 
-
-RASCI
-
-  **Roles**                        **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------------- ----------------- -------------------------- -------------- --------------- --------------
+  | Roles | Responsible | Approves/Accountable | Supports | Consulted | Informed 
+  | --- | --- | --- | --- | --- | --- 
   **Test Lead**                    X                                                                            
   **Test Analyst (Agile)**                                                                     X                
   **Business Tester**                                                                          X                
