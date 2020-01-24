@@ -1,32 +1,21 @@
-Introduction
+**Introduction**
 
-The Test Strategy for the PPR project aims to lay the appropriate QA and
-Test management foundation by implementing the tools, processes and
-governance to support the release plan for Phase 2 and potential
-following phases.
+The Test Strategy for the PPR project aims to lay the appropriate QA and Test management foundation by implementing the tools, processes and governance to support the release plan for PPR.
 
-The context of this project calls for a less traditional approach to
-testing due to the intended agile nature of the project set up.
-
-This agile nature will be reflected in:
-
+The agile nature of the project set up will be reflected in:
 -   Approach
 -   Goals
 -   Techniques
 -   Technology use
 -   Planning
 
-This approach does not preclude us from applying a level of rigor and
-good testing practices to this project. In fact, agile projects if done
-well are often more rigorous and consistent in approach.
+This approach does not preclude us from applying a level of rigor and good testing practices to this project. In fact, agile projects if done well are often more rigorous and consistent in approach.
 
-For our project we are working with a set of Testing Principles, which
-contain good (some would say best) practices for QA and testing.
+For our project we are working with a set of Testing Principles, which contain good (some would say best) practices for QA and testing.
 
 1.1 Content
 
 The Test Strategy addresses the following topics in detail:
-
 -   Risks, Dependencies, Assumptions, and Constraints
 -   Test Process Introduction
 -   Detailed Test Strategies
@@ -59,27 +48,10 @@ The Test Strategy addresses the following topics in detail:
     > foundation and guidance for future process improvement and
     > alignment at PPR.
 
--   Test planning will commence in Phase 1 but specific test plans will
-    > not be implemented until Phase 2 commences.
-
--   Test plans will continue to evolve throughout the life of the PPR
-    > project. 
-
- 
-
- 
-
- 
+-   Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
+-   Test plans will continue to evolve throughout the life of the PPR project. 
 
 Risks, Dependencies, Assumptions and Constraints
-
-June 24, 2019
-
-2:53 PM
-
-Risks
-
-See JIRA RIDAL
 
 Dependencies
 
