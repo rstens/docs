@@ -11,13 +11,9 @@ testing due to the intended agile nature of the project set up.
 This agile nature will be reflected in:
 
 -   Approach
-
 -   Goals
-
 -   Techniques
-
 -   Technology use
-
 -   Planning
 
 This approach does not preclude us from applying a level of rigor and
@@ -32,51 +28,28 @@ contain good (some would say best) practices for QA and testing.
 The Test Strategy addresses the following topics in detail:
 
 -   Risks, Dependencies, Assumptions, and Constraints
-
 -   Test Process Introduction
-
 -   Detailed Test Strategies
-
 -   Unit Test Strategy
-
 -   Integration Test Strategy
-
 -   Functional Test Strategy
-
 -   System Test Strategy
-
 -   User Acceptance Test Strategy
-
 -   Smoke Test Strategy
-
 -   Regression Test Strategy
-
 -   Performance Test Strategy
-
 -   Security Test Strategy
-
 -   Test Automation Strategy
-
 -   Management Strategies
-
 -   Test Data Strategy
-
 -   Defect Management Strategy
-
 -   Test Results Strategy
-
 -   Progress Reporting Strategy
-
 -   Readiness, Exit, Suspension and Resumption Criteria
-
 -   Definition of Done for Testing
-
 -   Test Environmental Needs
-
 -   Test Tool Needs
-
 -   Responsibilities, Staffing, and Training Needs
-
 -   Continuous Improvement Process (CIP)
 
 1.2 Key Scope Statements
