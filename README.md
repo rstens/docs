@@ -43,11 +43,7 @@ The Test Strategy addresses the following topics in detail:
 
 ## Key Scope Statements
 
--   The Test Strategy describes an approach for QA and Testing
-    > activities during the project with the intent to provide a
-    > foundation and guidance for future process improvement and
-    > alignment at PPR.
-
+-   The Test Strategy describes an approach for QA and Testing activities during the project with the intent to provide a foundation and guidance for future process improvement and alignment at PPR.
 -   Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
 -   Test plans will continue to evolve throughout the life of the PPR project. 
 
@@ -55,18 +51,18 @@ The Test Strategy addresses the following topics in detail:
 
 ## Dependencies
 
-  ** **   **Dependency Between**   **Potential Impact of Dependency**   **Owners**
-  ------- ------------------------ ------------------------------------ ------------
-  1                                                                      
-  2                                                                      
-  3                                                                      
+  | | Dependency Between | Potential Impact of Dependency | Owners
+  | --- | --- | --- | --- 
+  | 1 | | | |
+  | 2 | | | |                                                                   
+  | 3 | | | |
 
 ## Assumptions
 
-  ** **   **Assumption to be proven**                                                                                                                                                                                                                                                           **Impact of Assumption being incorrect**   **Status**   **Owners**
-  ------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------ ------------ ------------
-  1       BCGov will be able to supply business testing resources For UAT                                                                                                                                                                                                                       Schedule, Quality                                        
-  2       Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation                                                                                                                                     Schedule, Capability, Quality, Coverage                  
+  | | Assumption to be proven | Impact of Assumption being incorrect | Status | Owners
+  | --- | --- | --- | --- | --- 
+  | 1 | BCGov will be able to supply business testing resources For UAT | Schedule, Quality | | |                                      
+  | 2 | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage  | | |                
   3       PPR Project Testing resources will be available for 100% available time during sprints - after/In between sprints an availability of at least 50% is assumed                                                                                                                          Schedule, Coverage, Quality                              
   4       PPR Testing resources will be scheduled in for a minimum 24 effort hours a week, during sprints up to 35 hours per week might be required.                                                                                                                                            Schedule                                                 
   5       PPR Testing resources (Project and UAT) will need to be trained in testing fundamentals, Agile process, test process, tools, defect management.                                                                                                                                       Preparation                                              
@@ -91,14 +87,6 @@ The Test Strategy addresses the following topics in detail:
 
 # Test Process in an Agile Context
 
-![Machine generated alternative text: Planning Design Development Start
-Planning • Define scope and boundaries for development Implementation
-Testing Design • Articulate scope into detailed requirements required to
-deliver functionality Development • Translate requirements into code
-Testing • Validate that developed system addresses requirements • Finish
-Implementation Deploy to production environment
-](media/image1.png){width="7.35625in" height="4.1305555555555555in"}
-
 As PPR has adopted the agile software development paradigm, testing processes have to evolve accordingly.
 
 The key characteristics of agile testing will align with the key characteristics of agile development:
@@ -121,18 +109,15 @@ Testing for PPR is represented below.
 
 ![Machine generated alternative text: User Acceptance Testing Automated
 Testing Exploratory Testing Manual Testing Unit/lntegration Testing
-](media/image2.png){width="6.790972222222222in"
-height="3.973611111111111in"}
+](images/pyramid.png)
 
-The pyramid gives an indication of the relative importance of the
-different test activities and the dependencies. We\'ll discuss this
-pyramid from the bottom upwards.
+The pyramid gives an indication of the relative importance of the different test activities and the dependencies. We\'ll discuss this pyramid from the bottom upwards.
 
 First Layer
 -----------
-The basis for all testing is intensive unit testing (and integration testing) by the developers that is executed during development. Unit testing has the potential of eradicating most of the easy to find defects and many more complex ones. As almost every defect found after unit testing needs about the same amount of time in documentation, discussion and tracking, it would make sense to clear out the \"easy\" defects as soon as possible. It has been proven in practice and widely documented that a solid unit test effort has the largest impact on overall solution quality.
+The basis for all testing is intensive unit testing (and integration testing) during development. Unit testing has the potential of eradicating most of the easy to find defects and many more complex ones. As almost every defect found after unit testing needs about the same amount of time in documentation, discussion and tracking, it would make sense to clear out the \"easy\" defects as soon as possible. It has been proven in practice and widely documented that a solid unit test effort has the largest impact on overall solution quality.
 
-Unit testing is the sturdy foundation for our testing pyramid.
+Unit testing is the sturdy foundation of our testing pyramid.
 
 Second Layer
 ------------
@@ -147,14 +132,12 @@ As the pyramid indicates, automated testing will grow in scope during the sprint
 
 Third layer
 -----------
-User Acceptance testing follows the previous activities and build on the information already obtained. Contrary to popular belief, user
-acceptance testing is not so much a testing activity as a verification/confirmation one. The activities in user acceptance are complementary to the previous testing activities and not a repeat.
+User Acceptance testing follows the previous activities and build on the information already obtained. Contrary to popular belief, user acceptance testing is not so much a testing activity as a verification/confirmation one. The activities in user acceptance are complementary to the previous testing activities and not a repeat.
 
 The verification and validation of fit to business and ability to support the business processes (be it the application ones or the manual ones) will lead to the ability to answer the question: \"Would this new solution be able to support us and our clients in the work that we need to do?\".
 
 ## Test Processes
-After the Test Initiation each of the test activities contains the
-following processes:
+After the Test Initiation each of the test activities contains the following processes:
 
 -   Test Initiation
 -   Test Planning
@@ -169,69 +152,38 @@ These process are described to provide guidance to the team. It is expected that
 
 Test Initiation is the first stage of software testing life-cycle process. In this stage, the Test Strategy information will be created. This is a business level document which informs the Managers, Developers and Testers about the testing process, the approach and direction. 
 
-**RASCI**
-
-  | Roles | Responsible | Approves/Accountable | Supports | Consulted | Informed 
-  | --- | --- | --- | --- | --- | --- 
-  **Test Lead**                    X                                                                            
-  **Test Analyst (Agile)**                                                                     X                
-  **Business Tester**                                                                          X                
-  **Test Automation Specialist**                                                               X                
-  **Business Analyst**                                                                         X                
-  **Business Lead**                                                                            X                
-  **Developer**                                                                                                 X
-  **Developer Lead**                                                                           X                
-  **Solution Architect**                                                                       X                
-  **Release Manager**                                                                           X               
-  **Project Manager**                                X                                                          
-  **Client/Sponsor**                                 X                                                          
-
-Objectives
+**Objectives**
 
 -   Create clarity and direction on:
+    -   Test processes
+    -   Approach
+    -   Planned Test activities
+    -   Resource requirements
+    -   Tools and infrastructure
+    -   Obtain client approval
 
--   Test processes
+**Description**
 
--   Approach
-
--   Planned Test activities
-
--   Resource requirements
-
--   Tools and infrastructure
-
--   Obtain client approval
-
-Description
-
-During the test initiation process we consult, discuss and review. Since
-the agile approach is new to BCPC, it makes sense to spend time upfront
-thinking about the ramifications for testing.
+During the test initiation process we consult, discuss and review. 
 
 We need to find the balance between:
 
 -   Project Goals
-
 -   Constraints
-
 -   Existing practices/knowledge
-
 -   Efficiency
 
-The test initiation for PPR will yield a large amount of guidance that
-at this phase seems to be needed. The actual project experience will
-adjust to what is actually needed and used. Still we are stating a clear
-starting point to develop understanding and to obtain agreement.
+The test initiation for PPR will yield a large amount of guidance that at this phase seems to be needed. The actual project experience will adjust to what is actually needed and used. Still we are stating a clear starting point to develop understanding and to obtain agreement.
 
 **Steps**
 
-  **Step**               **Participant(s)**                                        **Description**
-  ---------------------- --------------------------------------------------------- -----------------------------------------------------------------
-  Investigation          Test Lead                                                 Understanding scope, constraints, existing guidance, objectives
-  Consultation           Test Lead, Client, Business, Testers                      Clarifying, discussing approach
-  Creation of strategy   Test Lead                                                 Writing the actual Test Strategy
-  Review                 Test Lead, Business, Client, Testers, Project Team, CGI   Broad review leading up to be ready for approval.
-  Approval               Client/Sponsor                                            Based on endorsements obtained from the review process.
+  | Step | Participant(s) | Description
+  | --- | --- | ---
+  | Investigation | Test Lead | Understanding scope, constraints, existing guidance, objectives
+  | Consultation  | Test Lead, Client, Business, Testers | Clarifying, discussing approach
+  | Creation of strategy | Test Lead | Writing the actual Test Strategy
+  | Review | Test Lead, Business, Client, Testers, Project Team | Broad review leading up to be ready for approval.
+  | Approval | Client/Sponsor | Based on endorsements obtained from the review process.
 
  
 
