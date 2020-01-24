@@ -59,30 +59,19 @@ The Test Strategy addresses the following topics in detail:
 
 ## Assumptions
 
-  | | Assumption to be proven | Impact of Assumption being incorrect | Status | Owners
-  | --- | --- | --- | --- | --- 
-  | 1 | BCGov will be able to supply business testing resources For UAT | Schedule, Quality | | |                                      
-  | 2 | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage  | | |                
-  3       PPR Project Testing resources will be available for 100% available time during sprints - after/In between sprints an availability of at least 50% is assumed                                                                                                                          Schedule, Coverage, Quality                              
-  4       PPR Testing resources will be scheduled in for a minimum 24 effort hours a week, during sprints up to 35 hours per week might be required.                                                                                                                                            Schedule                                                 
-  5       PPR Testing resources (Project and UAT) will need to be trained in testing fundamentals, Agile process, test process, tools, defect management.                                                                                                                                       Preparation                                              
-  6       PPR Testing resources will start the on boarding and training process as soon as possible in order to be fully ready for phase 2.                                                                                                                                                     Schedule, Preparation                                    
-  7       The on boarding for the Business Testers will be similar but not identical to the testing resources                                                                                                                                                                                   Schedule, Preparation                                    
-  8       The start of the on boarding for the Business Testers will happen mid-July 2019                                                                                                                                                                                                       Schedule, Preparation                                    
-  9       User Experience Focus Groups: This activity is the responsibility of PPR and will involve engaging with the member community to obtain their feedback on the new solution. These sessions will start once several pieces of functionality have been developed and can demonstrated.   Schedule, Coverage, Quality                              
+|  | Assumption to be proven | Impact of Assumption being incorrect | Status | Owners
+| --- | --- | --- | --- | ---
+| 1 | UAT will be executed by PPR Team Members | Schedule, Quality |  | 
+| 2 | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage |  | 
+| 3 | PPR Team will need to be trained in testing fundamentals, Agile process, test process, tools, defect management. | Preparation |  | 
 
 ## Constraints
 
-  ** **   **Constraints**       **Impact of Constraint on testing effort**                                                                                                                   **Owners**   **Update**
-  ------- --------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------ ------------ ------------------------------------------------------------------------------------------------------------------
-  1       Sprint Duration       Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items.                A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
-  2       Tester Availability   Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week.                              
-  3                                                                                                                                                                                                        
-
- 
-
- 
-
+| 	| Constraints	| Impact of Constraint on testing effort	| Owners	| Update
+| ---	| ---	| ---	| ---	| ---
+| 1	| Sprint Duration	| Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items.	| 	| A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
+| 2	| Tester Availability	| Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week.	| 	| 
+| 3	| 	| 	| 	| 
  
 
 # Test Process in an Agile Context
@@ -104,8 +93,6 @@ In the following chapters we describe a set of processes to guide our approach. 
 # Test Process Introduction
 
 ## Testing Pyramid
-
-Testing for PPR is represented below.
 
 ![Machine generated alternative text: User Acceptance Testing Automated
 Testing Exploratory Testing Manual Testing Unit/lntegration Testing
@@ -160,7 +147,7 @@ Test Initiation is the first stage of software testing life-cycle process. In th
     -   Planned Test activities
     -   Resource requirements
     -   Tools and infrastructure
-    -   Obtain client approval
+    -   Obtain team buy-in/approval
 
 **Description**
 
@@ -180,557 +167,151 @@ The test initiation for PPR will yield a large amount of guidance that at this p
   | Step | Participant(s) | Description
   | --- | --- | ---
   | Investigation | Test Lead | Understanding scope, constraints, existing guidance, objectives
-  | Consultation  | Test Lead, Client, Business, Testers | Clarifying, discussing approach
+  | Consultation  | Test Lead, Client, Business, Project Team | Clarifying, discussing approach
   | Creation of strategy | Test Lead | Writing the actual Test Strategy
   | Review | Test Lead, Business, Client, Testers, Project Team | Broad review leading up to be ready for approval.
   | Approval | Client/Sponsor | Based on endorsements obtained from the review process.
 
- 
+### Test Planning Process
 
- 
-
-Test Planning Process
-
-June 24, 2019
-
-3:02 PM
-
-Test Planning determines the scope, approach, resources and schedule of
-testing activities within the sprint.
+Test Planning determines the scope, approach, resources and schedule of testing activities within the sprint.
 
 Test planning is essential in:
 
--   ensuring testing identifies and reveals as many errors in the
-    > software as possible
-
+-   ensuring testing identifies and reveals as many errors in the software as possible
 -   bringing software to an acceptable level of quality
+-   giving efficiency regarding scope, budgetary and scheduling limitations.
 
--   giving efficiency regarding scope, budgetary and scheduling
-    > limitations.
+Test planning spans our Test Initiation, Test Planning and Test Design processes. Detailed Test plans will be created at Sprint planning time before and refined during the sprint.
 
- 
-
-Test planning spans our Test Initiation, Test Planning and Test
-Design processes. Detailed Test plans will be created at Sprint planning
-time before and refined during the sprint.
-
-RASCI
-
-  **Roles**                        **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------------- ----------------- -------------------------- -------------- --------------- --------------
-  **Test Lead**                    X                                                                            
-  **Test Analyst (Agile)**                                                                     X                
-  **Business Tester**                                                                          X                
-  **Test Automation Specialist**                                                               X                
-  **Business Analyst**                                                                                         X 
-  **Business Lead**                                                                            X                
-  **Developer**                                                                                                 X
-  **Developer Lead**                                                                           X                
-  **Solution Architect**                                                                                       X 
-  **Release Manager**                                                                           X               
-  **Project Manager**                                X                                                          
-  **Client/Sponsor**                                                                           X                
-
-Objective
+**Objective**
 
 -   Define Scope
-
 -   Define Test Approach (based on the Test Strategy set out here)
-
 -   Define resource needs
-
 -   Create schedule
 
-Description
+**Description**
 
-The following describes a largely common approach to the test planning
-process but supplemented with the agile project context.
+The following describes a largely common approach to the test planning process but supplemented with the agile project context.
 
-Test planning will not be just an activity at the beginning of the
-sprint, it will have to be part of the agile planning and re-planning
-process. It is therefore important to identify what can be planned
-upfront and where we need to be agile.
+Test planning will not be just an activity at the beginning of the sprint, it will have to be part of the agile planning and re-planning process. It is therefore important to identify what can be planned upfront and where we need to be agile.
 
 **High-level Test Planning**
 
-This is the activity that describes the \"who, what, when, where, and
-how\" of the test. Test plans can be developed at a variety of levels,
-for instance for a whole project, a sprint or even a specific testing
-activity in a sprint. The high-level test plan will show which functions
-and quality attributes of the application are to be tested. In the PPR
-Project, we create test plans per Sprint.
+This is the activity that describes the \"who, what, when, where, and how\" of the test. Test plans can be developed at a variety of levels, for instance for a whole project, a sprint or even a specific testing activity in a sprint. The high-level test plan will show which functions and quality attributes of the application are to be tested. In the PPR Project, we create test plans per Sprint.
 
 **Planning Tasks**
+| 	| Task	| Description	| Outcome	|  Frequency
+| ---	| ---	| ---	| ---	| ---
+| 1	| Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
+| 2	| Identify Needed Resources	| Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis.	| Dependable resource planning 	| Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
+| 3	| Plan Test Environment 	| Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work.	| Prepared environment	| Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
+| 4	| Define Test Procedures/Suites	| Based on scope and objectives we will plan the test procedures. In our test management tool, we will use the test suite concept to capture this. | High level organization/scope of our testing	| First cut at pre-Sprint during the planning. The final cut during the first week of the Sprint.
+| 5	| Identify Functions to be Tested	| We identify the functions to be tested by reviewing our test base (documentation, discussion etc.) and map the functions to be tested to our test suites	| Specific identification of application and system functions that will be tested	| Developed starting with the sprint but will most likely change depending on changes
+| 6	| Identify Interfaces to be Tested	| We identify the interfaces to be tested by reviewing our test base (technical documentation) and map the interfaces to be tested to our test suites	| Specific identification of interfaces and integration points that will be tested	| Developed starting with the sprint but will most likely change depending on changes
+| 7	| Write Test Scripts / Define Tests Cases / Define Exploratory Testing sessions	| Individual scripts and tests cases will be written. A test case is the lowest level of test that is intended to test one thing and one thing only. During this exercise we will also identify test automation candidates. | Test Scripts/Cases and exploratory testing sessions which are ready to be executed	| These will be developed, maintained and pruned during the sprint.
+| 8	| Design Test Data 	| Every test case needs test data, this data is either identified in the already present data or needs to be created from scratch	| Test data is identified and/or created	| This will be developed, maintained and pruned during the sprint.
+| 9	| Build Test Matrix	| The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools.	| Traceability matrix is present and will allow for management of progress and coverage	| This will be developed, maintained and pruned during the sprint.
+| 10	| Determine Test Schedules	| Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule.	| Defined schedule will allow us to start the effort with reasonable confidence.	| First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.
 
-+-------+--------------+--------------+--------------+--------------+
-| ** ** | **Task**     | **D          | **Outcome**  | **           |
-|       |              | escription** |              |  Frequency** |
-+=======+==============+==============+==============+==============+
-| 1     | Define Test  | Determines   | Clearly      | Before the   |
-|       | Objectives   | at a high    | delineated   | Sprint       |
-|       |              | level what   | objectives   | starts,      |
-|       |              | is to be     | which can be | typically in |
-|       |              | tested. This | reviewed and | pre-sprint   |
-|       |              | is based on  | c            | planning.    |
-|       |              | defined      | ommunicated. | But          |
-|       |              |  requirement |              | objectives   |
-|       |              | s/acceptance |              | may need to  |
-|       |              | criteria,    |              | be adjusted  |
-|       |              | no           |              | when changes |
-|       |              | n-functional |              | to sprint    |
-|       |              | r            |              | scope and    |
-|       |              | equirements, |              | objectives   |
-|       |              | business     |              | are needed.  |
-|       |              | events and   |              |              |
-|       |              | processes.   |              | The          |
-|       |              |              |              | definition   |
-|       |              |              |              | of the       |
-|       |              |              |              | objectives   |
-|       |              | Risk         |              | will be      |
-|       |              | Analysis     |              | subject to   |
-|       |              | will play a  |              | review       |
-|       |              | role during  |              | during the   |
-|       |              | the          |              | in-sprint    |
-|       |              | id           |              | planning     |
-|       |              | entification |              | exercises.   |
-|       |              | of the       |              |              |
-|       |              | objectives.  |              |              |
-|       |              | With regards |              |              |
-|       |              | to           |              |              |
-|       |              | th           |              |              |
-|       |              | e acceptance |              |              |
-|       |              | crit         |              |              |
-|       |              | eria testing |              |              |
-|       |              | we follow    |              |              |
-|       |              | the risk and |              |              |
-|       |              | priority     |              |              |
-|       |              | settings     |              |              |
-|       |              | from the     |              |              |
-|       |              | business     |              |              |
-|       |              | team.        |              |              |
-|       |              |              |              |              |
-|       |              | Additional   |              |              |
-|       |              | test         |              |              |
-|       |              | objectives   |              |              |
-|       |              | are related  |              |              |
-|       |              | to:          |              |              |
-|       |              |              |              |              |
-|       |              | -   Test     |              |              |
-|       |              |              |              |              |
-|       |              | > Automation |              |              |
-|       |              |              |              |              |
-|       |              | -   Test     |              |              |
-|       |              |     > Data   |              |              |
-|       |              |              |              |              |
-|       |              | > Management |              |              |
-|       |              |              |              |              |
-|       |              | -   System   |              |              |
-|       |              |     > Test,  |              |              |
-|       |              |              |              |              |
-|       |              |   > Security |              |              |
-|       |              |     > Test   |              |              |
-|       |              |     > etc.   |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 2     | Identify     | Fine tune    | Dependable   | Pre-Sprint   |
-|       | Needed       | the          | resource     | during the   |
-|       | Resources    | resources    | planning     | planning.    |
-|       |              | needed for   |              | Resource     |
-|       |              | the sprint.  |              | usage will   |
-|       |              | The general  |              | be reviewed  |
-|       |              | requirement  |              | at the end   |
-|       |              | has been     |              | of each      |
-|       |              | documented   |              | sprint to    |
-|       |              | in the Test  |              | see if any   |
-|       |              | Strategy but |              | adjustments  |
-|       |              | since no     |              | need to be   |
-|       |              | sprint is    |              | made.        |
-|       |              | exactly the  |              |              |
-|       |              | same, the    |              |              |
-|       |              | resource     |              |              |
-|       |              | requirements |              |              |
-|       |              | needs to be  |              |              |
-|       |              | revisited on |              |              |
-|       |              | a sprint by  |              |              |
-|       |              | sprint       |              |              |
-|       |              | basis.       |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 3     | Plan Test    | Determine    | Prepared     | Pre-Sprint   |
-|       | Environment  | where we     | environment  | during the   |
-|       |              | will test    |              | planning.    |
-|       |              | and what     |              | Environment  |
-|       |              | needs to be  |              | usage will   |
-|       |              | available in |              | be reviewed  |
-|       |              | the          |              | at the end   |
-|       |              | environment. |              | of each      |
-|       |              | Every sprint |              | sprint to    |
-|       |              | will have    |              | see if any   |
-|       |              | different or |              | adjustments  |
-|       |              | increased    |              | need to be   |
-|       |              | requirements |              | made.        |
-|       |              | and would    |              |              |
-|       |              | require a    |              |              |
-|       |              | review       |              |              |
-|       |              | upfront to   |              |              |
-|       |              | make sure    |              |              |
-|       |              | that the     |              |              |
-|       |              | testers can  |              |              |
-|       |              | start their  |              |              |
-|       |              | work.        |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 4     | Define Test  | Based on     | High level   | First cut at |
-|       | Proce        | scope and    | organi       | pre-Sprint   |
-|       | dures/Suites | objectives   | zation/scope | during the   |
-|       |              | we will plan | of our       | planning.    |
-|       |              | the test     | testing      | The final    |
-|       |              | procedures.  |              | cut during   |
-|       |              |              |              | the first    |
-|       |              |              |              | week of the  |
-|       |              |              |              | Sprint.      |
-|       |              | In our test  |              |              |
-|       |              | management   |              |              |
-|       |              | tool, we     |              |              |
-|       |              | will use the |              |              |
-|       |              | test suite   |              |              |
-|       |              | concept to   |              |              |
-|       |              | capture      |              |              |
-|       |              | this.        |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 5     | Identify     | We identify  | Specific     | Developed    |
-|       | Functions to | the          | id           | starting     |
-|       | be Tested    | functions to | entification | with the     |
-|       |              | be tested by | of           | sprint but   |
-|       |              | reviewing    | application  | will most    |
-|       |              | our test     | and system   | likely       |
-|       |              | base         | functions    | change       |
-|       |              | (do          | that will be | depending on |
-|       |              | cumentation, | tested       | changes      |
-|       |              | discussion   |              |              |
-|       |              | etc.) and    |              |              |
-|       |              | map the      |              |              |
-|       |              | functions to |              |              |
-|       |              | be tested to |              |              |
-|       |              | our test     |              |              |
-|       |              | suites       |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 6     | Identify     | We identify  | Specific     | Developed    |
-|       | Interfaces   | the          | id           | starting     |
-|       | to be Tested | interfaces   | entification | with the     |
-|       |              | to be tested | of           | sprint but   |
-|       |              | by reviewing | interfaces   | will most    |
-|       |              | our test     | and          | likely       |
-|       |              | base         | integration  | change       |
-|       |              | (technical   | points that  | depending on |
-|       |              | do           | will be      | changes      |
-|       |              | cumentation) | tested       |              |
-|       |              | and map the  |              |              |
-|       |              | interfaces   |              |              |
-|       |              | to be tested |              |              |
-|       |              | to our test  |              |              |
-|       |              | suites       |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 7     | Write Test   | Individual   | Test         | These will   |
-|       | Scripts /    | scripts and  | S            | be           |
-|       | Define Tests | tests cases  | cripts/Cases | developed,   |
-|       | Cases /      | will be      | and          | maintained   |
-|       | Define       | written. A   | exploratory  | and pruned   |
-|       | Exploratory  | test case is | testing      | during the   |
-|       | Testing      | the lowest   | sessions     | sprint.      |
-|       | sessions     | level of     | which are    |              |
-|       |              | test that is | ready to be  |              |
-|       |              | intended to  | executed     |              |
-|       |              | test one     |              |              |
-|       |              | thing and    |              |              |
-|       |              | one thing    |              |              |
-|       |              | only.        |              |              |
-|       |              |              |              |              |
-|       |              |              |              |              |
-|       |              |              |              |              |
-|       |              | During this  |              |              |
-|       |              | exercise we  |              |              |
-|       |              | will also    |              |              |
-|       |              | i            |              |              |
-|       |              | dentify test |              |              |
-|       |              | automation   |              |              |
-|       |              |  candidates. |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 8     | Design Test  | Every test   | Test data is | This will be |
-|       | Data         | case needs   | identified   | developed,   |
-|       |              | test data,   | and/or       | maintained   |
-|       |              | this data is | created      | and pruned   |
-|       |              | either       |              | during the   |
-|       |              | identified   |              | sprint.      |
-|       |              | in the       |              |              |
-|       |              | already      |              |              |
-|       |              | present data |              |              |
-|       |              | or needs to  |              |              |
-|       |              | be created   |              |              |
-|       |              | from scratch |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 9     | Build Test   | The Test     | Traceability | This will be |
-|       | Matrix       | requirement  | matrix is    | developed,   |
-|       |              | coverage     | present and  | maintained   |
-|       |              | matrix is    | will allow   | and pruned   |
-|       |              | build up     | for          | during the   |
-|       |              | during the   | management   | sprint.      |
-|       |              | definition   | of progress  |              |
-|       |              | of the       | and coverage |              |
-|       |              | suites, and  |              |              |
-|       |              | the          |              |              |
-|       |              | individual   |              |              |
-|       |              | test         |              |              |
-|       |              | sc           |              |              |
-|       |              | ripts/cases. |              |              |
-|       |              | The          |              |              |
-|       |              | integration  |              |              |
-|       |              | between JIR  |              |              |
-|       |              | A and Zephyr |              |              |
-|       |              | and the      |              |              |
-|       |              | project\'s   |              |              |
-|       |              | practice to  |              |              |
-|       |              | capture      |              |              |
-|       |              | requirements |              |              |
-|       |              | and          |              |              |
-|       |              | acceptance   |              |              |
-|       |              | criteria     |              |              |
-|       |              | allows the   |              |              |
-|       |              | project to   |              |              |
-|       |              | build up     |              |              |
-|       |              | such a       |              |              |
-|       |              | matrix in an |              |              |
-|       |              | efficient    |              |              |
-|       |              | way as it is |              |              |
-|       |              | a natural    |              |              |
-|       |              | outcome of   |              |              |
-|       |              | the way we   |              |              |
-|       |              | work with    |              |              |
-|       |              | our tools.   |              |              |
-+-------+--------------+--------------+--------------+--------------+
-| 10    | Determine    | Based on     | Defined      | First cut at |
-|       | Test         | test         | schedule     | pre-Sprint   |
-|       | Schedules    | objectives,  | will allow   | during the   |
-|       |              | planned      | us to start  | planning.    |
-|       |              | availability | the effort   | The test     |
-|       |              | of testable  | with         | schedule     |
-|       |              | fu           | reasonable   | will be      |
-|       |              | nctionality, | confidence.  | subject to   |
-|       |              | resources,   |              | review and   |
-|       |              | test data    |              | change       |
-|       |              | and test     |              | during the   |
-|       |              | design       |              | in-sprint    |
-|       |              | readiness,   |              | planning     |
-|       |              | we will      |              | exercises.   |
-|       |              | create our   |              |              |
-|       |              | initial test |              |              |
-|       |              | schedule.    |              |              |
-+-------+--------------+--------------+--------------+--------------+
+### Test Design Process
 
- 
+-   Test design is the act of identifying the appropriate tests.
 
- 
+Designing efficient tests is an analytic process that requires information, skills, communication, a critical eye and an awareness of
+constraints and risks.
 
-Test Design Process
-
-June 24, 2019
-
-3:02 PM
-
--   Test design is the act of creating and writing test suites for
-    > testing a software.
-
-> Designing efficient tests is an analytic process that requires
-> information, skills, communication, a critical eye and an awareness of
-> constraints and risks.
->
-> RASCI
-
-  **Roles**                        **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------------- ----------------- -------------------------- -------------- --------------- --------------
-  **Test Lead**                                      X                                                          
-  **Test Analyst (Agile)**          X                                                                           
-  **Business Tester**               X                                                                           
-  **Test Automation Specialist**    X                                                                           
-  **Business Analyst**                                                          X                               
-  **Business Lead**                                                             X                               
-  **Developer**                     X                                                                           
-  **Developer Lead**                                  X                                                         
-  **Solution Architect**                                                                                       X
-  **Release Manager**                                                                                          X
-  **Project Manager**                                                                                          X
-  **Client/Sponsor**                                                                           X                
-
-> Objective
-
+**Objective**
 -   Obtain efficient test cases
-
 -   Obtain full coverage for all functionality and processes with Test
-    > cases
-
+    cases
 -   Obtain a basis for test automation
 
-> Description
->
-> Testing software is a real challenge, because there are so many types
-> of test cases that come in so many different shapes and sizes. The
-> truth is, there is no "one size fits all" method for software testing.
-> Our project lends itself to a more casual, exploratory approach, where
-> agile test cases are helpful. But with our strong test automation
-> drive and with an eye for existing practices at PPR, we will design
-> test cases that will combine the exploratory testing, manual test case
-> and test automation aspects.
->
-> Documenting software test cases is required when you have to conform
-> to specific business rules. The project may have legal compliance
-> requirements, or there may even be contractual obligations to provide
-> documentary evidence of exactly what you tested. In that scenario, you
-> obviously need detailed test cases. The PPR application will be in use
-> for years, a set of well-thought-out agile test cases will provide
-> value for money because they'll be reused again and again. They will
-> even form the basis for automated tests. 
->
-> **Challenges of Test Design in an Agile Environment**
->
-> In cases where the project team is adopting an agile approach
-> (i.e. features are designed in an iterative fashion) there is no clear
-> picture for the application during any one sprint. Generally we find
-> that the initial goal at the start of development changes as backlogs
-> are revised (i.e. the sprint requirements change). Writing a lot of
-> agile test cases then is going to be less effective because you'll
-> have to rewrite them completely within a few builds. You might opt for
-> a checklist approach instead and combine exploratory testing with a
-> simple list of compatibility requirements that don't need to be
-> spelled out in full. It may even be possible for testers simply to
-> refer to the original user stories that informed the design or talk
-> directly to the customer to find a basis for their testing.
->
-> In PPR, we will adopt a hybrid approach where much of the actual
-> business design, user stories and acceptance criteria have been
-> developed and reviewed before the Sprint. This will allow testing to
-> leverage the created information to help with the test design.
->
-> **Test Basis**
->
-> The test basis is the information available (or to be acquired) that
-> we base our tests on.
->
-> For PPR our test base is:
+**Description**
+Testing software is a real challenge, because there are so many types of test cases that come in so many different shapes and sizes. The truth is, there is no "one size fits all" method for software testing. Our project lends itself to a more casual, exploratory approach, where agile test cases are helpful. But with our strong test automation drive and with an eye for existing practices at PPR, we will design test cases that will combine the exploratory testing, manual test case and test automation aspects. Documenting software test cases is required when you have to conform to specific business rules. The project may have legal compliance requirements, or there may even be contractual obligations to provide documentary evidence of exactly what you tested. In that scenario, you obviously need detailed test cases. The PPR application will be in use for years, a set of well-thought-out agile test cases will provide value for money because they'll be reused again and again. They will even form the basis for automated tests. 
 
+**Challenges of Test Design in an Agile Environment**
+In cases where the project team is adopting an agile approach (i.e. features are designed in an iterative fashion) there is no clear picture for the application during any one sprint. Generally we find that the initial goal at the start of development changes as backlogs are revised (i.e. the sprint requirements change). Writing a lot of agile test cases then is going to be less effective because you'll have to rewrite them completely within a few builds. You might opt for a checklist approach instead and combine exploratory testing with a simple list of compatibility requirements that don't need to be spelled out in full. It may even be possible for testers simply to refer to the original user stories that informed the design or talk directly to the customer to find a basis for their testing. In PPR, we will adopt a hybrid approach where much of the actual business design, user stories and acceptance criteria have been developed and reviewed before the Sprint. This will allow testing to leverage the created information to help with the test design.
+
+**Test Basis**
+The test basis is the information available (or to be acquired) that we base our tests on.
+
+For PPR our test base is:
 -   Project scope as defined by our product owner
-
 -   User Stories, see Epics, Features & User Stories
-
--   Acceptance Criteria (part of the user stories), see Epics, Features
-    > & User Stories
-
+-   Acceptance Criteria (part of the user stories), see Epics, Features & User Stories
 -   Non-functional requirements
-
--   Discussions and decisions on the above captured in JIRA
-
--   Feedback from SME\'s, Business Analysts, Architects and technical
-    > specialists
-
+-   Discussions and decisions on the above captured in ZenHub and SharePoint
+-   Feedback from SME\'s, Business Analysts, Architects and technical specialists
 -   Testers\' insight and experience with PPR business processes
-
 -   Good testing practices
-
 -   Constraints, Risks and Changes
-
 -   Creativity and the drive to create efficient tests
 
-> **Test Case Design**
->
-> Test case design is based on:
-
+**Test Case Design**
+Test case design is based on:
 -   The stated, explicit requirements for the feature
-
 -   The unstated, implied requirements
-
 -   The expected behavior of the feature
-
 -   The constraints imposed on the behavior of that feature
 
-> **Test Case Design Techniques**
->
-> Of all the test case design techniques which are available, the most
-> effective for the PPR project are:
+**Test Case Design Techniques**
+Of all the test case design techniques which are available, the most
+effective for the PPR project are:
 
 -   Specification-based technique.  This technique derives test cases
-    > from the documented specifications of the system's behavior.
-
+    from the documented specifications of the system's behavior.
 -   Functional analysis (functional specification-based testing).
-
 -   Sampling techniques.  These techniques identify small samples of
-    > high-potential test cases from large populations of possible
-    > conditions.
-
+    high-potential test cases from large populations of possible
+    conditions.
 -   Equivalence
-
 -   Boundary value (BV)
-
 -   Combinatorial methods, such as pair-wise and n-wise testing
+-   Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in
+    prior similar situations. 
+    -   Exploratory testing
+    -   User scenarios
+    -   Checklists
+    -   Risk analysis and prioritization.
 
--   Experience-based techniques.  These techniques utilize the testers'
-    > and others' experience, either with the system under test or in
-    > prior similar situations. 
+**Process**
+Test Design approach is indicated by the following steps:
 
--   Exploratory testing
+| Activity	| Technique Used	| Description		
+| ---	| ---	| ---		
+| 1	| Test Basis Analysis	| Review documentation and other test basis artifacts.		
+| 2	| First Identification of major test areas	| Sprint Scope/Schedule, Risk Analysis and prioritization		
+| 3	| Test Idea generation	| Risk Analysis		
+| 4	| Drafting of test cases/exploratory sessions	| All previously obtained information is used		
+| 5	| Adding detail to test cases	| All design techniques		
+| 6	| Identify test steps for each test case	| Review of the actual functionality		
+| 7	| Identify candidacy for test automation	| See Test Automation Strategy		
+| 8	| Review Test Cases	| Peer review		
+| 9	| Consolidate Test Cases in Test Suites	| Functional Analysis and Risk Analysis		
 
--   User scenarios
-
--   Checklists
-
--   Risk analysis and prioritization.
-
-> **Process**
->
-> Test Design approach is indicated by the following steps:
-
-  ** **   **Activity**                                  **Technique Used**                                        **Description**
-  ------- --------------------------------------------- --------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1       Test Basis Analysis                           Review documentation and other test basis artifacts.      This activity identifies gaps, generates questions and develops a initial understanding.
-  2       First Identification of major test areas      Sprint Scope/Schedule, Risk Analysis and prioritization   Reviewing schedule and planned scope of work for the Sprint, the major areas of interest can be identified.
-  3       Test Idea generation                          Risk Analysis                                             Initial series of test ideas, exploratory sessions and application of other techniques are identified.
-  4       Drafting of test cases/exploratory sessions   All previously obtained information is used               The high level test case and suites (groups of test cases that belong to the same logical group) are created. Also this is the time when we plan our sessions for exploratory sessions
-  5       Adding detail to test cases                   All design techniques                                     Using the appropriate test design technique, test cases will be expanded and added to.
-  6       Identify test steps for each test case        Review of the actual functionality                        If needed, test steps will be added to the test case. In the project we will minimize this step as test steps typically are very labor-intensive and add very little value.
-  7       Identify candidacy for test automation        See Test Automation Strategy                              At an early stage we label test cases as test automation candidates. We make sure that the test case contains enough information for automation scripting to commence.
-  8       Review Test Cases                             Peer review                                               Peer review is a powerful technique and is very appropriate in a agile project.
-  9       Consolidate Test Cases in Test Suites         Functional Analysis and Risk Analysis                     Test cases are grouped in logical block.
-
-> These steps will be repeated several times based on the following
-> triggers:
+These steps will be repeated several times based on the following triggers:
 
 -   New design becomes available
-
 -   A change to design invalidates previous test design
-
 -   Scope changes
-
 -   Bug Fixes
 
-> **Test Case Rating**
->
-> Test case rating or priority setting is important for the following
-> reasons:
+**Test Case Rating**
+Test case rating or priority setting is important for the following
+reasons:
 
--   It focuses the testers on those tests that will make the most
-    > difference
-
+-   It focuses the testers on those tests that will make the most difference
 -   It will allow for better and more efficient re-planning
-
 -   It helps with the tester workload assignment
-
--   It greatly helps the team to achieve working (and verified)
-    > functionality
-
+-   It greatly helps the team to achieve working (and verified) functionality
 -   It will allow for test automation candidates selection
 
-> Rating a test case is about rating the aspect of the function that the
-> test case intends to test. We can obtain much of our guidance from how
-> the user stories have been rated. Critical-rated user stories will
-> elevate the rating for the associated test cases.
->
-> Here are the risk/priority attributes that we take into consideration
-> when rating our test cases:
+Rating a test case is about rating the aspect of the function that the test case intends to test. We can obtain much of our guidance from how
+the user stories have been rated. Critical-rated user stories will elevate the rating for the associated test cases.
+
+Here are the risk/priority attributes that we take into consideration when rating our test cases:
 
   **Aspect to be Tested is**         **Description**                                                                                                                                                                          **High**                                                                            **Medium**                                                                          **Low**
   ---------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------- ----------------------------------------------------------------------------------- --------------------------------------------------------------------------
@@ -742,12 +323,11 @@ June 24, 2019
   Complex                            Aspects that are complex, have many business rules, calculations, need to be precise etc.                                                                                                Rate if contains calculations, more than 3 decisions, validations or data updates   Rate if contains calculations, more than 1 decisions, validations or data updates   Rate if contains no calculations, decisions, validations or data updates
   is dependent or has dependencies   Aspects that require other components or functionalities to be present in order to function. Or aspects that other functionality is dependent on.                                        Rate if there are multiple dependencies that are needed to operate                  Rate if there is one dependency that is needed to operate                           Rate if there are no dependencies
 
-> The following spreadsheet utility is used to obtain guidance for our
-> test case rating. This has been created for consistency sake and its
-> value will be evaluated after Sprint 1.
->
-> The rating that the spreadsheet will come up with is the
-> standard *test case priority* setting in Zephyr.  (TBD)
+The following spreadsheet utility is used to obtain guidance for our
+test case rating. This has been created for consistency sake and its
+value will be evaluated after Sprint 1.
+The rating that the spreadsheet will come up with is the
+standard *test case priority* setting in Zephyr.  (TBD)
 
   **Test Case Priority**   **Description**
   ------------------------ ------------------------------------------------------------------------------------------------------------------------
@@ -758,9 +338,8 @@ June 24, 2019
   4-Must be Tested         Mandatory to test, key functionality or higher risk test case. Would typically not be de-scoped even under pressure.
   5-Critical               Mandatory. Without this test case the risk exists that critical functionality is not working correctly.
 
->  
->
->  
+ 
+ 
 
   **Test Case Priority Analysis**                                                                   
   ---------------------------------- ------------ ------------ --------- --------- ----------- --- ------------------
@@ -780,11 +359,10 @@ June 24, 2019
                                                                                                4   4-Must be Tested
                                                                                                5   5-Critical
 
-> Test Case Rating Review
->
-> The ratings can be changed after review at the end of every Sprint or
-> when ever it is deemed needed. As test case rating is a tool, we need
-> to make sure that we keep our tool sharp and relevant.
+Test Case Rating Review
+The ratings can be changed after review at the end of every Sprint or
+when ever it is deemed needed. As test case rating is a tool, we need
+to make sure that we keep our tool sharp and relevant.
 
  
 
@@ -837,12 +415,12 @@ In the project there are 5 groups/mechanisms involved with test
 execution. They are:
 
 1.  Developers - Manual/Automated Unit Test on their workstation
-    > (iValua)
+    (iValua)
 
 2.  Agile Testers - Manual and Exploratory Tests in the TEST environment
 
 3.  Test Automation Specialist - Automated functional testing in the
-    > TEST environment
+    TEST environment
 
 4.  User Acceptance Testers - UAT in the TEST environment
 
@@ -869,21 +447,21 @@ The manual and exploratory test execution steps are as follows:
  For manual test execution, the following needs to present:
 
 -   Targeted functionality is available in the TEST or STAGING
-    > environment
+    environment
 
 -   Test Cases are ready or a Exploratory Test Session has been defined
 
 -   Test Cases have been assigned and the go ahead has been given by the
-    > test lead
+    test lead
 
 -   Test Data is present/identified
 
-> For automated test execution, the following needs to present:
+For automated test execution, the following needs to present:
 
 -   Targeted functionality is available in the TEST environment
 
 -   Automated Unit Test and/or Functional Test Scripts have been
-    > created, debugged and incorporated into the test framework
+    created, debugged and incorporated into the test framework
 
 -   Test Data is present/identified
 
@@ -1820,23 +1398,23 @@ are rated at a lower severity or ones that are deemed "simple".
 Common Triage Meeting Guidelines
 
 -   The Test Lead/Scrum Master makes sure the right people are present.
-    > Nota Bene: Not all are needed all the time!
+    Nota Bene: Not all are needed all the time!
 
 -   Test Lead determines when the meeting is held. *Do not hold meetings
-    > because they are on the calendar if you have nothing to discuss!*
+    because they are on the calendar if you have nothing to discuss!*
 
 -   The Test Lead facilitates the meeting.
 
 -   The Test Lead documents the decisions in JIRA during the meeting.
 
 -   An efficient triage meeting should take no longer than 30 minutes
-    > and should be finished as soon as possible.
+    and should be finished as soon as possible.
 
 -   Participants actively and respectfully contribute.
 
 -   The Defect Triage is not intended to solve defects. Common rule of
-    > thumb: If you need more than 2-3 minutes to decide on priority and
-    > assignment, it needs to be assigned for clarification.
+    thumb: If you need more than 2-3 minutes to decide on priority and
+    assignment, it needs to be assigned for clarification.
 
 -   The priority of defects to be discussed are:
 
@@ -1853,20 +1431,20 @@ Common Triage Meeting Guidelines
 6.  New defects in order of descending severity
 
 -   The triage meeting will also discuss readiness of testing for the
-    > new build.
+    new build.
 
 Agenda for a Triage Meeting
 
 **Introduction (2 minutes)**
 
 -   Flag any burning, immediate action needed, defects that impact test
-    > and development progress.
+    and development progress.
 
 -   Bring up list on screen sorted by priority of discussion.
 
 **Review defect by defect (no longer than 2-3 minutes per defect)**
 
-> **Determine:**
+**Determine:**
 
 1.  Validity of defect. (Invalid will close the defect)
 
@@ -1874,21 +1452,21 @@ Agenda for a Triage Meeting
 
 3.  Completeness/clarity of information
 
-> **Complete Triage (JIRA Transition) by obtaining input from
-> participants**
+**Complete Triage (JIRA Transition) by obtaining input from
+participants**
 
 1.  Review Symptom/Severity for correctness (Reporter has already
-    > entered this)
+    entered this)
 
 2.  Review Product Status for correctness (Reporter has already entered
-    > this)
+    this)
 
 3.  Discuss Business Value
 
 4.  Set Priority
 
 5.  Determine the Fix Versions (The version in which this defect needs
-    > to be fixed)
+    to be fixed)
 
 6.  Determine the Due Date
 
@@ -1896,11 +1474,11 @@ Agenda for a Triage Meeting
 
 8.  Review Priority again to make sure that that it is indeed correct.
 
-> **Obtain agreement from the participants**
+**Obtain agreement from the participants**
 
 1.  Update Status and Assignment
 
-> **Next defect....**
+**Next defect....**
 
 **Discuss Testing's readiness for the next build. (5 minutes)**
 
@@ -1912,13 +1490,13 @@ Agenda for a Triage Meeting
 
 ROLES & RESPONSIBILITIES of individuals in Defect Triage
 
-> **1. Project Manager**
+**1. Project Manager**
 
 -   Assists in the prioritization of the defects
 
 -   Deals with or escalates scoping defects.
 
-> **2. Business Lead/Product Owner**
+**2. Business Lead/Product Owner**
 
 -   Assists in the prioritization of the defects.
 
@@ -1926,7 +1504,7 @@ ROLES & RESPONSIBILITIES of individuals in Defect Triage
 
 -   Deals with or escalates business scoping defects.
 
-> **3. Test Lead/Scrum Master**
+**3. Test Lead/Scrum Master**
 
 -   Assists in the prioritization of the defects
 
@@ -1940,7 +1518,7 @@ ROLES & RESPONSIBILITIES of individuals in Defect Triage
 
 -   Explains the findings on each defect being presented
 
-> **4. Development Lead(CGI)**
+**4. Development Lead(CGI)**
 
 -   Assists in the prioritization of the defects
 
@@ -1949,12 +1527,12 @@ ROLES & RESPONSIBILITIES of individuals in Defect Triage
 -   Discusses the delivery date of next build to Testing
 
 -   Explains the level of complexity and the risk associated with each
-    > defect being presented at the Defect Triage
+    defect being presented at the Defect Triage
 
 -   Assigns the defects to the appropriate developer
 
 -   Team is aligned on the severity and priority of defects discussed
-    > during the Defect Triage
+    during the Defect Triage
 
  
 
@@ -2019,7 +1597,7 @@ The decision can be one of the following:
 **After** closing the sprint test we:
 
 1.  Collect the lessons learned and suggested process improvements for
-    > the **Sprint Retrospective**
+    the **Sprint Retrospective**
 
 2.  Evaluate our test estimation accuracy
 
@@ -2087,8 +1665,7 @@ impression of the relative importance and therefore focus.
 Rated from 0-10 on each category, the different activities are rated as
 follows:
 
-\<\<Detailed Test Strategies - Spreadsheet.xlsx\>\>
-
+\<\<Detailed Test Strategies - Spreadsheet.xlsx\
   ** **                         **Frequency**   **Impact On Quality**   **Business Importance**   **Operational Importance**   **Project Success factor**   **SUM Total**   **Rank**
   ----------------------------- --------------- ----------------------- ------------------------- ---------------------------- ---------------------------- --------------- ----------
   **Unit Testing**              0               0                       0                         0                            0                            **0**           10
@@ -2136,7 +1713,7 @@ Unit testing is guided by the following principle:
 **Basic assumption(s):**
 
 -   All modules/functions/components/interfaces need to be Unit tested
-    > by the developer.
+    by the developer.
 
 -   Unit tests need to be re-usable.
 
@@ -2147,7 +1724,7 @@ Unit testing is guided by the following principle:
 **Test Principle:**
 
 -   Developers will create a unit test design for each component they
-    > produce.
+    produce.
 
 -   Unit Test design is documented and stored for re-use and reference.
 
@@ -2156,24 +1733,24 @@ Objectives
 Unit Testing aims to:
 
 -   Find defects which may get created by the programmer while
-    > developing the software.
+    developing the software.
 
 -   Gain confidence in and provide information about the level of
-    > quality.
+    quality.
 
 -   Prevent defects being passed on to the next activity.
 
 Expected Benefits
 
 -   A team relying on automated unit tests can expect to reap some of
-    > the benefits of test-driven development, in particular a decrease
-    > in defect rates.
+    the benefits of test-driven development, in particular a decrease
+    in defect rates.
 
 -   Early and frequent testing is a pattern common to successful
-    > delivery of working software.
+    delivery of working software.
 
 -   Continuous Integration can only succeed when there is a solid basis
-    > of automated unit tests .
+    of automated unit tests .
 
  
 
@@ -2243,21 +1820,21 @@ Leave no stone unturned, all pieces of code will be:
 -   Reviewed.
 
 -   Covered by means of automated unit tests that will test all
-    > sequences, iterations and decisions, not only to test if they work
-    > but also if they react correctly in error situations.\
-    > **Positive and Negative Tests\
-    > **In Unit testing we aim to have at least 80% negative tests (test
-    > that should fail) and 20% positive tests (test that should
-    > succeed). The philosophy behind this is that errors typically
-    > cluster around exceptions, \"this will never happen\", domain
-    > issues, boundary problems etc.
+    sequences, iterations and decisions, not only to test if they work
+    but also if they react correctly in error situations.\
+    **Positive and Negative Tests\
+    **In Unit testing we aim to have at least 80% negative tests (test
+    that should fail) and 20% positive tests (test that should
+    succeed). The philosophy behind this is that errors typically
+    cluster around exceptions, \"this will never happen\", domain
+    issues, boundary problems etc.
 
 -   Exposed to as many data/usage variations as possible. Testing and
-    > therefore also Unit testing is largely a combinatorial problem,
-    > Variations are potentially hard to test as they often are too
-    > many. By deploying techniques like code coverage, pair-wise
-    > testing and risk analysis we can focus on achieving best value for
-    > our efforts balancing coverage with variability.
+    therefore also Unit testing is largely a combinatorial problem,
+    Variations are potentially hard to test as they often are too
+    many. By deploying techniques like code coverage, pair-wise
+    testing and risk analysis we can focus on achieving best value for
+    our efforts balancing coverage with variability.
 
 **Consistent**
 
@@ -2302,39 +1879,39 @@ The corollaries of this rule include: 
 
 -   **No unnecessary assertions**
 
-> It's counterproductive to Assert() anything that's also asserted by
-> another test: it just increases the frequency of pointless failures
-> without improving unit test coverage one bit.  *Have only one logical
-> assertion per test*. 
+It's counterproductive to Assert() anything that's also asserted by
+another test: it just increases the frequency of pointless failures
+without improving unit test coverage one bit.  *Have only one logical
+assertion per test*. 
 
 -   **Test only one code unit at a time **
 
-> The architecture must support testing units (i.e., classes or very
-> small groups of classes) independently, not all chained together. This
-> will avoid overlap between tests. 
+The architecture must support testing units (i.e., classes or very
+small groups of classes) independently, not all chained together. This
+will avoid overlap between tests. 
 
 -   **Mock out all external services and state **
 
-> Otherwise, behaviour in those external services overlaps multiple
-> tests, and state data means that different unit tests can influence
-> each other's outcome. 
+Otherwise, behaviour in those external services overlaps multiple
+tests, and state data means that different unit tests can influence
+each other's outcome. 
 
 -   **Avoid unnecessary preconditions **
 
-> Avoid having common setup code that runs at the beginning of lots of
-> unrelated tests. Otherwise, it's unclear what assumptions each test
-> relies on.
+Avoid having common setup code that runs at the beginning of lots of
+unrelated tests. Otherwise, it's unclear what assumptions each test
+relies on.
 
 -   **Don't unit-test configuration settings **
 
-> By definition, the configuration settings aren't part of any unit of
-> code. 
+By definition, the configuration settings aren't part of any unit of
+code. 
 
 -   **Name unit tests clearly and consistently **
 
-> Avoid non-descriptive unit tests names such as Purchase() or
-> OutOfStock(). Maintenance is hard if it is unclear what we need to
-> maintain.
+Avoid non-descriptive unit tests names such as Purchase() or
+OutOfStock(). Maintenance is hard if it is unclear what we need to
+maintain.
 
 Test Design
 
@@ -2434,8 +2011,8 @@ required to have the unit test data:
 Test data for unit testing needs to be:
 
 -   For one unit only, independent from other data. If dependencies are
-    > there, the data needs to be provided as part of the unit test and
-    > not assumed to be available
+    there, the data needs to be provided as part of the unit test and
+    not assumed to be available
 
 -   Comprehensive in support for the unit test(s) and all its variants
 
@@ -2455,74 +2032,69 @@ June 25, 2019
 
 9:44 AM
 
-> This section provides an overview of the test approach that will be
-> undertaken for Integration Testing. In unit testing we are testing the
-> individual components, which are then combined in large building
-> blocks or assemblages. By frequently testing potential interactions
-> (good or bad), the team will position itself to quickly deal with any
-> issues found. 
->
-> The term \"integration testing\" is used to mean three different
-> things:
+This section provides an overview of the test approach that will be
+undertaken for Integration Testing. In unit testing we are testing the
+individual components, which are then combined in large building
+blocks or assemblages. By frequently testing potential interactions
+(good or bad), the team will position itself to quickly deal with any
+issues found. 
+The term \"integration testing\" is used to mean three different
+things:
 
 -   **A sub-assembly test**: an interim level of testing, part of the
-    > way between unit testing and system testing of the fully
-    > integrated system.  The Integration Test Strategy is oriented
-    > primarily towards sub-assembly testing, but also addresses the
-    > other two types of integration testing.
+    way between unit testing and system testing of the fully
+    integrated system.  The Integration Test Strategy is oriented
+    primarily towards sub-assembly testing, but also addresses the
+    other two types of integration testing.
 
 -   **Smoke Test (or build verification test)**: a quick test of an
-    > integrated sub-assembly or complete system, just to confirm that
-    > all components are present and are connected together correctly. 
-    > The build verification test usually is not as intensive as a
-    > sub-assembly test.  The build process is a series of steps in
-    > which the components are compiled and linked together to form an
-    > executable system (or subsystem).  In large complex systems, many
-    > steps may be needed to build a system, and there can be several
-    > build verification tests as interim checkpoints to ensure that the
-    > build process is proceeding correctly.
+    integrated sub-assembly or complete system, just to confirm that
+    all components are present and are connected together correctly. 
+    The build verification test usually is not as intensive as a
+    sub-assembly test.  The build process is a series of steps in
+    which the components are compiled and linked together to form an
+    executable system (or subsystem).  In large complex systems, many
+    steps may be needed to build a system, and there can be several
+    build verification tests as interim checkpoints to ensure that the
+    build process is proceeding correctly.
 
 -   **An end-to-end test (or System Integration Test)**, usually
-    > performed on an entire system, where one feature is tested \"end
-    > to end\" through the system, without the distraction of other
-    > features or other simultaneous demands on the system.
+    performed on an entire system, where one feature is tested \"end
+    to end\" through the system, without the distraction of other
+    features or other simultaneous demands on the system.
 
-> In all the above three types of integration tests, the objective is to
-> ensure that components link and work together.  The focus is on the
-> effectiveness of functional interactions and compatibility at the
-> interfaces.  Integration testing is an interim level of testing that
-> occurs between unit testing and systems testing, and where groupings
-> of components are tested. 
->
-> Definition
->
-> Testing performed to expose defects in the interfaces and in the
-> interactions between integrated components or systems.
->
-> Objectives
+In all the above three types of integration tests, the objective is to
+ensure that components link and work together.  The focus is on the
+effectiveness of functional interactions and compatibility at the
+interfaces.  Integration testing is an interim level of testing that
+occurs between unit testing and systems testing, and where groupings
+of components are tested. 
+Definition
+Testing performed to expose defects in the interfaces and in the
+interactions between integrated components or systems.
+Objectives
 
 -   Verify whether all the components/unit within assemblages interact
-    > correctly, for example across procedure calls or processes. 
+    correctly, for example across procedure calls or processes. 
 
 -   Verify the \"building blocks\" and add verified assemblages are
-    > added to a verified base which is then used to support the
-    > integration testing of further assemblages.
+    added to a verified base which is then used to support the
+    integration testing of further assemblages.
 
 -   Verify interactions with external systems.
 
-> Expected Benefits
+Expected Benefits
 
 -   Individual system components work correctly with each other on the
-    > iValua platform
+    iValua platform
 
 -   External functionality works as expected
 
 -   REST-full layer operates according to specification
 
-> Responsibilities
->
-> [RASCI
-> Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Responsibilities
+[RASCI
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -2538,44 +2110,34 @@ June 25, 2019
   Release Manager                                              X
   Project Manager                                              X
 
-> Scope
->
-> Full System Integration will be tested during System(-Integration)
-> Testing.
->
-> Approach
->
-> Integration tests are related to Unit tests and we\'ll use the same
-> mechanism and approach to test.
->
-> With integration tests we expand the scope of the test to include
-> multiple components. During unit testing we want to isolate the
-> component, in integration testing we want to have the unit connect to
-> and work with other components. For this type of integration testing,
-> the structure of the unit test scripts can be re-purposed and updated
-> to reflect that actual data and results are coming back from the
-> components it is integrated with.
->
-> Test Design
->
-> Test Design approach follows the Unit Test approach. As stated above,
-> integration testing is performed to ensure that the units operate
-> correctly when they are combined together, as parts in a working (but
-> perhaps incomplete) application.  Integration testing usually proceeds
-> from small subassemblies, containing only a few components, to larger
-> ones containing many components.  Large complex products can go
-> through many repetitive build-and-test cycles before they are fully
-> integrated.
->
-> Test Execution
->
-> Execution will follow the same path and frequency of the automated
-> unit tests.
->
-> Data Requirements
->
->  As per definition in Test Data Strategy integration testing requires
-> the following types of test data: 
+Scope
+Full System Integration will be tested during System(-Integration)
+Testing.
+Approach
+Integration tests are related to Unit tests and we\'ll use the same
+mechanism and approach to test.
+With integration tests we expand the scope of the test to include
+multiple components. During unit testing we want to isolate the
+component, in integration testing we want to have the unit connect to
+and work with other components. For this type of integration testing,
+the structure of the unit test scripts can be re-purposed and updated
+to reflect that actual data and results are coming back from the
+components it is integrated with.
+Test Design
+Test Design approach follows the Unit Test approach. As stated above,
+integration testing is performed to ensure that the units operate
+correctly when they are combined together, as parts in a working (but
+perhaps incomplete) application.  Integration testing usually proceeds
+from small subassemblies, containing only a few components, to larger
+ones containing many components.  Large complex products can go
+through many repetitive build-and-test cycles before they are fully
+integrated.
+Test Execution
+Execution will follow the same path and frequency of the automated
+unit tests.
+Data Requirements
+ As per definition in Test Data Strategy integration testing requires
+the following types of test data: 
 
   **Usage**                            **Environment**         **Type of Test Data**   **User**
   ------------------------------------ ----------------------- ----------------------- ----------------------
@@ -2583,10 +2145,9 @@ June 25, 2019
   Automated Unit/Integration testing   Build/Integration       Purposely created       Automated CI process
   System Integration Testing           TEST                    Purposely Created       BA, Tester
 
->  
->
->  In Test Environments Needs we have defined which environments will be
-> required to have the unit test data:
+ 
+ In Test Environments Needs we have defined which environments will be
+required to have the unit test data:
 
   **Type of Testing**          **Environment(s)**   **Integrated with Back end**   **Who**                        **Description**
   ---------------------------- -------------------- ------------------------------ ------------------------------ -----------------
@@ -2625,15 +2186,14 @@ as our test cases.
 Objectives
 
 -   The main objective of functional testing is to verify that each
-    > function of the software application operates in accordance with
-    > the written acceptance (requirement) specifications.
+    function of the software application operates in accordance with
+    the written acceptance (requirement) specifications.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   Functional testing is to verify whether your product meets
-    > the *intended* functional acceptance criteria mentioned in your
-    > user story documentation.
+    the *intended* functional acceptance criteria mentioned in your
+    user story documentation.
 
  
 
@@ -2724,25 +2284,25 @@ Approach
 Testing functionality can be done from two perspectives:
 
 -   **Requirement-based testing: **In this type of testing the
-    > acceptance criteria (requirements) are prioritized and accordingly
-    > the tests follow that prioritization. This will ensure that the
-    > most important and most critical tests are included in the testing
-    > effort.
+    acceptance criteria (requirements) are prioritized and accordingly
+    the tests follow that prioritization. This will ensure that the
+    most important and most critical tests are included in the testing
+    effort.
 
 -   **Business-process-based testing: **In this type of testing the
-    > scenarios involved in the day-to-day business use of the system
-    > are described. It uses the knowledge of the business
-    > processes.** **For example, a personnel and payroll system may
-    > have the business process along the lines of: someone joins the
-    > company, employee is paid on the regular basis and employee
-    > finally leaves the company.
+    scenarios involved in the day-to-day business use of the system
+    are described. It uses the knowledge of the business
+    processes.** **For example, a personnel and payroll system may
+    have the business process along the lines of: someone joins the
+    company, employee is paid on the regular basis and employee
+    finally leaves the company.
 
-> For PPR we deploy both perspectives to functionality testing. However,
-> the emphasis will be initially on requirements-based testing (we would
-> also include checklists, web standards etc.). Business process testing
-> will come after the requirements have been tested and basic
-> functionality is deemed acceptable. This approach is used to focus the
-> testing effort.
+For PPR we deploy both perspectives to functionality testing. However,
+the emphasis will be initially on requirements-based testing (we would
+also include checklists, web standards etc.). Business process testing
+will come after the requirements have been tested and basic
+functionality is deemed acceptable. This approach is used to focus the
+testing effort.
 
 Test Design
 
@@ -2750,18 +2310,18 @@ Our test design consists of the following high level categories of test
 cases:
 
 -   Functionality: This is the most straight forward category, where we
-    > take each piece of the application and test it individually. 
+    take each piece of the application and test it individually. 
 
 -   Scenarios: We take the user scenarios and run them in order to
-    > review the behavior of the system. 
+    review the behavior of the system. 
 
 -   Negative tests: We think of all possible things that a user may do
-    > wrong in the system and make sure that a correct indication is
-    > displayed and no permanent damage is done to the system or its
-    > data.
+    wrong in the system and make sure that a correct indication is
+    displayed and no permanent damage is done to the system or its
+    data.
 
 -   Date dependent Tests: PPR is date dependent and a specific category
-    > of test cases is necessary
+    of test cases is necessary
 
 ### Test Case Design Techniques
 
@@ -2769,14 +2329,14 @@ Of all the test case design techniques which are available, the most
 effective for the functional testing are:
 
 -   Specification-based techniques.  This technique derives test cases
-    > from the documented specifications of the system's behavior. This
-    > includes the following design techniques:
+    from the documented specifications of the system's behavior. This
+    includes the following design techniques:
 
 -   Functional analysis (functional specification-based testing).
 
 -   Sampling techniques.  These techniques identify small samples of
-    > high-potential test cases from large populations of possible
-    > conditions. This includes the following design techniques:
+    high-potential test cases from large populations of possible
+    conditions. This includes the following design techniques:
 
 -   Equivalence Analysis
 
@@ -2785,18 +2345,16 @@ effective for the functional testing are:
 -   Combinatorial methods, such as pair-wise and n-wise testing
 
 -   Experience-based techniques.  These techniques utilize the testers'
-    > and others' experience, either with the system under test or in
-    > prior similar situations. This includes the following design
-    > techniques:
+    and others' experience, either with the system under test or in
+    prior similar situations. This includes the following design
+    techniques:
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   Exploratory testing
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   User scenarios
 
 -   Checklists
@@ -2818,77 +2376,77 @@ activities below will also contain certain types of Functional tests.
 | **Test Activity**    | **Functional Test**  | **Participant**      |
 +======================+======================+======================+
 | Unit/Integration     | -   Screen/Object    | Developer            |
-| Testing              |     > Behavior       |                      |
+| Testing              |     Behavior       |                      |
 |                      |                      |                      |
 |                      | -   Database         |                      |
-|                      |     > functions      |                      |
+|                      |     functions      |                      |
 |                      |                      |                      |
 |                      | -   Navigation       |                      |
 |                      |                      |                      |
 |                      | -   Acceptance       |                      |
-|                      |     > Criteria       |                      |
+|                      |     Criteria       |                      |
 +----------------------+----------------------+----------------------+
 | Functional Testing   | -   Functional       | Agile Testers, Test  |
-|                      |     > Acceptance     | Automation           |
-|                      |     > Criteria       | Specialist           |
+|                      |     Acceptance     | Automation           |
+|                      |     Criteria       | Specialist           |
 |                      |                      |                      |
 |                      | -   Business Process |                      |
 |                      |                      |                      |
 |                      | -   Application      |                      |
-|                      |     > Behavior       |                      |
+|                      |     Behavior       |                      |
 |                      |                      |                      |
 |                      | -   Navigation       |                      |
 |                      |                      |                      |
 |                      | -   Field/Screen     |                      |
-|                      |     > Element        |                      |
-|                      |     > behavior       |                      |
+|                      |     Element        |                      |
+|                      |     behavior       |                      |
 |                      |                      |                      |
 |                      | -   Validations      |                      |
 |                      |                      |                      |
 |                      | -   Data Entry       |                      |
 |                      |                      |                      |
 |                      | -   Limits and       |                      |
-|                      |     > Boundaries     |                      |
+|                      |     Boundaries     |                      |
 |                      |                      |                      |
 |                      | -   Buttons, check   |                      |
-|                      |     > boxes, radio   |                      |
-|                      |     > buttons        |                      |
+|                      |     boxes, radio   |                      |
+|                      |     buttons        |                      |
 |                      |                      |                      |
 |                      | -   Basic            |                      |
-|                      |     > functionality  |                      |
+|                      |     functionality  |                      |
 |                      |                      |                      |
 |                      | -   Login/Logout     |                      |
 |                      |                      |                      |
 |                      | -   Data Search,     |                      |
-|                      |     > Creation,      |                      |
-|                      |     > Retrieval,     |                      |
-|                      |     > Changing and   |                      |
-|                      |     > deletion       |                      |
+|                      |     Creation,      |                      |
+|                      |     Retrieval,     |                      |
+|                      |     Changing and   |                      |
+|                      |     deletion       |                      |
 |                      |                      |                      |
 |                      | -   Start/Stop of    |                      |
-|                      |     > application    |                      |
-|                      |     > page           |                      |
+|                      |     application    |                      |
+|                      |     page           |                      |
 |                      |                      |                      |
 |                      | -   Web specific     |                      |
-|                      |     > tests          |                      |
+|                      |     tests          |                      |
 |                      |                      |                      |
 |                      | -   Security role    |                      |
-|                      |     > validation     |                      |
-|                      |     > (basic at this |                      |
-|                      |     > stage)         |                      |
+|                      |     validation     |                      |
+|                      |     (basic at this |                      |
+|                      |     stage)         |                      |
 |                      |                      |                      |
 |                      | -   Negative Tests   |                      |
 |                      |                      |                      |
 |                      | -   Web Content and  |                      |
-|                      |     > configuration  |                      |
+|                      |     configuration  |                      |
 +----------------------+----------------------+----------------------+
 | System Testing       | -   Business Process | Agile Tester         |
 |                      |                      |                      |
 |                      | -   Acceptance       |                      |
-|                      |     > Criteria       |                      |
+|                      |     Criteria       |                      |
 |                      |                      |                      |
 |                      | -   Security Role    |                      |
-|                      |     > validation     |                      |
+|                      |     validation     |                      |
 +----------------------+----------------------+----------------------+
 | User Acceptance      | -   Business Process | Tester/Business      |
 | Testing              |                      | Analyst/Business     |
@@ -2984,7 +2542,7 @@ Objectives
 -   React to quickly changing system
 
 -   Define the basis for test automation and further exploratory test
-    > sessions
+    sessions
 
 -   Identify missed or unclear requirements
 
@@ -2995,13 +2553,13 @@ Expected Benefits
 -   Important defects are found quickly
 
 -   Test execution is more intellectually stimulating than execution of
-    > scripted tests
+    scripted tests
 
 -   Opens the possibility for deductive reasoning based on the results
-    > of previous results
+    of previous results
 
 -   Exploration throughout testing continuously challenges the System
-    > Under Test with new scenarios
+    Under Test with new scenarios
 
 Responsibilities
 
@@ -3135,12 +2693,12 @@ The session report records the test session in Zephyr. This includes:
 -   A list of any defects found
 
 -   A list of issues (open questions, product or project concerns), in
-    > JIRA
+    JIRA
 
 -   Any files/data the tester used or created to support their testing
 
 -   Percentage of the session spent on the charter versus investigating
-    > new opportunities
+    new opportunities
 
 -   Percentage of the session spent on:
 
@@ -3211,7 +2769,7 @@ sessions:
     -   What would constitute a diversified and practical test strategy?
 
     -   How can I improve my understanding of how well or poorly this
-        > product works?
+        product works?
 
     -   If there were an important problem here, how would I uncover it?
 
@@ -3224,7 +2782,7 @@ sessions:
     -   How powerful is this test?
 
     -   What have I learned from this test that helps me perform
-        > powerful new tests?
+        powerful new tests?
 
     -   What just happened? How do I examine that more closely?
 
@@ -3325,18 +2883,18 @@ Scope
 -   Business End-to-End testing: 
 
     -   *Testing a business process from its start through all steps
-        > until a conclusion has been reached. This could involve
-        > accessing multiple systems.*
+        until a conclusion has been reached. This could involve
+        accessing multiple systems.*
 
 -   System Integration testing
 
     -   *Testing the system\'s capability to operate and integrate with
-        > other systems.*
+        other systems.*
 
 -   Browser compatibility testing
 
     -   *Testing with the browsers that need to be supported.
-        > See Browser/OS Matrix and *
+        See Browser/OS Matrix and *
 
 -   Functional Testing
 
@@ -3345,8 +2903,7 @@ Scope
     -   *Testing system usability from a user\'s perspective.*
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   Security testing (Roles and Access)
 
 -   Exploratory testing
@@ -3354,27 +2911,25 @@ Scope
 -   Regression testing
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   Installation testing
 
     -   *Verification of the installation procedure for Staging and
-        > Production.*
+        Production.*
 
 -   Recovery testing and failover testing
 
     -   *Testing forced failure of the system in a variety of ways to
-        > verify that recovery is properly performed.*
+        verify that recovery is properly performed.*
 
 -   Accessibility testing
 
     -   *Accessibility testing is a subset of usability testing where in
-        > the users under consideration are people with all abilities
-        > and disabilities.*
+        the users under consideration are people with all abilities
+        and disabilities.*
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 -   Automated Testing
 
 Approach
@@ -3508,7 +3063,7 @@ Expected Benefits
 -   Compliance with the business requirements will be clear.
 
 -   Functionality/business logic problems that earlier testing might
-    > have missed will be identified.
+    have missed will be identified.
 
 -   Determination on how "done" the system is.
 
@@ -3519,7 +3074,7 @@ Expected Benefits
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -3562,7 +3117,7 @@ UAT does **not** need to focus on:
 -   Technical correctness of functionality
 
 -   Access Rules and implementation in the solution (a review would
-    > still be welcome)
+    still be welcome)
 
 -   In-screen validations
 
@@ -3575,29 +3130,29 @@ For PPR we distinguish between 3 different categories of activities
 which could be characterized as UAT. These are:
 
 1.  **Early Sprints Verification and Validation**: During the first
-    > sprints, UAT related activities will be limited to verification
-    > and validation based on user stories and functional acceptance
-    > criteria. This activity also allows the UAT group a more gradual
-    > introduction into the application, the testing work and the
-    > requirements. These sessions will allow the UAT team to refine
-    > their approach, engage with the team and start to give feedback.
-    > During this, the team would not be required to create a formal UAT
-    > approval. During the early sprints, the UAT testers will only be
-    > participating for the last 7/8 working days of the sprint. 
+    sprints, UAT related activities will be limited to verification
+    and validation based on user stories and functional acceptance
+    criteria. This activity also allows the UAT group a more gradual
+    introduction into the application, the testing work and the
+    requirements. These sessions will allow the UAT team to refine
+    their approach, engage with the team and start to give feedback.
+    During this, the team would not be required to create a formal UAT
+    approval. During the early sprints, the UAT testers will only be
+    participating for the last 7/8 working days of the sprint. 
 
 2.  **Later Sprints UAT**: The last 3 Sprints, become more like a
-    > regular, end-of-project, UAT. The UAT team has now prepared their
-    > test cases and scenarios and is prepared to execute these. They
-    > will also validate and re-test defect fixes on earlier found
-    > issues. At the end of the last Sprint, the team will be in a
-    > position to accept the solution. UAT during the later sprints will
-    > be a one month full-time effort (full sprint length).
+    regular, end-of-project, UAT. The UAT team has now prepared their
+    test cases and scenarios and is prepared to execute these. They
+    will also validate and re-test defect fixes on earlier found
+    issues. At the end of the last Sprint, the team will be in a
+    position to accept the solution. UAT during the later sprints will
+    be a one month full-time effort (full sprint length).
 
 3.  **User Experience Focus Groups**: This activity is the
-    > responsibility of PPR BA Team and will involve engaging with the
-    > member community to obtain their feedback on the new solution.
-    > These sessions will start once several pieces of functionality
-    > have been developed and can demonstrated.
+    responsibility of PPR BA Team and will involve engaging with the
+    member community to obtain their feedback on the new solution.
+    These sessions will start once several pieces of functionality
+    have been developed and can demonstrated.
 
 **Difference in the UAT experience between a traditional project and
 PPR**
@@ -3878,17 +3433,17 @@ Expected Benefits
 -   Save time and improve efficiency
 
 -   As smoke tests are typically automated, they can be run as part of
-    > the build and release process
+    the build and release process
 
 -   Early detection of obvious issues
 
 -   Prevention of wasted cycles because of releasing a non functional
-    > build
+    build
 
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -3975,98 +3530,98 @@ information we will be able to infer from the result.
 |       |          |          | to the   |          |          |
 |       |          |          | new code |          |          |
 +-------+----------+----------+----------+----------+----------+
-| 5     | > Use    | Funct    | > Fails  | Review   | Testing  |
-|       | > key    | ionality | > on:    | and fix  | can only |
-|       | > funct  | b        |          | problem  | p        |
+| 5     | Use    | Funct    | Fails  | Review   | Testing  |
+|       | key    | ionality | on:    | and fix  | can only |
+|       | funct  | b        |          | problem  | p        |
 |       | ionality | asically | -        |          | artially |
-|       | > in the | works.   |  Search: |          | proceed  |
-|       | > f      | Back-end |     >    |          | but will |
+|       | in the | works.   |  Search: |          | proceed  |
+|       | f      | Back-end |        |          | but will |
 |       | ollowing | is       | Database |          | be       |
-|       | > order  | c        |     > or |          | hampered |
-|       | > as     | onnected |     >    |          |          |
-|       | > simple | and      | back-end |          |          |
-|       | > as     | ope      |     >    |          |          |
-|       | > p      | rational |  systems |          |          |
+|       | order  | c        |     or |          | hampered |
+|       | as     | onnected |        |          |          |
+|       | simple | and      | back-end |          |          |
+|       | as     | ope      |        |          |          |
+|       | p      | rational |  systems |          |          |
 |       | ossible: |          |          |          |          |
-|       |          |          |    > not |          |          |
-|       | -        |          |     > c  |          |          |
+|       |          |          |    not |          |          |
+|       | -        |          |     c  |          |          |
 |       |   Search |          | onnected |          |          |
 |       |          |          |          |          |          |
 |       | -        |          | -        |          |          |
 |       |   Select |          |  Select: |          |          |
 |       |          |          |          |          |          |
-|       | -        |          |    > Inf |          |          |
+|       | -        |          |    Inf |          |          |
 |       |   Create |          | ormation |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |        |          |          |
 |       | -        |          | selected |          |          |
-|       |   Update |          |     > is |          |          |
+|       |   Update |          |     is |          |          |
 |       |          |          |          |          |          |
-|       | -        |          |    > not |          |          |
+|       | -        |          |    not |          |          |
 |       |   Delete |          |          |          |          |
-|       |          |          | > shown, |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          | shown, |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  problem |          |          |
-|       |          |          |     > in |          |          |
+|       |          |          |     in |          |          |
 |       |          |          |          |          |          |
-|       |          |          |  > funct |          |          |
+|       |          |          |  funct |          |          |
 |       |          |          | ionality |          |          |
 |       |          |          |          |          |          |
 |       |          |          | -   Crea |          |          |
 |       |          |          | te: Data |          |          |
-|       |          |          |     > is |          |          |
+|       |          |          |     is |          |          |
 |       |          |          |          |          |          |
-|       |          |          |    > not |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |    not |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  stored, |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |        |          |          |
 |       |          |          | database |          |          |
-|       |          |          |     > or |          |          |
+|       |          |          |     or |          |          |
 |       |          |          |          |          |          |
-|       |          |          | > rights |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          | rights |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  problem |          |          |
 |       |          |          |          |          |          |
 |       |          |          | -        |          |          |
 |       |          |          |  Update: |          |          |
 |       |          |          |          |          |          |
-|       |          |          |   > Data |          |          |
-|       |          |          |     > is |          |          |
+|       |          |          |   Data |          |          |
+|       |          |          |     is |          |          |
 |       |          |          |          |          |          |
-|       |          |          |    > not |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |    not |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  stored, |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |        |          |          |
 |       |          |          | database |          |          |
-|       |          |          |     > or |          |          |
+|       |          |          |     or |          |          |
 |       |          |          |          |          |          |
-|       |          |          | > rights |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          | rights |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  problem |          |          |
 |       |          |          |          |          |          |
 |       |          |          | -        |          |          |
 |       |          |          |  Delete: |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |        |          |          |
 |       |          |          | Database |          |          |
-|       |          |          |     > or |          |          |
+|       |          |          |     or |          |          |
 |       |          |          |          |          |          |
-|       |          |          | > rights |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          | rights |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  problem |          |          |
 |       |          |          |          |          |          |
 |       |          |          | -   With |          |          |
 |       |          |          |          |          |          |
-|       |          |          |    > all |          |          |
+|       |          |          |    all |          |          |
 |       |          |          |          |          |          |
-|       |          |          |    > the |          |          |
+|       |          |          |    the |          |          |
 |       |          |          |          |          |          |
-|       |          |          | > above: |          |          |
+|       |          |          | above: |          |          |
 |       |          |          |          |          |          |
-|       |          |          |  > issue |          |          |
+|       |          |          |  issue |          |          |
 |       |          |          |          |          |          |
-|       |          |          |   > with |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |   with |          |          |
+|       |          |          |        |          |          |
 |       |          |          | back-end |          |          |
-|       |          |          |     >    |          |          |
+|       |          |          |        |          |          |
 |       |          |          |  systems |          |          |
 +-------+----------+----------+----------+----------+----------+
 | 6     | Trigger  | External | External | Review   | Testing  |
@@ -4109,12 +3664,12 @@ Smoke test has the following characteristics:
 -   The duration will not be longer than 10 minutes, preferably shorter
 
 -   It is highly repeatable as it build to avoid dependencies on
-    > existing data, previous transaction etc.
+    existing data, previous transaction etc.
 
 -   It is to the point and superficial
 
 -   It does not tell us anything about the quality of the functionality
-    > (merely that it is there and seems to function)
+    (merely that it is there and seems to function)
 
 -   It is mostly automated (as close to 100% as possible)
 
@@ -4125,7 +3680,7 @@ When new configuration is added to the build, we will:
 -   Investigate what this code does and what minimally needs to work
 
 -   Review the existing unit test scripts for candidacy for the smoke
-    > test
+    test
 
 -   Identify functional scripts that need to be created and build them
 
@@ -4142,19 +3697,19 @@ See scope for the type of tests that we will have to design.
 Characteristics of the tests are:
 
 -   Simple: these are not major functional tests, these tests skim the
-    > surface
+    surface
 
 -   Independent: each test should be able to run as an independent unit
 
 -   Fast: each individual test should run no longer than a few seconds
 
 -   Easy to understand: the test objective must be clear and easy to
-    > understand
+    understand
 
 -   Automated: automation is essential for success
 
 -   Parameterized: to provide flexibility in running them against a
-    > variety of environments (like build, test, staging and production)
+    variety of environments (like build, test, staging and production)
 
 Test case aim to isolate:
 
@@ -4181,7 +3736,7 @@ The smoke tests will be executed:
 -   Any time a build is placed in an environment
 
 -   Any time any change is introduced in an environment (code,
-    > configuration, system etc.)
+    configuration, system etc.)
 
 A fully developed smoke test suite can also be (re-)used when the
 application is released in production.
@@ -4189,11 +3744,11 @@ application is released in production.
 In that case, the following caveats must be taken into account:
 
 -   Typically we would need to forego, writing, updating or deleting
-    > information (unless specific test accounts are available for
-    > exactly this purpose)
+    information (unless specific test accounts are available for
+    exactly this purpose)
 
 -   The smoke test will not be a replacement for the business user
-    > production-ready check
+    production-ready check
 
 Data Requirements
 
@@ -4233,31 +3788,30 @@ Regression testing is guided by the following principle: 
 
  
 
-> **Regression Test Principle**
->
-> **Basic assumption(s):**
+**Regression Test Principle**
+**Basic assumption(s):**
 
 -   Systems need to be tested for regression errors after changes.
 
 -   The scope of the regression test is dependent on risk.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Systems will be regression tested to mitigate risk on unintended
-    > errors after changes.
+    errors after changes.
 
 -   Regression tests will be automated where appropriate.
 
 Objectives
 
 -   Ensure that defects have not been introduced or uncovered in
-    > unchanged areas of the software, as a result of changes made
+    unchanged areas of the software, as a result of changes made
 
 -   Create confidence in the solution by making sure that \"everything
-    > still works\"
+    still works\"
 
 -   Through automation relieve the testers from manually running
-    > regression tests
+    regression tests
 
 Expected Benefits
 
@@ -4266,7 +3820,7 @@ Expected Benefits
 -   Support the agile process
 
 -   Build a regression test suite that can be used for the lifetime of
-    > the solution
+    the solution
 
  
 
@@ -4283,7 +3837,7 @@ testing is cut short, optimized or even ignored.
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -4313,7 +3867,7 @@ Guidelines for scope:
 -   Identify unique tests, do not repeat tests
 
 -   Code changes are important but data changes (variations) need to be
-    > considered too
+    considered too
 
 -   Write regression tests for important bug fixes
 
@@ -4328,50 +3882,47 @@ than just regression testing.
 How do we test a modification?  The answer is that four types of testing
 are needed:
 
-> **The unit test**, where the developer who is making the modification
-> checks his or her work.  This testing concerns the internal changes to
-> the source code, data structures, and stored data values. 
->
-> **The modification test**, also called the localized change test. 
-> This testing is done on the fully integrated, new version of the
-> system, and it addresses only the modifications. It can be done by a
-> black-box feature tester, and is driven by the change request or
-> defect report which describes the intended change. In this phase, the
-> goal is to test the direct modifications to the user features.  The
-> externally visible changes are based on the internal changes to the
-> source code, data structures, and stored data values, but these
-> internal changes are usually hidden from the black-box feature
-> testers.  The scope of this testing may include changes to the system
-> and user documentation, impact on system performance, changes to
-> system controls like password authentication, etc.
->
-> **The regional impact test.**  This level of testing goes beyond
-> checking the modification itself, and tests in the perceived
-> high-impact region around the change.  The black-box feature tester
-> needs to have some understanding of the system, what connects to what,
-> in order to identify the likely high-impact region.  This testing is a
-> compromise: it goes beyond testing just the modification, but falls
-> far short of a full-blown regression test.  In this phase, the goal is
-> to test the areas that are likely to be highly influenced by the
-> change(s) , e.g., the immediate modules which directly call to, or are
-> directly called by, the module that has been changed. 
->
-> **The regression test.**  The regression test is broader than the
-> modification test or the regional impact test, and its purpose is to
-> find unintended and unforeseen side effects of the modification.  In
-> regression testing, existing test cases are re-run in areas which
-> should not have been affected by the modification, to see if they
-> still work the same way as before.  Most regression testing is
-> deliberately executed with the complete regression test suite, not
-> just focused on where the modification has occurred. In this phase,
-> the goal is to re-test the entire system after a change or set of
-> changes, to ensure that features which were not intended to change
-> still work the same way as before. This extensive re-test is needed if
-> there is a concern about unintended side effects of the planed
-> changes.  These side effects can include failures in parts of the
-> system which seemingly are unrelated to the change, changes in the way
-> features work, and the re-surfacing of old defects that supposedly had
-> been eradicated.
+**The unit test**, where the developer who is making the modification
+checks his or her work.  This testing concerns the internal changes to
+the source code, data structures, and stored data values. 
+**The modification test**, also called the localized change test. 
+This testing is done on the fully integrated, new version of the
+system, and it addresses only the modifications. It can be done by a
+black-box feature tester, and is driven by the change request or
+defect report which describes the intended change. In this phase, the
+goal is to test the direct modifications to the user features.  The
+externally visible changes are based on the internal changes to the
+source code, data structures, and stored data values, but these
+internal changes are usually hidden from the black-box feature
+testers.  The scope of this testing may include changes to the system
+and user documentation, impact on system performance, changes to
+system controls like password authentication, etc.
+**The regional impact test.**  This level of testing goes beyond
+checking the modification itself, and tests in the perceived
+high-impact region around the change.  The black-box feature tester
+needs to have some understanding of the system, what connects to what,
+in order to identify the likely high-impact region.  This testing is a
+compromise: it goes beyond testing just the modification, but falls
+far short of a full-blown regression test.  In this phase, the goal is
+to test the areas that are likely to be highly influenced by the
+change(s) , e.g., the immediate modules which directly call to, or are
+directly called by, the module that has been changed. 
+**The regression test.**  The regression test is broader than the
+modification test or the regional impact test, and its purpose is to
+find unintended and unforeseen side effects of the modification.  In
+regression testing, existing test cases are re-run in areas which
+should not have been affected by the modification, to see if they
+still work the same way as before.  Most regression testing is
+deliberately executed with the complete regression test suite, not
+just focused on where the modification has occurred. In this phase,
+the goal is to re-test the entire system after a change or set of
+changes, to ensure that features which were not intended to change
+still work the same way as before. This extensive re-test is needed if
+there is a concern about unintended side effects of the planed
+changes.  These side effects can include failures in parts of the
+system which seemingly are unrelated to the change, changes in the way
+features work, and the re-surfacing of old defects that supposedly had
+been eradicated.
 
 **Who is responsible for each type of modification test?**
 
@@ -4389,22 +3940,22 @@ suite. Please see Test Design for the categories of tests that will be
 included in the regression test suite.
 
 1.  Analyze requirements and develop tests for business criticality,
-    > complexity and frequent use. These tests will be marked as
-    > regression test candidates.
+    complexity and frequent use. These tests will be marked as
+    regression test candidates.
 
 2.  Review (on an ongoing basis, basically every build) new and updated
-    > functionality and configuration. This will most likely result in
-    > tests that need to be added to the suite
+    functionality and configuration. This will most likely result in
+    tests that need to be added to the suite
 
 3.  Identify critical defects, test fails and bad fixes for inclusion
 
 4.  From the exploratory testing sessions identify regression test
-    > candidates
+    candidates
 
 5.  Document and first manual test all new tests
 
 6.  Automate identified tests and include them in the automated testing
-    > suite
+    suite
 
 7.  Run the automated regression test suite
 
@@ -4473,19 +4024,19 @@ When considering expanding the regression test suite we will consider
 the following:
 
 -   Does the new test case add unique value? (untested area, new
-    > functionality, new high risk realization)
+    functionality, new high risk realization)
 
 -   Is the new test the \"best\" test for the goal we need to achieve.
 
 -   How much time will the new test add to the execution of the
-    > regression test suite?
+    regression test suite?
 
 -   What are the requirements for the test case to run in the regression
-    > test suite context? (order of execution, test data needed,
-    > date/time requirements etc.)
+    test suite context? (order of execution, test data needed,
+    date/time requirements etc.)
 
 -   Do we have time to create test automation? If not how can we
-    > mitigate the risk of not doing it?
+    mitigate the risk of not doing it?
 
 **Regression Test Suite Maintenance**
 
@@ -4498,47 +4049,47 @@ There are several factors that diminish the effectiveness of the
 regression test suites:
 
 -   The most important among them is when enhancements to the test suite
-    > (addition of tests to the test suites) get out of sync with
-    > respect to the enhancements to the product. When features get
-    > added to the product as part of a Release, there might not be an
-    > equal amount of tests added to adequately test the new
-    > functionality implemented in the Release. This in effect reduces
-    > the functionality coverage achieved by the test suite. 
+    (addition of tests to the test suites) get out of sync with
+    respect to the enhancements to the product. When features get
+    added to the product as part of a Release, there might not be an
+    equal amount of tests added to adequately test the new
+    functionality implemented in the Release. This in effect reduces
+    the functionality coverage achieved by the test suite. 
 
 -   Another factor that affects the **effectiveness** of the test suites
-    > is when tests get added to the suite with a short-term
-    > perspective. One typical scenario is the case where
-    > testers/developers add tests to quickly test a particular
-    > functionality or a small part of the feature that is being
-    > developed for the current Release or to test a least significant
-    > part of a feature or module, mostly as part of their unit testing
-    > efforts. Later, these tests, if not removed from the test suite,
-    > become a liability because of the improper and insufficient
-    > scenarios they test. 
+    is when tests get added to the suite with a short-term
+    perspective. One typical scenario is the case where
+    testers/developers add tests to quickly test a particular
+    functionality or a small part of the feature that is being
+    developed for the current Release or to test a least significant
+    part of a feature or module, mostly as part of their unit testing
+    efforts. Later, these tests, if not removed from the test suite,
+    become a liability because of the improper and insufficient
+    scenarios they test. 
 
 -   A related factor affecting the test suite is the presence
-    > of** redundant tests**. There are many scenarios by which a test
-    > suite can end up with redundant tests or with two sets of tests
-    > that validate almost the same or similar functionality. Testers
-    > might add new tests to validate a feature, even when the same
-    > could be achieved by modifying some of the existing
-    > tests/framework. There might be a case where a feature gets
-    > implemented across Releases. When this happens, the corresponding
-    > tests also get staggered across Releases. It could happen that the
-    > regression test suite would then contain many small tests, each
-    > testing trivial parts of the feature, making the test suite
-    > bulky. 
+    of** redundant tests**. There are many scenarios by which a test
+    suite can end up with redundant tests or with two sets of tests
+    that validate almost the same or similar functionality. Testers
+    might add new tests to validate a feature, even when the same
+    could be achieved by modifying some of the existing
+    tests/framework. There might be a case where a feature gets
+    implemented across Releases. When this happens, the corresponding
+    tests also get staggered across Releases. It could happen that the
+    regression test suite would then contain many small tests, each
+    testing trivial parts of the feature, making the test suite
+    bulky. 
 
 -   In most cases, as the product goes on adding new features, the
-    > regression **test suite gets heavy** due to the tests that get
-    > added to it over a period of time. This will pose new problems.
-    > The entire test set might take a longer time now to complete all
-    > tests. This will mean that defect identification takes more time,
-    > and so also the defect verification after a fix. For example, if
-    > it takes a week for the testers to complete all the automated
-    > tests for a Release, then it is worth spending time to analyze new
-    > ways and means of lessening the time taken for execution and
-    > analysis of these tests. 
+    regression **test suite gets heavy** due to the tests that get
+    added to it over a period of time. This will pose new problems.
+    The entire test set might take a longer time now to complete all
+    tests. This will mean that defect identification takes more time,
+    and so also the defect verification after a fix. For example, if
+    it takes a week for the testers to complete all the automated
+    tests for a Release, then it is worth spending time to analyze new
+    ways and means of lessening the time taken for execution and
+    analysis of these tests. 
 
 **Summary**
 
@@ -4556,24 +4107,24 @@ effectiveness of the regression test suites:
  We will counter the above factors by:
 
 -   Implementing a good tracking mechanism between the feature and its
-    > corresponding tests in Zephyr
+    corresponding tests in Zephyr
 
 -   Monitoring addition of tests to the tests suite
 
 -   Optimizing tests when they get bulky
 
 -   Evaluating different Regression Test Selection strategies to avoid
-    > time and effort overrun for a Release, but maintaining the minimal
-    > coverage guidelines
+    time and effort overrun for a Release, but maintaining the minimal
+    coverage guidelines
 
 -   Periodically cleaning of tests and test suite
 
 -   Planning and explore changes in the regression test suite framework
-    > if there are major changes in the product focus (reacting as part
-    > of our agile methodology)
+    if there are major changes in the product focus (reacting as part
+    of our agile methodology)
 
 -   Using metrics to evaluate the effectiveness of the test suite
-    > (defect find/miss rates, run time etc.)
+    (defect find/miss rates, run time etc.)
 
 Test Execution
 
@@ -4587,7 +4138,7 @@ The automated regression tests will be executed:
 -   Any time a build is placed in an environment
 
 -   Any time any change is introduced in an environment (code,
-    > configuration, system etc.)
+    configuration, system etc.)
 
 -   In the Test environments
 
@@ -4627,8 +4178,7 @@ undertaken for Performance Testing.
 
 The risk analysis is attached to this page.
 
-\<\<PPR Performance Risks Worksheet.xlsx\>\>
-
+\<\<PPR Performance Risks Worksheet.xlsx\
 Definition
 
 Performance testing is a type of testing intended to determine the
@@ -4658,7 +4208,7 @@ Expected Benefits
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -4699,12 +4249,12 @@ effectiveness of application security controls. 
 Objectives
 
 -   Actively analyze the application for any weaknesses, technical
-    > flaws, or vulnerabilities. Any security issues that are found will
-    > be presented to the system owner, together with an assessment of
-    > the impact, a proposal for mitigation or a technical solution.
+    flaws, or vulnerabilities. Any security issues that are found will
+    be presented to the system owner, together with an assessment of
+    the impact, a proposal for mitigation or a technical solution.
 
 -   Seek to eliminate the risk of exposing member data to non-authorized
-    > parties.
+    parties.
 
 Expected Benefits
 
@@ -4721,7 +4271,7 @@ Expected Benefits
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   **Role **                    **R**   **A**   **S**   **C**   **I**
   ---------------------------- ------- ------- ------- ------- -------
@@ -4746,7 +4296,7 @@ The system scope of the security test is:
 -   Installation/Configuration of the solution
 
 -   Installation and configuration of the physical/virtual
-    > infrastructure
+    infrastructure
 
 Approach
 
@@ -4765,18 +4315,18 @@ Additionally the following activities could form part of the engagement
 but technically fall outside of the security testing scope:
 
 -   **Security Audit** - Driven by an Audit / Risk function to look at a
-    > specific control or compliance issue. Characterised by a narrow
-    > scope, this type of engagement could make use of any of the
-    > earlier approaches discussed (vulnerability assessment, security
-    > assessment, penetration test).
+    specific control or compliance issue. Characterised by a narrow
+    scope, this type of engagement could make use of any of the
+    earlier approaches discussed (vulnerability assessment, security
+    assessment, penetration test).
 
 -   **Security Review** - Verification that industry or internal
-    > security standards have been applied to system components or
-    > product. This is typically completed through gap analysis and
-    > utilises build / code reviews or by reviewing design documents and
-    > architecture diagrams. This activity does not utilize any of the
-    > earlier approaches (Vulnerability Assessment, Security Assessment,
-    > Penetration Test, Security Audit)
+    security standards have been applied to system components or
+    product. This is typically completed through gap analysis and
+    utilises build / code reviews or by reviewing design documents and
+    architecture diagrams. This activity does not utilize any of the
+    earlier approaches (Vulnerability Assessment, Security Assessment,
+    Penetration Test, Security Audit)
 
 **Security related activities by the development and release team**
 
@@ -4871,7 +4421,7 @@ mechanisms such as:
 -   Tiered System Segregation
 
 -   Legislative and standards compliance (including Privacy, Government
-    > and Industry standards)
+    and Industry standards)
 
  
 
@@ -4960,18 +4510,18 @@ Static code reviews validate the code against a set of checklists,
 including:
 
 -   Business requirements for availability, confidentiality, and
-    > integrity.
+    integrity.
 
 -   OWASP Guide or Top 10 Checklists for technical exposures (depending
-    > on the depth of the review).
+    on the depth of the review).
 
 -   Specific issues relating to the language or framework in use, such
-    > as the Scarlet paper for PHP or Microsoft Secure Coding checklists
-    > for ASP.NET.
+    as the Scarlet paper for PHP or Microsoft Secure Coding checklists
+    for ASP.NET.
 
 -   Any industry specific requirements, such as Sarbanes-Oxley 404,
-    > COPPA, ISO/IEC 27002, APRA, HIPAA, Visa Merchant guidelines, or
-    > other regulatory regimes.
+    COPPA, ISO/IEC 27002, APRA, HIPAA, Visa Merchant guidelines, or
+    other regulatory regimes.
 
 In terms of return on resources invested (mostly time), static code
 reviews produce far higher quality returns than any other security
@@ -5040,14 +4590,14 @@ management process.
 Process and Schedule for Secure Code reviews and Tests
 
 -   A ticket in JIRA will be created for each sprint, and will document
-    > the security tasks to be completed for that sprint.
+    the security tasks to be completed for that sprint.
 
 -   Additionally, in every second sprint, there will be a dedicated 1-2
-    > day(s) session to review code for secure code and update if
-    > required.
+    day(s) session to review code for secure code and update if
+    required.
 
 -   Appropriate compliance will be achieved before the January release
-    > date.
+    date.
 
 Schedule and tools that will be used:
 
@@ -5092,7 +4642,7 @@ This means that the following is identical:
 -   Authentication mechanisms
 
 -   Tools and utilities that will be run on the platforms during
-    > production
+    production
 
 -   Levels of encryption
 
@@ -5135,13 +4685,13 @@ be run repeatedly, at any time of day.
 Specifically test automation aims to:
 
 -   Automate all Unit and Integration tests, so that they can be run as
-    > part of the automated build process (CI) (Not applicable to PPR)
+    part of the automated build process (CI) (Not applicable to PPR)
 
 -   Provide automated functional tests, that will be used to regression
-    > test the solution on a ongoing basis
+    test the solution on a ongoing basis
 
 -   Provide in depth testing in cases where a large amount of variants
-    > need to be tested
+    need to be tested
 
 -   Enable performance testing
 
@@ -5162,15 +4712,15 @@ The following benefits are expected from test automation:
 -   Ability to do more testing in the same amount of time
 
 -   Free up the testers to focus on complex test situations and expand
-    > on the test design
+    on the test design
 
 -   Build up of a body of tests that will repeatedly runs over the
-    > lifetime of the application
+    lifetime of the application
 
 Responsibilities
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
 +----------------------------+-------+-------+-------+-------+-------+
 | **Role **                  | **R** | **A** | **S** | **C** | **I** |
@@ -5463,7 +5013,7 @@ Test automation will create several Automated test Suites, they are:
 -   Smoke Test Suite
 
 -   Functional Test Suite, containing additional tests, in-depth tests
-    > and multiple variations tests
+    and multiple variations tests
 
 Test Design
 
@@ -5474,26 +5024,26 @@ However, there are additions to the test design that automation can and
 will make. These additions are:
 
 -   Repetition: Automated tests can repeat certain actions for a long
-    > time. This could potentially trigger errors that are hard or even
-    > impossible to find when doing manual tests.
+    time. This could potentially trigger errors that are hard or even
+    impossible to find when doing manual tests.
 
 -   Variations: Once an automated test has been defined it can be fed
-    > with data variations offering the unique possibility to completely
-    > explore all possibilities. This is something that a manual tester
-    > would simply not have the time for.
+    with data variations offering the unique possibility to completely
+    explore all possibilities. This is something that a manual tester
+    would simply not have the time for.
 
 -   Stress: Automated tests can put quite a bit of stress on a system,
-    > particularly if several suites are run in parallel.
+    particularly if several suites are run in parallel.
 
 -   Low value tests: Once an automated test is defined it can be run
-    > over and over for almost no effort and cost. That means that even
-    > low value tests (tests that a manual tester would skip) could be
-    > included in the test suite.
+    over and over for almost no effort and cost. That means that even
+    low value tests (tests that a manual tester would skip) could be
+    included in the test suite.
 
 -   Extended Checking: An automated test can include system calls to
-    > different platforms (database, external systems) to check if the
-    > result observed is correct. A manual tester would spend
-    > significantly more time doing the same.
+    different platforms (database, external systems) to check if the
+    result observed is correct. A manual tester would spend
+    significantly more time doing the same.
 
 Test Execution
 
@@ -5504,17 +5054,17 @@ Test automation execution can and will also be manually triggered by:
     -   Test the Test Suite (during development of the test suites)
 
     -   Run specialized automated tests that are not part of the Smoke
-        > test or regression test suite
+        test or regression test suite
 
     -   Run any test suite when the need is there
 
 -   Agile Tester to:
 
     -   Test a specific Test Script (during development of the test
-        > script)
+        script)
 
     -   Run specialized automated tests that are not part of the Smoke
-        > test or regression test suite
+        test or regression test suite
 
     -   Run any test suite or subset when the need is there
 
@@ -5526,19 +5076,19 @@ Data Requirements
 Test Automation needs data that:
 
 -   Is uniquely designed/selected for the type of test automation. This
-    > means that we need sets for: Unit Testing, Regression Testing,
-    > Smoke Testing and any other test suites.
+    means that we need sets for: Unit Testing, Regression Testing,
+    Smoke Testing and any other test suites.
 
 -   Is restorable so that the test automation can run with the same data
-    > in the same state over and over.
+    in the same state over and over.
 
 -   Many PPR business functions are date dependent, to obtain
-    > repeatability of test execution we need to create our data from
-    > scratch to that we can control the order of activities.
+    repeatability of test execution we need to create our data from
+    scratch to that we can control the order of activities.
 
 -   Will **[*only* ]{.underline}**be used for its intended purpose. This
-    > means that we need separate data sets for development of test
-    > automation and test execution.
+    means that we need separate data sets for development of test
+    automation and test execution.
 
 Infrastructure Requirements
 
@@ -5582,13 +5132,12 @@ Weekly reports are intended for project management and client.
 
  
 
-> **Caveat**
->
-> Weekly reports represent a snapshot at the time of generation. Online
-> status through JIRA and Zephyr might no longer reflect the weekly
-> report as this information is always current. In case of concerns, it
-> is always recommended to contact the project manager for
-> clarification.
+**Caveat**
+Weekly reports represent a snapshot at the time of generation. Online
+status through JIRA and Zephyr might no longer reflect the weekly
+report as this information is always current. In case of concerns, it
+is always recommended to contact the project manager for
+clarification.
 
 Objectives
 
@@ -5605,18 +5154,18 @@ Key Guidelines
 -   All reporting will be automatically generated from Zephyr and JIRA
 
 -   Weekly reports will summarize and condense the automatic reports
-    > from Zephyr and JIRA
+    from Zephyr and JIRA
 
 Key Caveats
 
 -   Weekly reports will have a very short useful lifespan giving the
-    > high pace of change in an agile project
+    high pace of change in an agile project
 
 -   On demand reports from Zephyr are only available through the test
-    > team
+    team
 
 -   Continuous status dashboard might lack the context required for
-    > proper interpretation by non-project members
+    proper interpretation by non-project members
 
 Planned reports
 
@@ -5646,33 +5195,33 @@ Planned reports
 |                |               |                |                |
 |                |               |                | -   Build      |
 |                |               |                |                |
-|                |               |                | > Verification |
-|                |               |                |     > Test     |
-|                |               |                |     > (BVT)    |
-|                |               |                |     > runs     |
+|                |               |                | Verification |
+|                |               |                |     Test     |
+|                |               |                |     (BVT)    |
+|                |               |                |     runs     |
 |                |               |                |                |
 |                |               |                | -   Automated  |
-|                |               |                |     > Unit     |
-|                |               |                |     > tests    |
+|                |               |                |     Unit     |
+|                |               |                |     tests    |
 |                |               |                |                |
 |                |               |                | -   Automated  |
 |                |               |                |                |
-|                |               |                |   > Functional |
-|                |               |                |     > tests    |
+|                |               |                |   Functional |
+|                |               |                |     tests    |
 |                |               |                |                |
 |                |               |                | -              |
 |                |               |                |    Exploratory |
-|                |               |                |     > Testing  |
-|                |               |                |     > Sessions |
+|                |               |                |     Testing  |
+|                |               |                |     Sessions |
 |                |               |                |                |
 |                |               |                | -   Other      |
-|                |               |                |     > Manual   |
-|                |               |                |     > Testing  |
+|                |               |                |     Manual   |
+|                |               |                |     Testing  |
 |                |               |                |                |
 |                |               |                | -   User       |
 |                |               |                |                |
-|                |               |                |   > Acceptance |
-|                |               |                |     > Testing  |
+|                |               |                |   Acceptance |
+|                |               |                |     Testing  |
 +----------------+---------------+----------------+----------------+
 | Test Activity  | Sprint End    | Test Lead      | Summarization  |
 | Wrapup         |               |                | of results,    |
@@ -5704,20 +5253,18 @@ Test data needs to conform to the following characteristics:
 -   It allows the tests to be executed
 
 -   It can be adapted/changed/copied and deleted to support multiple
-    > test cycles
+    test cycles
 
 -   It allows for time and date shifting
 
 -   It does not unnecessarily expose the testers to private and/or
-    > sensitive data
+    sensitive data
 
  
 
-> **Test Data Principle**
->
->  
->
-> **Basic assumption(s):**
+**Test Data Principle**
+ 
+**Basic assumption(s):**
 
 -   Testing uses test data.
 
@@ -5727,13 +5274,13 @@ Test data needs to conform to the following characteristics:
 
 -   Developers are responsible for the creation of Unit Test Data.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The test environments contain either fictional test data or
-    > masked/de-identified production data.
+    masked/de-identified production data.
 
 -   The Business/User Acceptance Test environment contains production
-    > data or masked/de-identified production data.
+    data or masked/de-identified production data.
 
 -   Production data will not be used for testing outside of PPR.
 
@@ -5768,27 +5315,27 @@ We will adhere to our defined defect management principles:
 
  
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Defects need to be managed.
 
 -   There will be *one* defect management tool used during analysis,
-    > design, development and testing.
+    design, development and testing.
 
 -   The defect management tool, user procedures and reviews will enforce
-    > consistent, high quality defect reporting.
+    consistent, high quality defect reporting.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Defect Management will follow the standard defect management
-    > process.
+    process.
 
 -   All defects will be reported in and managed by a central defect
-    > management tool.
+    management tool.
 
 -   All personnel involved in the creation, roll-out and sustainment of
-    > a solution will have access to the central tool and will be able
-    > to review the project\'s defects.
+    a solution will have access to the central tool and will be able
+    to review the project\'s defects.
 
 Objectives
 
@@ -5809,7 +5356,7 @@ Key Guidelines
 -   The test lead is the facilitator of the defect management process
 
 -   All defects are reviewed, categorized and assigned, this is a
-    > cooperative exercise
+    cooperative exercise
 
 -   Defect management has several specific roles defined
 
@@ -5826,18 +5373,18 @@ Key Guidelines
 Key Caveats
 
 -   The number of defect reports is not immediately correlated with the
-    > quality of the SUT
+    quality of the SUT
 
 -   Not all defects will be fixed at the end of a sprint
 
 -   Not all defects are valid, unique or worth the project\'s time, they
-    > will be closed with reasoning included
+    will be closed with reasoning included
 
 -   A defect observed without a defect report is a missed opportunity
-    > for improvement
+    for improvement
 
 -   Defect volumes are not to be used to assess tester and developer
-    > productivity
+    productivity
 
  
 
@@ -5858,7 +5405,7 @@ There are three elements involved in the rating of defects, they are:
 -   **Symptom**: What happened? What went wrong?
 
 -   **Severity**: How does the found defect impact the functionality,
-    > quality, risk etc.
+    quality, risk etc.
 
 -   **Priority**: How quickly does this defect need to be fixed
 
@@ -5872,7 +5419,7 @@ rule, in this case the process is meant for consistency and guidance.
 Who is responsible for setting\....?
 
 [RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/BCBid/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
   ** **                 **Symptom**   **Severity**   **Priority**
   --------------------- ------------- -------------- --------------
@@ -6023,7 +5570,7 @@ We are guided by the following testing principles:
 **Test Principle:**
 
 -   Testers will map all test cases back to requirements to ensure they
-    > have all been covered by test cases.
+    have all been covered by test cases.
 
 -   Test Lead will report progress based on requirements coverage.
 
@@ -6044,15 +5591,15 @@ We are guided by the following testing principles:
 -   Quality Tests are executed by the quality testers.
 
 -   Acceptance Tests are executed by the Acceptance testers and Business
-    > Users.
+    Users.
 
 Objectives
 
 -   Provide continuous insight in the state of the application under
-    > test
+    test
 
 -   Detect trends, failure and fix rates to allow management of the test
-    > process
+    process
 
 -   Provide progress reports
 
@@ -6065,17 +5612,17 @@ Key Guidelines
 -   All tests and results will be documented in Zephyr
 
 -   Dashboards showing the test progress and results will be available
-    > in Jira
+    in Jira
 
 -   All reporting will be automatically generated from Zephyr/Jira
 
 Key Caveats
 
 -   High quality test reporting depends on consistent and disciplined
-    > usage of the test management tool and Jira
+    usage of the test management tool and Jira
 
 -   With continuous reporting, confusion can emerge about the readiness
-    > of a testing activity or cycle
+    of a testing activity or cycle
 
  
 
@@ -6094,25 +5641,23 @@ environment principle:
 
  
 
-> **Test Environment Principle**
->
->  
->
-> **Basic assumption(s):**
+**Test Environment Principle**
+ 
+**Basic assumption(s):**
 
 -   All developed and configured software must be tested.
 
 -   Test environments are available and configured.
 
 -   Multiple projects/activities may need to use the same test
-    > environments.
+    environments.
 
 -   Usage of the same environment by different project/activity can
-    > cause interference.
+    cause interference.
 
 -   Test environment resource conflicts need to be addressed.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Testing uses dedicated Test Environments.
 
@@ -6124,8 +5669,8 @@ environment principle:
 
 -   Facilitating the creation of new test environments.
 
-> The project and the internal Testing Services group owns the Test
-> environments.
+The project and the internal Testing Services group owns the Test
+environments.
 
  
 
@@ -6327,7 +5872,7 @@ June 27, 2019
 |                 |                 | ps://citz.sp.go |           |
 |                 |                 | v.bc.ca/sites/S |           |
 |                 |                 | hared/Project/B |           |
-|                 |                 | idR/BCBid/CONTR |           |
+|                 |                 | idR/PPR/CONTR |           |
 |                 |                 | ACT%20%20SCHEDU |           |
 |                 |                 | LE/Testing/Reso |           |
 |                 |                 | urces/Testing%2 |           |
@@ -6463,7 +6008,7 @@ these roles are:
 
 -   Business Tester
 
->  
+ 
 
   **Experience Level**                                                                                                                           
   ---------------------------------------- ------------------- -------------------- ----------------------------------------------------------- -------------------------
@@ -6501,8 +6046,8 @@ June 27, 2019
 
 At the highest level the DoD  for testing is when:** **
 
-> **\"All planned testing tasks have been completed and no open defects
-> are remaining.\"**
+**\"All planned testing tasks have been completed and no open defects
+are remaining.\"**
 
 How do we determine Done?
 
@@ -6575,8 +6120,7 @@ activities that can be realistically committed by the test team to be
 completed at each sprint.
 
 \- See more
-at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-definition-of-done-(dod)#sthash.mCx6mHl7.dpuf>
-
+at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-definition-of-done-(dod)#sthash.mCx6mHl7.dpuf
  
 
 +----------------+----------------+----------------+----------------+
@@ -6586,394 +6130,394 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |                | sponsibility** |                |
 +================+================+================+================+
 | **Unit Test**  | -   All Unit   | No/iValua      |                |
-|                |     > Tests    |                |                |
-|                |     > are      |                |                |
+|                |     Tests    |                |                |
+|                |     are      |                |                |
 |                |                |                |                |
-|                |    > automated |                |                |
+|                |    automated |                |                |
 |                |                |                |                |
 |                | -   All Unit   |                |                |
-|                |     > Tests    |                |                |
-|                |     > Pass     |                |                |
+|                |     Tests    |                |                |
+|                |     Pass     |                |                |
 +----------------+----------------+----------------+----------------+
 | **Functional   | -   All        | Yes/CGI &      | Minimum level  |
-| Test**         |     > priority | Province       | of done.       |
-|                |     > 1 and 1  |                | Failed test    |
-|                |     > test     |                | cases of lower |
-|                |     > cases    |                | priority will  |
-|                |     > Pass     |                | have to be     |
+| Test**         |     priority | Province       | of done.       |
+|                |     1 and 1  |                | Failed test    |
+|                |     test     |                | cases of lower |
+|                |     cases    |                | priority will  |
+|                |     Pass     |                | have to be     |
 |                |                |                | added to the   |
 |                | -   All        |                | project        |
-|                |     > priority |                | backlog.       |
-|                |     > 1 and 2  |                |                |
-|                |     > test     |                |                |
-|                |     > cases    |                |                |
-|                |     > have     |                |                |
-|                |     > been     |                |                |
+|                |     priority |                | backlog.       |
+|                |     1 and 2  |                |                |
+|                |     test     |                |                |
+|                |     cases    |                |                |
+|                |     have     |                |                |
+|                |     been     |                |                |
 |                |                |                |                |
-|                |    > automated |                |                |
+|                |    automated |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
 |                |                |                |                |
-|                |      > (fixed) |                |                |
+|                |      (fixed) |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
-|                |         > (not |                |                |
+|                |         (not |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |   -   Deferred |                |                |
-|                |         > (on  |                |                |
-|                |         > the  |                |                |
+|                |         (on  |                |                |
+|                |         the  |                |                |
 |                |                |                |                |
-|                |     > backlog) |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **User         | -   All        | Yes/Province   |                |
-| Acceptance     |     > priority |                |                |
-| Test**         |     > 1 and 2  |                |                |
-|                |     > test     |                |                |
-|                |     > cases    |                |                |
-|                |     > Pass     |                |                |
+| Acceptance     |     priority |                |                |
+| Test**         |     1 and 2  |                |                |
+|                |     test     |                |                |
+|                |     cases    |                |                |
+|                |     Pass     |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
 |                |                |                |                |
-|                |      > (fixed) |                |                |
+|                |      (fixed) |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
-|                |         > (not |                |                |
+|                |         (not |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |   -   Deferred |                |                |
-|                |         > (on  |                |                |
-|                |         > the  |                |                |
+|                |         (on  |                |                |
+|                |         the  |                |                |
 |                |                |                |                |
-|                |     > backlog) |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Regression   | -   All        | Yes/CGI and    | This activity  |
 | Test**         |                | Province       | needs to be    |
-|                |   > identified |                | successful. A  |
+|                |   identified |                | successful. A  |
 |                |                |                | regression     |
-|                |   > regression |                | test suite     |
-|                |     > test     |                | will contain a |
-|                |     > cases    |                | subset of all  |
-|                |     > have     |                | other tests.   |
-|                |     > been     |                |                |
+|                |   regression |                | test suite     |
+|                |     test     |                | will contain a |
+|                |     cases    |                | subset of all  |
+|                |     have     |                | other tests.   |
+|                |     been     |                |                |
 |                |                |                |                |
-|                |    > automated |                |                |
+|                |    automated |                |                |
 |                |                |                |                |
 |                | -   All test   |                |                |
-|                |     > cases    |                |                |
-|                |     > Pass     |                |                |
+|                |     cases    |                |                |
+|                |     Pass     |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                | -   Closed     |                |                |
-|                |     > (fixed)  |                |                |
+|                |     (fixed)  |                |                |
 +----------------+----------------+----------------+----------------+
 | **Security     | -   Security   | Yes/CGI and    | It might be    |
-| Test**         |     > testing  | Province       | that security  |
-|                |     > has been |                | testing is not |
+| Test**         |     testing  | Province       | that security  |
+|                |     has been |                | testing is not |
 |                |                |                | a planned      |
-|                |    > performed |                | activity in    |
+|                |    performed |                | activity in    |
 |                |                |                | every sprint.  |
 |                | -   All        |                |                |
-|                |     > critical |                |                |
-|                |     > defects  |                |                |
-|                |     > have     |                |                |
-|                |     > been     |                |                |
-|                |     > fixed    |                |                |
+|                |     critical |                |                |
+|                |     defects  |                |                |
+|                |     have     |                |                |
+|                |     been     |                |                |
+|                |     fixed    |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                | -   Closed     |                |                |
-|                |     > (fixed)  |                |                |
+|                |     (fixed)  |                |                |
 |                |                |                |                |
 |                | -   Closed     |                |                |
-|                |     > (not     |                |                |
+|                |     (not     |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                | -   Deferred   |                |                |
-|                |     > (on the  |                |                |
-|                |     > backlog) |                |                |
+|                |     (on the  |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Integration  | -   All test   | Yes/iValua,    | As the         |
-| Test**         |     > cases    | CGI and        | integration    |
-|                |     > Pass     | Province       | components are |
+| Test**         |     cases    | CGI and        | integration    |
+|                |     Pass     | Province       | components are |
 |                |                |                | the key        |
 |                | -   All test   |                | enabler for    |
-|                |     > cases    |                | the built      |
-|                |     > have     |                | functionality, |
-|                |     > been     |                | we do need a   |
+|                |     cases    |                | the built      |
+|                |     have     |                | functionality, |
+|                |     been     |                | we do need a   |
 |                |                |                | full pass and  |
-|                |    > automated |                | automation.    |
+|                |    automated |                | automation.    |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                | -   Closed     |                |                |
-|                |     > (fixed)  |                |                |
+|                |     (fixed)  |                |                |
 |                |                |                |                |
 |                | -   Closed     |                |                |
-|                |     > (not     |                |                |
+|                |     (not     |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                | -   Deferred   |                |                |
-|                |     > (on the  |                |                |
-|                |     > backlog) |                |                |
+|                |     (on the  |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **System       | -   All        | Yes/iValua,    |                |
-| Test**         |     > priority | CGI            |                |
-|                |     > 1 and 2  |                |                |
-|                |     > test     |                |                |
-|                |     > cases    |                |                |
-|                |     > Pass     |                |                |
+| Test**         |     priority | CGI            |                |
+|                |     1 and 2  |                |                |
+|                |     test     |                |                |
+|                |     cases    |                |                |
+|                |     Pass     |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
-|                |     > priority |                |                |
-|                |     > 1 and 2  |                |                |
-|                |     > test     |                |                |
+|                |     priority |                |                |
+|                |     1 and 2  |                |                |
+|                |     test     |                |                |
 |                |                |                |                |
-|                |    > scenarios |                |                |
-|                |     > have     |                |                |
-|                |     > been     |                |                |
+|                |    scenarios |                |                |
+|                |     have     |                |                |
+|                |     been     |                |                |
 |                |                |                |                |
-|                |    > automated |                |                |
+|                |    automated |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
 |                |                |                |                |
-|                |      > (fixed) |                |                |
+|                |      (fixed) |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
-|                |         > (not |                |                |
+|                |         (not |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |   -   Deferred |                |                |
-|                |         > (on  |                |                |
-|                |         > the  |                |                |
+|                |         (on  |                |                |
+|                |         the  |                |                |
 |                |                |                |                |
-|                |     > backlog) |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Smoke Test** | -   Smoke test | Yes/All        | A failed smoke |
-|                |     > passes   |                | test would     |
-|                |     > 100%     |                | mean that the  |
+|                |     passes   |                | test would     |
+|                |     100%     |                | mean that the  |
 |                |                |                | solution does  |
 |                | -   No         |                | not run.       |
-|                |     >          |                |                |
+|                |              |                |                |
 |                |  open/deferred |                |                |
-|                |     > defects  |                |                |
-|                |     > allowed  |                |                |
+|                |     defects  |                |                |
+|                |     allowed  |                |                |
 +----------------+----------------+----------------+----------------+
 | **Performance  | -   All        | Yes/iValua &   | It might be    |
-| Test**         |     > priority | CGI            | that           |
-|                |     > 1 and 2  |                | performance    |
+| Test**         |     priority | CGI            | that           |
+|                |     1 and 2  |                | performance    |
 |                |                |                | testing is not |
-|                |  > performance |                | a planned      |
-|                |     > goals    |                | activity in    |
-|                |     > are      |                | every sprint.  |
-|                |     > reached  |                |                |
+|                |  performance |                | a planned      |
+|                |     goals    |                | activity in    |
+|                |     are      |                | every sprint.  |
+|                |     reached  |                |                |
 |                |                |                |                |
 |                | -              |                |                |
 |                |    Performance |                |                |
-|                |     > Test     |                |                |
-|                |     > Scripts  |                |                |
-|                |     > have     |                |                |
-|                |     > been     |                |                |
-|                |     > created  |                |                |
-|                |     > and      |                |                |
-|                |     > executed |                |                |
+|                |     Test     |                |                |
+|                |     Scripts  |                |                |
+|                |     have     |                |                |
+|                |     been     |                |                |
+|                |     created  |                |                |
+|                |     and      |                |                |
+|                |     executed |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
 |                |                |                |                |
-|                |    > resulting |                |                |
-|                |     > defects  |                |                |
-|                |     > are:     |                |                |
+|                |    resulting |                |                |
+|                |     defects  |                |                |
+|                |     are:     |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
 |                |                |                |                |
-|                |      > (fixed) |                |                |
+|                |      (fixed) |                |                |
 |                |                |                |                |
 |                |     -   Closed |                |                |
-|                |         > (not |                |                |
+|                |         (not |                |                |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |   -   Deferred |                |                |
-|                |         > (on  |                |                |
-|                |         > the  |                |                |
+|                |         (on  |                |                |
+|                |         the  |                |                |
 |                |                |                |                |
-|                |     > backlog) |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Test         | -   All test   | Maybe          | Test           |
 | Automation**   |                |                | automation is  |
-|                |   > automation |                | a key enabler, |
-|                |     > tasks    |                | which will     |
-|                |     > have     |                | allow the      |
-|                |     > been     |                | project to     |
-|                |     > executed |                | keep moving    |
+|                |   automation |                | a key enabler, |
+|                |     tasks    |                | which will     |
+|                |     have     |                | allow the      |
+|                |     been     |                | project to     |
+|                |     executed |                | keep moving    |
 |                |                |                | forward        |
-|                |    > resulting |                | through the    |
-|                |     > in:      |                | sprints. If    |
+|                |    resulting |                | through the    |
+|                |     in:      |                | sprints. If    |
 |                |                |                | not finished   |
 |                |                |                | the project    |
 |                |  -   Automated |                | will incur     |
 |                |                |                | issues and     |
-|                |     > Function |                | challenges     |
+|                |     Function |                | challenges     |
 |                | al/Integration |                | during later   |
 |                |                |                | sprints and/or |
-|                |        > Tests |                | post release   |
+|                |        Tests |                | post release   |
 |                |                |                | maintenance.   |
 |                |                |                |                |
 |                |  -   Automated |                |                |
 |                |                |                |                |
-|                |       > System |                |                |
+|                |       System |                |                |
 |                |                |                |                |
-|                |        > Tests |                |                |
+|                |        Tests |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |  -   Automated |                |                |
 |                |                |                |                |
-|                |   > Regression |                |                |
-|                |         > Test |                |                |
+|                |   Regression |                |                |
+|                |         Test |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |   -   Scripted |                |                |
 |                |                |                |                |
-|                |  > performance |                |                |
+|                |  performance |                |                |
 |                |                |                |                |
-|                |        > tests |                |                |
+|                |        tests |                |                |
 |                |                |                |                |
 |                |                |                |                |
 |                |    -   Updated |                |                |
-|                |         > test |                |                |
+|                |         test |                |                |
 |                |                |                |                |
-|                |   > automation |                |                |
-|                |         > run  |                |                |
-|                |         > book |                |                |
+|                |   automation |                |                |
+|                |         run  |                |                |
+|                |         book |                |                |
 +----------------+----------------+----------------+----------------+
 | **Defects**    | -   *          | Yes/ ALL       | At the end of  |
 |                | *All** defects |                | the sprint     |
-|                |     > have     |                | there will be  |
-|                |     > been     |                | no open (new,  |
-|                |     > reviewed |                | in progress,   |
-|                |     > and      |                | re-opened,     |
+|                |     have     |                | there will be  |
+|                |     been     |                | no open (new,  |
+|                |     reviewed |                | in progress,   |
+|                |     and      |                | re-opened,     |
 |                |                |                | failed)        |
-|                |    > addressed |                | defects.       |
+|                |    addressed |                | defects.       |
 |                |                |                |                |
 |                | -   All        |                | Defects are    |
 |                |                |                | either closed  |
-|                |    > resulting |                | (no action     |
-|                |     > defects  |                | necessary) or  |
-|                |     > are:     |                | deferred and   |
+|                |    resulting |                | (no action     |
+|                |     defects  |                | necessary) or  |
+|                |     are:     |                | deferred and   |
 |                |                |                | entered in the |
 |                | -   Closed     |                | project        |
-|                |     > (fixed)  |                | backlog. The   |
+|                |     (fixed)  |                | backlog. The   |
 |                |                |                | deferral is    |
 |                | -   Closed     |                | decided by the |
-|                |     > (not     |                | team.          |
+|                |     (not     |                | team.          |
 |                |                |                |                |
-|                |    > relevant) |                |                |
+|                |    relevant) |                |                |
 |                |                |                |                |
 |                | -   Deferred   |                |                |
-|                |     > (on the  |                |                |
-|                |     > backlog) |                |                |
+|                |     (on the  |                |                |
+|                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Test         | -   All test   | Yes/Roland     |                |
-| Management     |     > plans    |                |                |
-| (Zephyr)**     |     > are      |                |                |
+| Management     |     plans    |                |                |
+| (Zephyr)**     |     are      |                |                |
 |                |                |                |                |
-|                |    > finalized |                |                |
-|                |     > and      |                |                |
-|                |     > closed   |                |                |
+|                |    finalized |                |                |
+|                |     and      |                |                |
+|                |     closed   |                |                |
 |                |                |                |                |
 |                | -   All        |                |                |
-|                |     > reports  |                |                |
-|                |     > have     |                |                |
-|                |     > been     |                |                |
+|                |     reports  |                |                |
+|                |     have     |                |                |
+|                |     been     |                |                |
 |                |                |                |                |
-|                |    > generated |                |                |
+|                |    generated |                |                |
 |                |                |                |                |
 |                | -   The        |                |                |
 |                |                |                |                |
-|                |   > activities |                |                |
-|                |     > for the  |                |                |
-|                |     > current  |                |                |
+|                |   activities |                |                |
+|                |     for the  |                |                |
+|                |     current  |                |                |
 |                |                |                |                |
-|                |    > milestone |                |                |
-|                |     > have     |                |                |
+|                |    milestone |                |                |
+|                |     have     |                |                |
 |                |                |                |                |
-|                |    > concluded |                |                |
+|                |    concluded |                |                |
 |                |                |                |                |
 |                | -   The work   |                |                |
-|                |     > for this |                |                |
-|                |     > cycle    |                |                |
-|                |     > has been |                |                |
-|                |     > locked   |                |                |
-|                |     > and      |                |                |
-|                |     > archived |                |                |
+|                |     for this |                |                |
+|                |     cycle    |                |                |
+|                |     has been |                |                |
+|                |     locked   |                |                |
+|                |     and      |                |                |
+|                |     archived |                |                |
 +----------------+----------------+----------------+----------------+
 | **D            | -   Test       | Yes/Province   |                |
-| ocumentation** |     >          | Team           |                |
+| ocumentation** |              | Team           |                |
 |                |  Documentation |                |                |
-|                |     > has been |                |                |
-|                |     > updated  |                |                |
+|                |     has been |                |                |
+|                |     updated  |                |                |
 +----------------+----------------+----------------+----------------+
 | **Project      | -   The        | Yes/Scrum      |                |
-| Backlog**      |     > project  | Master         |                |
-|                |     > backlog  |                |                |
-|                |     > is       |                |                |
-|                |     > updated  |                |                |
-|                |     > with     |                |                |
-|                |     > items    |                |                |
-|                |     > that     |                |                |
-|                |     > emanated |                |                |
-|                |     > from     |                |                |
-|                |     > testing  |                |                |
+| Backlog**      |     project  | Master         |                |
+|                |     backlog  |                |                |
+|                |     is       |                |                |
+|                |     updated  |                |                |
+|                |     with     |                |                |
+|                |     items    |                |                |
+|                |     that     |                |                |
+|                |     emanated |                |                |
+|                |     from     |                |                |
+|                |     testing  |                |                |
 |                |                |                |                |
 |                | -   The team   |                |                |
-|                |     > has      |                |                |
-|                |     > agreed   |                |                |
-|                |     > on the   |                |                |
-|                |     > new      |                |                |
-|                |     > testing  |                |                |
-|                |     > items in |                |                |
-|                |     > the      |                |                |
-|                |     > backlog  |                |                |
+|                |     has      |                |                |
+|                |     agreed   |                |                |
+|                |     on the   |                |                |
+|                |     new      |                |                |
+|                |     testing  |                |                |
+|                |     items in |                |                |
+|                |     the      |                |                |
+|                |     backlog  |                |                |
 +----------------+----------------+----------------+----------------+
 
  
@@ -7078,47 +6622,47 @@ principles from which they emanate.
 -   Testing is a risk management activity.
 
 -   Testing involves: Planning, Analysis, Design, Execution, Evaluation,
-    > Reporting and Test Closure.
+    Reporting and Test Closure.
 
 -   Testware is a valuable asset that needs to be carefully kept and
-    > maintained.
+    maintained.
 
 -   Testing needs to be a plan-able and predictable activity.
 
 -   Testing requires verification, validation and experiments by an
-    > independent
-    > party.[\[1\]](file:///C:/Users/Roland/Documents/Pensions/Test%20Policy.docx#_ftn1)
+    independent
+    party.[\[1\]](file:///C:/Users/Roland/Documents/Pensions/Test%20Policy.docx#_ftn1)
 
 -   Testing provides information on the state and condition of the SUT.
 
 -   Management makes decisions on acceptability of defects moving into
-    > production.
+    production.
 
 -   Everybody involved with the deployment of systems is responsible for
-    > quality.
+    quality.
 
 -   More complete and better defined input results in better testing.
 
 -   Testing aims to verify all stated and tacit requirements.
 
 -   The testing phases are accumulative; each phase builds on the
-    > achievements of an earlier phase without repeating the work of the
-    > previous phase.
+    achievements of an earlier phase without repeating the work of the
+    previous phase.
 
 -   Testers are specialized resources with a mindset distinctly
-    > different from developers.
+    different from developers.
 
 -   Testing needs to be aware of context and adjust its approach
-    > accordingly.
+    accordingly.
 
 -   Well planned and executed testing provides unmatched understanding
-    > on the readiness of the application to be deployed.
+    on the readiness of the application to be deployed.
 
 -   Testing assumes that the SUT is broken, the more this assumption is
-    > proven wrong, the weaker the assumption becomes.
+    proven wrong, the weaker the assumption becomes.
 
 -   Testing is expensive and therefore needs to be planned in such a way
-    > that it delivers the most value per dollar invested.
+    that it delivers the most value per dollar invested.
 
 -   Testing will often be squarely on the critical path of a project.
 
@@ -7129,61 +6673,61 @@ principles from which they emanate.
 -   Repetitive tests need to be automated.
 
 -   A centralized defect management process is the backbone of the test
-    > process.
+    process.
 
 General Software Test Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All developed and configured software must be tested.
 
 -   All changes to existing systems must be tested.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Developers, Testers and Business Users will test all systems based
-    > on Test Strategy, Test Plan and activities as described in the
-    > testing process before the system is used in production.
+    on Test Strategy, Test Plan and activities as described in the
+    testing process before the system is used in production.
 
 Test Strategy Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Testing is a planned activity.
 
 -   Testing helps manage the risks when implementing new or changed
-    > software.
+    software.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The test lead will produce a test strategy describing the test
-    > approach.
+    approach.
 
 -   The test strategy needs agreement from the stakeholders.
 
 Test Planning Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Testing is a planned activity.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The test lead will deliver a test plan describing how the test
-    > strategy will be implemented.
+    strategy will be implemented.
 
 Traceability Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All requirements must be tested.
 
 -   Test progress must be measured against coverage of requirements.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Testers will map all test cases back to requirements to ensure they
-    > have all been covered by test cases.
+    have all been covered by test cases.
 
 -   Test Lead will report progress based on requirements coverage.
 
@@ -7196,24 +6740,24 @@ Test Estimation Principle
 -   Test estimation covers: Scope, Time and Resources (human and system)
 
 -   Test estimation applies resources there where they bring the most
-    > benefit for the project.
+    benefit for the project.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Every test effort will be estimated and approved first before
-    > testing commences.
+    testing commences.
 
 -   The test estimation takes the identified project/system risks into
-    > account.
+    account.
 
 -   Estimates for testing will be delivered by the test lead.
 
 -   Estimates for testing will be refined in detailed plans as more
-    > information becomes available.
+    information becomes available.
 
 Test Design Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All test requirements need to be met.
 
@@ -7221,21 +6765,21 @@ Test Design Principle
 
 -   Tests need to be documented.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Testers will create test design for Integration and System Testing.
 
 -   Testers will create Testing charters to be executed during the
-    > sprints.
+    sprints.
 
 -   Test design is documented and stored for re-use and reference.
 
 Unit Test Design Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All modules/functions/components/interfaces need to be Unit tested
-    > by the developer.
+    by the developer.
 
 -   Unit tests need to be re-usable.
 
@@ -7243,53 +6787,53 @@ Unit Test Design Principle
 
 -   Unit Tests need to be implemented as automated tests.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Developers will create a unit test design for each component they
-    > produce.
+    produce.
 
 -   Unit Test design is documented and stored for re-use and reference.
 
 Business/User Acceptance Test Design Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Business Users will get a solution that will allow them to meet
-    > their business objectives.
+    their business objectives.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The Business/User Acceptance Tester will create a test design
-    > focused on proving that the solution meets the Business Users
-    > needs.
+    focused on proving that the solution meets the Business Users
+    needs.
 
 -   The Business/User Acceptance Test design reflects the common and
-    > exception operations of the business.
+    exception operations of the business.
 
 -   The Business/User Acceptance Test design will contain all the test
-    > cases needed to obtain the information for acceptance of the
-    > system.
+    cases needed to obtain the information for acceptance of the
+    system.
 
 Test Execution Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Tests need to be executed.
 
 -   The right resources need to execute the tests.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Unit Tests are executed by developers.
 
 -   Quality Tests are executed by the quality testers.
 
 -   Business/User Acceptance Tests are executed by the Acceptance
-    > testers and Business Users.
+    testers and Business Users.
 
 Automated Test Execution Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Tests need to be executed in an efficient and repeatable manner.
 
@@ -7301,7 +6845,7 @@ Automated Test Execution Principle
 
 -   Tests will be automated in order to improve efficiency.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Automated Unit Tests are executed by the Developers.
 
@@ -7313,22 +6857,22 @@ Automated Test Execution Principle
 
 Regression Test Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Systems need to be tested for regression errors after changes.
 
 -   The scope of the regression test is dependent on risk.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Systems will be regression tested to mitigate risk on unintended
-    > errors after changes.
+    errors after changes.
 
 -   Regression tests will be automated where appropriate.
 
 Test Environment Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All developed and configured software must be tested.
 
@@ -7337,11 +6881,11 @@ Test Environment Principle
 -   Multiple projects need to use the same test environments.
 
 -   Usage of the same environment by different project can cause
-    > interference.
+    interference.
 
 -   Test environment resource conflicts need to be addressed.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Testing uses dedicated Test Environments.
 
@@ -7354,11 +6898,11 @@ Test Environment Principle
 -   Facilitating the creation of new test environments.
 
 -   The project and the internal Testing Services group owns the Test
-    > environments.
+    environments.
 
 Test Data Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Testing is using test data.
 
@@ -7368,42 +6912,42 @@ Test Data Principle
 
 -   Developers are responsible for the creation of Unit Test Data.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The test environments contain either fictional test data or
-    > masked/de-identified production data.
+    masked/de-identified production data.
 
 -   The Business/User Acceptance Test environment can contain production
-    > data or masked/de-identified production data.
+    data or masked/de-identified production data.
 
 Defect Management Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Defects need to be managed.
 
 -   There will be *one* defect management tool used during analysis,
-    > design, development and testing.
+    design, development and testing.
 
 -   The defect management tool, user procedures and reviews will enforce
-    > consistent, high quality defect reporting.
+    consistent, high quality defect reporting.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Defect Management will follow the standard defect management
-    > process.
+    process.
 
 -   All defects will be reported in and managed by a central defect
-    > management tool.
+    management tool.
 
 -   All personnel involved in the creation, roll-out and sustainment of
-    > a solution will have access to the central tool and will be able
-    > to review the project issues.
+    a solution will have access to the central tool and will be able
+    to review the project issues.
 
 Testware[**\[2\]**](file:///C:/Users/Roland/Documents/Pensions/Test%20Policy.docx#_ftn2) Management
 Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   All testware needs to be kept.
 
@@ -7411,34 +6955,34 @@ Principle
 
 -   Testware has significant value to the corporation.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   Developers will store and consolidate all Unit Test Testware for
-    > later re-use and reference.
+    later re-use and reference.
 
 -   Testers will store and consolidate all Quality Testing Testware for
-    > later re-use and reference.
+    later re-use and reference.
 
 -   Acceptance Testers and Business Users will store and consolidate all
-    > Business/User Acceptance Test Testware for later re-use and
-    > reference.
+    Business/User Acceptance Test Testware for later re-use and
+    reference.
 
 -   The PPR Project is the initial testware guardian.
 
 Test Closure Principle
 
-> **Basic assumption(s):**
+**Basic assumption(s):**
 
 -   Closure of the test activities will provide an opportunity to
-    > consolidate results, obtain/extract relevant metrics and identify
-    > improvement opportunities for the future.
+    consolidate results, obtain/extract relevant metrics and identify
+    improvement opportunities for the future.
 
-> **Test Principle:**
+**Test Principle:**
 
 -   The planning for testing will include a test closure activity.
 
 -   The Test Services groups and the Business Support groups are the
-    > main stakeholders in the test closure activity.
+    main stakeholders in the test closure activity.
 
  
 
@@ -7692,7 +7236,7 @@ Areas
 -   Is there at least one strategy keyword?
 
 -   Is there at least one product area, as specific as meaningful to
-    > specify?
+    specify?
 
 Duration
 
@@ -7705,35 +7249,35 @@ Opportunity
 -   If the opportunity number is over 0%, what was the opportunity?
 
 -   If the opportunity number is over 25%, consider modifying the
-    > charter.
+    charter.
 
 -   If the opportunity number is over 50%, modify the charter for this
-    > session and consider doing a new session based on the original
-    > charter.
+    session and consider doing a new session based on the original
+    charter.
 
 Data Files
 
 -   If there were no data files, why not?
 
 -   If there were data files, were they original or re-used? If re-used,
-    > were they modified in any way? If so, how do they now relate to
-    > other sessions that refer to the same data?
+    were they modified in any way? If so, how do they now relate to
+    other sessions that refer to the same data?
 
 -   Is there an associated test coverage outline that should be
-    > referenced?
+    referenced?
 
 Test Notes
 
 -   Are they comprehensible?
 
 -   In conjunction with the charter, do they answer the question \"what
-    > happened in this test session?\"
+    happened in this test session?\"
 
 -   Do they include information about coverage, oracles, and strategy?
 
 -   Is there anything in the notes that can be re-used in a future
-    > session? If not, that may be okay, but remember: part of the
-    > reason for the notes is to build a better plan for testing.
+    session? If not, that may be okay, but remember: part of the
+    reason for the notes is to build a better plan for testing.
 
 -   Is this section free of issues and bugs?
 
@@ -7746,7 +7290,7 @@ Defects
 Issues
 
 -   If there are no issues, does that mean there was no confusion, no
-    > remaining questions, and no obstacles in the path of testing?
+    remaining questions, and no obstacles in the path of testing?
 
 -   Do any issues require actions to be taken?
 
@@ -7755,7 +7299,7 @@ Issues
 Overall
 
 -   Will metrics based on this session sheet faithfully represent the
-    > testing that was done?
+    testing that was done?
 
 -   Do the results of this session suggest the need for another session?
 
@@ -8082,7 +7626,7 @@ June 19, 2019
 -   Close mitigated risk for Phase 1
 
 -   Close Releases - Releases need to be every code release and every
-    > major release
+    major release
 
 -   Defect Workflow updates and training
 
@@ -8104,7 +7648,7 @@ June 19, 2019
 
 -   Schedule backlog clean-up
 
->  
+ 
 
  
 
@@ -8157,7 +7701,7 @@ Current list:
   Surname:                        **ValueTest**
   Email:                          [**roland.stens\@gmail.com**](mailto:roland.stens@gmail.com)
 
-*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx>\>*
+*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx
 
   **BCeID Account Information**   
   ------------------------------- --------------------------------------------------------------
@@ -8168,7 +7712,7 @@ Current list:
   Surname:                        **Valuas**
   Email:                          [**roland.stens\@gmail.com**](mailto:roland.stens@gmail.com)
 
-*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx>\>*
+*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx
 
   **BCeID Account Information**   
   ------------------------------- --------------------------------------------------------------
@@ -8197,7 +7741,7 @@ Directory](javascript:__doPostBack('proceedToSubscriptionsButton',''))
 
  
 
-*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx>\>*
+*From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx
 
  
 
@@ -8215,41 +7759,31 @@ Tuesday, June 11, 2019
 
 A nice little feature that most people do not know of.
 
-Say you have your Gmail email account like <john.smith@gmail.com>
-
+Say you have your Gmail email account like <john.smith@gmail.com
 You can create additional email address that will all result in the
 emails arriving at your regular address.
 
 Examples:
 
-<john.smith+address1@gmail.com>
-
-<john.smith+address2@gmail.com>
-
-<john.smith+address3@gmail.com>
-
-<john.smith+address4@gmail.com>
-
-<john.smith+address5@gmail.com>
-
+<john.smith+address1@gmail.com
+<john.smith+address2@gmail.com
+<john.smith+address3@gmail.com
+<john.smith+address4@gmail.com
+<john.smith+address5@gmail.com
 All the above would be seen as different addresses by most systems, but
 emails sent to them will all arrive in the same email box
-(<john.smith@gmail.com>).
+(<john.smith@gmail.com.
 
-Additionally <john.smith@gmail.com> and <johnsmith@gmail.com> are
+Additionally <john.smith@gmail.comand <johnsmith@gmail.comare
 identical in google, so that is another way to create multiple email
 addresses that are all the same address.
 
 Examples:
 
-<john.smith@gmail.com>
-
-<johnsmith@gmail.com>
-
-<j.ohnsmith@gmail.com>
-
-<Johnsm.ith@gmail.com>
-
+<john.smith@gmail.com
+<johnsmith@gmail.com
+<j.ohnsmith@gmail.com
+<Johnsm.ith@gmail.com
 Etc.
 
  
@@ -8286,7 +7820,7 @@ Requirements:
 -   Represents one or more roles in the BC procurement process
 
 -   Understands the purpose of bringing an end-user perspective to the
-    > test process
+    test process
 
 -   Open to learning how User Acceptance Testing is conducted
 
@@ -8297,16 +7831,16 @@ Requirements:
 -   Possesses analytical, problem solving, and communication skills
 
 -   Nice to have: has been involved with the project during discovery,
-    > design or usability testing
+    design or usability testing
 
 Time Line:
 ----------
 
 -   With go-live planned in January, it is assumed that all UAT testing
-    > will need to be concluded by mid December.
+    will need to be concluded by mid December.
 
 -   The actual UAT execution will take 4-5 weeks, requiring the business
-    > testers to be ready to start the work by early to mid November
+    testers to be ready to start the work by early to mid November
 
     -   Ready to do UAT means that the Business Testers are/do:
 
@@ -8321,7 +7855,7 @@ Time Line:
         -   Test cases and scenarios have been defined and reviewed
 
         -   Test Data, Integrated systems and the Acceptance Test
-            > Environment have been set up and verified
+            Environment have been set up and verified
 
         -   Test location has been identified and moved into
 
@@ -8352,25 +7886,25 @@ Team Composition:
 An effective UAT Team has the following roles:
 
 -   Business Lead - This person will provide guidance with regards to
-    > UAT scope, business priorities and will be instrumental in guiding
-    > the business testers through UAT.
+    UAT scope, business priorities and will be instrumental in guiding
+    the business testers through UAT.
 
 -   Test Lead - This is a BC Bid Team member who will make sure that the
-    > pre-requisites (like system readiness, test data, access etc.) are
-    > met and will drive and facilitate the day to day UAT activities.
-    > The test lead will also facilitate the defect triage
+    pre-requisites (like system readiness, test data, access etc.) are
+    met and will drive and facilitate the day to day UAT activities.
+    The test lead will also facilitate the defect triage
 
 -   Business Testers - 4-6 SMEs (current estimate). There is potential
-    > to start with 2-3 senior SMEs and then add more junior ones later.
+    to start with 2-3 senior SMEs and then add more junior ones later.
 
 -   Business Analyst(s) - These are BC Bid team members that will assist
-    > with testing, but more specifically will analyse issues found and
-    > provide guidance to the BC Bid team and will communicate with
-    > Business Leadership if needed.
+    with testing, but more specifically will analyse issues found and
+    provide guidance to the BC Bid team and will communicate with
+    Business Leadership if needed.
 
 -   System Integrator - CGI - These are the developers of the system and
-    > will provide bug fixes for the issues that were found and needed
-    > to be fixed.
+    will provide bug fixes for the issues that were found and needed
+    to be fixed.
 
  
 
@@ -8381,20 +7915,20 @@ The business testers will be involved in the following activities
 (supported by the BC Bid Team):
 
 -   Review of requirements and identification of tests to test the
-    > individual scenarios
+    individual scenarios
 
 -   Identification of the end-to-end business scenarios that need to be
-    > verified
+    verified
 
 -   Identification of the exceptional and out of the ordinary scenarios
-    > that need to be verified
+    that need to be verified
 
 -   Creation of test scenarios and test scripts that will give answers
-    > to the questions that the business users will need to get
-    > answered.
+    to the questions that the business users will need to get
+    answered.
 
 -   Review all test scenarios and verify scenarios with system before
-    > the actual test execution
+    the actual test execution
 
 -   Execute defined tests
 
@@ -8414,29 +7948,29 @@ Success Factors for UAT:
 ------------------------
 
 -   Business user (SME) perspective to be represented *throughout* the
-    > sprints
+    sprints
 
 -   Senior SMEs - SMEs that have possibly worked in multiple roles and
-    > have had significant exposure to most aspects of the BC Government
-    > procurement processes.
+    have had significant exposure to most aspects of the BC Government
+    procurement processes.
 
 -   SMEs working in parallel with the BC Bid team during all sprints
-    > will improve communication and understanding - this will make the
-    > final UAT almost a non-event and more a final check
+    will improve communication and understanding - this will make the
+    final UAT almost a non-event and more a final check
 
 -   The participating SMEs will be centres of knowledge once they return
-    > to their operational tasks
+    to their operational tasks
 
 -   A full time commitment - a of-the-side-of-your-desk approach will
-    > typically yield a sub-par result and increase stress levels
+    typically yield a sub-par result and increase stress levels
 
 -   A strong \"buck stops here\" business lead/owner who will make key
-    > decisions
+    decisions
 
 -   A commitment from business leadership for time and participation
 
 -   One location - Particularly when starting up and doing the final UAT
-    > execution, it is beneficial and efficient to have people together.
+    execution, it is beneficial and efficient to have people together.
 
 Benefits for the Business:
 --------------------------
@@ -8446,7 +7980,7 @@ Benefits for the Business:
 -   Early training and instruction for key SMEs
 
 -   SMEs able acquire additional skills to further their career and/or
-    > build the confidence that they can grow
+    build the confidence that they can grow
 
 -   Issues, observations, opinions will be conveyed in business language
 
@@ -8473,20 +8007,19 @@ For training and test:
 -   If we have new data all the time do we have to wipe/reset?
 
 -   Do we give people data examples to implement (so the can focus on
-    > the things they need to do?)
+    the things they need to do?)
 
 -   How \"real\" can the data be?
 
 -   Are we enabling/disabling the training url or will this always be
-    > available
+    available
 
 -   What about instructions on not touching existing data?
 
 -   Are there data \"starting points?
 
->  
->
->  
+ 
+ 
 
  
 
@@ -8505,17 +8038,16 @@ What do we want to accomplish?
 -   Training different roles with BCeID and IDIR
 
 -   Personal IDIRs can be used but they need to be set up in a specific
-    > role(s).
+    role(s).
 
 -   Currently we can only set up basic bceids, whereas in production
-    > there will be business bceids, we have not tested this yet
+    there will be business bceids, we have not tested this yet
 
 -   Also for the pilot we would encourage for supplier to have only one
-    > contact
+    contact
 
->  
->
->  
+ 
+ 
 
  
 
@@ -8695,7 +8227,7 @@ July 5, 2019
 
 -   Added Issue linking entry
 
->  
+ 
 
  
 
@@ -8792,7 +8324,7 @@ New Custom field:
   Repeatability   Reproducible
   Repeatability   Unknown
 
->  
+ 
 
  
 
@@ -8983,7 +8515,7 @@ August 13, 2019
 4:40 PM
 
 -   Add a new workflow step referring back to itself, and set the proper
-    > resolution in the post actions
+    resolution in the post actions
 
 -   Query them all and do a bulk transition to the new step.
 
@@ -9004,8 +8536,7 @@ Tuesday, June 11, 2019
 3:26 PM
 
 From:
-<https://www.getzephyr.com/resources/whitepapers/how-behavior-driven-development-can-fuel-your-software-testing-program>
-
+<https://www.getzephyr.com/resources/whitepapers/how-behavior-driven-development-can-fuel-your-software-testing-program
 How Behavior Driven Development Can Fuel Your Software Testing Program
 ======================================================================
 
@@ -9042,12 +8573,12 @@ How Behavior-Driven Development works
 #### *Implementing BDD is comprised of the following steps:*
 
 1.  Change the structure of the sentences you use to write requirements
-    > to follow a particular pattern
+    to follow a particular pattern
 
 2.  Focus writing code to fulfill the criteria of the sentences
 
 3.  Focus writing test cases on testing that the criteria of the
-    > sentence is met
+    sentence is met
 
 4.  Rejoice that things are more clear
 
@@ -9062,13 +8593,11 @@ How Behavior-Driven Development works
 1.  Who is the primary user
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  What is the effect the user wants
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  What is the business value for the user
 
 **Acceptance Criteria:**
@@ -9077,18 +8606,13 @@ Write as many acceptance criteria as you need to describe exactly what
 needs to happen to satisfy the user. When you write them, write them in
 the following format:
 
-1.  Given \<this situation\>
-
+1.  Given \<this situation\
 ```{=html}
-<!-- -->
-```
-2.  When \<the user does this\>
-
+<!-- --```
+2.  When \<the user does this\
 ```{=html}
-<!-- -->
-```
-3.  Then \<this outcome occurs\>
-
+<!-- --```
+3.  Then \<this outcome occurs\
 ![](media/image9.png){width="8.052083333333334in"
 height="2.2784722222222222in"}
 
@@ -9147,53 +8671,47 @@ into inventory, so that I can reuse them.*
 #### *Next, he outlines the functional needs:*
 
 1.  A method is needed to add recycled items back into inventory to be
-    > used again.
+    used again.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  A method is needed to identify recycled inventory so that it is not
-    > reused again.
+    reused again.
 
 #### *After that, he outlines some business rules:*
 
 1.  Consumable inventory items may be recycled and added back into
-    > inventory.
+    inventory.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  A recycled item may only be added back once. It must be disposed of
-    > after the second use.
+    after the second use.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  Non-consumable inventory is not recycled and is not considered for
-    > this story.
+    this story.
 
 #### *Next, he outlines some acceptance criteria:*
 
 1.  There must be a way to add consumable inventory back into inventory
-    > as a recycled item.
+    as a recycled item.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  There must be a way to identify recycled consumable items in
-    > inventory.
+    inventory.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  Recycled inventory, once removed to be used, may not be added back
-    > into inventory.
+    into inventory.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 4.  Non-consumable inventory may not be added back as recycled
-    > inventory.
+    inventory.
 
 The developer now looks through this documentation. It accurately
 describes the problem, but the developer is left with where to start.
@@ -9217,25 +8735,21 @@ handled wherever a user can add, view, edit or delete inventory.
 1.  Trying to add a recycled item
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  Trying to add a recycled non-consumable
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  Trying to add a recycled item back into inventory
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 4.  Trying to remove a recycled item from inventory
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 5.  Trying to change a consumable into a recycled item in inventory edit
-    > screens
+    screens
 
 The team completes the code in a few weeks. It goes to production and
 things are fine for a while. Four months later, a lot of new features
@@ -9267,18 +8781,16 @@ obvious. It can be read as a single, clear sentence, but note what
 breaking it up into lines does:
 
 1.  Each part of what you want to happen is discrete and easy to
-    > understand
+    understand
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  Each line effectively translates to a single chunk of code
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  Each line effectively translates into a testable criteria, so
-    > writing test cases is easy
+    writing test cases is easy
 
 She looks at the user's two steps: the user enters a product number. The
 product is not a recycled product. The developer modifies adding new
@@ -9337,19 +8849,17 @@ recycled product".
 #### *The QA Analyst builds the following test case immediately:*
 
 1.  Try to add inventory to system. Enter product number that is not for
-    > a recycled product.
+    a recycled product.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 2.  Try to add inventory to system. Enter product number that is for a
-    > non-consumable product.
+    non-consumable product.
 
 ```{=html}
-<!-- -->
-```
+<!-- --```
 3.  Try to add inventory to system. Enter product number that is for a
-    > recycled product.
+    recycled product.
 
 He adds to the first test case the comment "the user enters a product
 number and the product is NOT a recycled product". To the second, he
@@ -9461,9 +8971,8 @@ I want to gain some beneficial outcome which furthers the goal
 
 **When** some action by the actor
 
-> **And** some other action
->
-> **And** yet another action
+**And** some other action
+**And** yet another action
 
 **Then** some testable outcome is achieved
 
@@ -9478,26 +8987,26 @@ The parser divides the input into features, scenarios and steps. Let's
 walk through the above example:
 
 1.  Feature: Some terse yet descriptive text of what is desired starts
-    > the feature and gives it a title. Learn more about features in the
-    > "[Features](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#features)"
-    > section.
+    the feature and gives it a title. Learn more about features in the
+    "[Features](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#features)"
+    section.
 
 2.  Behat does not parse the next 3 lines of text. (In order to\... As
-    > an\... I want to\...). These lines simply provide context to the
-    > people reading your feature, and describe the business value
-    > derived from the inclusion of the feature in your software.
+    an\... I want to\...). These lines simply provide context to the
+    people reading your feature, and describe the business value
+    derived from the inclusion of the feature in your software.
 
 3.  Scenario: Some determinable business situation starts the scenario,
-    > and contains a description of the scenario. Learn more about
-    > scenarios in the
-    > "[Scenarios](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#scenarios)"
-    > section.
+    and contains a description of the scenario. Learn more about
+    scenarios in the
+    "[Scenarios](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#scenarios)"
+    section.
 
 4.  The next 7 lines are the scenario steps, each of which is matched to
-    > a regular expression defined elsewhere. Learn more about steps in
-    > the
-    > "[Steps](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#steps)"
-    > section.
+    a regular expression defined elsewhere. Learn more about steps in
+    the
+    "[Steps](http://docs.behat.org/en/v2.5/guides/1.gherkin.html#steps)"
+    section.
 
 5.  Scenario: A different situation starts the next scenario, and so on.
 
@@ -9727,7 +9236,7 @@ Test
 
 -   BBB the user stories
 
--   BBB -\> what into pilot - Pilot field indicated
+-   BBB -\what into pilot - Pilot field indicated
 
 -   Mainly done by Vivek and Audra
 
@@ -9781,19 +9290,15 @@ Daily Routine
 
     -   Assigned to me
 
->  
->
->  
->
->  
->
->  
+ 
+ 
+ 
+ 
 
  
 
->  
->
->  
+ 
+ 
 
  
 
@@ -9822,7 +9327,7 @@ Deb:
 -   Deployment creates \"Tag\" ivalua deployment package
 
 -   Then into dev env. (2 dev environments? 1 for development, 1 for
-    > maintenance prod aligned. (hot fixes))
+    maintenance prod aligned. (hot fixes))
 
 -   If tag deployed correctly
 
@@ -9837,28 +9342,27 @@ Deb:
 -   Scope of changes will not contain \"content\"
 
 -   They need to be manually moved - time needed dependent on what needs
-    > to move
+    to move
 
 -   Are there any completely manual steps? Yes but not very many
 
 -   Then a validation test again in the target environment.
 
 -   Then we\'ll deploy to training. We\'ll keep that until test is
-    > released.
+    released.
 
 -   Deb is checking if a set up can be stored for restore later.
-    > (Training)
+    (Training)
 
 -   iValua rolls out in prod
 
 -   Discussion needed between Pascal and Tlel for hot fix updates, who
-    > does what.
+    does what.
 
 -   New version from iValua - documented in .... (PMP?)
 
->  
->
->  
+ 
+ 
 
 ![](media/image12.png){width="10.64375in" height="7.582638888888889in"}
 
