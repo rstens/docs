@@ -840,363 +840,172 @@ As per definition in Test Data Strategy integration testing requires the follo
 | ---------------------------------- | ----------------------- | ----------------- | -------------------- |
 | Unit Testing/Integration Testing   | Developer Workstation   | Purposely created | Developer            |
 | Automated Unit/Integration Testing | Build/Integration (Dev) | Purposely created | Automated CI process |
-| System Integration Testing | TEST | Purposely Created | BA, Tester |
+| System Integration Testing         | TEST                    | Purposely Created | BA, Tester           |
 
 In Test Environments Needs we have defined which environments will be required to have the unit test data:
 
-| Type of Testing | Environment(s) | Integrated with Back-end | Who 
-| --- | --- | --- | --- 
-| Integration Testing | Developer Workstation, Dev, Test | Yes | Developers  
-| System Integration Testing | Test | Yes | BA, Tester, Business Testers
+| Type of Testing            | Environment(s)                   | Integrated with Back-end | Who                          |
+| -------------------------- | -------------------------------- | ------------------------ | ---------------------------- |
+| Integration Testing        | Developer Workstation, Dev, Test | Yes                      | Developers                   |
+| System Integration Testing | Test                             | Yes                      | BA, Tester, Business Testers |
 
 ## Functional Test Strategy
 
 This section provides an overview of the test approach for Functional Testing.
 
-Functional testing is a large testing effort in our project. Functional
-tests tend to answer the questions like "can the user do this?" or "does
-this particular feature work?".
+Functional testing is a large testing effort in our project. Functional tests tend to answer the questions like "can the user do this?" or "does this particular feature work?".
 
-Definition
+### Definition
 
-Testing based on an analysis of the specification of the functionality
-of a component or system.
+Testing based on an analysis of the specification of the functionality of a component or system.
 
-In functional testing the testing of the functions of component or
-system is done. It refers to activities that verify a specific action or
-function of the code. This is typically described in a requirements
-specification or in a functional specification. For PPR we use the
-Acceptance Criteria (not to be confused with user acceptance criteria),
-as our test cases.
+In functional testing the testing of the functions of component or system is done. It refers to activities that verify a specific action or function of the code. This is typically described in a requirements specification or in a functional specification. For PPR we use the Acceptance Criteria (not to be confused with user acceptance criteria) that are defined as part of our user stories, as our test cases.
 
-Objectives
+#### Objectives
 
-- The main objective of functional testing is to verify that each
-  function of the software application operates in accordance with
-  the written acceptance (requirement) specifications.
+- The main objective of functional testing is to verify that each function of the software application operates in accordance with the written acceptance (requirement) specifications.
+- Functional testing is to verify whether your product meets the *intended* functional acceptance criteria mentioned in your user story documentation.
 
-````{=html}
-<!-- --```
--   Functional testing is to verify whether your product meets
-    the *intended* functional acceptance criteria mentioned in your
-    user story documentation.
-
- 
-
-**Challenges in an Agile project**
-
-In a traditional projects, (highly) detailed requirements are considered
-the main guidance for test development. In an agile project, detailed
-requirements are typically not available. Test ideas/case therefore will
-be developed by consultation, reviewing other materials like the user
-stories, technical specification etc. This process of discovery will
-yield questions, issues and observations that will feed back into the
-project.
+> **Challenges in an Agile project**
+> In a traditional projects, (highly) detailed requirements are considered the main guidance for test development. In an agile project, detailed requirements are typically not available. Test ideas/case therefore will be developed by consultation, reviewing other materials like the user stories, technical specification etc. This process of discovery will yield questions, issues and observations that will feed back into the project.
 
 Expected Benefits
 
--   Acceptance Criteria are verified
+- Acceptance Criteria are verified
+- Functionality of the solution is verified
+- Basic usability is ensured
+- Defects are found
 
--   Functionality of the solution  is verified
+### Scope
 
--   Basic usability is ensured
-
--   Defects are found
-
-Responsibilities
-
- 
-
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                            X                        
-  Test Analyst (Agile)         X                                
-  Business Tester                                              X 
-  Test Automation Specialist                   X                
-  Business Analyst                                     X        
-  Business Lead                                         X       
-  Developer                                    X                
-  Developer Lead                                                X
-  Solution Architect                                            
-  Release Manager                                               X
-  Subject Matter Expert                                 X       
-  Auditor                                                      X
-  Project Manager                                               X
-
-Scope
-
-Since a sprint works on a limited and different scope at the time, the
-actual scope for functional testing can vary. The following list would
-be our typical tests.
+Since a sprint works on a limited and different scope at the time, the actual scope for functional testing can vary. The following list would be our typical tests.
 
 Functional Testing typically includes the following:
 
--   Functional Acceptance Criteria
+- Functional Acceptance Criteria
+- Business Process
+- Application Behavior
+- Navigation
+- Field/Screen Element behavior
+- Validations
+- Data Entry
+- Limits and Boundaries
+- Buttons, check boxes, radio buttons
+- Basic functionality
+- Login/Logout
+- Data Search, Creation, Retrieval, Changing and deletion
+- Start/Stop of application page
+- Web specific tests
+- Security role validation (basic at this stage)
+- Negative Tests
+- Web Content and configuration
 
--   Business Process
-
--   Application Behavior
-
--   Navigation
-
--   Field/Screen Element behavior
-
--   Validations
-
--   Data Entry
-
--   Limits and Boundaries
-
--   Buttons, check boxes, radio buttons
-
--   Basic functionality
-
--   Login/Logout
-
--   Data Search, Creation, Retrieval, Changing and deletion
-
--   Start/Stop of application page
-
--   Web specific tests
-
--   Security role validation (basic at this stage)
-
--   Negative Tests
-
--   Web Content and configuration
-
-Approach
+### Approach
 
 Testing functionality can be done from two perspectives:
 
--   **Requirement-based testing: **In this type of testing the
-    acceptance criteria (requirements) are prioritized and accordingly
-    the tests follow that prioritization. This will ensure that the
-    most important and most critical tests are included in the testing
-    effort.
+- **Requirement-based testing:** In this type of testing the acceptance criteria (requirements) are prioritized and accordingly the tests follow that prioritization. This will ensure that the most important and most critical tests are included in the testing effort.
+- **Business-process-based testing:** In this type of testing the scenarios involved in the day-to-day business use of the system are described. It uses the knowledge of the business processes. For example: a personnel and payroll system may
+  have the business process along the lines of: someone joins the company, employee is paid on the regular basis and employee
+  finally leaves the company.
 
--   **Business-process-based testing: **In this type of testing the
-    scenarios involved in the day-to-day business use of the system
-    are described. It uses the knowledge of the business
-    processes.** **For example, a personnel and payroll system may
-    have the business process along the lines of: someone joins the
-    company, employee is paid on the regular basis and employee
-    finally leaves the company.
+For PPR we deploy both perspectives to functionality testing. However, the emphasis will be initially on requirements-based testing (we would also include checklists, web standards etc.). Business process testing will come after the requirements have been tested and basic functionality is deemed acceptable. This approach is used to focus the testing effort.
 
-For PPR we deploy both perspectives to functionality testing. However,
-the emphasis will be initially on requirements-based testing (we would
-also include checklists, web standards etc.). Business process testing
-will come after the requirements have been tested and basic
-functionality is deemed acceptable. This approach is used to focus the
-testing effort.
-
-Test Design
+### Test Design
 
 Our test design consists of the following high level categories of test
 cases:
 
--   Functionality: This is the most straight forward category, where we
-    take each piece of the application and test it individually. 
-
--   Scenarios: We take the user scenarios and run them in order to
-    review the behavior of the system. 
-
--   Negative tests: We think of all possible things that a user may do
-    wrong in the system and make sure that a correct indication is
-    displayed and no permanent damage is done to the system or its
-    data.
-
--   Date dependent Tests: PPR is date dependent and a specific category
-    of test cases is necessary
+- Functionality: This is the most straight forward category, where we take each piece of the application and test it individually.
+- Scenarios: We take the user scenarios and run them in order to review the behavior of the system.
+- Negative tests: We think of all possible things that a user may do wrong in the system and make sure that a correct indication is displayed and no permanent damage is done to the system or its data.
+- Date dependent Tests: PPR is date dependent and a specific category of test cases is necessary
 
 ### Test Case Design Techniques
 
-Of all the test case design techniques which are available, the most
-effective for the functional testing are:
+Of all the test case design techniques which are available, the most effective for the functional testing are:
 
--   Specification-based techniques.  This technique derives test cases
-    from the documented specifications of the system's behavior. This
-    includes the following design techniques:
+- Specification-based techniques.  This technique derives test cases from the documented specifications of the system's behavior. This includes the following design techniques:
+- Functional analysis (functional specification-based testing).
+- Sampling techniques.  These techniques identify small samples of high-potential test cases from large populations of possible conditions. This includes the following design techniques:
+  - Equivalence Analysis
+  - Boundary value (BV) Analysis
+  - Combinatorial methods, such as pair-wise and n-wise testing
+- Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in prior similar situations. This includes the following design techniques:
+  - Exploratory testing
+  - User scenarios
+  - Checklists
+  - Risk analysis and prioritization
 
--   Functional analysis (functional specification-based testing).
+#### Checklists
 
--   Sampling techniques.  These techniques identify small samples of
-    high-potential test cases from large populations of possible
-    conditions. This includes the following design techniques:
+After each sprint the test team collects lessons learned and compiles these into checklists for future reference when developing test cases.
 
--   Equivalence Analysis
-
--   Boundary value (BV) Analysis
-
--   Combinatorial methods, such as pair-wise and n-wise testing
-
--   Experience-based techniques.  These techniques utilize the testers'
-    and others' experience, either with the system under test or in
-    prior similar situations. This includes the following design
-    techniques:
-
-```{=html}
-<!-- --```
--   Exploratory testing
-
-```{=html}
-<!-- --```
--   User scenarios
-
--   Checklists
-
--   Risk analysis and prioritization
-
-**Checklists**
-
-After each sprint the test team collects lessons learned and compiles
-these into checklists for future reference when developing test cases.
-
-Test Execution
+### Test Execution
 
 Functional Testing is recognized as a separate activity that precedes
 system and user acceptance testing (See below), however other test
 activities below will also contain certain types of Functional tests.
 
-+----------------------+----------------------+----------------------+
-| **Test Activity**    | **Functional Test**  | **Participant**      |
-+======================+======================+======================+
-| Unit/Integration     | -   Screen/Object    | Developer            |
-| Testing              |     Behavior       |                      |
-|                      |                      |                      |
-|                      | -   Database         |                      |
-|                      |     functions      |                      |
-|                      |                      |                      |
-|                      | -   Navigation       |                      |
-|                      |                      |                      |
-|                      | -   Acceptance       |                      |
-|                      |     Criteria       |                      |
-+----------------------+----------------------+----------------------+
-| Functional Testing   | -   Functional       | Agile Testers, Test  |
-|                      |     Acceptance     | Automation           |
-|                      |     Criteria       | Specialist           |
-|                      |                      |                      |
-|                      | -   Business Process |                      |
-|                      |                      |                      |
-|                      | -   Application      |                      |
-|                      |     Behavior       |                      |
-|                      |                      |                      |
-|                      | -   Navigation       |                      |
-|                      |                      |                      |
-|                      | -   Field/Screen     |                      |
-|                      |     Element        |                      |
-|                      |     behavior       |                      |
-|                      |                      |                      |
-|                      | -   Validations      |                      |
-|                      |                      |                      |
-|                      | -   Data Entry       |                      |
-|                      |                      |                      |
-|                      | -   Limits and       |                      |
-|                      |     Boundaries     |                      |
-|                      |                      |                      |
-|                      | -   Buttons, check   |                      |
-|                      |     boxes, radio   |                      |
-|                      |     buttons        |                      |
-|                      |                      |                      |
-|                      | -   Basic            |                      |
-|                      |     functionality  |                      |
-|                      |                      |                      |
-|                      | -   Login/Logout     |                      |
-|                      |                      |                      |
-|                      | -   Data Search,     |                      |
-|                      |     Creation,      |                      |
-|                      |     Retrieval,     |                      |
-|                      |     Changing and   |                      |
-|                      |     deletion       |                      |
-|                      |                      |                      |
-|                      | -   Start/Stop of    |                      |
-|                      |     application    |                      |
-|                      |     page           |                      |
-|                      |                      |                      |
-|                      | -   Web specific     |                      |
-|                      |     tests          |                      |
-|                      |                      |                      |
-|                      | -   Security role    |                      |
-|                      |     validation     |                      |
-|                      |     (basic at this |                      |
-|                      |     stage)         |                      |
-|                      |                      |                      |
-|                      | -   Negative Tests   |                      |
-|                      |                      |                      |
-|                      | -   Web Content and  |                      |
-|                      |     configuration  |                      |
-+----------------------+----------------------+----------------------+
-| System Testing       | -   Business Process | Agile Tester         |
-|                      |                      |                      |
-|                      | -   Acceptance       |                      |
-|                      |     Criteria       |                      |
-|                      |                      |                      |
-|                      | -   Security Role    |                      |
-|                      |     validation     |                      |
-+----------------------+----------------------+----------------------+
-| User Acceptance      | -   Business Process | Tester/Business      |
-| Testing              |                      | Analyst/Business     |
-|                      |                      | Tester               |
-+----------------------+----------------------+----------------------+
+| **Test Activity**        | **Functional Test**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **Participant**                           |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Unit/Integration Testing | Screen/Object Behavior, Database functions, Navigation, Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                               | Developer                                 |
+| Functional Testing       | Functional Acceptance Criteria, Business Process, Application Behavior, Navigation, Field/Screen Element behavior, Validations, Data Entry, Limits and Boundaries, Buttons, check boxes, radio buttons, Basic functionality, Login/Logout, Data Search, -Creation, -Retrieval, -Changing and -deletion, Start/Stop of application page, Web specific tests, Security role validation (basic at this stage), Negative Tests, Web Content and configuration | Agile Testers, Test Automation Specialist |
+| System Testing           | Business Process, Acceptance Criteria, Security Role validation                                                                                                                                                                                                                                                                                                                                                                                           | Agile Tester                              |
+| User Acceptance Testing  | Business Process                                                                                                                                                                                                                                                                                                                                                                                                                                          | Tester/Business Analyst/Business Tester   |
 
-But the specific step of functional testing completely focuses on
-functionality and making sure that system under test is in good enough
-shape to continue with the next step: system testing.
+But the specific step of functional testing completely focuses on functionality and making sure that system under test is in good enough shape to continue with the next step: system testing.
 
-Data Requirements
+### Data Requirements
 
-  **Usage**            **Environment**   **Type of Test Data**    **User**          **Comments**
-  -------------------- ----------------- ------------------------ ----------------- --------------
-  Functional Testing   DEV/TEST          Test Data + Valid IDIR   Testers (Agile)    
+**Usage** **Environment** **Type of Test Data** **User** **Comments**
+
+---
+
+Functional Testing DEV/TEST Test Data + Valid IDIR Testers (Agile)
 
 Infrastructure Requirements
 
- 
-
 +-------------+-------------+-------------+-------------+-------------+
-| **Type of   | **Envir     | *           | **Who**     | **De        |
-| Testing**   | onment(s)** | *Integrated |             | scription** |
-|             |             | with Back   |             |             |
-|             |             | end**       |             |             |
+| **Type of | **Envir | * | **Who** | **De |
+| Testing** | onment(s)\*\* | *Integrated | | scription** |
+| | | with Back | | |
+| | | end** | | |
 +=============+=============+=============+=============+=============+
-| Functional  | DEV/TEST    | No          | Agile       | Functional  |
-| Testing     |             |             | Testers     | Testing has |
-|             |             |             |             | different   |
-|             |             |             |             | aspects to  |
-|             |             |             |             | it, first   |
-|             |             |             |             | we\'ll have |
-|             |             |             |             | the         |
-|             |             |             |             | \'tr        |
-|             |             |             |             | aditional\' |
-|             |             |             |             | test cases  |
-|             |             |             |             | and         |
-|             |             |             |             | scripts,    |
-|             |             |             |             | but we will |
-|             |             |             |             | also engage |
-|             |             |             |             | in          |
-|             |             |             |             | exploratory |
-|             |             |             |             | testing.    |
-|             |             |             |             |             |
-|             |             |             |             | This type   |
-|             |             |             |             | of testing  |
-|             |             |             |             | can         |
-|             |             |             |             | co-exist    |
-|             |             |             |             | with        |
-|             |             |             |             | Automated   |
-|             |             |             |             | Functional  |
-|             |             |             |             | Testing as  |
-|             |             |             |             | long as we  |
-|             |             |             |             | keep a      |
-|             |             |             |             | clear data  |
-|             |             |             |             | separation  |
-|             |             |             |             | between the |
-|             |             |             |             | 2           |
-|             |             |             |             | activities. |
+| Functional | DEV/TEST | No | Agile | Functional |
+| Testing | | | Testers | Testing has |
+| | | | | different |
+| | | | | aspects to |
+| | | | | it, first |
+| | | | | we\'ll have |
+| | | | | the |
+| | | | | \'tr |
+| | | | | aditional\' |
+| | | | | test cases |
+| | | | | and |
+| | | | | scripts, |
+| | | | | but we will |
+| | | | | also engage |
+| | | | | in |
+| | | | | exploratory |
+| | | | | testing. |
+| | | | | |
+| | | | | This type |
+| | | | | of testing |
+| | | | | can |
+| | | | | co-exist |
+| | | | | with |
+| | | | | Automated |
+| | | | | Functional |
+| | | | | Testing as |
+| | | | | long as we |
+| | | | | keep a |
+| | | | | clear data |
+| | | | | separation |
+| | | | | between the |
+| | | | | 2 |
+| | | | | activities. |
 +-------------+-------------+-------------+-------------+-------------+
-
- 
-
- 
 
 Exploratory Testing Strategy
 
@@ -1219,33 +1028,33 @@ change, refinements and course correction.
 Definition
 
 Exploratory testing is an approach to software testing that is concisely
-described as simultaneous learning, test design and test execution. 
+described as simultaneous learning, test design and test execution.
 
 Objectives
 
--   Find defects quickly
+- Find defects quickly
 
--   React to quickly changing system
+- React to quickly changing system
 
--   Define the basis for test automation and further exploratory test
-    sessions
+- Define the basis for test automation and further exploratory test
+  sessions
 
--   Identify missed or unclear requirements
+- Identify missed or unclear requirements
 
 Expected Benefits
 
--   Less initial test preparation is needed
+- Less initial test preparation is needed
 
--   Important defects are found quickly
+- Important defects are found quickly
 
--   Test execution is more intellectually stimulating than execution of
-    scripted tests
+- Test execution is more intellectually stimulating than execution of
+  scripted tests
 
--   Opens the possibility for deductive reasoning based on the results
-    of previous results
+- Opens the possibility for deductive reasoning based on the results
+  of previous results
 
--   Exploration throughout testing continuously challenges the System
-    Under Test with new scenarios
+- Exploration throughout testing continuously challenges the System
+  Under Test with new scenarios
 
 Responsibilities
 
@@ -1267,15 +1076,13 @@ great benefit for business process testing as well.
 
 Approach
 
-*One of the criticisms of exploratory testing is that it can be purely
+_One of the criticisms of exploratory testing is that it can be purely
 ad-hoc, uncontrolled, non-traceable. Indeed if the approach is left
 undefined this would be a certainty. The answer to this is to instill a
 lightweight process call Session-Based Test Management (SBTM), a method
-for measuring and managing exploratory testing.*
+for measuring and managing exploratory testing._
 
-***SBTM by James and Jon Bach***
-
- 
+**_SBTM by James and Jon Bach_**
 
 **Description**
 
@@ -1319,17 +1126,17 @@ with important information about what they did.
 The session metrics are the primary means to express the status of the
 exploratory test process. They contain the following elements:
 
--   Number of sessions completed
+- Number of sessions completed
 
--   Number of problems found
+- Number of problems found
 
--   Function areas covered
+- Function areas covered
 
--   Percentage of session time spent setting up for testing
+- Percentage of session time spent setting up for testing
 
--   Percentage of session time spent testing
+- Percentage of session time spent testing
 
--   Percentage of session time spent investigating problems
+- Percentage of session time spent investigating problems
 
 **Debriefings**
 
@@ -1346,7 +1153,7 @@ a checklist of questions.
 
 The mission in Session Based Test Management identifies the purpose of
 the session, helping to focus the session while still allowing for
-exploration of the system under test. 
+exploration of the system under test.
 
 **Charter**
 
@@ -1370,31 +1177,31 @@ method as deemed appropriate by the tester.
 
 The session report records the test session in Zephyr. This includes:
 
--   Charter
+- Charter
 
--   Area tested
+- Area tested
 
--   Detailed notes on how testing was conducted
+- Detailed notes on how testing was conducted
 
--   A list of any defects found
+- A list of any defects found
 
--   A list of issues (open questions, product or project concerns), in
-    JIRA
+- A list of issues (open questions, product or project concerns), in
+  JIRA
 
--   Any files/data the tester used or created to support their testing
+- Any files/data the tester used or created to support their testing
 
--   Percentage of the session spent on the charter versus investigating
-    new opportunities
+- Percentage of the session spent on the charter versus investigating
+  new opportunities
 
--   Percentage of the session spent on:
+- Percentage of the session spent on:
 
--   Testing - creating and executing tests
+- Testing - creating and executing tests
 
--   Bug investigation / reporting
+- Bug investigation / reporting
 
--   Session setup or other non-testing activities
+- Session setup or other non-testing activities
 
--   Session Start time and duration
+- Session Start time and duration
 
 Debrief
 
@@ -1404,15 +1211,15 @@ this debriefing.
 
 PROOF stands for:
 
--   **P**ast. What happened during the session?
+- **P**ast. What happened during the session?
 
--   **R**esults. What was achieved during the session?
+- **R**esults. What was achieved during the session?
 
--   **O**bstacles. What got in the way of good testing?
+- **O**bstacles. What got in the way of good testing?
 
--   **O**utlook. What still needs to be done?
+- **O**utlook. What still needs to be done?
 
--   **F**eelings. How does the tester feel about all this?
+- **F**eelings. How does the tester feel about all this?
 
 Parsing results
 
@@ -1440,47 +1247,45 @@ As testing is the process of asking questions of the solution. For
 example, the following questions can be asked during exploratory test
 sessions:
 
- 
+- **Product**
 
--   **Product**
+  - What is this product?
 
-    -   What is this product?
+  - What can I control and observe?
 
-    -   What can I control and observe?
+  - What should I test?
 
-    -   What should I test?
+- **Tests**
 
--   **Tests**
+  - What would constitute a diversified and practical test strategy?
 
-    -   What would constitute a diversified and practical test strategy?
+  - How can I improve my understanding of how well or poorly this
+    product works?
 
-    -   How can I improve my understanding of how well or poorly this
-        product works?
+  - If there were an important problem here, how would I uncover it?
 
-    -   If there were an important problem here, how would I uncover it?
+  - What document to load?
 
-    -   What document to load? 
+  - Which button to push?
 
-    -   Which button to push?
+  - What number to enter?
 
-    -   What number to enter?
+  - How powerful is this test?
 
-    -   How powerful is this test?
+  - What have I learned from this test that helps me perform
+    powerful new tests?
 
-    -   What have I learned from this test that helps me perform
-        powerful new tests?
+  - What just happened? How do I examine that more closely?
 
-    -   What just happened? How do I examine that more closely?
+- **Problems**
 
--   **Problems**
+  - What quality criteria matter?
 
-    -   What quality criteria matter?
+  - What kinds of problems might I find in this product?
 
-    -   What kinds of problems might I find in this product?
+  - Is what I see, here, a problem? If so, why?
 
-    -   Is what I see, here, a problem? If so, why?
-
-    -   How important is this problem? Why should it be fixed?
+  - How important is this problem? Why should it be fixed?
 
 Test Execution
 
@@ -1498,15 +1303,11 @@ Infrastructure Requirements
 
 The infrastructure required for exploratory testing is:
 
--   Test Environment
+- Test Environment
 
--   JIRA
+- JIRA
 
--   Zephyr
-
- 
-
- 
+- Zephyr
 
 System Test Strategy
 
@@ -1517,7 +1318,7 @@ June 25, 2019
 This section provides an overview of the test approach that will be
 undertaken for System Testing. System testing occurs at 100%
 integration, i.e., once all the components in the system planned for the
-specific sprint have been integrated together. 
+specific sprint have been integrated together.
 
 Definition
 
@@ -1534,61 +1335,63 @@ support/optimization) is tested.
 
 Objectives
 
--   Verify the fully integrated system works correctly
+- Verify the fully integrated system works correctly
 
--   Verify non-functional requirements specified for the system
+- Verify non-functional requirements specified for the system
 
--   Verify end-to-end functionality including all integration points
+- Verify end-to-end functionality including all integration points
 
 Expected Benefits
 
--   Correctly working and behaving system
+- Correctly working and behaving system
 
--   System conforms to the non-functional requirements
+- System conforms to the non-functional requirements
 
--   System is proven ready for deployment
+- System is proven ready for deployment
 
 Responsibilities
 
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                            X                        
-  Test Analyst (Agile)         X                                
-  Business Tester                              X                
-  Test Automation Specialist                   X                
-  Business Analyst                                     X        
-  Business Lead                                        X        
-  Developer                                    X                
-  Developer Lead                                               X
-  Solution Architect                                   X        
-  Release Manager                              X                
-  Project Manager                                              X
+**Role ** **R** **A** **S** **C** **I**
+
+---
+
+Test Lead   X      
+Test Analyst (Agile) X        
+Business Tester     X    
+Test Automation Specialist     X    
+Business Analyst       X  
+Business Lead       X  
+Developer     X    
+Developer Lead         X
+Solution Architect       X  
+Release Manager     X    
+Project Manager         X
 
 Scope
 
--   Business End-to-End testing: 
+- Business End-to-End testing:
 
-    -   *Testing a business process from its start through all steps
-        until a conclusion has been reached. This could involve
-        accessing multiple systems.*
+  - _Testing a business process from its start through all steps
+    until a conclusion has been reached. This could involve
+    accessing multiple systems._
 
--   System Integration testing
+- System Integration testing
 
-    -   *Testing the system\'s capability to operate and integrate with
-        other systems.*
+  - _Testing the system\'s capability to operate and integrate with
+    other systems._
 
--   Browser compatibility testing
+- Browser compatibility testing
 
-    -   *Testing with the browsers that need to be supported.
-        See Browser/OS Matrix and *
+  - _Testing with the browsers that need to be supported.
+    See Browser/OS Matrix and _
 
--   Functional Testing
+- Functional Testing
 
--   Usability testing
+- Usability testing
 
-    -   *Testing system usability from a user\'s perspective.*
+  - _Testing system usability from a user\'s perspective._
 
-```{=html}
+````{=html}
 <!-- --```
 -   Security testing (Roles and Access)
 
