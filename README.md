@@ -624,18 +624,11 @@ follows:
 
 ## Unit Test Strategy
 
-This section has been added for information only as Unit Testing for PPR
-is not implemented as traditional Unit Testing. However, the
-developers/configurators do have activities that could be characterized
-as \"Developer Testing\". Many of the concepts shown below would still
-apply to that activity.
+Great no-nonsense article on [Unit Testing](https://blog.stevensanderson.com/2009/08/24/writing-great-unit-tests-best-and-worst-practises/).
 
-Definition
+### Definition
 
-A unit test, as Agile teams understand the term, is a short program
-fragment written and maintained by the developers on the product team,
-which exercises some narrow part of the product\'s source code and
-checks the results.
+A unit test, as Agile teams understand the term, is a short program fragment written and maintained by the developers on the product team, which exercises some narrow part of the product\'s source code and checks the results.
 
 Unit testing is guided by the following principle:
 
@@ -643,105 +636,55 @@ Unit testing is guided by the following principle:
 
 **Basic assumption(s):**
 
-- All modules/functions/components/interfaces need to be Unit tested
-  by the developer.
-
-- Unit tests need to be re-usable.
-
+- All modules/functions/components/interfaces need to be Unit tested by the developer.
+- Unit tests need to be re-usable, atomic and independent.
 - Unit tests need to cover design specification requirements.
-
 - Unit Tests need to be implemented as automated tests.
 
 **Test Principle:**
 
-- Developers will create a unit test design for each component they
-  produce.
+- Developers will create a automated unit test for each component they produce.
+- The Unit Test scripts are documented and stored for re-use and reference.
 
-- Unit Test design is documented and stored for re-use and reference.
-
-Objectives
+### Objectives
 
 Unit Testing aims to:
 
-- Find defects which may get created by the programmer while
-  developing the software.
-
-- Gain confidence in and provide information about the level of
-  quality.
-
+- Find defects which may get created by the programmer while developing the software.
+- Gain confidence in and provide information about the level of quality.
 - Prevent defects being passed on to the next activity.
+- Allow for capturing the specifications for a unit and test against thoses specifications.
 
-Expected Benefits
+### Expected Benefits
 
-- A team relying on automated unit tests can expect to reap some of
-  the benefits of test-driven development, in particular a decrease
-  in defect rates.
+- A team relying on automated unit tests can expect to reap some of the benefits of test-driven/supported development, in particular a decrease in defects caused by regression errors.
+- Early and frequent testing is a pattern common to successful delivery of working software.
+- Continuous Integration can only succeed when there is a solid basis of automated unit tests.
 
-- Early and frequent testing is a pattern common to successful
-  delivery of working software.
+> **To Note**
+> Agile development has led to a strong emphasis, among developers, on the use of automated checking procedures, and this has tended to marginalize other forms of testing, in particular that done by professional testers. Yet this work (which some Agile teams call \"exploratory\" testing) is no less important in an Agile context.
 
-- Continuous Integration can only succeed when there is a solid basis
-  of automated unit tests .
+### Responsibilities
 
-**To Note**
+Unit testing is the responsibility of the developers in the team.
 
-Agile has led to a strong emphasis, among developers, on the use of
-automated checking procedures, and this has tended to marginalize other
-forms of testing, in particular that done by professional testers. Yet
-this work (which some Agile teams call \"exploratory\" testing) is no
-less important in an Agile context.
-
-Responsibilities
-
-**Role ** **R** **A** **S** **C** **I**
-
----
-
-Test Lead     X    
-Test Analyst (Agile)          
-Business Tester          
-Test Automation Specialist     X    
-Business Analyst          
-Business Lead          
-Developer X        
-Developer Lead   X      
-Solution Architect       X  
-Release Manager     X    
-Auditor          
-Project Manager         X
-
-Unit testing is the responsibility of the development team.
-
-Scope
+### Scope
 
 **Unit, Component and Module Test Scope**
 
-In Agile projects the test scope is determined by the content of each
-sprint. Each user story in the sprint will consist of one or more
-software components, units and or modules and these will have one or
-(typically) more unit tests each.
+In Agile projects the test scope is determined by the content of each sprint. Each user story in the sprint will consist of one or more software components, units and or modules and these will have one or (typically) more unit tests each.
 
-Approach
+#### Approach
 
-This section provides an overview of the test approach that will be
-undertaken for Unit Testing.
+This section provides an overview of the test approach that will be undertaken for Unit Testing.
 
-In the early eighties, IBM did a lot of research on the value of Unit
-Testing and found that it was capable of finding at least 60% of all
-defects that a project could encounter. The more striking number was
-that this could be done for a fraction of the cost and with minimal
-disruption to the delivery of the project. This notion is at the core of
-the practice in agile projects to have a focus on unit testing and
-particularly automated unit testing.
+> In the early eighties, IBM did a lot of research on the value of Unit Testing and found that it was capable of finding at least 60% of all defects that a project could encounter. The more striking observations was that this could be done for a fraction of the cost and with minimal disruption to the delivery of the project. This notion is at the core of the practice in agile projects to have a focus on unit testing and particularly automated unit testing.
 
 In general terms we want unit testing to be:
 
 - Rigorous
-
 - Consistent
-
 - Repeatable
-
 - Dependable
 
 **Rigorous**
@@ -749,105 +692,58 @@ In general terms we want unit testing to be:
 Leave no stone unturned, all pieces of code will be:
 
 - Reviewed.
-
-- Covered by means of automated unit tests that will test all
-  sequences, iterations and decisions, not only to test if they work
-  but also if they react correctly in error situations.\
-  **Positive and Negative Tests\
-  **In Unit testing we aim to have at least 80% negative tests (test
-  that should fail) and 20% positive tests (test that should
-  succeed). The philosophy behind this is that errors typically
-  cluster around exceptions, \"this will never happen\", domain
-  issues, boundary problems etc.
-
-- Exposed to as many data/usage variations as possible. Testing and
-  therefore also Unit testing is largely a combinatorial problem,
-  Variations are potentially hard to test as they often are too
-  many. By deploying techniques like code coverage, pair-wise
-  testing and risk analysis we can focus on achieving best value for
-  our efforts balancing coverage with variability.
+- Covered by means of automated unit tests that will test all sequences, iterations and decisions, not only to test if they work but also if they react correctly in error situations. (Positive and Negative Tests). The metric that gets mentioned related to this is: _Test Coverage_
+  > In Unit testing we aim to have at least 80% negative tests (test that should fail) and 20% positive tests (test that should succeed). The philosophy behind this is that errors typically cluster around exceptions, \"this will never happen\", domain issues, boundary problems etc.
+- Exposed to as many data/usage variations as possible. Testing and therefore also Unit testing is largely a combinatorial problem, Variations are potentially hard to test as they often are too
+  many. By deploying techniques like code coverage, pair-wise testing and risk analysis we can focus on achieving best value for our efforts balancing coverage with variability.
 
 **Consistent**
 
 Effectiveness of the automated unit tests is greatly enhanced when:
 
 - They get executed whenever the code changes
-
 - They are part of every code build and roll out process
-
 - They conform to minimum levels of coverage and complexity
-
 - They are reviewed for consistency
-
 - They are kept up-to-date when the code changes
 
 **Repeatable**
 
-Most value will be obtained from unit tests when they are repeatable at
-any time. This requires that they are set up, in such a fashion that
-they can run independently of the phase of the project or the activity.
+Most value will be obtained from unit tests when they are repeatable at any time. This requires that they are set up, in such a fashion that they can run independently of the phase of the project or the activity.
 
-This repeatability requires the unit tests to have the following
-characteristics:
+This repeatability requires the unit tests to have the following characteristics:
 
 - They need to be modular
-
 - They need specific unit test data
-
 - They need to be isolated from the rest of the system
+- They are independent of the environment they run in
 
 **Dependable**
 
-Unit tests that repeatedly yield believable results can be depended on
-when assessing the quality of the code base.
+Unit tests that repeatedly yield believable results can be depended on when assessing the quality of the code base.
 
-Dependable unit tests are obtained by making each test independent to
-all the others. Any given behaviour should be specified in one and only
-one test. Otherwise if that behaviour changes later, multiple tests have
-to be changed.
+Dependable unit tests are obtained by making each test independent to all the others. Any given behaviour should be specified in one and only one test. Otherwise if that behaviour changes later, multiple tests have to be changed.
 
 The corollaries of this rule include:
 
 - **No unnecessary assertions**
+  - It's counterproductive to Assert() anything that's also asserted by another test: it just increases the frequency of pointless failures without improving unit test coverage one bit.  *Have only one logical assertion per test*.
+- **Test only one code unit at a time**
+  - The architecture must support testing units (i.e., classes or very small groups of classes) independently, not all chained together. This will avoid overlap between tests.
+- **Mock out all external services and state** See [Mock object definition](https://en.wikipedia.org/wiki/Mock_object)
+  - Otherwise, behaviour in those external services overlaps multiple tests, and state data means that different unit tests can influence each other's outcome.
+- **Avoid unnecessary preconditions**
+  - Avoid having common setup code that runs at the beginning of lots of unrelated tests. Otherwise, it's unclear what assumptions each test relies on. Each test should have its pre-conditions set just before it runs.
+- **Don't unit-test configuration settings**
+  - By definition, the configuration settings aren't part of any unit of code.
+- **Name unit tests clearly and consistently**
+  - Avoid non-descriptive unit tests names such as Purchase() or OutOfStock(). Maintenance is hard if it is unclear what we need to maintain.
 
-It's counterproductive to Assert() anything that's also asserted by
-another test: it just increases the frequency of pointless failures
-without improving unit test coverage one bit.  *Have only one logical
-assertion per test*.
+![alt text](images/unittest.png "Where do unit tests sit?")
 
-- **Test only one code unit at a time **
+### Test Design
 
-The architecture must support testing units (i.e., classes or very
-small groups of classes) independently, not all chained together. This
-will avoid overlap between tests.
-
-- **Mock out all external services and state **
-
-Otherwise, behaviour in those external services overlaps multiple
-tests, and state data means that different unit tests can influence
-each other's outcome.
-
-- **Avoid unnecessary preconditions **
-
-Avoid having common setup code that runs at the beginning of lots of
-unrelated tests. Otherwise, it's unclear what assumptions each test
-relies on.
-
-- **Don't unit-test configuration settings **
-
-By definition, the configuration settings aren't part of any unit of
-code.
-
-- **Name unit tests clearly and consistently **
-
-Avoid non-descriptive unit tests names such as Purchase() or
-OutOfStock(). Maintenance is hard if it is unclear what we need to
-maintain.
-
-Test Design
-
-For our unit test design we will be deploying multiple techniques and
-approaches in order to maximize our effectiveness.
+For our unit test design we will be deploying multiple techniques and approaches in order to maximize our effectiveness.
 
 **Technique** **Description**
 
