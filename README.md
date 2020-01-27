@@ -52,7 +52,7 @@ The Test Strategy addresses the following topics in detail:
 ## Dependencies
 
   | | Dependency Between | Potential Impact of Dependency | Owners
-  | --- | --- | --- | --- 
+  | :---: | --- | --- | --- 
   | 1 | | | |
   | 2 | | | |                                                                   
   | 3 | | | |
@@ -68,7 +68,7 @@ The Test Strategy addresses the following topics in detail:
 ## Constraints
 
 |  | Constraints | Impact of Constraint on testing effort | Owners | Update
-| --- | --- | --- | --- | ---
+| :---: | --- | --- | --- | ---
 | 1 | Sprint Duration | Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items. |  | A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
 | 2 | Tester Availability | Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week. |  | 
 | 3 |  |  |  | 
@@ -203,7 +203,7 @@ This is the activity that describes the \"who, what, when, where, and how\" of t
 
 **Planning Tasks**
 |  | Task | Description | Outcome |  Frequency
-| --- | --- | --- | --- | ---
+| :---: | --- | --- | --- | --- 
 | 1 | Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
 | 2 | Identify Needed Resources | Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis. | Dependable resource planning  | Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
 | 3 | Plan Test Environment  | Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work. | Prepared environment | Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
@@ -276,7 +276,7 @@ Of all the test case design techniques which are available, the most effective f
 Test Design approach is indicated by the following steps:
 
 | Activity | Technique Used | Description  
-| --- | --- | ---  
+| :---: | --- | ---  
 | 1 | Test Basis Analysis | Review documentation and other test basis artifacts.  
 | 2 | First Identification of major test areas | Sprint Scope/Schedule, Risk Analysis and prioritization  
 | 3 | Test Idea generation | Risk Analysis  
@@ -309,15 +309,16 @@ the user stories have been rated. Critical-rated user stories will elevate the r
 
 Here are the risk/priority attributes that we take into consideration when rating our test cases:
 
-  **Aspect to be Tested is**         **Description**                                                                                                                                                                          **High**                                                                            **Medium**                                                                          **Low**
-  ---------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------- ----------------------------------------------------------------------------------- --------------------------------------------------------------------------
-  Frequently tested by other tests   Aspects that are tested many times are often navigational tests, login etc.                                                                                                              Rate if tested more than 3 times in other tests                                     Rate if tested more than 0 but lower or equal than 3                                Rate if not tested yet
-  Well understood                    Aspects that are clear to the tester because sufficient documentation/guidance is present                                                                                                Rate if completely understood                                                       Rate if some questions are still outstanding                                        Rate if none of the questions are answered or the answers remain unclear
-  Mission-Critical                   Aspects that are mission-critical, without this functioning the solution would not be viable. Guidance for this rating attribute can be obtained from the User Story priority setting.   Rate if the solution would not be viable                                            Rate where the solution would be impeded but workarounds could be available         Rate when the aspect is a nice-to-have for the solution
-  Risky                              Aspects that pose is risk to the business, security, confidentially, finance etc.                                                                                                        Rate if one or more high/critical risks are identified                              Rate if one or more medium risks are identified                                     Rate if no or only low risks are identified
-  Used Frequently                    Aspects that are used frequently.                                                                                                                                                        Rate if used multiple times per user session                                        Rate if used only once per user session                                             Rate if only used occasionally
-  Complex                            Aspects that are complex, have many business rules, calculations, need to be precise etc.                                                                                                Rate if contains calculations, more than 3 decisions, validations or data updates   Rate if contains calculations, more than 1 decisions, validations or data updates   Rate if contains no calculations, decisions, validations or data updates
-  is dependent or has dependencies   Aspects that require other components or functionalities to be present in order to function. Or aspects that other functionality is dependent on.                                        Rate if there are multiple dependencies that are needed to operate                  Rate if there is one dependency that is needed to operate                           Rate if there are no dependencies
+| Aspect to be Tested is | Description | High | Medium | Low
+| --- | --- | --- | --- | ----
+| Frequently tested by other tests | Aspects that are tested many times are often navigational tests, login etc. | Rate if tested more than 3 times in other tests | Rate if tested more than 0 but lower or equal than 3 | Rate if not tested yet
+| Well understood | Aspects that are clear to the tester because sufficient documentation/guidance is present | Rate if completely understood | Rate if some questions are still outstanding | Rate if none of the questions are answered or the answers remain unclear
+| Mission-Critical | Aspects that are mission-critical, without this functioning the solution would not be viable. Guidance for this rating attribute can be obtained from the User Story priority setting. | Rate if the solution would not be viable | Rate where the solution would be impeded but workarounds could be available | Rate when the aspect is a nice-to-have for the solution
+| Risky | Aspects that pose is risk to the business, security, confidentially, finance etc. | Rate if one or more high/critical risks are identified | Rate if one or more medium risks are identified | Rate if no or only low risks are identified
+| Used Frequently | Aspects that are used frequently. | Rate if used multiple times per user session | Rate if used only once per user session | Rate if only used occasionally
+| Complex | Aspects that are complex, have many business rules, calculations, need to be precise etc. | Rate if contains calculations, more than 3 decisions, validations or data updates | Rate if contains calculations, more than 1 decisions, validations or data updates | Rate if contains no calculations, decisions, validations or data updates
+| is dependent or has dependencies | Aspects that require other components or functionalities to be present in order to function. Or aspects that other functionality is dependent on. | Rate if there are multiple dependencies that are needed to operate | Rate if there is one dependency that is needed to operate | Rate if there are no dependencies
+
 
 The following spreadsheet utility is used to obtain guidance for our
 test case rating. This has been created for consistency sake and its
