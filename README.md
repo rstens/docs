@@ -335,7 +335,7 @@ Here are the risk/priority attributes that we take into consideration when ratin
 
 The following [spreadsheet utility](files/testcasepriority.xlsx) is used to obtain guidance for our test case rating. This has been created for consistency sake and its value will be evaluated after a few Sprints.
 
-The rating that the spreadsheet will come up with is the standard *test case priority* setting in [TestRail[(https://bcrs.testrail.io/)] (our Test Management Tool).
+The rating that the spreadsheet will come up with is the standard *test case priority* setting in [TestRail](https://bcrs.testrail.io/) (our Test Management Tool).
 
 | Test Case Priority | Description                                                                                                            |
 | :----------------: | ---------------------------------------------------------------------------------------------------------------------- |
