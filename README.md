@@ -745,255 +745,113 @@ The corollaries of this rule include:
 
 For our unit test design we will be deploying multiple techniques and approaches in order to maximize our effectiveness.
 
-**Technique** **Description**
+| Technique                   | Description                                                                                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Path Coverage Analysis      | Analysis of the paths through the code that can be executed and making sure that the unit tests account for every path                      |
+| Peer Review                 | A peer review adds value by providing a set of fresh eyes on the code that can generate more testing ideas and better quality testing ideas |
+| Analysis of requirements    | The code needs to meet the requirement or acceptance criteria that are defined.                                                             |
+| Review of flow charts       | Developing an understanding of the overall flow of the functionality                                                                        |
+| Standards review            | Coding, database usage and development standards need to be followed                                                                        |
+| Decision Logic review       | Review of decision tables, defined validations and external validation mechanisms                                                           |
+| Review of Data Structures   | Developing an insight of where data resides and how it is interconnected                                                                    |
+| Review of common interfaces | Understanding the common interfaces to the solution, the back end systems and external interfaces                                           |
 
----
+The unit testing deliverables of the test design stage include unit test scripts, mock objects, and test data. These deliverables will be uploaded in the version control system and subsequently connected to the delivered code units/components.
 
-Path Coverage Analysis Analysis of the paths through the code that can be executed and making sure that the unit tests account for every path
-Peer Review A peer review adds value by providing a set of fresh eyes on the code that can generate more testing ideas and better quality testing ideas
-Analysis of requirements The code needs to meet the requirement or acceptance criteria that are defined.
-Review of flow charts Developing an understanding of the overall flow of the functionality
-Standards review Coding, database usage and iValua development standards need to be followed
-Decision Logic review Review of decision tables, defined validations and external validation mechanisms
-Review of Data Structures Developing an insight of where data resides and how it is interconnected
-Review of common interfaces Understanding the common interfaces to iValua, the back end systems and external interfaces (like address complete)
+### Test Execution
 
-The unit testing deliverables of the test design stage include unit test
-scripts, mock objects, and test data. These deliverables will be
-uploaded in the version control system and subsequently connected to the
-delivered code units/components.
+The outcome of a unit test is binary: either \"pass\" if the program\'s behavior is consistent with the recorded expectations, or \"fail\" otherwise. Developers will typically write a large number of unit tests (corresponding to a large number of program behaviors of interest), called a \"test suite\".
 
-Test Execution
+Unit tests will first be executed on the developers workstation as part of the development process. Once development is deemed done, the code is updated in the version control system and the changes will be incorporated in the automated build and unit test process that will run multiple times a day.
 
-The outcome of a unit test is binary: either \"pass\" if the program\'s
-behavior is consistent with the recorded expectations, or \"fail\"
-otherwise. Developers will typically write a large number of unit tests
-(corresponding to a large number of program behaviors of interest),
-called a \"test suite\".
+### Data Requirements
 
-Unit tests will first be executed on the developers workstation as part
-of the development process. Once development is deemed done, the code is
-updated in the version control system and the changes will be
-incorporated in the automated build and unit test process that will run
-multiple times a day.
+As per definition in Test Data Strategy unit testing requires the following types of test data:
 
-Data Requirements
+| Usage                              | Environment             | Type of Test Data | User                 |
+| ---------------------------------- | ----------------------- | ----------------- | -------------------- |
+| Unit Testing/Integration Testing   | Developer Workstation   | Purposely created | Developer            |
+| Automated Unit/Integration Testing | Build/Integration (Dev) | Purposely created | Automated CI process |
 
-As per definition in Test Data Strategy unit testing requires the
-following types of test data:
+In Test Environments needs we have defined which environments will be required to have the unit test data:
 
-**Usage** **Environment** **Type of Test Data** **User**
-
----
-
-Unit Testing/Integration Testing Developer Workstation Purposely created Developer
-Automated Unit/Integration testing Build/Integration Purposely created Automated CI process
-
-In Test Environments Needs we have defined which environments will be
-required to have the unit test data:
-
-+----------+----------+----------+----------+----------+----------+
-| **Type | ** | ** | **In | **Who** | **Descr |
-| of | Environm | Database | tegrated | | iption** |
-| T | ent(s)** | In | with | | |
-| esting** | | stance** | Back | | |
-| | | | end** | | |
-+==========+==========+==========+==========+==========+==========+
-| Unit | Dev. | Local | No | De | A |
-| Testing | Work | D | | velopers | utomated |
-| | station, | atabase, | | | Unit |
-| | B | | | | tests |
-| | uild/Int | Build | | | are |
-| | egration | Database | | | d |
-| | Env | | | | eveloped |
-| | ironment | | | | by the |
-| | | | | | de |
-| | | | | | velopers |
-| | | | | | on their |
-| | | | | | own |
-| | | | | | wor |
-| | | | | | kstation |
-| | | | | | and |
-| | | | | | these |
-| | | | | | test |
-| | | | | | scripts |
-| | | | | | get |
-| | | | | | s |
-| | | | | | ubmitted |
-| | | | | | with the |
-| | | | | | code |
-| | | | | | they |
-| | | | | | created. |
-| | | | | | Subs |
-| | | | | | equently |
-| | | | | | the unit |
-| | | | | | tests |
-| | | | | | will be |
-| | | | | | executed |
-| | | | | | during |
-| | | | | | the |
-| | | | | | co |
-| | | | | | ntinuous |
-| | | | | | int |
-| | | | | | egration |
-| | | | | | process. |
-+----------+----------+----------+----------+----------+----------+
+| Type of Testing | Environment(s)                                  | Database Instance              | Integrated with Back end | Who        | Description                                                                                                                                                                                                                            |
+| --------------- | ----------------------------------------------- | ------------------------------ | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unit Testing    | Dev. Workstation, Build/Integration Environment | Local Database, Build Database | No                       | Developers | Automated Unit tests are developed by the developers on their own workstation and these test scripts get submitted with the code they created. Subsequently the unit tests will be executed during the continuous integration process. |
 
 Test data for unit testing needs to be:
 
-- For one unit only, independent from other data. If dependencies are
-  there, the data needs to be provided as part of the unit test and
-  not assumed to be available
-
+- For one unit only, independent from other data. If dependencies are there, the data needs to be provided as part of the unit test and not assumed to be available
 - Comprehensive in support for the unit test(s) and all its variants
 
-If these requirements are met, a truly effective automated unit test
-solution can be brought into place. If the requirements are *not* met,
-it is very likely that the automated test solution will require
-significant maintenance and upkeep in later sprints effectively negating
-the benefits that automated unit testing can bring.
+If these requirements are met, a truly effective automated unit test solution can be brought into place. If the requirements are *not* met, it is very likely that the automated test solution will require significant maintenance and upkeep in later sprints effectively negating the benefits that automated unit testing can bring.
 
-Integration Test Strategy
+## Integration Test Strategy
 
-June 25, 2019
+This section provides an overview of the test approach that will be undertaken for Integration Testing. In unit testing we are testing the individual components, which are then combined in large building blocks or assemblages. By frequently testing potential interactions (good or bad), the team will position itself to quickly deal with any issues found.
 
-9:44 AM
+The term \"integration testing\" is used to mean three different things:
 
-This section provides an overview of the test approach that will be
-undertaken for Integration Testing. In unit testing we are testing the
-individual components, which are then combined in large building
-blocks or assemblages. By frequently testing potential interactions
-(good or bad), the team will position itself to quickly deal with any
-issues found. 
-The term \"integration testing\" is used to mean three different
-things:
+- **A sub-assembly test**: an interim level of testing, part of the way between unit testing and system testing of the fully integrated system.  The Integration Test Strategy is oriented primarily towards sub-assembly testing, but also addresses the other two types of integration testing.
+- **Smoke Test (or build verification test)**: a quick test of an integrated sub-assembly or complete system, just to confirm that all components are present and are connected together correctly. The build verification test usually is not as intensive as a sub-assembly test.  The build process is a series of steps in which the components are compiled and linked together to form an executable system (or subsystem).  In large complex systems, many steps may be needed to build a system, and there can be several build verification tests as interim checkpoints to ensure that the build process is proceeding correctly.
+- **An end-to-end test (or System Integration Test)**, usually performed on an entire system, where one feature is tested \"end to end\" (e2e), without the distraction of other features or other simultaneous demands on the system.
 
-- **A sub-assembly test**: an interim level of testing, part of the
-  way between unit testing and system testing of the fully
-  integrated system.  The Integration Test Strategy is oriented
-  primarily towards sub-assembly testing, but also addresses the
-  other two types of integration testing.
+In all the above three types of integration tests, the objective is to ensure that components link and work together.  The focus is on the effectiveness of functional interactions and compatibility at the
+interfaces.  Integration testing is an interim level of testing that occurs between unit testing and systems testing, and where groupings of components are tested.
 
-- **Smoke Test (or build verification test)**: a quick test of an
-  integrated sub-assembly or complete system, just to confirm that
-  all components are present and are connected together correctly. 
-  The build verification test usually is not as intensive as a
-  sub-assembly test.  The build process is a series of steps in
-  which the components are compiled and linked together to form an
-  executable system (or subsystem).  In large complex systems, many
-  steps may be needed to build a system, and there can be several
-  build verification tests as interim checkpoints to ensure that the
-  build process is proceeding correctly.
+### Definition
 
-- **An end-to-end test (or System Integration Test)**, usually
-  performed on an entire system, where one feature is tested \"end
-  to end\" through the system, without the distraction of other
-  features or other simultaneous demands on the system.
+Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.
 
-In all the above three types of integration tests, the objective is to
-ensure that components link and work together.  The focus is on the
-effectiveness of functional interactions and compatibility at the
-interfaces.  Integration testing is an interim level of testing that
-occurs between unit testing and systems testing, and where groupings
-of components are tested. 
-Definition
-Testing performed to expose defects in the interfaces and in the
-interactions between integrated components or systems.
-Objectives
+### Objectives
 
-- Verify whether all the components/unit within assemblages interact
-  correctly, for example across procedure calls or processes.
-
-- Verify the \"building blocks\" and add verified assemblages are
-  added to a verified base which is then used to support the
-  integration testing of further assemblages.
-
+- Verify whether all the components/unit within assemblages interact correctly, for example across procedure calls or processes.
+- Verify the \"building blocks\" and add verified assemblages are added to a verified base which is then used to support the integration testing of further assemblages.
 - Verify interactions with external systems.
 
-Expected Benefits
+### Expected Benefits
 
-- Individual system components work correctly with each other on the
-  iValua platform
-
+- Individual system components work correctly within Registries infrastructure
 - External functionality works as expected
-
 - REST-full layer operates according to specification
 
-Responsibilities
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+### Scope
 
-**Role ** **R** **A** **S** **C** **I**
+Full System Integration will be tested during System(-Integration) Testing.
 
----
+### Approach
 
-Test Lead     X    
-Test Analyst (Agile)     X    
-Business Tester          
-Test Automation Specialist     X    
-Business Analyst          
-Business Lead          
-Developer X        
-Developer Lead   X      
-Solution Architect         X
-Release Manager         X
-Project Manager         X
+Integration tests are related to Unit tests and we\'ll use similar mechanisms and approaches to test.
+With integration tests we expand the scope of the test to include multiple components. During unit testing we want to isolate the component, in integration testing we want to have the unit connect to and work with other components. For this type of integration testing, the structure of the unit test scripts can be re-purposed and updated to reflect that actual data and results are coming back from the components it is integrated with.
 
-Scope
-Full System Integration will be tested during System(-Integration)
-Testing.
-Approach
-Integration tests are related to Unit tests and we\'ll use the same
-mechanism and approach to test.
-With integration tests we expand the scope of the test to include
-multiple components. During unit testing we want to isolate the
-component, in integration testing we want to have the unit connect to
-and work with other components. For this type of integration testing,
-the structure of the unit test scripts can be re-purposed and updated
-to reflect that actual data and results are coming back from the
-components it is integrated with.
-Test Design
-Test Design approach follows the Unit Test approach. As stated above,
-integration testing is performed to ensure that the units operate
-correctly when they are combined together, as parts in a working (but
-perhaps incomplete) application.  Integration testing usually proceeds
-from small subassemblies, containing only a few components, to larger
-ones containing many components.  Large complex products can go
-through many repetitive build-and-test cycles before they are fully
-integrated.
-Test Execution
-Execution will follow the same path and frequency of the automated
-unit tests.
-Data Requirements
- As per definition in Test Data Strategy integration testing requires
-the following types of test data:
+### Test Design
 
-**Usage** **Environment** **Type of Test Data** **User**
+Test Design approach follows the Unit Test approach. As stated above, integration testing is performed to ensure that the units operate correctly when they are combined together, as parts in a working (but perhaps incomplete) application.  Integration testing usually proceeds from small subassemblies, containing only a few components, to larger ones containing many components.  Large complex products can go through many repetitive build-and-test cycles before they are fully integrated.
 
----
+### Test Execution
 
-Unit Testing/Integration Testing Developer Workstation Purposely created Developer
-Automated Unit/Integration testing Build/Integration Purposely created Automated CI process
-System Integration Testing TEST Purposely Created BA, Tester
+Execution will follow the same path and frequency of the automated unit tests.
 
-In Test Environments Needs we have defined which environments will be
-required to have the unit test data:
+### Data Requirements
 
-**Type of Testing** **Environment(s)** **Integrated with Back end** **Who** **Description**
+As per definition in Test Data Strategy integration testing requires the following types of test data:
 
----
+| Usage                              | Environment             | Type of Test Data | User                 |
+| ---------------------------------- | ----------------------- | ----------------- | -------------------- |
+| Unit Testing/Integration Testing   | Developer Workstation   | Purposely created | Developer            |
+| Automated Unit/Integration Testing | Build/Integration (Dev) | Purposely created | Automated CI process |
+| System Integration Testing | TEST | Purposely Created | BA, Tester |
 
-Integration Testing Integration Test  Yes Developers  
-System Integration Testing TEST Yes BA, Tester, Business Testers
+In Test Environments Needs we have defined which environments will be required to have the unit test data:
 
-Functional Test Strategy
+| Type of Testing | Environment(s) | Integrated with Back-end | Who 
+| --- | --- | --- | --- 
+| Integration Testing | Developer Workstation, Dev, Test | Yes | Developers  
+| System Integration Testing | Test | Yes | BA, Tester, Business Testers
 
-June 25, 2019
+## Functional Test Strategy
 
-10:45 AM
-
-This section provides an overview of the test approach for Functional
-Testing.
+This section provides an overview of the test approach for Functional Testing.
 
 Functional testing is a large testing effort in our project. Functional
 tests tend to answer the questions like "can the user do this?" or "does
