@@ -431,944 +431,80 @@ Our tool set (ZenHub) allows for configuration templates to support consistent t
 
 Defect Management Workflow
 
-![](media/image3.png){width="9.738888888888889in"
-height="7.530555555555556in"}
+> TBD for PRR - We might end up with a very light defect management process more
 
-+----------+----------+----------+----------+----------+----------+
-| **Step** | ** | **Tran | **R | **Descr | **Action |
-| | Status** | sition** | esulting | iption** | By** |
-| | | | Status** | | |
-+==========+==========+==========+==========+==========+==========+
-| **Open** | Open |   |   | Opening | Anybody, |
-| | | | | of a new | but |
-| | | | | Defect | mainly |
-| | | | | | testers |
-+----------+----------+----------+----------+----------+----------+
-| \*_ ** | Open | Ready | In | Once the | The |
-| | | For | Review | defect | defect |
-| | | Review | | has been | reporter |
-| | | | | do | |
-| | | | | cumented | |
-| | | | | it will | |
-| | | | | be | |
-| | | | | s | |
-| | | | | ubmitted | |
-| | | | | for | |
-| | | | | review. | |
-| | | | | No | |
-| | | | | action | |
-| | | | | on the | |
-| | | | | defect | |
-| | | | | will | |
-| | | | | happen | |
-| | | | | until it | |
-| | | | | is | |
-| | | | | labeled | |
-| | | | | \"Ready | |
-| | | | | for | |
-| | | | | R | |
-| | | | | eview\", | |
-| | | | | this | |
-| | | | | will | |
-| | | | | allow | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | reporter | |
-| | | | | to | |
-| | | | | collect | |
-| | | | | all the | |
-| | | | | n | |
-| | | | | ecessary | |
-| | | | | info | |
-| | | | | rmation. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Open | Close | Closed | If it | The |
-| | | | | turns | defect |
-| | | | | out that | author |
-| | | | | the | or test |
-| | | | | defect | lead. |
-| | | | | wasn\'t | |
-| | | | | a defect | |
-| | | | | or it | |
-| | | | | was a | |
-| | | | | du | |
-| | | | | plicate, | |
-| | | | | misunder | |
-| | | | | standing | |
-| | | | | etc. the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | closed | |
-| | | | | imme | |
-| | | | | diately. | |
-| | | | | Int | |
-| | | | | eresting | |
-| | | | | to note | |
-| | | | | is that | |
-| | | | | we are | |
-| | | | | not | |
-| | | | | deleting | |
-| | | | | any | |
-| | | | | defects | |
-| | | | | as even | |
-| | | | | the fact | |
-| | | | | of | |
-| | | | | quickly | |
-| | | | | closed | |
-| | | | | defects | |
-| | | | | is | |
-| | | | | int | |
-| | | | | eresting | |
-| | | | | and | |
-| | | | | might | |
-| | | | | feed | |
-| | | | | into the | |
-| | | | | Sprint | |
-| | | | | Retros | |
-| | | | | pective. | |
-+----------+----------+----------+----------+----------+----------+
-| ** | In |   |   | During | Test |
-| Review** | Review | | | review | Lead |
-| | | | | the test | |
-| | | | | lead | |
-| | | | | does a | |
-| | | | | quality | |
-| | | | | and a | |
-| | | | | quick | |
-| | | | | sanity | |
-| | | | | check on | |
-| | | | | the | |
-| | | | | created | |
-| | | | | defect | |
-| | | | | report. | |
-| | | | | A | |
-| | | | | typical | |
-| | | | | review | |
-| | | | | does not | |
-| | | | | take a | |
-| | | | | lot of | |
-| | | | | time and | |
-| | | | | the test | |
-| | | | | lead | |
-| | | | | will be | |
-| | | | | able to | |
-| | | | | do those | |
-| | | | | in mere | |
-| | | | | seconds. | |
-| | | | | | |
-| | | | | This QA | |
-| | | | | gate | |
-| | | | | ensures | |
-| | | | | that an | |
-| | | | | ac | |
-| | | | | tionable | |
-| | | | | defect | |
-| | | | | report | |
-| | | | | is | |
-| | | | | f | |
-| | | | | orwarded | |
-| | | | | and will | |
-| | | | | cut down | |
-| | | | | on | |
-| | | | | unn | |
-| | | | | ecessary | |
-| | | | | back and | |
-| | | | | forth | |
-| | | | | commu | |
-| | | | | nication | |
-| | | | | between | |
-| | | | | reporter | |
-| | | | | and | |
-| | | | | de | |
-| | | | | veloper. | |
-| | | | | With our | |
-| | | | | o | |
-| | | | | ff-shore | |
-| | | | | dev | |
-| | | | | elopment | |
-| | | | | group | |
-| | | | | this is | |
-| | | | | es | |
-| | | | | sential. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Return | Open | If the | Test |
-| | Review | to | | defect | Lead |
-| | | Reporter | | report | |
-| | | | | is found | |
-| | | | | lacking | |
-| | | | | or | |
-| | | | | in-ac | |
-| | | | | tionable | |
-| | | | | it is | |
-| | | | | returned | |
-| | | | | to the | |
-| | | | | reporter | |
-| | | | | with the | |
-| | | | | request | |
-| | | | | to | |
-| | | | | update | |
-| | | | | the | |
-| | | | | info | |
-| | | | | rmation. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Ready | Triage | If the | Test |
-| | Review | for | | test | Lead |
-| | | Triage | | lead | |
-| | | | | find the | |
-| | | | | defect | |
-| | | | | report | |
-| | | | | in good | |
-| | | | | state, | |
-| | | | | it can | |
-| | | | | be | |
-| | | | | tran | |
-| | | | | sitioned | |
-| | | | | to the | |
-| | | | | defect | |
-| | | | | triage. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Close | Closed | If it | Test |
-| | Review | | | turns | Lead |
-| | | | | out that | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | wasn\'t | |
-| | | | | a defect | |
-| | | | | or it | |
-| | | | | was a | |
-| | | | | du | |
-| | | | | plicate, | |
-| | | | | misunder | |
-| | | | | standing | |
-| | | | | etc. the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | closed. | |
-+----------+----------+----------+----------+----------+----------+
-| ** | Triage |   |   | The | Sprint |
-| Triage** | | | | triage | Team |
-| | | | | process | Leads |
-| | | | | is meant | |
-| | | | | to | |
-| | | | | discuss | |
-| | | | | the | |
-| | | | | course | |
-| | | | | of | |
-| | | | | action | |
-| | | | | for | |
-| | | | | defects | |
-| | | | | that | |
-| | | | | have | |
-| | | | | just | |
-| | | | | been | |
-| | | | | r | |
-| | | | | eported. | |
-| | | | | This is | |
-| | | | | the | |
-| | | | | process | |
-| | | | | in which | |
-| | | | | the team | |
-| | | | | agrees | |
-| | | | | on | |
-| | | | | priority | |
-| | | | | for | |
-| | | | | fixing | |
-| | | | | the | |
-| | | | | defect. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Triage | Complete | Triage | During | Test |
-| | | Triage | C | th | Lead, |
-| | | | ompleted | e Triage | Team |
-| | | | | mee | |
-| | | | | ting the | |
-| | | | | inf | |
-| | | | | ormation | |
-| | | | | is | |
-| | | | | c | |
-| | | | | ollected | |
-| | | | | to | |
-| | | | | compete | |
-| | | | | the | |
-| | | | | triage | |
-| | | | | for the | |
-| | | | | issue. | |
-| | | | | This | |
-| | | | | d | |
-| | | | | ocuments | |
-| | | | | de | |
-| | | | | cisions, | |
-| | | | | assi | |
-| | | | | gnments, | |
-| | | | | pri | |
-| | | | | orities, | |
-| | | | | business | |
-| | | | | value | |
-| | | | | etc. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Triage | Assign | Waiting | Once the | Test |
-| | | to Fix | for Fix | triage | Lead, |
-| | | | | is | Team |
-| | | | | co | |
-| | | | | mpleted, | |
-| | | | | valid | |
-| | | | | defects | |
-| | | | | that | |
-| | | | | need to | |
-| | | | | be fixed | |
-| | | | | will be | |
-| | | | | assigned | |
-| | | | | to the | |
-| | | | | Dev. | |
-| | | | | Lead. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Triage | Defer | Deferred | If the | Team |
-| | | | | defect | |
-| | | | | is | |
-| | | | | deemed | |
-| | | | | out of | |
-| | | | | scope | |
-| | | | | for this | |
-| | | | | sprint | |
-| | | | | but | |
-| | | | | valid it | |
-| | | | | will be | |
-| | | | | deferred | |
-| | | | | and will | |
-| | | | | end up | |
-| | | | | on the | |
-| | | | | backlog | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Triage | Close | Closed | If it | Test |
-| | | | | turns | Lead, |
-| | | | | out that | Team |
-| | | | | the | |
-| | | | | defect | |
-| | | | | wasn\'t | |
-| | | | | a defect | |
-| | | | | or it | |
-| | | | | was a | |
-| | | | | du | |
-| | | | | plicate, | |
-| | | | | misunder | |
-| | | | | standing | |
-| | | | | etc. the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | closed. | |
-+----------+----------+----------+----------+----------+----------+
-| **Assign | Waiting |   |   | The | Dev. |
-| to Fix** | for Fix | | | defect | Lead |
-| | | | | has been | |
-| | | | | assigned | |
-| | | | | to the | |
-| | | | | Dev. | |
-| | | | | Lead | |
-| | | | | into the | |
-| | | | | fix | |
-| | | | | queue | |
-| | | | | for | |
-| | | | | ass | |
-| | | | | ignment. | |
-| | | | | After | |
-| | | | | the | |
-| | | | | ass | |
-| | | | | ignment, | |
-| | | | | the | |
-| | | | | d | |
-| | | | | eveloper | |
-| | | | | sees the | |
-| | | | | defect | |
-| | | | | in his | |
-| | | | | task | |
-| | | | | list. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Waiting | Start | In | The | D |
-| | for Fix | Work | Progress | d | eveloper |
-| | | | | eveloper | |
-| | | | | starts | |
-| | | | | work on | |
-| | | | | the | |
-| | | | | defect, | |
-| | | | | the \"In | |
-| | | | | Pr | |
-| | | | | ogress\" | |
-| | | | | status | |
-| | | | | i | |
-| | | | | ndicates | |
-| | | | | to the | |
-| | | | | dev lead | |
-| | | | | that the | |
-| | | | | d | |
-| | | | | eveloper | |
-| | | | | is busy. | |
-+----------+----------+----------+----------+----------+----------+
-| ** | In |   |   | The | D |
-| Fixing** | Progress | | | d | eveloper |
-| | | | | eveloper | |
-| | | | | starts | |
-| | | | | the work | |
-| | | | | on | |
-| | | | | fixing | |
-| | | | | the | |
-| | | | | defect. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Finish | Ready | Once the | D |
-| | Progress | Work | for | d | eveloper |
-| | | | Va | eveloper | |
-| | | | lidation | is | |
-| | | | | f | |
-| | | | | inished, | |
-| | | | | he | |
-| | | | | d | |
-| | | | | ocuments | |
-| | | | | the fix | |
-| | | | | and | |
-| | | | | updates | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | report. | |
-| | | | | The | |
-| | | | | defect | |
-| | | | | is now | |
-| | | | | ready | |
-| | | | | for | |
-| | | | | va | |
-| | | | | lidation | |
-| | | | | by | |
-| | | | | testing | |
-| | | | | (or the | |
-| | | | | re | |
-| | | | | porter). | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Back to | Assign | If the | D |
-| | Progress | Fix | to Fix | d | eveloper |
-| | | Queue | | eveloper | |
-| | | | | has too | |
-| | | | | much | |
-| | | | | work on | |
-| | | | | his | |
-| | | | | plate or | |
-| | | | | finds | |
-| | | | | that | |
-| | | | | this | |
-| | | | | defect | |
-| | | | | is not | |
-| | | | | his, the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | assigned | |
-| | | | | back to | |
-| | | | | the Dev. | |
-| | | | | lead for | |
-| | | | | re-ass | |
-| | | | | ignment. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | In | Return | Triage | If new | D |
-| | Progress | to | | inf | eveloper |
-| | | Triage | | ormation | |
-| | | | | emerges | |
-| | | | | on the | |
-| | | | | defect | |
-| | | | | that | |
-| | | | | would | |
-| | | | | require | |
-| | | | | the | |
-| | | | | team\'s | |
-| | | | | input | |
-| | | | | and | |
-| | | | | ass | |
-| | | | | essment, | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | send | |
-| | | | | back to | |
-| | | | | triage. | |
-| | | | | | |
-| | | | | Reasons | |
-| | | | | could | |
-| | | | | be: | |
-| | | | | Signi | |
-| | | | | ficantly | |
-| | | | | more | |
-| | | | | risk, | |
-| | | | | missed | |
-| | | | | requi | |
-| | | | | rements, | |
-| | | | | defect | |
-| | | | | exposes | |
-| | | | | more | |
-| | | | | issues | |
-| | | | | etc. | |
-+----------+----------+----------+----------+----------+----------+
-| **Ready | Ready |   |   | The | Test |
-| for | for | | | defect | Lead |
-| Vali | Va | | | is now | |
-| dation** | lidation | | | ready to | |
-| | | | | be | |
-| | | | | assigned | |
-| | | | | to a | |
-| | | | | tester | |
-| | | | | ( | |
-| | | | | reporter | |
-| | | | | of | |
-| | | | | defect) | |
-| | | | | to | |
-| | | | | validate | |
-| | | | | that the | |
-| | | | | issue | |
-| | | | | was | |
-| | | | | dealt | |
-| | | | | with | |
-| | | | | co | |
-| | | | | rrectly. | |
-| | | | | This | |
-| | | | | step is | |
-| | | | | i | |
-| | | | | mportant | |
-| | | | | because | |
-| | | | | the test | |
-| | | | | env | |
-| | | | | ironment | |
-| | | | | co | |
-| | | | | ntaining | |
-| | | | | the fix | |
-| | | | | might | |
-| | | | | not be | |
-| | | | | a | |
-| | | | | vailable | |
-| | | | | just | |
-| | | | | yet. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Ready | Assign | Va | The | Test |
-| | for | for | lidating | as | Lead |
-| | Va | Va | | signment | |
-| | lidation | lidation | | to the | |
-| | | | | tester | |
-| | | | | (re | |
-| | | | | porting) | |
-| | | | | will be | |
-| | | | | t | |
-| | | | | riggered | |
-| | | | | by the | |
-| | | | | avai | |
-| | | | | lability | |
-| | | | | of the | |
-| | | | | test | |
-| | | | | env | |
-| | | | | ironment | |
-| | | | | co | |
-| | | | | ntaining | |
-| | | | | the fix. | |
-| | | | | And even | |
-| | | | | though | |
-| | | | | we build | |
-| | | | | new | |
-| | | | | versions | |
-| | | | | conti | |
-| | | | | nuously, | |
-| | | | | a | |
-| | | | | cons | |
-| | | | | olidated | |
-| | | | | new | |
-| | | | | version | |
-| | | | | for QA | |
-| | | | | will not | |
-| | | | | be | |
-| | | | | a | |
-| | | | | vailable | |
-| | | | | as | |
-| | | | | fre | |
-| | | | | quently. | |
-+----------+----------+----------+----------+----------+----------+
-| **Vali | Va |   |   | During | Tester |
-| dating** | lidating | | | the | |
-| | | | | va | |
-| | | | | lidating | |
-| | | | | step, | |
-| | | | | the | |
-| | | | | tester | |
-| | | | | will | |
-| | | | | validate | |
-| | | | | the | |
-| | | | | fixed | |
-| | | | | defect. | |
-| | | | | The | |
-| | | | | tester | |
-| | | | | would | |
-| | | | | only | |
-| | | | | start | |
-| | | | | the | |
-| | | | | va | |
-| | | | | lidation | |
-| | | | | if the | |
-| | | | | defect | |
-| | | | | was | |
-| | | | | assigned | |
-| | | | | to him. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Va | Pass | Closed | If the | Tester |
-| | lidating | | | defect | |
-| | | | | fix was | |
-| | | | | correct, | |
-| | | | | the | |
-| | | | | tester | |
-| | | | | will | |
-| | | | | indicate | |
-| | | | | \ | |
-| | | | | "Pass\". | |
-| | | | | This | |
-| | | | | will | |
-| | | | | autom | |
-| | | | | atically | |
-| | | | | close | |
-| | | | | the | |
-| | | | | defect. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Va | Fail | Assign | If the | Tester |
-| | lidating | | to Fix | defect | |
-| | | | | fix was | |
-| | | | | not | |
-| | | | | correct, | |
-| | | | | the | |
-| | | | | tester | |
-| | | | | will | |
-| | | | | indicate | |
-| | | | | \"Fail\" | |
-| | | | | and the | |
-| | | | | defect | |
-| | | | | will | |
-| | | | | autom | |
-| | | | | atically | |
-| | | | | be | |
-| | | | | assigned | |
-| | | | | back to | |
-| | | | | the Dev. | |
-| | | | | lead in | |
-| | | | | status | |
-| | | | | \"Assign | |
-| | | | | to Fix\" | |
-+----------+----------+----------+----------+----------+----------+
-| ** \*\* | Va | Return | Triage | If new | Tester |
-| | lidating | to | | inf | |
-| | | Triage | | ormation | |
-| | | | | emerges | |
-| | | | | on the | |
-| | | | | defect | |
-| | | | | that | |
-| | | | | would | |
-| | | | | require | |
-| | | | | the | |
-| | | | | team\'s | |
-| | | | | input | |
-| | | | | and | |
-| | | | | ass | |
-| | | | | essment, | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | send | |
-| | | | | back to | |
-| | | | | triage. | |
-| | | | | | |
-| | | | | Reasons | |
-| | | | | could | |
-| | | | | be: | |
-| | | | | Signi | |
-| | | | | ficantly | |
-| | | | | more | |
-| | | | | risk, | |
-| | | | | missed | |
-| | | | | requi | |
-| | | | | rements, | |
-| | | | | defect | |
-| | | | | exposes | |
-| | | | | more | |
-| | | | | issues | |
-| | | | | etc. | |
-+----------+----------+----------+----------+----------+----------+
-| _ | Deferred |   |   | An | Test |
-| _Defer** | | | | out- | Lead, |
-| | | | | of-scope | Team |
-| | | | | defect | |
-| | | | | will be | |
-| | | | | labelled | |
-| | | | | \"De | |
-| | | | | ferred\" | |
-| | | | | in order | |
-| | | | | to be | |
-| | | | | reviewed | |
-| | | | | at a | |
-| | | | | later | |
-| | | | | time. | |
-| | | | | Deferral | |
-| | | | | only | |
-| | | | | happens | |
-| | | | | during | |
-| | | | | the | |
-| | | | | triage | |
-| | | | | and is | |
-| | | | | t | |
-| | | | | herefore | |
-| | | | | a | |
-| | | | | combined | |
-| | | | | decision | |
-| | | | | of the | |
-| | | | | team. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | Deferred | R | Triage | Once the | Test |
-| | | e-Assess | | time is | Lead, |
-| | | | | there, a | Team |
-| | | | | deferred | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | brought | |
-| | | | | back | |
-| | | | | into the | |
-| | | | | process | |
-| | | | | by | |
-| | | | | re-a | |
-| | | | | ssessing | |
-| | | | | in | |
-| | | | | triage. | |
-+----------+----------+----------+----------+----------+----------+
-| **R | R |   |   | A | Tester/ |
-| e-Open** | e-opened | | | formerly | Reporter |
-| | | | | closed | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | r | |
-| | | | | e-opened | |
-| | | | | if the | |
-| | | | | same | |
-| | | | | c | |
-| | | | | ondition | |
-| | | | | appears | |
-| | | | | again. | |
-| | | | | This | |
-| | | | | defect | |
-| | | | | will | |
-| | | | | then be | |
-| | | | | co | |
-| | | | | nsidered | |
-| | | | | in the | |
-| | | | | same | |
-| | | | | fashion | |
-| | | | | as a | |
-| | | | | brand | |
-| | | | | new | |
-| | | | | defect. | |
-+----------+----------+----------+----------+----------+----------+
-| ** ** | R | Close | Closed | If it | Tester/ |
-| | e-opened | | | turns | Reporter |
-| | | | | out that | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | wasn\'t | |
-| | | | | a defect | |
-| | | | | or it | |
-| | | | | was a | |
-| | | | | du | |
-| | | | | plicate, | |
-| | | | | misunder | |
-| | | | | standing | |
-| | | | | etc. the | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | closed. | |
-+----------+----------+----------+----------+----------+----------+
-| ** \*\* | R | Ready | In | Once the | Tester/ |
-| | e-opened | for | Review | defect | Reporter |
-| | | Review | | has been | |
-| | | | | updated | |
-| | | | | it will | |
-| | | | | be | |
-| | | | | s | |
-| | | | | ubmitted | |
-| | | | | for | |
-| | | | | review. | |
-| | | | | No | |
-| | | | | action | |
-| | | | | on the | |
-| | | | | defect | |
-| | | | | will | |
-| | | | | happen | |
-| | | | | until it | |
-| | | | | is | |
-| | | | | labeled | |
-| | | | | \"Ready | |
-| | | | | for | |
-| | | | | R | |
-| | | | | eview\", | |
-| | | | | this | |
-| | | | | will | |
-| | | | | allow | |
-| | | | | the | |
-| | | | | defect | |
-| | | | | reporter | |
-| | | | | to | |
-| | | | | collect | |
-| | | | | all the | |
-| | | | | n | |
-| | | | | ecessary | |
-| | | | | info | |
-| | | | | rmation. | |
-+----------+----------+----------+----------+----------+----------+
-| _ | Closed |   |   | A defect | Team |
-| \*Close** | | | | can be | |
-| | | | | closed | |
-| | | | | because | |
-| | | | | it | |
-| | | | | passed | |
-| | | | | va | |
-| | | | | lidation | |
-| | | | | or for a | |
-| | | | | variety | |
-| | | | | of other | |
-| | | | | reasons. | |
-+----------+----------+----------+----------+----------+----------+
-| ** \*\* | Closed | Re-Open | R | A | Tester/ |
-| | | | e-opened | formerly | Reporter |
-| | | | | closed | |
-| | | | | defect | |
-| | | | | can be | |
-| | | | | r | |
-| | | | | e-opened | |
-| | | | | if the | |
-| | | | | same | |
-| | | | | c | |
-| | | | | ondition | |
-| | | | | appears | |
-| | | | | again. | |
-| | | | | This | |
-| | | | | defect | |
-| | | | | will | |
-| | | | | then be | |
-| | | | | co | |
-| | | | | nsidered | |
-| | | | | in the | |
-| | | | | same | |
-| | | | | fashion | |
-| | | | | as a | |
-| | | | | brand | |
-| | | | | new | |
-| | | | | defect. | |
-+----------+----------+----------+----------+----------+----------+
-
-**Output**
+### Output
 
 Managed defects.
 
-Defect Triage Meeting Guidelines
+## Defect Triage Meeting Guidelines
 
-June 24, 2019
+> This process might be a bit too heavy handed for PRR, but the guidelines for discussing an deciding on defects are applicable.
 
-3:03 PM
+A defect triage is a meeting/review initiated by the Test Lead/Scrum Master and attended by the leads. The objective of the meeting is to prioritize and track the defects to be addressed, ensuring timely and accurate resolution.  The triage will also be the time where testers readiness for the new build is communicated.
 
-A defect triage is a meeting/review initiated by the Test Lead/Scrum
-Master and attended by the leads. The objective of the meeting is to
-prioritize and track the defects to be addressed, ensuring timely and
-accurate resolution.  The triage will also be the time where testers
-readiness for the new build is communicated.
+### Frequency
 
-Frequency
-
-A Defect Triage should be held as needed during the sprints. The
-frequency and the number of occurrences will vary, but is typically
-based on:
+A Defect Triage should be held as needed during the sprints. The frequency and the number of occurrences will vary, but is typically based on:
 
 - the number of defects being reported,
-
 - the overall sprint schedule and
-
 - the current status of the sprint.
 
-Scope of the meeting
+### Scope of the meeting
 
-The defects that will be discussed are all the defects which have the
-status "Triage".
+The defects that will be discussed are all the defects which have the status "New Issue".
 
-At the Defect Triage, each defect should be discussed; even those that
-are rated at a lower severity or ones that are deemed "simple".
+At the Defect Triage, each defect should be discussed; even those that are rated at a lower severity or ones that are deemed "simple".
 
-Common Triage Meeting Guidelines
+### Common Triage Meeting Guidelines
 
 - The Test Lead/Scrum Master makes sure the right people are present.
   Nota Bene: Not all are needed all the time!
-
 - Test Lead determines when the meeting is held. *Do not hold meetings
   because they are on the calendar if you have nothing to discuss!*
-
 - The Test Lead facilitates the meeting.
-
 - The Test Lead documents the decisions in JIRA during the meeting.
-
 - An efficient triage meeting should take no longer than 30 minutes
   and should be finished as soon as possible.
-
 - Participants actively and respectfully contribute.
-
 - The Defect Triage is not intended to solve defects. Common rule of
   thumb: If you need more than 2-3 minutes to decide on priority and
   assignment, it needs to be assigned for clarification.
 
-- The priority of defects to be discussed are:
+The priority of defects to be discussed are:
 
 1.  "Failed" Validation
-
 2.  Defects that have new information provided to them
-
-3.  Returned to Triage from Development of Validation
-
+3.  Returned to review from Development in case of questions
 4.  Re-assessed defects (previously deferred)
-
 5.  Re-opened defects
-
 6.  New defects in order of descending severity
 
-- The triage meeting will also discuss readiness of testing for the
-  new build.
+- The triage meeting will also discuss readiness of testing for the new build in Test.
 
-Agenda for a Triage Meeting
+### Agenda for a Triage Meeting
 
 **Introduction (2 minutes)**
 
-- Flag any burning, immediate action needed, defects that impact test
-  and development progress.
-
+- Flag any burning, immediate action needed, defects that impact test and development progress.
 - Bring up list on screen sorted by priority of discussion.
-
-**Review defect by defect (no longer than 2-3 minutes per defect)**
+- **Review defect by defect (no longer than 2-3 minutes per defect)**
 
 **Determine:**
 
 1.  Validity of defect. (Invalid will close the defect)
-
 2.  In scope or out of scope? (Out of scope will result in Deferral)
-
 3.  Completeness/clarity of information
 
-**Complete Triage (JIRA Transition) by obtaining input from
-participants**
+**Complete Triage by obtaining input from participants**
 
-1.  Review Symptom/Severity for correctness (Reporter has already
-    entered this)
-
-2.  Review Product Status for correctness (Reporter has already entered
-    this)
-
+1.  Review Symptom/Severity for correctness
+2.  Review Product Status for correctness
 3.  Discuss Business Value
-
 4.  Set Priority
-
-5.  Determine the Fix Versions (The version in which this defect needs
-    to be fixed)
-
-6.  Determine the Due Date
-
-7.  Add a comment if necessary
-
-8.  Review Priority again to make sure that that it is indeed correct.
+5.  Determine the when this defect needs to be fixed (this sprint, next or go to back log)
+6.  Add a comment if necessary
 
 **Obtain agreement from the participants**
 
@@ -1379,201 +515,114 @@ participants**
 **Discuss Testing's readiness for the next build. (5 minutes)**
 
 - Test Lead indicates status of current test cycle.
-
 - Dev. Lead reports on readiness of Dev. to produce a new build.
-
 - Agree build deployment date/schedule.
 
 ROLES & RESPONSIBILITIES of individuals in Defect Triage
 
-**1. Project Manager**
+**1. Product Owner**
 
 - Assists in the prioritization of the defects
-
 - Deals with or escalates scoping defects.
-
-**2. Business Lead/Product Owner**
-
-- Assists in the prioritization of the defects.
-
 - Assists in setting the Business Value of the defect.
-
 - Deals with or escalates business scoping defects.
 
-**3. Test Lead/Scrum Master**
+**2. Test Lead/Scrum Master**
 
 - Assists in the prioritization of the defects
-
 - Calls the Defect Triage
-
-- Manages defects in JIRA
-
+- Manages defects in ZenHub
 - Discusses the arrival of the next build for Testing
-
 - Escalates Testing defects
-
 - Explains the findings on each defect being presented
 
-**4. Development Lead(CGI)**
+**4. Development Lead**
 
 - Assists in the prioritization of the defects
-
-- Escalates development defects to PM
-
+- Escalates development defects
 - Discusses the delivery date of next build to Testing
-
 - Explains the level of complexity and the risk associated with each
   defect being presented at the Defect Triage
 
-- Assigns the defects to the appropriate developer
+#### Outcome
 
-- Team is aligned on the severity and priority of defects discussed
-  during the Defect Triage
+Team is aligned on the severity and priority of defects discussed during the Defect Triage
 
-Test Closure Process
+## Test Closure Process
 
-June 24, 2019
-
-3:04 PM
-
-RASCI
-
-**Roles** **Responsible** **Approves/Accountable** **Supports** **Consulted** **Informed**
-
----
-
-**Test Lead** X        
-**Business Lead**      X    
-**Developer Lead**      X    
-**Release Manager**      X    
-**Auditor**         X
-**Project Manager**   X      
-**Product Owner/Client**         X
-
-Objective
+### Objective
 
 Determine \"done-ness\".
+Wrap up the sprint\'s testing effort, consolidate results and report on outcome.
 
-Wrap up the sprint\'s testing effort, consolidate results and report on
-outcome.
-
-Pre-requisites
+### Pre-requisites
 
 **Before** closing the sprint test we determine if:
 
 1.  We meet our definition of done (DoD) for testing
-
-2.  Testing has been performed against test plan(s)
-
+2.  Testing has been performed algned with the Sprint plan
 3.  All test cases are mapped to requirements
-
 4.  All test cases have been executed unless known and agreed upon
-
 5.  All defects have been addressed
 
-Description
+### Description
 
-During the project, every sprint will go through a test closure. In the
-test closure we determine that we are indeed finished and what
-activities are still outstanding to secure our test artifacts and
-results.
-
-Any outstanding work items will need to be discussed and decided upon.
+During the project, every sprint will go through a test closure. In the test closure we determine that we are indeed finished and what activities are still outstanding to secure our test artifacts and
+results. Any outstanding work items will need to be discussed and decided upon.
 
 The decision can be one of the following:
 
 - Deal with it in the last phase of the sprint
-
 - Put on the backlog for future sprint incorporation
-
 - Determine that the item is no longer necessary
 
 **After** closing the sprint test we:
 
 1.  Collect the lessons learned and suggested process improvements for
     the **Sprint Retrospective**
-
 2.  Evaluate our test estimation accuracy
-
 3.  Conduct a defect trend analysis
-
 4.  Archive/consolidate all relevant test collateral, including:
-
     a. Test plan(s)
-
     b. Test case(s)
-
     c. Test report(s)
-
     d. Test data
-
     e. Relevant emails
 
-Output: Test Closure Report
+### Output
+
+**Test Closure Report**
 
 The Test Closure Report is input to the **Sprint Review.**
 
 This report provides the following details:
 
 - Outstanding Risks and Issues
-
 - Action Plan for open work items
-
 - Statistics on:
-
   - Defects found
-
   - Defects fixed
-
   - Open Defects
-
   - Open Defects by Severity and Priority
-
   - Postponed defects (backlog)
-
   - Test Passes/Fails
-
   - Not-run test cases
-
   - Blocked test cases
 
-Detailed Test Strategies
+# Detailed Test Strategies
 
-June 25, 2019
+This chapter contains the individual test strategies for the different test activities and techniques to be deployed in the PPR project.
 
-9:34 AM
-
-This chapter contains the individual test strategies for the different
-test activities and techniques to be deployed in the PPR project.
-
-Not all of these strategies will be deployed equally or with the same
-width of implementation. The info-graphic below gives a high level
-impression of the relative importance and therefore focus.
+Not all of these strategies will be deployed equally or with the same width of implementation. The info-graphic below gives a high level impression of the relative importance and therefore focus.
 
 Rated from 0-10 on each category, the different activities are rated as
 follows:
 
-\<\<Detailed Test Strategies - Spreadsheet.xlsx\
- \*\* \*\* **Frequency** **Impact On Quality** **Business Importance** **Operational Importance** **Project Success factor** **SUM Total** **Rank**
+> See the [worksheet](files/DetailedTestStrategies.xlsx) for calculating the relative importance of each of the testing activities.
 
----
+![alt text](images/rating.png "Test Category Rating")
 
-**Unit Testing** 0 0 0 0 0 **0** 10
-**Functional Testing** 10 10 9 5 10 **44** 1
-**Test Automation** 1 1 3 8 4 **17** 7
-**System Testing** 2 3 4 8 5 **22** 5.5
-**Regression Testing** 9 2 8 8 8 **35** 3.5
-**Smoke Testing** 10 1 1 8 2 **22** 5.5
-**Integration Testing** 5 8 8 6 8 **35** 3.5
-**User Acceptance Testing** 6 2 10 8 10 **36** 2
-**Security Testing** 1 1 5 8 1 **16** 8
-**Performance Testing** 1 1 4 8 1 **15** 9
-
-Unit Test Strategy
-
-June 25, 2019
-
-9:44 AM
+## Unit Test Strategy
 
 This section has been added for information only as Unit Testing for PPR
 is not implemented as traditional Unit Testing. However, the
