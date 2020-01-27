@@ -202,6 +202,7 @@ Test planning will not be just an activity at the beginning of the sprint, it wi
 This is the activity that describes the \"who, what, when, where, and how\" of the test. Test plans can be developed at a variety of levels, for instance for a whole project, a sprint or even a specific testing activity in a sprint. The high-level test plan will show which functions and quality attributes of the application are to be tested. In the PPR Project, we create test plans per Sprint.
 
 **Planning Tasks**
+
 |  | Task | Description | Outcome |  Frequency
 | :---: | --- | --- | --- | --- 
 | 1 | Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
