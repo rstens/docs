@@ -3,11 +3,12 @@
 The Test Strategy for the PPR project aims to lay the appropriate QA and Test management foundation by implementing the tools, processes and governance to support the release plan for PPR.
 
 The agile nature of the project set up will be reflected in:
--   Approach
--   Goals
--   Techniques
--   Technology use
--   Planning
+
+- Approach
+- Goals
+- Techniques
+- Technology use
+- Planning
 
 This approach does not preclude us from applying a level of rigor and good testing practices to this project. In fact, agile projects if done well are often more rigorous and consistent in approach.
 
@@ -16,63 +17,63 @@ For our project we are working with a set of Testing Principles, which contain 
 ## Content
 
 The Test Strategy addresses the following topics in detail:
--   Risks, Dependencies, Assumptions, and Constraints
--   Test Process Introduction
--   Detailed Test Strategies
--   Unit Test Strategy
--   Integration Test Strategy
--   Functional Test Strategy
--   System Test Strategy
--   User Acceptance Test Strategy
--   Smoke Test Strategy
--   Regression Test Strategy
--   Performance Test Strategy
--   Security Test Strategy
--   Test Automation Strategy
--   Management Strategies
--   Test Data Strategy
--   Defect Management Strategy
--   Test Results Strategy
--   Progress Reporting Strategy
--   Readiness, Exit, Suspension and Resumption Criteria
--   Definition of Done for Testing
--   Test Environmental Needs
--   Test Tool Needs
--   Responsibilities, Staffing, and Training Needs
--   Continuous Improvement Process (CIP)
+
+- Risks, Dependencies, Assumptions, and Constraints
+- Test Process Introduction
+- Detailed Test Strategies
+- Unit Test Strategy
+- Integration Test Strategy
+- Functional Test Strategy
+- System Test Strategy
+- User Acceptance Test Strategy
+- Smoke Test Strategy
+- Regression Test Strategy
+- Performance Test Strategy
+- Security Test Strategy
+- Test Automation Strategy
+- Management Strategies
+- Test Data Strategy
+- Defect Management Strategy
+- Test Results Strategy
+- Progress Reporting Strategy
+- Readiness, Exit, Suspension and Resumption Criteria
+- Definition of Done for Testing
+- Test Environmental Needs
+- Test Tool Needs
+- Responsibilities, Staffing, and Training Needs
+- Continuous Improvement Process (CIP)
 
 ## Key Scope Statements
 
--   The Test Strategy describes an approach for QA and Testing activities during the project with the intent to provide a foundation and guidance for future process improvement and alignment at PPR.
--   Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
--   Test plans will continue to evolve throughout the life of the PPR project. 
+- The Test Strategy describes an approach for QA and Testing activities during the project with the intent to provide a foundation and guidance for future process improvement and alignment at PPR.
+- Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
+- Test plans will continue to evolve throughout the life of the PPR project.
 
 # Risks, Dependencies, Assumptions and Constraints
 
 ## Dependencies
 
-  | | Dependency Between | Potential Impact of Dependency | Owners
-  | :---: | --- | --- | --- 
-  | 1 | | | |
-  | 2 | | | |                                                                   
-  | 3 | | | |
+|     | Dependency Between | Potential Impact of Dependency | Owners |
+| :-: | ------------------ | ------------------------------ | ------ |
+|  1  |                    |                                |        |
+|  2  |                    |                                |        |       |
+|  3  |                    |                                |        |
 
 ## Assumptions
 
-|  | Assumption to be proven | Impact of Assumption being incorrect | Status | Owners
-| --- | --- | --- | --- | ---
-| 1 | UAT will be executed by PPR Team Members | Schedule, Quality |  | 
-| 2 | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage |  | 
-| 3 | PPR Team will need to be trained in testing fundamentals, Agile process, test process, tools, defect management. | Preparation |  | 
+|     | Assumption to be proven                                                                                                                           | Impact of Assumption being incorrect    | Status | Owners |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------ | ------ |
+| 1   | UAT will be executed by PPR Team Members                                                                                                          | Schedule, Quality                       |        |
+| 2   | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage |        |
+| 3   | PPR Team will need to be trained in testing fundamentals, Agile process, test process, tools, defect management.                                  | Preparation                             |        |
 
 ## Constraints
 
-|  | Constraints | Impact of Constraint on testing effort | Owners | Update
-| :---: | --- | --- | --- | ---
-| 1 | Sprint Duration | Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items. |  | A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint.
-| 2 | Tester Availability | Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week. |  | 
-| 3 |  |  |  | 
- 
+|     | Constraints         | Impact of Constraint on testing effort                                                                                                                     | Owners | Update                                                                                                           |
+| :-: | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
+|  1  | Sprint Duration     | Length of the sprint and therefore the available time for testing will has us timebox the testing activities and potentially generating new backlog items. |        | A significant portion of testing/regression testing from the previous Sprint is not scheduled in the new Sprint. |
+|  2  | Tester Availability | Testers will have less than 100% availability due to matrix and leave demands. This could constrain us to 24 plannable effort hours per week.              |        |
+|  3  |                     |                                                                                                                                                            |        |
 
 # Test Process in an Agile Context
 
@@ -80,11 +81,11 @@ As PPR has adopted the agile software development paradigm, testing processes ha
 
 The key characteristics of agile testing will align with the key characteristics of agile development:
 
--   Working closely with developers, business analysts, testers and other stakeholders.
--   Testers are an integrated part of agile team.
--   Testing on an ongoing basis during sprints and not at the end of project.
--   Focus on test automation.
--   Shorter test and release cycles.
+- Working closely with developers, business analysts, testers and other stakeholders.
+- Testers are an integrated part of agile team.
+- Testing on an ongoing basis during sprints and not at the end of project.
+- Focus on test automation.
+- Shorter test and release cycles.
 
 An agile context would perhaps suggest foregoing any process. This is not the case. What we will be doing is using \"just enough\" process and guidelines to add value to the cooperation during the sprints.
 
@@ -100,77 +101,79 @@ Testing Exploratory Testing Manual Testing Unit/lntegration Testing
 
 The pyramid gives an indication of the relative importance of the different test activities and the dependencies. We\'ll discuss this pyramid from the bottom upwards.
 
-First Layer
------------
+## First Layer
+
 The basis for all testing is intensive unit testing (and integration testing) during development. Unit testing has the potential of eradicating most of the easy to find defects and many more complex ones. As almost every defect found after unit testing needs about the same amount of time in documentation, discussion and tracking, it would make sense to clear out the \"easy\" defects as soon as possible. It has been proven in practice and widely documented that a solid unit test effort has the largest impact on overall solution quality.
 
 Unit testing is the sturdy foundation of our testing pyramid.
 
-Second Layer
-------------
+## Second Layer
+
 The next layer is a trifecta of 3 types of testing:
--   Exploratory testing
--   Manual testing
--   Automated Testing
+
+- Exploratory testing
+- Manual testing
+- Automated Testing
 
 Both Exploratory Testing and Manual (Functional) Testing are pre-cursors for Automated Testing. They are the main mechanisms to obtain test ideas and identify regression test scenarios that can be (should be) automated.
 
 As the pyramid indicates, automated testing will grow in scope during the sprint and exploratory testing and manual testing will shrink in scope. At the end of the sprint, the objective is that no more manual or exploratory tests are required for the Sprint\'s deliverables.
 
-Third layer
------------
+## Third layer
+
 User Acceptance testing follows the previous activities and build on the information already obtained. Contrary to popular belief, user acceptance testing is not so much a testing activity as a verification/confirmation one. The activities in user acceptance are complementary to the previous testing activities and not a repeat.
 
 The verification and validation of fit to business and ability to support the business processes (be it the application ones or the manual ones) will lead to the ability to answer the question: \"Would this new solution be able to support us and our clients in the work that we need to do?\".
 
 ## Test Processes
+
 After the Test Initiation each of the test activities contains the following processes:
 
--   Test Initiation
--   Test Planning
--   Test Design
--   Test Execution
--   Defect Management
--   Test Closure
+- Test Initiation
+- Test Planning
+- Test Design
+- Test Execution
+- Defect Management
+- Test Closure
 
-These process are described to provide guidance to the team. It is expected that processes will change, mature and otherwise evolve during the course of the sprints and the project. 
+These process are described to provide guidance to the team. It is expected that processes will change, mature and otherwise evolve during the course of the sprints and the project.
 
 ### Test Initiation Process
 
-Test Initiation is the first stage of software testing life-cycle process. In this stage, the Test Strategy information will be created. This is a business level document which informs the Managers, Developers and Testers about the testing process, the approach and direction. 
+Test Initiation is the first stage of software testing life-cycle process. In this stage, the Test Strategy information will be created. This is a business level document which informs the Managers, Developers and Testers about the testing process, the approach and direction.
 
 **Objectives**
 
--   Create clarity and direction on:
-    -   Test processes
-    -   Approach
-    -   Planned Test activities
-    -   Resource requirements
-    -   Tools and infrastructure
-    -   Obtain team buy-in/approval
+- Create clarity and direction on:
+  - Test processes
+  - Approach
+  - Planned Test activities
+  - Resource requirements
+  - Tools and infrastructure
+  - Obtain team buy-in/approval
 
 **Description**
 
-During the test initiation process we consult, discuss and review. 
+During the test initiation process we consult, discuss and review.
 
 We need to find the balance between:
 
--   Project Goals
--   Constraints
--   Existing practices/knowledge
--   Efficiency
+- Project Goals
+- Constraints
+- Existing practices/knowledge
+- Efficiency
 
 The test initiation for PPR will yield a large amount of guidance that at this phase seems to be needed. The actual project experience will adjust to what is actually needed and used. Still we are stating a clear starting point to develop understanding and to obtain agreement.
 
 **Steps**
 
-  | Step | Participant(s) | Description
-  | --- | --- | ---
-  | Investigation | Test Lead | Understanding scope, constraints, existing guidance, objectives
-  | Consultation  | Test Lead, Client, Business, Project Team | Clarifying, discussing approach
-  | Creation of strategy | Test Lead | Writing the actual Test Strategy
-  | Review | Test Lead, Business, Client, Testers, Project Team | Broad review leading up to be ready for approval.
-  | Approval | Client/Sponsor | Based on endorsements obtained from the review process.
+| Step                 | Participant(s)                                     | Description                                                     |
+| -------------------- | -------------------------------------------------- | --------------------------------------------------------------- |
+| Investigation        | Test Lead                                          | Understanding scope, constraints, existing guidance, objectives |
+| Consultation         | Test Lead, Client, Business, Project Team          | Clarifying, discussing approach                                 |
+| Creation of strategy | Test Lead                                          | Writing the actual Test Strategy                                |
+| Review               | Test Lead, Business, Client, Testers, Project Team | Broad review leading up to be ready for approval.               |
+| Approval             | Client/Sponsor                                     | Based on endorsements obtained from the review process.         |
 
 ### Test Planning Process
 
@@ -178,18 +181,18 @@ Test Planning determines the scope, approach, resources and schedule of testing 
 
 Test planning is essential in:
 
--   ensuring testing identifies and reveals as many errors in the software as possible
--   bringing software to an acceptable level of quality
--   giving efficiency regarding scope, budgetary and scheduling limitations.
+- ensuring testing identifies and reveals as many errors in the software as possible
+- bringing software to an acceptable level of quality
+- giving efficiency regarding scope, budgetary and scheduling limitations.
 
 Test planning spans our Test Initiation, Test Planning and Test Design processes. Detailed Test plans will be created at Sprint planning time before and refined during the sprint.
 
 **Objective**
 
--   Define Scope
--   Define Test Approach (based on the Test Strategy set out here)
--   Define resource needs
--   Create schedule
+- Define Scope
+- Define Test Approach (based on the Test Strategy set out here)
+- Define resource needs
+- Create schedule
 
 **Description**
 
@@ -203,1163 +206,1058 @@ This is the activity that describes the \"who, what, when, where, and how\" of t
 
 **Planning Tasks**
 
-|  | Task | Description | Outcome |  Frequency
-| :---: | --- | --- | --- | --- 
-| 1 | Define Test Objectives | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated. | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises.
-| 2 | Identify Needed Resources | Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis. | Dependable resource planning  | Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
-| 3 | Plan Test Environment  | Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work. | Prepared environment | Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.
-| 4 | Define Test Procedures/Suites | Based on scope and objectives we will plan the test procedures. In our test management tool, we will use the test suite concept to capture this. | High level organization/scope of our testing | First cut at pre-Sprint during the planning. The final cut during the first week of the Sprint.
-| 5 | Identify Functions to be Tested | We identify the functions to be tested by reviewing our test base (documentation, discussion etc.) and map the functions to be tested to our test suites | Specific identification of application and system functions that will be tested | Developed starting with the sprint but will most likely change depending on changes
-| 6 | Identify Interfaces to be Tested | We identify the interfaces to be tested by reviewing our test base (technical documentation) and map the interfaces to be tested to our test suites | Specific identification of interfaces and integration points that will be tested | Developed starting with the sprint but will most likely change depending on changes
-| 7 | Write Test Scripts / Define Tests Cases / Define Exploratory Testing sessions | Individual scripts and tests cases will be written. A test case is the lowest level of test that is intended to test one thing and one thing only. During this exercise we will also identify test automation candidates. | Test Scripts/Cases and exploratory testing sessions which are ready to be executed | These will be developed, maintained and pruned during the sprint.
-| 8 | Design Test Data  | Every test case needs test data, this data is either identified in the already present data or needs to be created from scratch | Test data is identified and/or created | This will be developed, maintained and pruned during the sprint.
-| 9 | Build Test Matrix | The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools. | Traceability matrix is present and will allow for management of progress and coverage | This will be developed, maintained and pruned during the sprint.
-| 10 | Determine Test Schedules | Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule. | Defined schedule will allow us to start the effort with reasonable confidence. | First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.
+|     | Task                                                                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Outcome                                                                               |  Frequency                                                                                                                                                                                                                                                     |
+| :-: | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  1  | Define Test Objectives                                                        | Determines at a high level what is to be tested. This is based on defined requirements/acceptance criteria, non-functional requirements, business events and processes. Additional test objectives are related to: Test Automation, Test Data Management, System Test, Security Test etc. Risk Analysis will play a role during the identification of the objectives. With regards to the acceptance criteria testing we follow the risk and priority settings from the business team. | Clearly delineated objectives which can be reviewed and communicated.                 | Before the Sprint starts, typically in pre-sprint planning. But objectives may need to be adjusted when changes to sprint scope and objectives are needed. The definition of the objectives will be subject to review during the in-sprint planning exercises. |
+|  2  | Identify Needed Resources                                                     | Fine tune the resources needed for the sprint. The general requirement has been documented in the QA Strategy but since no sprint is exactly the same, the resource requirements needs to be revisited on a sprint by sprint basis.                                                                                                                                                                                                                                                    | Dependable resource planning                                                          | Pre-Sprint during the planning. Resource usage will be reviewed at the end of each sprint to see if any adjustments need to be made.                                                                                                                           |
+|  3  | Plan Test Environment                                                         | Determine where we will test and what needs to be available in the environment. Every sprint will have different or increased requirements and would require a review upfront to make sure that the testers can start their work.                                                                                                                                                                                                                                                      | Prepared environment                                                                  | Pre-Sprint during the planning. Environment usage will be reviewed at the end of each sprint to see if any adjustments need to be made.                                                                                                                        |
+|  4  | Define Test Procedures/Suites                                                 | Based on scope and objectives we will plan the test procedures. In our test management tool, we will use the test suite concept to capture this.                                                                                                                                                                                                                                                                                                                                       | High level organization/scope of our testing                                          | First cut at pre-Sprint during the planning. The final cut during the first week of the Sprint.                                                                                                                                                                |
+|  5  | Identify Functions to be Tested                                               | We identify the functions to be tested by reviewing our test base (documentation, discussion etc.) and map the functions to be tested to our test suites                                                                                                                                                                                                                                                                                                                               | Specific identification of application and system functions that will be tested       | Developed starting with the sprint but will most likely change depending on changes                                                                                                                                                                            |
+|  6  | Identify Interfaces to be Tested                                              | We identify the interfaces to be tested by reviewing our test base (technical documentation) and map the interfaces to be tested to our test suites                                                                                                                                                                                                                                                                                                                                    | Specific identification of interfaces and integration points that will be tested      | Developed starting with the sprint but will most likely change depending on changes                                                                                                                                                                            |
+|  7  | Write Test Scripts / Define Tests Cases / Define Exploratory Testing sessions | Individual scripts and tests cases will be written. A test case is the lowest level of test that is intended to test one thing and one thing only. During this exercise we will also identify test automation candidates.                                                                                                                                                                                                                                                              | Test Scripts/Cases and exploratory testing sessions which are ready to be executed    | These will be developed, maintained and pruned during the sprint.                                                                                                                                                                                              |
+|  8  | Design Test Data                                                              | Every test case needs test data, this data is either identified in the already present data or needs to be created from scratch                                                                                                                                                                                                                                                                                                                                                        | Test data is identified and/or created                                                | This will be developed, maintained and pruned during the sprint.                                                                                                                                                                                               |
+|  9  | Build Test Matrix                                                             | The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools.                                                                                                         | Traceability matrix is present and will allow for management of progress and coverage | This will be developed, maintained and pruned during the sprint.                                                                                                                                                                                               |
+| 10  | Determine Test Schedules                                                      | Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule.                                                                                                                                                                                                                                                                                                                    | Defined schedule will allow us to start the effort with reasonable confidence.        | First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.                                                                                                                   |
 
 ### Test Design Process
 
--   Test design is the act of identifying the appropriate tests.
+- Test design is the act of identifying the appropriate tests.
 
 Designing efficient tests is an analytic process that requires information, skills, communication, a critical eye and an awareness of
 constraints and risks.
 
-**Objective**
--   Obtain efficient test cases
--   Obtain full coverage for all functionality and processes with Test
-    cases
--   Obtain a basis for test automation
+### Objective
 
-**Description**
-Testing software is a real challenge, because there are so many types of test cases that come in so many different shapes and sizes. The truth is, there is no "one size fits all" method for software testing. Our project lends itself to a more casual, exploratory approach, where agile test cases are helpful. But with our strong test automation drive and with an eye for existing practices at PPR, we will design test cases that will combine the exploratory testing, manual test case and test automation aspects. Documenting software test cases is required when you have to conform to specific business rules. The project may have legal compliance requirements, or there may even be contractual obligations to provide documentary evidence of exactly what you tested. In that scenario, you obviously need detailed test cases. The PPR application will be in use for years, a set of well-thought-out agile test cases will provide value for money because they'll be reused again and again. They will even form the basis for automated tests. 
+- Obtain efficient test cases
+- Obtain full coverage for all functionality and processes with Test
+  cases
+- Obtain a basis for test automation
 
-**Challenges of Test Design in an Agile Environment**
+### Description
+
+Testing software is a real challenge, because there are so many types of test cases that come in so many different shapes and sizes. The truth is, there is no "one size fits all" method for software testing. Our project lends itself to a more casual, exploratory approach, where agile test cases are helpful. But with our strong test automation drive and with an eye for existing practices at PPR, we will design test cases that will combine the exploratory testing, manual test case and test automation aspects. Documenting software test cases is required when you have to conform to specific business rules. The project may have legal compliance requirements, or there may even be contractual obligations to provide documentary evidence of exactly what you tested. In that scenario, you obviously need detailed test cases. The PPR application will be in use for years, a set of well-thought-out agile test cases will provide value for money because they'll be reused again and again. They will even form the basis for automated tests.
+
+### Challenges of Test Design in an Agile Environment
+
 In cases where the project team is adopting an agile approach (i.e. features are designed in an iterative fashion) there is no clear picture for the application during any one sprint. Generally we find that the initial goal at the start of development changes as backlogs are revised (i.e. the sprint requirements change). Writing a lot of agile test cases then is going to be less effective because you'll have to rewrite them completely within a few builds. You might opt for a checklist approach instead and combine exploratory testing with a simple list of compatibility requirements that don't need to be spelled out in full. It may even be possible for testers simply to refer to the original user stories that informed the design or talk directly to the customer to find a basis for their testing. In PPR, we will adopt a hybrid approach where much of the actual business design, user stories and acceptance criteria have been developed and reviewed before the Sprint. This will allow testing to leverage the created information to help with the test design.
 
-**Test Basis**
+### Test Basis
+
 The test basis is the information available (or to be acquired) that we base our tests on.
 
 For PPR our test base is:
--   Project scope as defined by our product owner
--   User Stories, see Epics, Features & User Stories
--   Acceptance Criteria (part of the user stories), see Epics, Features & User Stories
--   Non-functional requirements
--   Discussions and decisions on the above captured in ZenHub and SharePoint
--   Feedback from SME\'s, Business Analysts, Architects and technical specialists
--   Testers\' insight and experience with PPR business processes
--   Good testing practices
--   Constraints, Risks and Changes
--   Creativity and the drive to create efficient tests
 
-**Test Case Design**
+- Project scope as defined by our product owner
+- User Stories, see Epics, Features & User Stories
+- Acceptance Criteria (part of the user stories), see Epics, Features & User Stories
+- Non-functional requirements
+- Discussions and decisions on the above captured in ZenHub and SharePoint
+- Feedback from SME\'s, Business Analysts, Architects and technical specialists
+- Testers\' insight and experience with PPR business processes
+- Good testing practices
+- Constraints, Risks and Changes
+- Creativity and the drive to create efficient tests
+
+### Test Case Design
+
 Test case design is based on:
--   The stated, explicit requirements for the feature
--   The unstated, implied requirements
--   The expected behavior of the feature
--   The constraints imposed on the behavior of that feature
 
-**Test Case Design Techniques**
+- The stated, explicit requirements for the feature
+- The unstated, implied requirements
+- The expected behavior of the feature
+- The constraints imposed on the behavior of that feature
+
+### Test Case Design Techniques\*
+
 Of all the test case design techniques which are available, the most effective for the PPR project are:
 
--   Specification-based technique.  This technique derives test cases from the documented specifications of the system's behavior.
--   Functional analysis (functional specification-based testing).
--   Sampling techniques.  These techniques identify small samples of high-potential test cases from large populations of possible
-    conditions.
--   Equivalence
--   Boundary value (BV)
--   Combinatorial methods, such as pair-wise and n-wise testing
--   Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in prior similar situations. 
-    -   Exploratory testing
-    -   User scenarios
-    -   Checklists
-    -   Risk analysis and prioritization.
+- Specification-based technique.  This technique derives test cases from the documented specifications of the system's behavior.
+- Functional analysis (functional specification-based testing).
+- Sampling techniques.  These techniques identify small samples of high-potential test cases from large populations of possible
+  conditions.
+- Equivalence
+- Boundary value (BV)
+- Combinatorial methods, such as pair-wise and n-wise testing
+- Experience-based techniques.  These techniques utilize the testers' and others' experience, either with the system under test or in prior similar situations.
+  - Exploratory testing
+  - User scenarios
+  - Checklists
+  - Risk analysis and prioritization.
 
-**Process**
+### Process
+
 Test Design approach is indicated by the following steps:
 
-| Activity | Technique Used | Description  
-| :---: | --- | ---  
-| 1 | Test Basis Analysis | Review documentation and other test basis artifacts.  
-| 2 | First Identification of major test areas | Sprint Scope/Schedule, Risk Analysis and prioritization  
-| 3 | Test Idea generation | Risk Analysis  
-| 4 | Drafting of test cases/exploratory sessions | All previously obtained information is used  
-| 5 | Adding detail to test cases | All design techniques  
-| 6 | Identify test steps for each test case | Review of the actual functionality  
-| 7 | Identify candidacy for test automation | See Test Automation Strategy  
-| 8 | Review Test Cases | Peer review  
-| 9 | Consolidate Test Cases in Test Suites | Functional Analysis and Risk Analysis  
+| Activity | Technique Used                              | Description                                             |
+| :------: | ------------------------------------------- | ------------------------------------------------------- |
+|    1     | Test Basis Analysis                         | Review documentation and other test basis artifacts.    |
+|    2     | First Identification of major test areas    | Sprint Scope/Schedule, Risk Analysis and prioritization |
+|    3     | Test Idea generation                        | Risk Analysis                                           |
+|    4     | Drafting of test cases/exploratory sessions | All previously obtained information is used             |
+|    5     | Adding detail to test cases                 | All design techniques                                   |
+|    6     | Identify test steps for each test case      | Review of the actual functionality                      |
+|    7     | Identify candidacy for test automation      | See Test Automation Strategy                            |
+|    8     | Review Test Cases                           | Peer review                                             |
+|    9     | Consolidate Test Cases in Test Suites       | Functional Analysis and Risk Analysis                   |
 
 These steps will be repeated several times based on the following triggers:
 
--   New design becomes available
--   A change to design invalidates previous test design
--   Scope changes
--   Bug Fixes
+- New design becomes available
+- A change to design invalidates previous test design
+- Scope changes
+- Bug Fixes
 
-**Test Case Rating**
+### Test Case Rating
+
 Test case rating or priority setting is important for the following
 reasons:
 
--   It focuses the testers on those tests that will make the most difference
--   It will allow for better and more efficient re-planning
--   It helps with the tester workload assignment
--   It greatly helps the team to achieve working (and verified) functionality
--   It will allow for test automation candidates selection
+- It focuses the testers on those tests that will make the most difference
+- It will allow for better and more efficient re-planning
+- It helps with the tester workload assignment
+- It greatly helps the team to achieve working (and verified) functionality
+- It will allow for test automation candidates selection
 
 Rating a test case is about rating the aspect of the function that the test case intends to test. We can obtain much of our guidance from how
 the user stories have been rated. Critical-rated user stories will elevate the rating for the associated test cases.
 
 Here are the risk/priority attributes that we take into consideration when rating our test cases:
 
-| Aspect to be Tested is | Description | High | Medium | Low
-| --- | --- | --- | --- | ----
-| Frequently tested by other tests | Aspects that are tested many times are often navigational tests, login etc. | Rate if tested more than 3 times in other tests | Rate if tested more than 0 but lower or equal than 3 | Rate if not tested yet
-| Well understood | Aspects that are clear to the tester because sufficient documentation/guidance is present | Rate if completely understood | Rate if some questions are still outstanding | Rate if none of the questions are answered or the answers remain unclear
-| Mission-Critical | Aspects that are mission-critical, without this functioning the solution would not be viable. Guidance for this rating attribute can be obtained from the User Story priority setting. | Rate if the solution would not be viable | Rate where the solution would be impeded but workarounds could be available | Rate when the aspect is a nice-to-have for the solution
-| Risky | Aspects that pose is risk to the business, security, confidentially, finance etc. | Rate if one or more high/critical risks are identified | Rate if one or more medium risks are identified | Rate if no or only low risks are identified
-| Used Frequently | Aspects that are used frequently. | Rate if used multiple times per user session | Rate if used only once per user session | Rate if only used occasionally
-| Complex | Aspects that are complex, have many business rules, calculations, need to be precise etc. | Rate if contains calculations, more than 3 decisions, validations or data updates | Rate if contains calculations, more than 1 decisions, validations or data updates | Rate if contains no calculations, decisions, validations or data updates
-| is dependent or has dependencies | Aspects that require other components or functionalities to be present in order to function. Or aspects that other functionality is dependent on. | Rate if there are multiple dependencies that are needed to operate | Rate if there is one dependency that is needed to operate | Rate if there are no dependencies
+| Aspect to be Tested is           | Description                                                                                                                                                                            | High                                                                              | Medium                                                                            | Low                                                                      |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Frequently tested by other tests | Aspects that are tested many times are often navigational tests, login etc.                                                                                                            | Rate if tested more than 3 times in other tests                                   | Rate if tested more than 0 but lower or equal than 3                              | Rate if not tested yet                                                   |
+| Well understood                  | Aspects that are clear to the tester because sufficient documentation/guidance is present                                                                                              | Rate if completely understood                                                     | Rate if some questions are still outstanding                                      | Rate if none of the questions are answered or the answers remain unclear |
+| Mission-Critical                 | Aspects that are mission-critical, without this functioning the solution would not be viable. Guidance for this rating attribute can be obtained from the User Story priority setting. | Rate if the solution would not be viable                                          | Rate where the solution would be impeded but workarounds could be available       | Rate when the aspect is a nice-to-have for the solution                  |
+| Risky                            | Aspects that pose is risk to the business, security, confidentially, finance etc.                                                                                                      | Rate if one or more high/critical risks are identified                            | Rate if one or more medium risks are identified                                   | Rate if no or only low risks are identified                              |
+| Used Frequently                  | Aspects that are used frequently.                                                                                                                                                      | Rate if used multiple times per user session                                      | Rate if used only once per user session                                           | Rate if only used occasionally                                           |
+| Complex                          | Aspects that are complex, have many business rules, calculations, need to be precise etc.                                                                                              | Rate if contains calculations, more than 3 decisions, validations or data updates | Rate if contains calculations, more than 1 decisions, validations or data updates | Rate if contains no calculations, decisions, validations or data updates |
+| is dependent or has dependencies | Aspects that require other components or functionalities to be present in order to function. Or aspects that other functionality is dependent on.                                      | Rate if there are multiple dependencies that are needed to operate                | Rate if there is one dependency that is needed to operate                         | Rate if there are no dependencies                                        |
 
+The following [spreadsheet utility](files/testcasepriority.xlsx) is used to obtain guidance for our test case rating. This has been created for consistency sake and its value will be evaluated after a few Sprints.
 
-The following spreadsheet utility is used to obtain guidance for our
-test case rating. This has been created for consistency sake and its
-value will be evaluated after Sprint 1.
-The rating that the spreadsheet will come up with is the
-standard *test case priority* setting in Zephyr.  (TBD)
+The rating that the spreadsheet will come up with is the standard *test case priority* setting in [TestRail[(https://bcrs.testrail.io/)] (our Test Management Tool).
 
-  **Test Case Priority**   **Description**
-  ------------------------ ------------------------------------------------------------------------------------------------------------------------
-  **Test Case Priority**   **Description**
-  1-Don\'t Test            No need to test, this would apply to test cases that were maybe introduced at a time where not all details were clear.
-  2-Maybe                  Can be included in the test runs, but would be one of the first to be dropped if time and scope demands a reduction.
-  3-If Time                Typical candidate be included in the test runs, but could be de-scoped.
-  4-Must be Tested         Mandatory to test, key functionality or higher risk test case. Would typically not be de-scoped even under pressure.
-  5-Critical               Mandatory. Without this test case the risk exists that critical functionality is not working correctly.
+| Test Case Priority | Description                                                                                                            |
+| :----------------: | ---------------------------------------------------------------------------------------------------------------------- |
+|    Don\'t Test     | No need to test, this would apply to test cases that were maybe introduced at a time where not all details were clear. |
+|        Low         | Can be included in the test runs, but would be one of the first to be dropped if time and scope demands a reduction.   |
+|       Medium       | Typical candidate be included in the test runs, but could be de-scoped.                                                |
+|        High        | Mandatory to test, key functionality or higher risk test case. Would typically not be de-scoped even under pressure.   |
+|      Critical      | Mandatory. Without this test case the risk exists that critical functionality is not working correctly.                |
 
- 
- 
+### Test Case Rating Review
 
-  **Test Case Priority Analysis**                                                                   
-  ---------------------------------- ------------ ------------ --------- --------- ----------- --- ------------------
-                                     **Rating**                                                     
-  **Aspect to be Tested**            **High**     **Medium**   **Low**   **N/A**                    
-  Frequently tested by other tests                                                 0                
-  Well understood                                                                  0                
-  Mission-Critical                                                                 0                
-  Risky                                                                            0                
-  Used Frequently                                                                  0                
-  Complex                                                                          0                
-  is dependent or has dependencies                                                 0                
-  **Test Case Priority Guidance**                                                  **\#N/A**        
-                                                                                               1   1-Don\'t Test
-                                                                                               2   2-Maybe
-                                                                                               3   3-If Time
-                                                                                               4   4-Must be Tested
-                                                                                               5   5-Critical
+The ratings can be changed after review at the end of every Sprint or when ever it is deemed needed. As test case rating is a tool, we need to make sure that we keep our tool sharp and relevant.
 
-Test Case Rating Review
-The ratings can be changed after review at the end of every Sprint or
-when ever it is deemed needed. As test case rating is a tool, we need
-to make sure that we keep our tool sharp and relevant.
+## Test Execution Process
 
- 
+Test execution is the process of executing the code (running the application) and comparing the expected and actual results.
 
- 
+### Objective
 
-Test Execution Process
+- Obtain application Quality Status information
+- Find defects
+- Verify and Validate the solution
 
-June 24, 2019
+> **V & V**
+> Verification - "Have we built the product right?" and 
+> Validation - "Have we built the right product?"
 
-3:03 PM
+### Description
 
-Test execution is the process of executing the code (running the
-application) and comparing the expected and actual results.
-
- 
-
-RASCI
-
-  **Roles**                        **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------------- ----------------- -------------------------- -------------- --------------- --------------
-  **Test Lead**                                      X                                                          
-  **Test Analyst (Agile)**          X                                                                           
-  **Business Tester**               X                                                                           
-  **Test Automation Specialist**    X                                                                           
-  **Business Analyst**                                                          X                               
-  **Business Lead**                                                                                             
-  **Developer**                     X                                                                           
-  **Developer Lead**                                  X                                                         
-  **Solution Architect**                                                                                       X
-  **Release Manager**                                                           X                              X
-  **Project Manager**                                                                                          X
-  **Client/Sponsor**                                                                           X                
-
-Objective
-
--   Obtain application Quality Status information
-
--   Find defects
-
--   Verify and Validate the solution
-
-* **V & V***
-
-*Verification - "Have we built the product right?" and Validation -
-"Have we built the right product?" *
-
-Description
-
-In the project there are 5 groups/mechanisms involved with test
-execution. They are:
+In the project there are 5 groups/mechanisms involved with test execution. They are:
 
 1.  Developers - Manual/Automated Unit Test on their workstation
-    (iValua)
+2.  Developers - Automated Unit and Integration Tests in GitHub Actions
+3.  Agile Testers/Developers - Manual and Exploratory Tests in the Dev(OpenShift) environment
+4.  Test Automation Specialist - Automated functional testing in the Test(OpenShift) environment
+5.  Test Automation Specialist - Other automated system testing (e.g. performance, security, accessibility scans etc.) in the Test(OpenShift) environment
+6.  User Acceptance Testers - UAT in the Prod (OpenShift) environment
 
-2.  Agile Testers - Manual and Exploratory Tests in the TEST environment
+### Automated Test Execution Process
 
-3.  Test Automation Specialist - Automated functional testing in the
-    TEST environment
+The process is described in the following chart that shows the different systems, activities and parties involved:
 
-4.  User Acceptance Testers - UAT in the TEST environment
+> **tbd**
 
-**Automated Test Execution Process**
-
-The process is described in the following chart that shows the different
-systems, activities and parties involved:
-
-**tbd**
-
-**The Manual Test Execution Process**
+### The Manual Test Execution Process
 
 The manual and exploratory test execution steps are as follows:
 
-  **Activity**                           **When/Frequency**                                                                                                                                                                                                                      **Participant**
-  -------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------
-  Manual Unit Testing                    All throughout the development process.                                                                                                                                                                                                 Developer
-  Manual Testing of defined test cases   Once a targeted functionality becomes available. This will need to be repeated in case of defects and changes. The manual tests will be transformed into automated tests and the necessity for a tester to run the test will go away.   Agile Testers
-  Exploratory Testing                    Once a targeted functionality becomes initially available. The exact exploratory test will not be repeated, but variations on it can be in case of changes. Exploratory testing is also meant to generate ideas for test automation.    Agile Testers
-  User Acceptance Testing                In the last 7 work days of the Sprint and close to the release date, user acceptance testers will manually execute their test cases and scenarios. In case of defects, they would need to repeat.                                       Tester/Business Analyst
+|                                       Activity                                        |                                                                                                            When/Frequency                                                                                                            | Participant                  |
+| :-----------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ---------------------------- |
+|                                  Manual Unit Testing                                  |                                                                                               All throughout the development process.                                                                                                | Developer                    |
+| Manual Testing of defined test cases Once a targeted functionality becomes available. |                         This will need to be repeated in case of defects and changes. The manual tests will be transformed into automated tests and the necessity for a tester to run the test will go away.                         | Agile Testers                |
+|                                  Exploratory Testing                                  | Once a targeted functionality becomes initially available. The exact exploratory test will not be repeated, but variations on it can be in case of changes. Exploratory testing is also meant to generate ideas for test automation. | Agile Testers                |
+|                                User Acceptance Testing                                |                      In the last 50% of the Sprint and close to the release date, user acceptance testers will manually execute their test cases and scenarios. In case of defects, they would need to repeat.                       | Tester/Business Analyst/User |
 
-**Requirements for Test Execution**
+### Requirements for Test Execution
 
- For manual test execution, the following needs to present:
+For manual test execution, the following needs to present:
 
--   Targeted functionality is available in the TEST or STAGING
-    environment
+- Targeted functionality is available in the Test or Prod environment
+- Test Cases are ready or a Exploratory Test Session has been defined
+- Test Cases have been assigned and the go ahead has been given by the test lead
+- Test Data is present/identified
 
--   Test Cases are ready or a Exploratory Test Session has been defined
+For automated test execution, the following needs to be present:
 
--   Test Cases have been assigned and the go ahead has been given by the
-    test lead
+- Targeted functionality is available in the Test environment
+- Automated Unit Test and/or Functional Test Scripts have been created, debugged and incorporated into the test framework
+- Test Data is present/identified
 
--   Test Data is present/identified
+## Defect Management Process
 
-For automated test execution, the following needs to present:
+### Objective
 
--   Targeted functionality is available in the TEST environment
+Define the defect management process to support efficient handling and documentation of defects found during sprints.
 
--   Automated Unit Test and/or Functional Test Scripts have been
-    created, debugged and incorporated into the test framework
+### Description
 
--   Test Data is present/identified
-
--   The automated test execution run is cleared to go by test lead 
-
- 
-
- 
-
-Defect Management Process
-
-June 24, 2019
-
-3:03 PM
-
-RASCI
-
-  **Roles**                        **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------------- ----------------- -------------------------- -------------- --------------- --------------
-  **Test Lead**                                      X                                                          
-  **Test Analyst (Agile)**          X                                                                           
-  **Business Tester**               X                                                                           
-  **Test Automation Specialist**    X                                                                           
-  **Business Analyst**              X                                                                           
-  **Business Lead**                 X                                                                           
-  **Developer**                     X                                                                           
-  **Developer Lead**                X                                                                           
-  **Solution Architect**                                                        X                               
-  **Release Manager**              X                                                                           X
-  **Project Manager**                                                           X                               
-  **Client/Sponsor**                                                                                           X
-
-Objective
-
-Define the defect management process to support efficient handling and
-documentation of defects found during sprints.
-
-Description
-
-Documented defects are the main output of the testing team, it is this
-information that will allow the team to achieve its goals and identify
-anything that might need to be added to the backlog.
+Documented defects are the main output of the testing team, it is this information that will allow the team to achieve its goals and identify anything that might need to be added to the backlog.
 
 Defect reports need to be:
 
--   Objective
+- Objective
+- Factual
+- Concise
+- Complete
+- Precise
 
--   Factual
-
--   Concise
-
--   Complete
-
--   Precise
-
-Defect reports will need to stand the test of time and geographic
-distance as not all defects will be fixed immediately, we need to
-provide full context, discussion and details. In other words the defect
+Defect reports will need to stand the test of time and geographic distance as not all defects will be fixed immediately, we need to provide full context, discussion and details. In other words the defect
 description should be actionable.
 
-Our tool set (JIRA) allows for configuration of the defect management
-workflow that will support consistent tracking and reportability.
+Our tool set (ZenHub) allows for configuration templates to support consistent tracking and reporting.
 
 Defect Management Workflow
 
 ![](media/image3.png){width="9.738888888888889in"
 height="7.530555555555556in"}
 
- 
-
- 
-
 +----------+----------+----------+----------+----------+----------+
-| **Step** | **       | **Tran   | **R      | **Descr  | **Action |
-|          | Status** | sition** | esulting | iption** | By**     |
-|          |          |          | Status** |          |          |
+| **Step** | ** | **Tran | **R | **Descr | **Action |
+| | Status** | sition** | esulting | iption** | By** |
+| | | | Status** | | |
 +==========+==========+==========+==========+==========+==========+
-| **Open** | Open     |          |          | Opening  | Anybody, |
-|          |          |          |          | of a new | but      |
-|          |          |          |          | Defect   | mainly   |
-|          |          |          |          |          | testers  |
+| **Open** | Open |   |   | Opening | Anybody, |
+| | | | | of a new | but |
+| | | | | Defect | mainly |
+| | | | | | testers |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Open     | Ready    | In       | Once the | The      |
-|          |          | For      | Review   | defect   | defect   |
-|          |          | Review   |          | has been | reporter |
-|          |          |          |          | do       |          |
-|          |          |          |          | cumented |          |
-|          |          |          |          | it will  |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | s        |          |
-|          |          |          |          | ubmitted |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | review.  |          |
-|          |          |          |          | No       |          |
-|          |          |          |          | action   |          |
-|          |          |          |          | on the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | happen   |          |
-|          |          |          |          | until it |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | labeled  |          |
-|          |          |          |          | \"Ready  |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | R        |          |
-|          |          |          |          | eview\", |          |
-|          |          |          |          | this     |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | allow    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | reporter |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | collect  |          |
-|          |          |          |          | all the  |          |
-|          |          |          |          | n        |          |
-|          |          |          |          | ecessary |          |
-|          |          |          |          | info     |          |
-|          |          |          |          | rmation. |          |
+| \*_ ** | Open | Ready | In | Once the | The |
+| | | For | Review | defect | defect |
+| | | Review | | has been | reporter |
+| | | | | do | |
+| | | | | cumented | |
+| | | | | it will | |
+| | | | | be | |
+| | | | | s | |
+| | | | | ubmitted | |
+| | | | | for | |
+| | | | | review. | |
+| | | | | No | |
+| | | | | action | |
+| | | | | on the | |
+| | | | | defect | |
+| | | | | will | |
+| | | | | happen | |
+| | | | | until it | |
+| | | | | is | |
+| | | | | labeled | |
+| | | | | \"Ready | |
+| | | | | for | |
+| | | | | R | |
+| | | | | eview\", | |
+| | | | | this | |
+| | | | | will | |
+| | | | | allow | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | reporter | |
+| | | | | to | |
+| | | | | collect | |
+| | | | | all the | |
+| | | | | n | |
+| | | | | ecessary | |
+| | | | | info | |
+| | | | | rmation. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Open     | Close    | Closed   | If it    | The      |
-|          |          |          |          | turns    | defect   |
-|          |          |          |          | out that | author   |
-|          |          |          |          | the      | or test  |
-|          |          |          |          | defect   | lead.    |
-|          |          |          |          | wasn\'t  |          |
-|          |          |          |          | a defect |          |
-|          |          |          |          | or it    |          |
-|          |          |          |          | was a    |          |
-|          |          |          |          | du       |          |
-|          |          |          |          | plicate, |          |
-|          |          |          |          | misunder |          |
-|          |          |          |          | standing |          |
-|          |          |          |          | etc. the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | closed   |          |
-|          |          |          |          | imme     |          |
-|          |          |          |          | diately. |          |
-|          |          |          |          | Int      |          |
-|          |          |          |          | eresting |          |
-|          |          |          |          | to note  |          |
-|          |          |          |          | is that  |          |
-|          |          |          |          | we are   |          |
-|          |          |          |          | not      |          |
-|          |          |          |          | deleting |          |
-|          |          |          |          | any      |          |
-|          |          |          |          | defects  |          |
-|          |          |          |          | as even  |          |
-|          |          |          |          | the fact |          |
-|          |          |          |          | of       |          |
-|          |          |          |          | quickly  |          |
-|          |          |          |          | closed   |          |
-|          |          |          |          | defects  |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | int      |          |
-|          |          |          |          | eresting |          |
-|          |          |          |          | and      |          |
-|          |          |          |          | might    |          |
-|          |          |          |          | feed     |          |
-|          |          |          |          | into the |          |
-|          |          |          |          | Sprint   |          |
-|          |          |          |          | Retros   |          |
-|          |          |          |          | pective. |          |
+| ** ** | Open | Close | Closed | If it | The |
+| | | | | turns | defect |
+| | | | | out that | author |
+| | | | | the | or test |
+| | | | | defect | lead. |
+| | | | | wasn\'t | |
+| | | | | a defect | |
+| | | | | or it | |
+| | | | | was a | |
+| | | | | du | |
+| | | | | plicate, | |
+| | | | | misunder | |
+| | | | | standing | |
+| | | | | etc. the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | closed | |
+| | | | | imme | |
+| | | | | diately. | |
+| | | | | Int | |
+| | | | | eresting | |
+| | | | | to note | |
+| | | | | is that | |
+| | | | | we are | |
+| | | | | not | |
+| | | | | deleting | |
+| | | | | any | |
+| | | | | defects | |
+| | | | | as even | |
+| | | | | the fact | |
+| | | | | of | |
+| | | | | quickly | |
+| | | | | closed | |
+| | | | | defects | |
+| | | | | is | |
+| | | | | int | |
+| | | | | eresting | |
+| | | | | and | |
+| | | | | might | |
+| | | | | feed | |
+| | | | | into the | |
+| | | | | Sprint | |
+| | | | | Retros | |
+| | | | | pective. | |
 +----------+----------+----------+----------+----------+----------+
-| **       | In       |          |          | During   | Test     |
-| Review** | Review   |          |          | review   | Lead     |
-|          |          |          |          | the test |          |
-|          |          |          |          | lead     |          |
-|          |          |          |          | does a   |          |
-|          |          |          |          | quality  |          |
-|          |          |          |          | and a    |          |
-|          |          |          |          | quick    |          |
-|          |          |          |          | sanity   |          |
-|          |          |          |          | check on |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | created  |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | report.  |          |
-|          |          |          |          | A        |          |
-|          |          |          |          | typical  |          |
-|          |          |          |          | review   |          |
-|          |          |          |          | does not |          |
-|          |          |          |          | take a   |          |
-|          |          |          |          | lot of   |          |
-|          |          |          |          | time and |          |
-|          |          |          |          | the test |          |
-|          |          |          |          | lead     |          |
-|          |          |          |          | will be  |          |
-|          |          |          |          | able to  |          |
-|          |          |          |          | do those |          |
-|          |          |          |          | in mere  |          |
-|          |          |          |          | seconds. |          |
-|          |          |          |          |          |          |
-|          |          |          |          | This QA  |          |
-|          |          |          |          | gate     |          |
-|          |          |          |          | ensures  |          |
-|          |          |          |          | that an  |          |
-|          |          |          |          | ac       |          |
-|          |          |          |          | tionable |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | report   |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | f        |          |
-|          |          |          |          | orwarded |          |
-|          |          |          |          | and will |          |
-|          |          |          |          | cut down |          |
-|          |          |          |          | on       |          |
-|          |          |          |          | unn      |          |
-|          |          |          |          | ecessary |          |
-|          |          |          |          | back and |          |
-|          |          |          |          | forth    |          |
-|          |          |          |          | commu    |          |
-|          |          |          |          | nication |          |
-|          |          |          |          | between  |          |
-|          |          |          |          | reporter |          |
-|          |          |          |          | and      |          |
-|          |          |          |          | de       |          |
-|          |          |          |          | veloper. |          |
-|          |          |          |          | With our |          |
-|          |          |          |          | o        |          |
-|          |          |          |          | ff-shore |          |
-|          |          |          |          | dev      |          |
-|          |          |          |          | elopment |          |
-|          |          |          |          | group    |          |
-|          |          |          |          | this is  |          |
-|          |          |          |          | es       |          |
-|          |          |          |          | sential. |          |
+| ** | In |   |   | During | Test |
+| Review** | Review | | | review | Lead |
+| | | | | the test | |
+| | | | | lead | |
+| | | | | does a | |
+| | | | | quality | |
+| | | | | and a | |
+| | | | | quick | |
+| | | | | sanity | |
+| | | | | check on | |
+| | | | | the | |
+| | | | | created | |
+| | | | | defect | |
+| | | | | report. | |
+| | | | | A | |
+| | | | | typical | |
+| | | | | review | |
+| | | | | does not | |
+| | | | | take a | |
+| | | | | lot of | |
+| | | | | time and | |
+| | | | | the test | |
+| | | | | lead | |
+| | | | | will be | |
+| | | | | able to | |
+| | | | | do those | |
+| | | | | in mere | |
+| | | | | seconds. | |
+| | | | | | |
+| | | | | This QA | |
+| | | | | gate | |
+| | | | | ensures | |
+| | | | | that an | |
+| | | | | ac | |
+| | | | | tionable | |
+| | | | | defect | |
+| | | | | report | |
+| | | | | is | |
+| | | | | f | |
+| | | | | orwarded | |
+| | | | | and will | |
+| | | | | cut down | |
+| | | | | on | |
+| | | | | unn | |
+| | | | | ecessary | |
+| | | | | back and | |
+| | | | | forth | |
+| | | | | commu | |
+| | | | | nication | |
+| | | | | between | |
+| | | | | reporter | |
+| | | | | and | |
+| | | | | de | |
+| | | | | veloper. | |
+| | | | | With our | |
+| | | | | o | |
+| | | | | ff-shore | |
+| | | | | dev | |
+| | | | | elopment | |
+| | | | | group | |
+| | | | | this is | |
+| | | | | es | |
+| | | | | sential. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Return   | Open     | If the   | Test     |
-|          | Review   | to       |          | defect   | Lead     |
-|          |          | Reporter |          | report   |          |
-|          |          |          |          | is found |          |
-|          |          |          |          | lacking  |          |
-|          |          |          |          | or       |          |
-|          |          |          |          | in-ac    |          |
-|          |          |          |          | tionable |          |
-|          |          |          |          | it is    |          |
-|          |          |          |          | returned |          |
-|          |          |          |          | to the   |          |
-|          |          |          |          | reporter |          |
-|          |          |          |          | with the |          |
-|          |          |          |          | request  |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | update   |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | info     |          |
-|          |          |          |          | rmation. |          |
+| ** ** | In | Return | Open | If the | Test |
+| | Review | to | | defect | Lead |
+| | | Reporter | | report | |
+| | | | | is found | |
+| | | | | lacking | |
+| | | | | or | |
+| | | | | in-ac | |
+| | | | | tionable | |
+| | | | | it is | |
+| | | | | returned | |
+| | | | | to the | |
+| | | | | reporter | |
+| | | | | with the | |
+| | | | | request | |
+| | | | | to | |
+| | | | | update | |
+| | | | | the | |
+| | | | | info | |
+| | | | | rmation. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Ready    | Triage   | If the   | Test     |
-|          | Review   | for      |          | test     | Lead     |
-|          |          | Triage   |          | lead     |          |
-|          |          |          |          | find the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | report   |          |
-|          |          |          |          | in good  |          |
-|          |          |          |          | state,   |          |
-|          |          |          |          | it can   |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | tran     |          |
-|          |          |          |          | sitioned |          |
-|          |          |          |          | to the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | triage.  |          |
+| ** ** | In | Ready | Triage | If the | Test |
+| | Review | for | | test | Lead |
+| | | Triage | | lead | |
+| | | | | find the | |
+| | | | | defect | |
+| | | | | report | |
+| | | | | in good | |
+| | | | | state, | |
+| | | | | it can | |
+| | | | | be | |
+| | | | | tran | |
+| | | | | sitioned | |
+| | | | | to the | |
+| | | | | defect | |
+| | | | | triage. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Close    | Closed   | If it    | Test     |
-|          | Review   |          |          | turns    | Lead     |
-|          |          |          |          | out that |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | wasn\'t  |          |
-|          |          |          |          | a defect |          |
-|          |          |          |          | or it    |          |
-|          |          |          |          | was a    |          |
-|          |          |          |          | du       |          |
-|          |          |          |          | plicate, |          |
-|          |          |          |          | misunder |          |
-|          |          |          |          | standing |          |
-|          |          |          |          | etc. the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | closed.  |          |
+| ** ** | In | Close | Closed | If it | Test |
+| | Review | | | turns | Lead |
+| | | | | out that | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | wasn\'t | |
+| | | | | a defect | |
+| | | | | or it | |
+| | | | | was a | |
+| | | | | du | |
+| | | | | plicate, | |
+| | | | | misunder | |
+| | | | | standing | |
+| | | | | etc. the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | closed. | |
 +----------+----------+----------+----------+----------+----------+
-| **       | Triage   |          |          | The      | Sprint   |
-| Triage** |          |          |          | triage   | Team     |
-|          |          |          |          | process  | Leads    |
-|          |          |          |          | is meant |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | discuss  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | course   |          |
-|          |          |          |          | of       |          |
-|          |          |          |          | action   |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | defects  |          |
-|          |          |          |          | that     |          |
-|          |          |          |          | have     |          |
-|          |          |          |          | just     |          |
-|          |          |          |          | been     |          |
-|          |          |          |          | r        |          |
-|          |          |          |          | eported. |          |
-|          |          |          |          | This is  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | process  |          |
-|          |          |          |          | in which |          |
-|          |          |          |          | the team |          |
-|          |          |          |          | agrees   |          |
-|          |          |          |          | on       |          |
-|          |          |          |          | priority |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | fixing   |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect.  |          |
+| ** | Triage |   |   | The | Sprint |
+| Triage** | | | | triage | Team |
+| | | | | process | Leads |
+| | | | | is meant | |
+| | | | | to | |
+| | | | | discuss | |
+| | | | | the | |
+| | | | | course | |
+| | | | | of | |
+| | | | | action | |
+| | | | | for | |
+| | | | | defects | |
+| | | | | that | |
+| | | | | have | |
+| | | | | just | |
+| | | | | been | |
+| | | | | r | |
+| | | | | eported. | |
+| | | | | This is | |
+| | | | | the | |
+| | | | | process | |
+| | | | | in which | |
+| | | | | the team | |
+| | | | | agrees | |
+| | | | | on | |
+| | | | | priority | |
+| | | | | for | |
+| | | | | fixing | |
+| | | | | the | |
+| | | | | defect. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Triage   | Complete | Triage   | During   | Test     |
-|          |          | Triage   | C        | th       | Lead,    |
-|          |          |          | ompleted | e Triage | Team     |
-|          |          |          |          | mee      |          |
-|          |          |          |          | ting the |          |
-|          |          |          |          | inf      |          |
-|          |          |          |          | ormation |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | c        |          |
-|          |          |          |          | ollected |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | compete  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | triage   |          |
-|          |          |          |          | for the  |          |
-|          |          |          |          | issue.   |          |
-|          |          |          |          | This     |          |
-|          |          |          |          | d        |          |
-|          |          |          |          | ocuments |          |
-|          |          |          |          | de       |          |
-|          |          |          |          | cisions, |          |
-|          |          |          |          | assi     |          |
-|          |          |          |          | gnments, |          |
-|          |          |          |          | pri      |          |
-|          |          |          |          | orities, |          |
-|          |          |          |          | business |          |
-|          |          |          |          | value    |          |
-|          |          |          |          | etc.     |          |
+| ** ** | Triage | Complete | Triage | During | Test |
+| | | Triage | C | th | Lead, |
+| | | | ompleted | e Triage | Team |
+| | | | | mee | |
+| | | | | ting the | |
+| | | | | inf | |
+| | | | | ormation | |
+| | | | | is | |
+| | | | | c | |
+| | | | | ollected | |
+| | | | | to | |
+| | | | | compete | |
+| | | | | the | |
+| | | | | triage | |
+| | | | | for the | |
+| | | | | issue. | |
+| | | | | This | |
+| | | | | d | |
+| | | | | ocuments | |
+| | | | | de | |
+| | | | | cisions, | |
+| | | | | assi | |
+| | | | | gnments, | |
+| | | | | pri | |
+| | | | | orities, | |
+| | | | | business | |
+| | | | | value | |
+| | | | | etc. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Triage   | Assign   | Waiting  | Once the | Test     |
-|          |          | to Fix   | for Fix  | triage   | Lead,    |
-|          |          |          |          | is       | Team     |
-|          |          |          |          | co       |          |
-|          |          |          |          | mpleted, |          |
-|          |          |          |          | valid    |          |
-|          |          |          |          | defects  |          |
-|          |          |          |          | that     |          |
-|          |          |          |          | need to  |          |
-|          |          |          |          | be fixed |          |
-|          |          |          |          | will be  |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | to the   |          |
-|          |          |          |          | Dev.     |          |
-|          |          |          |          | Lead.    |          |
+| ** ** | Triage | Assign | Waiting | Once the | Test |
+| | | to Fix | for Fix | triage | Lead, |
+| | | | | is | Team |
+| | | | | co | |
+| | | | | mpleted, | |
+| | | | | valid | |
+| | | | | defects | |
+| | | | | that | |
+| | | | | need to | |
+| | | | | be fixed | |
+| | | | | will be | |
+| | | | | assigned | |
+| | | | | to the | |
+| | | | | Dev. | |
+| | | | | Lead. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Triage   | Defer    | Deferred | If the   | Team     |
-|          |          |          |          | defect   |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | deemed   |          |
-|          |          |          |          | out of   |          |
-|          |          |          |          | scope    |          |
-|          |          |          |          | for this |          |
-|          |          |          |          | sprint   |          |
-|          |          |          |          | but      |          |
-|          |          |          |          | valid it |          |
-|          |          |          |          | will be  |          |
-|          |          |          |          | deferred |          |
-|          |          |          |          | and will |          |
-|          |          |          |          | end up   |          |
-|          |          |          |          | on the   |          |
-|          |          |          |          | backlog  |          |
+| ** ** | Triage | Defer | Deferred | If the | Team |
+| | | | | defect | |
+| | | | | is | |
+| | | | | deemed | |
+| | | | | out of | |
+| | | | | scope | |
+| | | | | for this | |
+| | | | | sprint | |
+| | | | | but | |
+| | | | | valid it | |
+| | | | | will be | |
+| | | | | deferred | |
+| | | | | and will | |
+| | | | | end up | |
+| | | | | on the | |
+| | | | | backlog | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Triage   | Close    | Closed   | If it    | Test     |
-|          |          |          |          | turns    | Lead,    |
-|          |          |          |          | out that | Team     |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | wasn\'t  |          |
-|          |          |          |          | a defect |          |
-|          |          |          |          | or it    |          |
-|          |          |          |          | was a    |          |
-|          |          |          |          | du       |          |
-|          |          |          |          | plicate, |          |
-|          |          |          |          | misunder |          |
-|          |          |          |          | standing |          |
-|          |          |          |          | etc. the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | closed.  |          |
+| ** ** | Triage | Close | Closed | If it | Test |
+| | | | | turns | Lead, |
+| | | | | out that | Team |
+| | | | | the | |
+| | | | | defect | |
+| | | | | wasn\'t | |
+| | | | | a defect | |
+| | | | | or it | |
+| | | | | was a | |
+| | | | | du | |
+| | | | | plicate, | |
+| | | | | misunder | |
+| | | | | standing | |
+| | | | | etc. the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | closed. | |
 +----------+----------+----------+----------+----------+----------+
-| **Assign | Waiting  |          |          | The      | Dev.     |
-| to Fix** | for Fix  |          |          | defect   | Lead     |
-|          |          |          |          | has been |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | to the   |          |
-|          |          |          |          | Dev.     |          |
-|          |          |          |          | Lead     |          |
-|          |          |          |          | into the |          |
-|          |          |          |          | fix      |          |
-|          |          |          |          | queue    |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | ass      |          |
-|          |          |          |          | ignment. |          |
-|          |          |          |          | After    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | ass      |          |
-|          |          |          |          | ignment, |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | d        |          |
-|          |          |          |          | eveloper |          |
-|          |          |          |          | sees the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | in his   |          |
-|          |          |          |          | task     |          |
-|          |          |          |          | list.    |          |
+| **Assign | Waiting |   |   | The | Dev. |
+| to Fix** | for Fix | | | defect | Lead |
+| | | | | has been | |
+| | | | | assigned | |
+| | | | | to the | |
+| | | | | Dev. | |
+| | | | | Lead | |
+| | | | | into the | |
+| | | | | fix | |
+| | | | | queue | |
+| | | | | for | |
+| | | | | ass | |
+| | | | | ignment. | |
+| | | | | After | |
+| | | | | the | |
+| | | | | ass | |
+| | | | | ignment, | |
+| | | | | the | |
+| | | | | d | |
+| | | | | eveloper | |
+| | | | | sees the | |
+| | | | | defect | |
+| | | | | in his | |
+| | | | | task | |
+| | | | | list. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Waiting  | Start    | In       | The      | D        |
-|          | for Fix  | Work     | Progress | d        | eveloper |
-|          |          |          |          | eveloper |          |
-|          |          |          |          | starts   |          |
-|          |          |          |          | work on  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect,  |          |
-|          |          |          |          | the \"In |          |
-|          |          |          |          | Pr       |          |
-|          |          |          |          | ogress\" |          |
-|          |          |          |          | status   |          |
-|          |          |          |          | i        |          |
-|          |          |          |          | ndicates |          |
-|          |          |          |          | to the   |          |
-|          |          |          |          | dev lead |          |
-|          |          |          |          | that the |          |
-|          |          |          |          | d        |          |
-|          |          |          |          | eveloper |          |
-|          |          |          |          | is busy. |          |
+| ** ** | Waiting | Start | In | The | D |
+| | for Fix | Work | Progress | d | eveloper |
+| | | | | eveloper | |
+| | | | | starts | |
+| | | | | work on | |
+| | | | | the | |
+| | | | | defect, | |
+| | | | | the \"In | |
+| | | | | Pr | |
+| | | | | ogress\" | |
+| | | | | status | |
+| | | | | i | |
+| | | | | ndicates | |
+| | | | | to the | |
+| | | | | dev lead | |
+| | | | | that the | |
+| | | | | d | |
+| | | | | eveloper | |
+| | | | | is busy. | |
 +----------+----------+----------+----------+----------+----------+
-| **       | In       |          |          | The      | D        |
-| Fixing** | Progress |          |          | d        | eveloper |
-|          |          |          |          | eveloper |          |
-|          |          |          |          | starts   |          |
-|          |          |          |          | the work |          |
-|          |          |          |          | on       |          |
-|          |          |          |          | fixing   |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect.  |          |
+| ** | In |   |   | The | D |
+| Fixing** | Progress | | | d | eveloper |
+| | | | | eveloper | |
+| | | | | starts | |
+| | | | | the work | |
+| | | | | on | |
+| | | | | fixing | |
+| | | | | the | |
+| | | | | defect. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Finish   | Ready    | Once the | D        |
-|          | Progress | Work     | for      | d        | eveloper |
-|          |          |          | Va       | eveloper |          |
-|          |          |          | lidation | is       |          |
-|          |          |          |          | f        |          |
-|          |          |          |          | inished, |          |
-|          |          |          |          | he       |          |
-|          |          |          |          | d        |          |
-|          |          |          |          | ocuments |          |
-|          |          |          |          | the fix  |          |
-|          |          |          |          | and      |          |
-|          |          |          |          | updates  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | report.  |          |
-|          |          |          |          | The      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | is now   |          |
-|          |          |          |          | ready    |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | va       |          |
-|          |          |          |          | lidation |          |
-|          |          |          |          | by       |          |
-|          |          |          |          | testing  |          |
-|          |          |          |          | (or the  |          |
-|          |          |          |          | re       |          |
-|          |          |          |          | porter). |          |
+| ** ** | In | Finish | Ready | Once the | D |
+| | Progress | Work | for | d | eveloper |
+| | | | Va | eveloper | |
+| | | | lidation | is | |
+| | | | | f | |
+| | | | | inished, | |
+| | | | | he | |
+| | | | | d | |
+| | | | | ocuments | |
+| | | | | the fix | |
+| | | | | and | |
+| | | | | updates | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | report. | |
+| | | | | The | |
+| | | | | defect | |
+| | | | | is now | |
+| | | | | ready | |
+| | | | | for | |
+| | | | | va | |
+| | | | | lidation | |
+| | | | | by | |
+| | | | | testing | |
+| | | | | (or the | |
+| | | | | re | |
+| | | | | porter). | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Back to  | Assign   | If the   | D        |
-|          | Progress | Fix      | to Fix   | d        | eveloper |
-|          |          | Queue    |          | eveloper |          |
-|          |          |          |          | has too  |          |
-|          |          |          |          | much     |          |
-|          |          |          |          | work on  |          |
-|          |          |          |          | his      |          |
-|          |          |          |          | plate or |          |
-|          |          |          |          | finds    |          |
-|          |          |          |          | that     |          |
-|          |          |          |          | this     |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | is not   |          |
-|          |          |          |          | his, the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | back to  |          |
-|          |          |          |          | the Dev. |          |
-|          |          |          |          | lead for |          |
-|          |          |          |          | re-ass   |          |
-|          |          |          |          | ignment. |          |
+| ** ** | In | Back to | Assign | If the | D |
+| | Progress | Fix | to Fix | d | eveloper |
+| | | Queue | | eveloper | |
+| | | | | has too | |
+| | | | | much | |
+| | | | | work on | |
+| | | | | his | |
+| | | | | plate or | |
+| | | | | finds | |
+| | | | | that | |
+| | | | | this | |
+| | | | | defect | |
+| | | | | is not | |
+| | | | | his, the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | assigned | |
+| | | | | back to | |
+| | | | | the Dev. | |
+| | | | | lead for | |
+| | | | | re-ass | |
+| | | | | ignment. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | In       | Return   | Triage   | If new   | D        |
-|          | Progress | to       |          | inf      | eveloper |
-|          |          | Triage   |          | ormation |          |
-|          |          |          |          | emerges  |          |
-|          |          |          |          | on the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | that     |          |
-|          |          |          |          | would    |          |
-|          |          |          |          | require  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | team\'s  |          |
-|          |          |          |          | input    |          |
-|          |          |          |          | and      |          |
-|          |          |          |          | ass      |          |
-|          |          |          |          | essment, |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | send     |          |
-|          |          |          |          | back to  |          |
-|          |          |          |          | triage.  |          |
-|          |          |          |          |          |          |
-|          |          |          |          | Reasons  |          |
-|          |          |          |          | could    |          |
-|          |          |          |          | be:      |          |
-|          |          |          |          | Signi    |          |
-|          |          |          |          | ficantly |          |
-|          |          |          |          | more     |          |
-|          |          |          |          | risk,    |          |
-|          |          |          |          | missed   |          |
-|          |          |          |          | requi    |          |
-|          |          |          |          | rements, |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | exposes  |          |
-|          |          |          |          | more     |          |
-|          |          |          |          | issues   |          |
-|          |          |          |          | etc.     |          |
+| ** ** | In | Return | Triage | If new | D |
+| | Progress | to | | inf | eveloper |
+| | | Triage | | ormation | |
+| | | | | emerges | |
+| | | | | on the | |
+| | | | | defect | |
+| | | | | that | |
+| | | | | would | |
+| | | | | require | |
+| | | | | the | |
+| | | | | team\'s | |
+| | | | | input | |
+| | | | | and | |
+| | | | | ass | |
+| | | | | essment, | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | send | |
+| | | | | back to | |
+| | | | | triage. | |
+| | | | | | |
+| | | | | Reasons | |
+| | | | | could | |
+| | | | | be: | |
+| | | | | Signi | |
+| | | | | ficantly | |
+| | | | | more | |
+| | | | | risk, | |
+| | | | | missed | |
+| | | | | requi | |
+| | | | | rements, | |
+| | | | | defect | |
+| | | | | exposes | |
+| | | | | more | |
+| | | | | issues | |
+| | | | | etc. | |
 +----------+----------+----------+----------+----------+----------+
-| **Ready  | Ready    |          |          | The      | Test     |
-| for      | for      |          |          | defect   | Lead     |
-| Vali     | Va       |          |          | is now   |          |
-| dation** | lidation |          |          | ready to |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | to a     |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | (        |          |
-|          |          |          |          | reporter |          |
-|          |          |          |          | of       |          |
-|          |          |          |          | defect)  |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | validate |          |
-|          |          |          |          | that the |          |
-|          |          |          |          | issue    |          |
-|          |          |          |          | was      |          |
-|          |          |          |          | dealt    |          |
-|          |          |          |          | with     |          |
-|          |          |          |          | co       |          |
-|          |          |          |          | rrectly. |          |
-|          |          |          |          | This     |          |
-|          |          |          |          | step is  |          |
-|          |          |          |          | i        |          |
-|          |          |          |          | mportant |          |
-|          |          |          |          | because  |          |
-|          |          |          |          | the test |          |
-|          |          |          |          | env      |          |
-|          |          |          |          | ironment |          |
-|          |          |          |          | co       |          |
-|          |          |          |          | ntaining |          |
-|          |          |          |          | the fix  |          |
-|          |          |          |          | might    |          |
-|          |          |          |          | not be   |          |
-|          |          |          |          | a        |          |
-|          |          |          |          | vailable |          |
-|          |          |          |          | just     |          |
-|          |          |          |          | yet.     |          |
+| **Ready | Ready |   |   | The | Test |
+| for | for | | | defect | Lead |
+| Vali | Va | | | is now | |
+| dation** | lidation | | | ready to | |
+| | | | | be | |
+| | | | | assigned | |
+| | | | | to a | |
+| | | | | tester | |
+| | | | | ( | |
+| | | | | reporter | |
+| | | | | of | |
+| | | | | defect) | |
+| | | | | to | |
+| | | | | validate | |
+| | | | | that the | |
+| | | | | issue | |
+| | | | | was | |
+| | | | | dealt | |
+| | | | | with | |
+| | | | | co | |
+| | | | | rrectly. | |
+| | | | | This | |
+| | | | | step is | |
+| | | | | i | |
+| | | | | mportant | |
+| | | | | because | |
+| | | | | the test | |
+| | | | | env | |
+| | | | | ironment | |
+| | | | | co | |
+| | | | | ntaining | |
+| | | | | the fix | |
+| | | | | might | |
+| | | | | not be | |
+| | | | | a | |
+| | | | | vailable | |
+| | | | | just | |
+| | | | | yet. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Ready    | Assign   | Va       | The      | Test     |
-|          | for      | for      | lidating | as       | Lead     |
-|          | Va       | Va       |          | signment |          |
-|          | lidation | lidation |          | to the   |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | (re      |          |
-|          |          |          |          | porting) |          |
-|          |          |          |          | will be  |          |
-|          |          |          |          | t        |          |
-|          |          |          |          | riggered |          |
-|          |          |          |          | by the   |          |
-|          |          |          |          | avai     |          |
-|          |          |          |          | lability |          |
-|          |          |          |          | of the   |          |
-|          |          |          |          | test     |          |
-|          |          |          |          | env      |          |
-|          |          |          |          | ironment |          |
-|          |          |          |          | co       |          |
-|          |          |          |          | ntaining |          |
-|          |          |          |          | the fix. |          |
-|          |          |          |          | And even |          |
-|          |          |          |          | though   |          |
-|          |          |          |          | we build |          |
-|          |          |          |          | new      |          |
-|          |          |          |          | versions |          |
-|          |          |          |          | conti    |          |
-|          |          |          |          | nuously, |          |
-|          |          |          |          | a        |          |
-|          |          |          |          | cons     |          |
-|          |          |          |          | olidated |          |
-|          |          |          |          | new      |          |
-|          |          |          |          | version  |          |
-|          |          |          |          | for QA   |          |
-|          |          |          |          | will not |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | a        |          |
-|          |          |          |          | vailable |          |
-|          |          |          |          | as       |          |
-|          |          |          |          | fre      |          |
-|          |          |          |          | quently. |          |
+| ** ** | Ready | Assign | Va | The | Test |
+| | for | for | lidating | as | Lead |
+| | Va | Va | | signment | |
+| | lidation | lidation | | to the | |
+| | | | | tester | |
+| | | | | (re | |
+| | | | | porting) | |
+| | | | | will be | |
+| | | | | t | |
+| | | | | riggered | |
+| | | | | by the | |
+| | | | | avai | |
+| | | | | lability | |
+| | | | | of the | |
+| | | | | test | |
+| | | | | env | |
+| | | | | ironment | |
+| | | | | co | |
+| | | | | ntaining | |
+| | | | | the fix. | |
+| | | | | And even | |
+| | | | | though | |
+| | | | | we build | |
+| | | | | new | |
+| | | | | versions | |
+| | | | | conti | |
+| | | | | nuously, | |
+| | | | | a | |
+| | | | | cons | |
+| | | | | olidated | |
+| | | | | new | |
+| | | | | version | |
+| | | | | for QA | |
+| | | | | will not | |
+| | | | | be | |
+| | | | | a | |
+| | | | | vailable | |
+| | | | | as | |
+| | | | | fre | |
+| | | | | quently. | |
 +----------+----------+----------+----------+----------+----------+
-| **Vali   | Va       |          |          | During   | Tester   |
-| dating** | lidating |          |          | the      |          |
-|          |          |          |          | va       |          |
-|          |          |          |          | lidating |          |
-|          |          |          |          | step,    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | validate |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | fixed    |          |
-|          |          |          |          | defect.  |          |
-|          |          |          |          | The      |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | would    |          |
-|          |          |          |          | only     |          |
-|          |          |          |          | start    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | va       |          |
-|          |          |          |          | lidation |          |
-|          |          |          |          | if the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | was      |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | to him.  |          |
+| **Vali | Va |   |   | During | Tester |
+| dating** | lidating | | | the | |
+| | | | | va | |
+| | | | | lidating | |
+| | | | | step, | |
+| | | | | the | |
+| | | | | tester | |
+| | | | | will | |
+| | | | | validate | |
+| | | | | the | |
+| | | | | fixed | |
+| | | | | defect. | |
+| | | | | The | |
+| | | | | tester | |
+| | | | | would | |
+| | | | | only | |
+| | | | | start | |
+| | | | | the | |
+| | | | | va | |
+| | | | | lidation | |
+| | | | | if the | |
+| | | | | defect | |
+| | | | | was | |
+| | | | | assigned | |
+| | | | | to him. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Va       | Pass     | Closed   | If the   | Tester   |
-|          | lidating |          |          | defect   |          |
-|          |          |          |          | fix was  |          |
-|          |          |          |          | correct, |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | indicate |          |
-|          |          |          |          | \        |          |
-|          |          |          |          | "Pass\". |          |
-|          |          |          |          | This     |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | autom    |          |
-|          |          |          |          | atically |          |
-|          |          |          |          | close    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect.  |          |
+| ** ** | Va | Pass | Closed | If the | Tester |
+| | lidating | | | defect | |
+| | | | | fix was | |
+| | | | | correct, | |
+| | | | | the | |
+| | | | | tester | |
+| | | | | will | |
+| | | | | indicate | |
+| | | | | \ | |
+| | | | | "Pass\". | |
+| | | | | This | |
+| | | | | will | |
+| | | | | autom | |
+| | | | | atically | |
+| | | | | close | |
+| | | | | the | |
+| | | | | defect. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Va       | Fail     | Assign   | If the   | Tester   |
-|          | lidating |          | to Fix   | defect   |          |
-|          |          |          |          | fix was  |          |
-|          |          |          |          | not      |          |
-|          |          |          |          | correct, |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | tester   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | indicate |          |
-|          |          |          |          | \"Fail\" |          |
-|          |          |          |          | and the  |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | autom    |          |
-|          |          |          |          | atically |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | assigned |          |
-|          |          |          |          | back to  |          |
-|          |          |          |          | the Dev. |          |
-|          |          |          |          | lead in  |          |
-|          |          |          |          | status   |          |
-|          |          |          |          | \"Assign |          |
-|          |          |          |          | to Fix\" |          |
+| ** ** | Va | Fail | Assign | If the | Tester |
+| | lidating | | to Fix | defect | |
+| | | | | fix was | |
+| | | | | not | |
+| | | | | correct, | |
+| | | | | the | |
+| | | | | tester | |
+| | | | | will | |
+| | | | | indicate | |
+| | | | | \"Fail\" | |
+| | | | | and the | |
+| | | | | defect | |
+| | | | | will | |
+| | | | | autom | |
+| | | | | atically | |
+| | | | | be | |
+| | | | | assigned | |
+| | | | | back to | |
+| | | | | the Dev. | |
+| | | | | lead in | |
+| | | | | status | |
+| | | | | \"Assign | |
+| | | | | to Fix\" | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Va       | Return   | Triage   | If new   | Tester   |
-|          | lidating | to       |          | inf      |          |
-|          |          | Triage   |          | ormation |          |
-|          |          |          |          | emerges  |          |
-|          |          |          |          | on the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | that     |          |
-|          |          |          |          | would    |          |
-|          |          |          |          | require  |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | team\'s  |          |
-|          |          |          |          | input    |          |
-|          |          |          |          | and      |          |
-|          |          |          |          | ass      |          |
-|          |          |          |          | essment, |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | send     |          |
-|          |          |          |          | back to  |          |
-|          |          |          |          | triage.  |          |
-|          |          |          |          |          |          |
-|          |          |          |          | Reasons  |          |
-|          |          |          |          | could    |          |
-|          |          |          |          | be:      |          |
-|          |          |          |          | Signi    |          |
-|          |          |          |          | ficantly |          |
-|          |          |          |          | more     |          |
-|          |          |          |          | risk,    |          |
-|          |          |          |          | missed   |          |
-|          |          |          |          | requi    |          |
-|          |          |          |          | rements, |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | exposes  |          |
-|          |          |          |          | more     |          |
-|          |          |          |          | issues   |          |
-|          |          |          |          | etc.     |          |
+| ** \*\* | Va | Return | Triage | If new | Tester |
+| | lidating | to | | inf | |
+| | | Triage | | ormation | |
+| | | | | emerges | |
+| | | | | on the | |
+| | | | | defect | |
+| | | | | that | |
+| | | | | would | |
+| | | | | require | |
+| | | | | the | |
+| | | | | team\'s | |
+| | | | | input | |
+| | | | | and | |
+| | | | | ass | |
+| | | | | essment, | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | send | |
+| | | | | back to | |
+| | | | | triage. | |
+| | | | | | |
+| | | | | Reasons | |
+| | | | | could | |
+| | | | | be: | |
+| | | | | Signi | |
+| | | | | ficantly | |
+| | | | | more | |
+| | | | | risk, | |
+| | | | | missed | |
+| | | | | requi | |
+| | | | | rements, | |
+| | | | | defect | |
+| | | | | exposes | |
+| | | | | more | |
+| | | | | issues | |
+| | | | | etc. | |
 +----------+----------+----------+----------+----------+----------+
-| *        | Deferred |          |          | An       | Test     |
-| *Defer** |          |          |          | out-     | Lead,    |
-|          |          |          |          | of-scope | Team     |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will be  |          |
-|          |          |          |          | labelled |          |
-|          |          |          |          | \"De     |          |
-|          |          |          |          | ferred\" |          |
-|          |          |          |          | in order |          |
-|          |          |          |          | to be    |          |
-|          |          |          |          | reviewed |          |
-|          |          |          |          | at a     |          |
-|          |          |          |          | later    |          |
-|          |          |          |          | time.    |          |
-|          |          |          |          | Deferral |          |
-|          |          |          |          | only     |          |
-|          |          |          |          | happens  |          |
-|          |          |          |          | during   |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | triage   |          |
-|          |          |          |          | and is   |          |
-|          |          |          |          | t        |          |
-|          |          |          |          | herefore |          |
-|          |          |          |          | a        |          |
-|          |          |          |          | combined |          |
-|          |          |          |          | decision |          |
-|          |          |          |          | of the   |          |
-|          |          |          |          | team.    |          |
+| _ | Deferred |   |   | An | Test |
+| _Defer** | | | | out- | Lead, |
+| | | | | of-scope | Team |
+| | | | | defect | |
+| | | | | will be | |
+| | | | | labelled | |
+| | | | | \"De | |
+| | | | | ferred\" | |
+| | | | | in order | |
+| | | | | to be | |
+| | | | | reviewed | |
+| | | | | at a | |
+| | | | | later | |
+| | | | | time. | |
+| | | | | Deferral | |
+| | | | | only | |
+| | | | | happens | |
+| | | | | during | |
+| | | | | the | |
+| | | | | triage | |
+| | | | | and is | |
+| | | | | t | |
+| | | | | herefore | |
+| | | | | a | |
+| | | | | combined | |
+| | | | | decision | |
+| | | | | of the | |
+| | | | | team. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Deferred | R        | Triage   | Once the | Test     |
-|          |          | e-Assess |          | time is  | Lead,    |
-|          |          |          |          | there, a | Team     |
-|          |          |          |          | deferred |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | brought  |          |
-|          |          |          |          | back     |          |
-|          |          |          |          | into the |          |
-|          |          |          |          | process  |          |
-|          |          |          |          | by       |          |
-|          |          |          |          | re-a     |          |
-|          |          |          |          | ssessing |          |
-|          |          |          |          | in       |          |
-|          |          |          |          | triage.  |          |
+| ** ** | Deferred | R | Triage | Once the | Test |
+| | | e-Assess | | time is | Lead, |
+| | | | | there, a | Team |
+| | | | | deferred | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | brought | |
+| | | | | back | |
+| | | | | into the | |
+| | | | | process | |
+| | | | | by | |
+| | | | | re-a | |
+| | | | | ssessing | |
+| | | | | in | |
+| | | | | triage. | |
 +----------+----------+----------+----------+----------+----------+
-| **R      | R        |          |          | A        | Tester/  |
-| e-Open** | e-opened |          |          | formerly | Reporter |
-|          |          |          |          | closed   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | r        |          |
-|          |          |          |          | e-opened |          |
-|          |          |          |          | if the   |          |
-|          |          |          |          | same     |          |
-|          |          |          |          | c        |          |
-|          |          |          |          | ondition |          |
-|          |          |          |          | appears  |          |
-|          |          |          |          | again.   |          |
-|          |          |          |          | This     |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | then be  |          |
-|          |          |          |          | co       |          |
-|          |          |          |          | nsidered |          |
-|          |          |          |          | in the   |          |
-|          |          |          |          | same     |          |
-|          |          |          |          | fashion  |          |
-|          |          |          |          | as a     |          |
-|          |          |          |          | brand    |          |
-|          |          |          |          | new      |          |
-|          |          |          |          | defect.  |          |
+| **R | R |   |   | A | Tester/ |
+| e-Open** | e-opened | | | formerly | Reporter |
+| | | | | closed | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | r | |
+| | | | | e-opened | |
+| | | | | if the | |
+| | | | | same | |
+| | | | | c | |
+| | | | | ondition | |
+| | | | | appears | |
+| | | | | again. | |
+| | | | | This | |
+| | | | | defect | |
+| | | | | will | |
+| | | | | then be | |
+| | | | | co | |
+| | | | | nsidered | |
+| | | | | in the | |
+| | | | | same | |
+| | | | | fashion | |
+| | | | | as a | |
+| | | | | brand | |
+| | | | | new | |
+| | | | | defect. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | R        | Close    | Closed   | If it    | Tester/  |
-|          | e-opened |          |          | turns    | Reporter |
-|          |          |          |          | out that |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | wasn\'t  |          |
-|          |          |          |          | a defect |          |
-|          |          |          |          | or it    |          |
-|          |          |          |          | was a    |          |
-|          |          |          |          | du       |          |
-|          |          |          |          | plicate, |          |
-|          |          |          |          | misunder |          |
-|          |          |          |          | standing |          |
-|          |          |          |          | etc. the |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | closed.  |          |
+| ** ** | R | Close | Closed | If it | Tester/ |
+| | e-opened | | | turns | Reporter |
+| | | | | out that | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | wasn\'t | |
+| | | | | a defect | |
+| | | | | or it | |
+| | | | | was a | |
+| | | | | du | |
+| | | | | plicate, | |
+| | | | | misunder | |
+| | | | | standing | |
+| | | | | etc. the | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | closed. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | R        | Ready    | In       | Once the | Tester/  |
-|          | e-opened | for      | Review   | defect   | Reporter |
-|          |          | Review   |          | has been |          |
-|          |          |          |          | updated  |          |
-|          |          |          |          | it will  |          |
-|          |          |          |          | be       |          |
-|          |          |          |          | s        |          |
-|          |          |          |          | ubmitted |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | review.  |          |
-|          |          |          |          | No       |          |
-|          |          |          |          | action   |          |
-|          |          |          |          | on the   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | happen   |          |
-|          |          |          |          | until it |          |
-|          |          |          |          | is       |          |
-|          |          |          |          | labeled  |          |
-|          |          |          |          | \"Ready  |          |
-|          |          |          |          | for      |          |
-|          |          |          |          | R        |          |
-|          |          |          |          | eview\", |          |
-|          |          |          |          | this     |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | allow    |          |
-|          |          |          |          | the      |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | reporter |          |
-|          |          |          |          | to       |          |
-|          |          |          |          | collect  |          |
-|          |          |          |          | all the  |          |
-|          |          |          |          | n        |          |
-|          |          |          |          | ecessary |          |
-|          |          |          |          | info     |          |
-|          |          |          |          | rmation. |          |
+| ** \*\* | R | Ready | In | Once the | Tester/ |
+| | e-opened | for | Review | defect | Reporter |
+| | | Review | | has been | |
+| | | | | updated | |
+| | | | | it will | |
+| | | | | be | |
+| | | | | s | |
+| | | | | ubmitted | |
+| | | | | for | |
+| | | | | review. | |
+| | | | | No | |
+| | | | | action | |
+| | | | | on the | |
+| | | | | defect | |
+| | | | | will | |
+| | | | | happen | |
+| | | | | until it | |
+| | | | | is | |
+| | | | | labeled | |
+| | | | | \"Ready | |
+| | | | | for | |
+| | | | | R | |
+| | | | | eview\", | |
+| | | | | this | |
+| | | | | will | |
+| | | | | allow | |
+| | | | | the | |
+| | | | | defect | |
+| | | | | reporter | |
+| | | | | to | |
+| | | | | collect | |
+| | | | | all the | |
+| | | | | n | |
+| | | | | ecessary | |
+| | | | | info | |
+| | | | | rmation. | |
 +----------+----------+----------+----------+----------+----------+
-| *        | Closed   |          |          | A defect | Team     |
-| *Close** |          |          |          | can be   |          |
-|          |          |          |          | closed   |          |
-|          |          |          |          | because  |          |
-|          |          |          |          | it       |          |
-|          |          |          |          | passed   |          |
-|          |          |          |          | va       |          |
-|          |          |          |          | lidation |          |
-|          |          |          |          | or for a |          |
-|          |          |          |          | variety  |          |
-|          |          |          |          | of other |          |
-|          |          |          |          | reasons. |          |
+| _ | Closed |   |   | A defect | Team |
+| \*Close** | | | | can be | |
+| | | | | closed | |
+| | | | | because | |
+| | | | | it | |
+| | | | | passed | |
+| | | | | va | |
+| | | | | lidation | |
+| | | | | or for a | |
+| | | | | variety | |
+| | | | | of other | |
+| | | | | reasons. | |
 +----------+----------+----------+----------+----------+----------+
-| ** **    | Closed   | Re-Open  | R        | A        | Tester/  |
-|          |          |          | e-opened | formerly | Reporter |
-|          |          |          |          | closed   |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | can be   |          |
-|          |          |          |          | r        |          |
-|          |          |          |          | e-opened |          |
-|          |          |          |          | if the   |          |
-|          |          |          |          | same     |          |
-|          |          |          |          | c        |          |
-|          |          |          |          | ondition |          |
-|          |          |          |          | appears  |          |
-|          |          |          |          | again.   |          |
-|          |          |          |          | This     |          |
-|          |          |          |          | defect   |          |
-|          |          |          |          | will     |          |
-|          |          |          |          | then be  |          |
-|          |          |          |          | co       |          |
-|          |          |          |          | nsidered |          |
-|          |          |          |          | in the   |          |
-|          |          |          |          | same     |          |
-|          |          |          |          | fashion  |          |
-|          |          |          |          | as a     |          |
-|          |          |          |          | brand    |          |
-|          |          |          |          | new      |          |
-|          |          |          |          | defect.  |          |
+| ** \*\* | Closed | Re-Open | R | A | Tester/ |
+| | | | e-opened | formerly | Reporter |
+| | | | | closed | |
+| | | | | defect | |
+| | | | | can be | |
+| | | | | r | |
+| | | | | e-opened | |
+| | | | | if the | |
+| | | | | same | |
+| | | | | c | |
+| | | | | ondition | |
+| | | | | appears | |
+| | | | | again. | |
+| | | | | This | |
+| | | | | defect | |
+| | | | | will | |
+| | | | | then be | |
+| | | | | co | |
+| | | | | nsidered | |
+| | | | | in the | |
+| | | | | same | |
+| | | | | fashion | |
+| | | | | as a | |
+| | | | | brand | |
+| | | | | new | |
+| | | | | defect. | |
 +----------+----------+----------+----------+----------+----------+
 
 **Output**
 
 Managed defects.
-
- 
-
- 
 
 Defect Triage Meeting Guidelines
 
@@ -1379,42 +1277,42 @@ A Defect Triage should be held as needed during the sprints. The
 frequency and the number of occurrences will vary, but is typically
 based on:
 
--   the number of defects being reported,
+- the number of defects being reported,
 
--   the overall sprint schedule and
+- the overall sprint schedule and
 
--   the current status of the sprint.
+- the current status of the sprint.
 
 Scope of the meeting
 
 The defects that will be discussed are all the defects which have the
-status "Triage".  
+status "Triage".
 
 At the Defect Triage, each defect should be discussed; even those that
 are rated at a lower severity or ones that are deemed "simple".
 
 Common Triage Meeting Guidelines
 
--   The Test Lead/Scrum Master makes sure the right people are present.
-    Nota Bene: Not all are needed all the time!
+- The Test Lead/Scrum Master makes sure the right people are present.
+  Nota Bene: Not all are needed all the time!
 
--   Test Lead determines when the meeting is held. *Do not hold meetings
-    because they are on the calendar if you have nothing to discuss!*
+- Test Lead determines when the meeting is held. *Do not hold meetings
+  because they are on the calendar if you have nothing to discuss!*
 
--   The Test Lead facilitates the meeting.
+- The Test Lead facilitates the meeting.
 
--   The Test Lead documents the decisions in JIRA during the meeting.
+- The Test Lead documents the decisions in JIRA during the meeting.
 
--   An efficient triage meeting should take no longer than 30 minutes
-    and should be finished as soon as possible.
+- An efficient triage meeting should take no longer than 30 minutes
+  and should be finished as soon as possible.
 
--   Participants actively and respectfully contribute.
+- Participants actively and respectfully contribute.
 
--   The Defect Triage is not intended to solve defects. Common rule of
-    thumb: If you need more than 2-3 minutes to decide on priority and
-    assignment, it needs to be assigned for clarification.
+- The Defect Triage is not intended to solve defects. Common rule of
+  thumb: If you need more than 2-3 minutes to decide on priority and
+  assignment, it needs to be assigned for clarification.
 
--   The priority of defects to be discussed are:
+- The priority of defects to be discussed are:
 
 1.  "Failed" Validation
 
@@ -1428,17 +1326,17 @@ Common Triage Meeting Guidelines
 
 6.  New defects in order of descending severity
 
--   The triage meeting will also discuss readiness of testing for the
-    new build.
+- The triage meeting will also discuss readiness of testing for the
+  new build.
 
 Agenda for a Triage Meeting
 
 **Introduction (2 minutes)**
 
--   Flag any burning, immediate action needed, defects that impact test
-    and development progress.
+- Flag any burning, immediate action needed, defects that impact test
+  and development progress.
 
--   Bring up list on screen sorted by priority of discussion.
+- Bring up list on screen sorted by priority of discussion.
 
 **Review defect by defect (no longer than 2-3 minutes per defect)**
 
@@ -1480,61 +1378,57 @@ participants**
 
 **Discuss Testing's readiness for the next build. (5 minutes)**
 
--   Test Lead indicates status of current test cycle.
+- Test Lead indicates status of current test cycle.
 
--   Dev. Lead reports on readiness of Dev. to produce a new build.
+- Dev. Lead reports on readiness of Dev. to produce a new build.
 
--   Agree build deployment date/schedule.
+- Agree build deployment date/schedule.
 
 ROLES & RESPONSIBILITIES of individuals in Defect Triage
 
 **1. Project Manager**
 
--   Assists in the prioritization of the defects
+- Assists in the prioritization of the defects
 
--   Deals with or escalates scoping defects.
+- Deals with or escalates scoping defects.
 
 **2. Business Lead/Product Owner**
 
--   Assists in the prioritization of the defects.
+- Assists in the prioritization of the defects.
 
--   Assists in setting the Business Value of the defect.
+- Assists in setting the Business Value of the defect.
 
--   Deals with or escalates business scoping defects.
+- Deals with or escalates business scoping defects.
 
 **3. Test Lead/Scrum Master**
 
--   Assists in the prioritization of the defects
+- Assists in the prioritization of the defects
 
--   Calls the Defect Triage
+- Calls the Defect Triage
 
--   Manages defects in JIRA
+- Manages defects in JIRA
 
--   Discusses the arrival of the next build for Testing
+- Discusses the arrival of the next build for Testing
 
--   Escalates Testing defects
+- Escalates Testing defects
 
--   Explains the findings on each defect being presented
+- Explains the findings on each defect being presented
 
 **4. Development Lead(CGI)**
 
--   Assists in the prioritization of the defects
+- Assists in the prioritization of the defects
 
--   Escalates development defects to PM
+- Escalates development defects to PM
 
--   Discusses the delivery date of next build to Testing
+- Discusses the delivery date of next build to Testing
 
--   Explains the level of complexity and the risk associated with each
-    defect being presented at the Defect Triage
+- Explains the level of complexity and the risk associated with each
+  defect being presented at the Defect Triage
 
--   Assigns the defects to the appropriate developer
+- Assigns the defects to the appropriate developer
 
--   Team is aligned on the severity and priority of defects discussed
-    during the Defect Triage
-
- 
-
- 
+- Team is aligned on the severity and priority of defects discussed
+  during the Defect Triage
 
 Test Closure Process
 
@@ -1544,15 +1438,17 @@ June 24, 2019
 
 RASCI
 
-  **Roles**                  **Responsible**   **Approves/Accountable**   **Supports**   **Consulted**   **Informed**
-  -------------------------- ----------------- -------------------------- -------------- --------------- --------------
-  **Test Lead**              X                                                                            
-  **Business Lead**                                                        X                              
-  **Developer Lead**                                                       X                              
-  **Release Manager**                                                      X                              
-  **Auditor**                                                                                            X
-  **Project Manager**                          X                                                          
-  **Product Owner/Client**                                                                               X
+**Roles** **Responsible** **Approves/Accountable** **Supports** **Consulted** **Informed**
+
+---
+
+**Test Lead** X        
+**Business Lead**      X    
+**Developer Lead**      X    
+**Release Manager**      X    
+**Auditor**         X
+**Project Manager**   X      
+**Product Owner/Client**         X
 
 Objective
 
@@ -1586,11 +1482,11 @@ Any outstanding work items will need to be discussed and decided upon.
 
 The decision can be one of the following:
 
--   Deal with it in the last phase of the sprint
+- Deal with it in the last phase of the sprint
 
--   Put on the backlog for future sprint incorporation 
+- Put on the backlog for future sprint incorporation
 
--   Determine that the item is no longer necessary
+- Determine that the item is no longer necessary
 
 **After** closing the sprint test we:
 
@@ -1603,49 +1499,43 @@ The decision can be one of the following:
 
 4.  Archive/consolidate all relevant test collateral, including:
 
-    a.  Test plan(s)
+    a. Test plan(s)
 
-    b.  Test case(s)
+    b. Test case(s)
 
-    c.  Test report(s)
+    c. Test report(s)
 
-    d.  Test data
+    d. Test data
 
-    e.  Relevant emails
+    e. Relevant emails
 
 Output: Test Closure Report
 
-The Test Closure Report is input to the **Sprint Review.** 
+The Test Closure Report is input to the **Sprint Review.**
 
 This report provides the following details:
 
--   Outstanding Risks and Issues
+- Outstanding Risks and Issues
 
--   Action Plan for open work items
+- Action Plan for open work items
 
--   Statistics on:
+- Statistics on:
 
-    -   Defects found
+  - Defects found
 
-    -   Defects fixed
+  - Defects fixed
 
-    -   Open Defects
+  - Open Defects
 
-    -   Open Defects by Severity and Priority
+  - Open Defects by Severity and Priority
 
-    -   Postponed defects (backlog)
+  - Postponed defects (backlog)
 
-    -   Test Passes/Fails
+  - Test Passes/Fails
 
-    -   Not-run test cases
+  - Not-run test cases
 
-    -   Blocked test cases
-
- 
-
- 
-
- 
+  - Blocked test cases
 
 Detailed Test Strategies
 
@@ -1664,24 +1554,20 @@ Rated from 0-10 on each category, the different activities are rated as
 follows:
 
 \<\<Detailed Test Strategies - Spreadsheet.xlsx\
-  ** **                         **Frequency**   **Impact On Quality**   **Business Importance**   **Operational Importance**   **Project Success factor**   **SUM Total**   **Rank**
-  ----------------------------- --------------- ----------------------- ------------------------- ---------------------------- ---------------------------- --------------- ----------
-  **Unit Testing**              0               0                       0                         0                            0                            **0**           10
-  **Functional Testing**        10              10                      9                         5                            10                           **44**          1
-  **Test Automation**           1               1                       3                         8                            4                            **17**          7
-  **System Testing**            2               3                       4                         8                            5                            **22**          5.5
-  **Regression Testing**        9               2                       8                         8                            8                            **35**          3.5
-  **Smoke Testing**             10              1                       1                         8                            2                            **22**          5.5
-  **Integration Testing**       5               8                       8                         6                            8                            **35**          3.5
-  **User Acceptance Testing**   6               2                       10                        8                            10                           **36**          2
-  **Security Testing**          1               1                       5                         8                            1                            **16**          8
-  **Performance Testing**       1               1                       4                         8                            1                            **15**          9
+ \*\* \*\* **Frequency** **Impact On Quality** **Business Importance** **Operational Importance** **Project Success factor** **SUM Total** **Rank**
 
- 
+---
 
- 
-
- 
+**Unit Testing** 0 0 0 0 0 **0** 10
+**Functional Testing** 10 10 9 5 10 **44** 1
+**Test Automation** 1 1 3 8 4 **17** 7
+**System Testing** 2 3 4 8 5 **22** 5.5
+**Regression Testing** 9 2 8 8 8 **35** 3.5
+**Smoke Testing** 10 1 1 8 2 **22** 5.5
+**Integration Testing** 5 8 8 6 8 **35** 3.5
+**User Acceptance Testing** 6 2 10 8 10 **36** 2
+**Security Testing** 1 1 5 8 1 **16** 8
+**Performance Testing** 1 1 4 8 1 **15** 9
 
 Unit Test Strategy
 
@@ -1695,62 +1581,58 @@ developers/configurators do have activities that could be characterized
 as \"Developer Testing\". Many of the concepts shown below would still
 apply to that activity.
 
-Definition 
+Definition
 
- A unit test, as Agile teams understand the term, is a short program
+A unit test, as Agile teams understand the term, is a short program
 fragment written and maintained by the developers on the product team,
 which exercises some narrow part of the product\'s source code and
-checks the results. 
+checks the results.
 
 Unit testing is guided by the following principle:
-
- 
 
 **Unit Testing Principle**
 
 **Basic assumption(s):**
 
--   All modules/functions/components/interfaces need to be Unit tested
-    by the developer.
+- All modules/functions/components/interfaces need to be Unit tested
+  by the developer.
 
--   Unit tests need to be re-usable.
+- Unit tests need to be re-usable.
 
--   Unit tests need to cover design specification requirements.
+- Unit tests need to cover design specification requirements.
 
--   Unit Tests need to be implemented as automated tests.
+- Unit Tests need to be implemented as automated tests.
 
 **Test Principle:**
 
--   Developers will create a unit test design for each component they
-    produce.
+- Developers will create a unit test design for each component they
+  produce.
 
--   Unit Test design is documented and stored for re-use and reference.
+- Unit Test design is documented and stored for re-use and reference.
 
 Objectives
 
 Unit Testing aims to:
 
--   Find defects which may get created by the programmer while
-    developing the software.
+- Find defects which may get created by the programmer while
+  developing the software.
 
--   Gain confidence in and provide information about the level of
-    quality.
+- Gain confidence in and provide information about the level of
+  quality.
 
--   Prevent defects being passed on to the next activity.
+- Prevent defects being passed on to the next activity.
 
 Expected Benefits
 
--   A team relying on automated unit tests can expect to reap some of
-    the benefits of test-driven development, in particular a decrease
-    in defect rates.
+- A team relying on automated unit tests can expect to reap some of
+  the benefits of test-driven development, in particular a decrease
+  in defect rates.
 
--   Early and frequent testing is a pattern common to successful
-    delivery of working software.
+- Early and frequent testing is a pattern common to successful
+  delivery of working software.
 
--   Continuous Integration can only succeed when there is a solid basis
-    of automated unit tests .
-
- 
+- Continuous Integration can only succeed when there is a solid basis
+  of automated unit tests .
 
 **To Note**
 
@@ -1762,20 +1644,22 @@ less important in an Agile context.
 
 Responsibilities
 
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                                    X                
-  Test Analyst (Agile)                                          
-  Business Tester                                               
-  Test Automation Specialist                   X                
-  Business Analyst                                              
-  Business Lead                                                 
-  Developer                    X                                
-  Developer Lead                       X                        
-  Solution Architect                                   X        
-  Release Manager                              X                
-  Auditor                                                       
-  Project Manager                                              X
+**Role ** **R** **A** **S** **C** **I**
+
+---
+
+Test Lead     X    
+Test Analyst (Agile)          
+Business Tester          
+Test Automation Specialist     X    
+Business Analyst          
+Business Lead          
+Developer X        
+Developer Lead   X      
+Solution Architect       X  
+Release Manager     X    
+Auditor          
+Project Manager         X
 
 Unit testing is the responsibility of the development team.
 
@@ -1791,7 +1675,7 @@ software components, units and or modules and these will have one or
 Approach
 
 This section provides an overview of the test approach that will be
-undertaken for Unit Testing. 
+undertaken for Unit Testing.
 
 In the early eighties, IBM did a lot of research on the value of Unit
 Testing and found that it was capable of finding at least 60% of all
@@ -1799,54 +1683,54 @@ defects that a project could encounter. The more striking number was
 that this could be done for a fraction of the cost and with minimal
 disruption to the delivery of the project. This notion is at the core of
 the practice in agile projects to have a focus on unit testing and
-particularly automated unit testing. 
+particularly automated unit testing.
 
 In general terms we want unit testing to be:
 
--   Rigorous
+- Rigorous
 
--   Consistent
+- Consistent
 
--   Repeatable
+- Repeatable
 
--   Dependable
+- Dependable
 
 **Rigorous**
 
 Leave no stone unturned, all pieces of code will be:
 
--   Reviewed.
+- Reviewed.
 
--   Covered by means of automated unit tests that will test all
-    sequences, iterations and decisions, not only to test if they work
-    but also if they react correctly in error situations.\
-    **Positive and Negative Tests\
-    **In Unit testing we aim to have at least 80% negative tests (test
-    that should fail) and 20% positive tests (test that should
-    succeed). The philosophy behind this is that errors typically
-    cluster around exceptions, \"this will never happen\", domain
-    issues, boundary problems etc.
+- Covered by means of automated unit tests that will test all
+  sequences, iterations and decisions, not only to test if they work
+  but also if they react correctly in error situations.\
+  **Positive and Negative Tests\
+  **In Unit testing we aim to have at least 80% negative tests (test
+  that should fail) and 20% positive tests (test that should
+  succeed). The philosophy behind this is that errors typically
+  cluster around exceptions, \"this will never happen\", domain
+  issues, boundary problems etc.
 
--   Exposed to as many data/usage variations as possible. Testing and
-    therefore also Unit testing is largely a combinatorial problem,
-    Variations are potentially hard to test as they often are too
-    many. By deploying techniques like code coverage, pair-wise
-    testing and risk analysis we can focus on achieving best value for
-    our efforts balancing coverage with variability.
+- Exposed to as many data/usage variations as possible. Testing and
+  therefore also Unit testing is largely a combinatorial problem,
+  Variations are potentially hard to test as they often are too
+  many. By deploying techniques like code coverage, pair-wise
+  testing and risk analysis we can focus on achieving best value for
+  our efforts balancing coverage with variability.
 
 **Consistent**
 
 Effectiveness of the automated unit tests is greatly enhanced when:
 
--   They get executed whenever the code changes
+- They get executed whenever the code changes
 
--   They are part of every code build and roll out process
+- They are part of every code build and roll out process
 
--   They conform to minimum levels of coverage and complexity
+- They conform to minimum levels of coverage and complexity
 
--   They are reviewed for consistency
+- They are reviewed for consistency
 
--   They are kept up-to-date when the code changes
+- They are kept up-to-date when the code changes
 
 **Repeatable**
 
@@ -1857,11 +1741,11 @@ they can run independently of the phase of the project or the activity.
 This repeatability requires the unit tests to have the following
 characteristics:
 
--   They need to be modular
+- They need to be modular
 
--   They need specific unit test data
+- They need specific unit test data
 
--   They need to be isolated from the rest of the system
+- They need to be isolated from the rest of the system
 
 **Dependable**
 
@@ -1873,39 +1757,39 @@ all the others. Any given behaviour should be specified in one and only
 one test. Otherwise if that behaviour changes later, multiple tests have
 to be changed.
 
-The corollaries of this rule include: 
+The corollaries of this rule include:
 
--   **No unnecessary assertions**
+- **No unnecessary assertions**
 
 It's counterproductive to Assert() anything that's also asserted by
 another test: it just increases the frequency of pointless failures
 without improving unit test coverage one bit.  *Have only one logical
-assertion per test*. 
+assertion per test*.
 
--   **Test only one code unit at a time **
+- **Test only one code unit at a time **
 
 The architecture must support testing units (i.e., classes or very
 small groups of classes) independently, not all chained together. This
-will avoid overlap between tests. 
+will avoid overlap between tests.
 
--   **Mock out all external services and state **
+- **Mock out all external services and state **
 
 Otherwise, behaviour in those external services overlaps multiple
 tests, and state data means that different unit tests can influence
-each other's outcome. 
+each other's outcome.
 
--   **Avoid unnecessary preconditions **
+- **Avoid unnecessary preconditions **
 
 Avoid having common setup code that runs at the beginning of lots of
 unrelated tests. Otherwise, it's unclear what assumptions each test
 relies on.
 
--   **Don't unit-test configuration settings **
+- **Don't unit-test configuration settings **
 
 By definition, the configuration settings aren't part of any unit of
-code. 
+code.
 
--   **Name unit tests clearly and consistently **
+- **Name unit tests clearly and consistently **
 
 Avoid non-descriptive unit tests names such as Purchase() or
 OutOfStock(). Maintenance is hard if it is unclear what we need to
@@ -1916,16 +1800,18 @@ Test Design
 For our unit test design we will be deploying multiple techniques and
 approaches in order to maximize our effectiveness.
 
-  **Technique**                 **Description**
-  ----------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------
-  Path Coverage Analysis        Analysis of the paths through the code that can be executed and making sure that the unit tests account for every path
-  Peer Review                   A peer review adds value by providing a set of fresh eyes on the code that can generate more testing ideas and better quality testing ideas
-  Analysis of requirements      The code needs to meet the requirement or acceptance criteria that are defined.
-  Review of flow charts         Developing an understanding of the overall flow of the functionality
-  Standards review              Coding, database usage and iValua development standards need to be followed
-  Decision Logic review         Review of decision tables, defined validations and external validation mechanisms
-  Review of Data Structures     Developing an insight of where data resides and how it is interconnected
-  Review of common interfaces   Understanding the common interfaces to iValua, the back end systems and external interfaces (like address complete)
+**Technique** **Description**
+
+---
+
+Path Coverage Analysis Analysis of the paths through the code that can be executed and making sure that the unit tests account for every path
+Peer Review A peer review adds value by providing a set of fresh eyes on the code that can generate more testing ideas and better quality testing ideas
+Analysis of requirements The code needs to meet the requirement or acceptance criteria that are defined.
+Review of flow charts Developing an understanding of the overall flow of the functionality
+Standards review Coding, database usage and iValua development standards need to be followed
+Decision Logic review Review of decision tables, defined validations and external validation mechanisms
+Review of Data Structures Developing an insight of where data resides and how it is interconnected
+Review of common interfaces Understanding the common interfaces to iValua, the back end systems and external interfaces (like address complete)
 
 The unit testing deliverables of the test design stage include unit test
 scripts, mock objects, and test data. These deliverables will be
@@ -1938,7 +1824,7 @@ The outcome of a unit test is binary: either \"pass\" if the program\'s
 behavior is consistent with the recorded expectations, or \"fail\"
 otherwise. Developers will typically write a large number of unit tests
 (corresponding to a large number of program behaviors of interest),
-called a \"test suite\". 
+called a \"test suite\".
 
 Unit tests will first be executed on the developers workstation as part
 of the development process. Once development is deemed done, the code is
@@ -1948,81 +1834,79 @@ multiple times a day.
 
 Data Requirements
 
- As per definition in Test Data Strategy unit testing requires the
-following types of test data: 
+As per definition in Test Data Strategy unit testing requires the
+following types of test data:
 
-  **Usage**                            **Environment**         **Type of Test Data**   **User**
-  ------------------------------------ ----------------------- ----------------------- ----------------------
-  Unit Testing/Integration Testing     Developer Workstation   Purposely created       Developer
-  Automated Unit/Integration testing   Build/Integration       Purposely created       Automated CI process
+**Usage** **Environment** **Type of Test Data** **User**
 
- In Test Environments Needs we have defined which environments will be
+---
+
+Unit Testing/Integration Testing Developer Workstation Purposely created Developer
+Automated Unit/Integration testing Build/Integration Purposely created Automated CI process
+
+In Test Environments Needs we have defined which environments will be
 required to have the unit test data:
 
 +----------+----------+----------+----------+----------+----------+
-| **Type   | **       | **       | **In     | **Who**  | **Descr  |
-| of       | Environm | Database | tegrated |          | iption** |
-| T        | ent(s)** | In       | with     |          |          |
-| esting** |          | stance** | Back     |          |          |
-|          |          |          | end**    |          |          |
+| **Type | ** | ** | **In | **Who** | **Descr |
+| of | Environm | Database | tegrated | | iption** |
+| T | ent(s)** | In | with | | |
+| esting** | | stance** | Back | | |
+| | | | end** | | |
 +==========+==========+==========+==========+==========+==========+
-| Unit     | Dev.     | Local    | No       | De       | A        |
-| Testing  | Work     | D        |          | velopers | utomated |
-|          | station, | atabase, |          |          | Unit     |
-|          | B        |          |          |          | tests    |
-|          | uild/Int | Build    |          |          | are      |
-|          | egration | Database |          |          | d        |
-|          | Env      |          |          |          | eveloped |
-|          | ironment |          |          |          | by the   |
-|          |          |          |          |          | de       |
-|          |          |          |          |          | velopers |
-|          |          |          |          |          | on their |
-|          |          |          |          |          | own      |
-|          |          |          |          |          | wor      |
-|          |          |          |          |          | kstation |
-|          |          |          |          |          | and      |
-|          |          |          |          |          | these    |
-|          |          |          |          |          | test     |
-|          |          |          |          |          | scripts  |
-|          |          |          |          |          | get      |
-|          |          |          |          |          | s        |
-|          |          |          |          |          | ubmitted |
-|          |          |          |          |          | with the |
-|          |          |          |          |          | code     |
-|          |          |          |          |          | they     |
-|          |          |          |          |          | created. |
-|          |          |          |          |          | Subs     |
-|          |          |          |          |          | equently |
-|          |          |          |          |          | the unit |
-|          |          |          |          |          | tests    |
-|          |          |          |          |          | will be  |
-|          |          |          |          |          | executed |
-|          |          |          |          |          | during   |
-|          |          |          |          |          | the      |
-|          |          |          |          |          | co       |
-|          |          |          |          |          | ntinuous |
-|          |          |          |          |          | int      |
-|          |          |          |          |          | egration |
-|          |          |          |          |          | process. |
+| Unit | Dev. | Local | No | De | A |
+| Testing | Work | D | | velopers | utomated |
+| | station, | atabase, | | | Unit |
+| | B | | | | tests |
+| | uild/Int | Build | | | are |
+| | egration | Database | | | d |
+| | Env | | | | eveloped |
+| | ironment | | | | by the |
+| | | | | | de |
+| | | | | | velopers |
+| | | | | | on their |
+| | | | | | own |
+| | | | | | wor |
+| | | | | | kstation |
+| | | | | | and |
+| | | | | | these |
+| | | | | | test |
+| | | | | | scripts |
+| | | | | | get |
+| | | | | | s |
+| | | | | | ubmitted |
+| | | | | | with the |
+| | | | | | code |
+| | | | | | they |
+| | | | | | created. |
+| | | | | | Subs |
+| | | | | | equently |
+| | | | | | the unit |
+| | | | | | tests |
+| | | | | | will be |
+| | | | | | executed |
+| | | | | | during |
+| | | | | | the |
+| | | | | | co |
+| | | | | | ntinuous |
+| | | | | | int |
+| | | | | | egration |
+| | | | | | process. |
 +----------+----------+----------+----------+----------+----------+
 
 Test data for unit testing needs to be:
 
--   For one unit only, independent from other data. If dependencies are
-    there, the data needs to be provided as part of the unit test and
-    not assumed to be available
+- For one unit only, independent from other data. If dependencies are
+  there, the data needs to be provided as part of the unit test and
+  not assumed to be available
 
--   Comprehensive in support for the unit test(s) and all its variants
+- Comprehensive in support for the unit test(s) and all its variants
 
 If these requirements are met, a truly effective automated unit test
 solution can be brought into place. If the requirements are *not* met,
 it is very likely that the automated test solution will require
 significant maintenance and upkeep in later sprints effectively negating
 the benefits that automated unit testing can bring.
-
- 
-
- 
 
 Integration Test Strategy
 
@@ -2039,27 +1923,27 @@ issues found. 
 The term \"integration testing\" is used to mean three different
 things:
 
--   **A sub-assembly test**: an interim level of testing, part of the
-    way between unit testing and system testing of the fully
-    integrated system.  The Integration Test Strategy is oriented
-    primarily towards sub-assembly testing, but also addresses the
-    other two types of integration testing.
+- **A sub-assembly test**: an interim level of testing, part of the
+  way between unit testing and system testing of the fully
+  integrated system.  The Integration Test Strategy is oriented
+  primarily towards sub-assembly testing, but also addresses the
+  other two types of integration testing.
 
--   **Smoke Test (or build verification test)**: a quick test of an
-    integrated sub-assembly or complete system, just to confirm that
-    all components are present and are connected together correctly. 
-    The build verification test usually is not as intensive as a
-    sub-assembly test.  The build process is a series of steps in
-    which the components are compiled and linked together to form an
-    executable system (or subsystem).  In large complex systems, many
-    steps may be needed to build a system, and there can be several
-    build verification tests as interim checkpoints to ensure that the
-    build process is proceeding correctly.
+- **Smoke Test (or build verification test)**: a quick test of an
+  integrated sub-assembly or complete system, just to confirm that
+  all components are present and are connected together correctly. 
+  The build verification test usually is not as intensive as a
+  sub-assembly test.  The build process is a series of steps in
+  which the components are compiled and linked together to form an
+  executable system (or subsystem).  In large complex systems, many
+  steps may be needed to build a system, and there can be several
+  build verification tests as interim checkpoints to ensure that the
+  build process is proceeding correctly.
 
--   **An end-to-end test (or System Integration Test)**, usually
-    performed on an entire system, where one feature is tested \"end
-    to end\" through the system, without the distraction of other
-    features or other simultaneous demands on the system.
+- **An end-to-end test (or System Integration Test)**, usually
+  performed on an entire system, where one feature is tested \"end
+  to end\" through the system, without the distraction of other
+  features or other simultaneous demands on the system.
 
 In all the above three types of integration tests, the objective is to
 ensure that components link and work together.  The focus is on the
@@ -2072,41 +1956,43 @@ Testing performed to expose defects in the interfaces and in the
 interactions between integrated components or systems.
 Objectives
 
--   Verify whether all the components/unit within assemblages interact
-    correctly, for example across procedure calls or processes. 
+- Verify whether all the components/unit within assemblages interact
+  correctly, for example across procedure calls or processes.
 
--   Verify the \"building blocks\" and add verified assemblages are
-    added to a verified base which is then used to support the
-    integration testing of further assemblages.
+- Verify the \"building blocks\" and add verified assemblages are
+  added to a verified base which is then used to support the
+  integration testing of further assemblages.
 
--   Verify interactions with external systems.
+- Verify interactions with external systems.
 
 Expected Benefits
 
--   Individual system components work correctly with each other on the
-    iValua platform
+- Individual system components work correctly with each other on the
+  iValua platform
 
--   External functionality works as expected
+- External functionality works as expected
 
--   REST-full layer operates according to specification
+- REST-full layer operates according to specification
 
 Responsibilities
 [RASCI
 Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
 
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                                    X                
-  Test Analyst (Agile)                         X                
-  Business Tester                                               
-  Test Automation Specialist                   X                
-  Business Analyst                                              
-  Business Lead                                                 
-  Developer                    X                                
-  Developer Lead                       X                        
-  Solution Architect                                           X
-  Release Manager                                              X
-  Project Manager                                              X
+**Role ** **R** **A** **S** **C** **I**
+
+---
+
+Test Lead     X    
+Test Analyst (Agile)     X    
+Business Tester          
+Test Automation Specialist     X    
+Business Analyst          
+Business Lead          
+Developer X        
+Developer Lead   X      
+Solution Architect         X
+Release Manager         X
+Project Manager         X
 
 Scope
 Full System Integration will be tested during System(-Integration)
@@ -2135,26 +2021,25 @@ Execution will follow the same path and frequency of the automated
 unit tests.
 Data Requirements
  As per definition in Test Data Strategy integration testing requires
-the following types of test data: 
+the following types of test data:
 
-  **Usage**                            **Environment**         **Type of Test Data**   **User**
-  ------------------------------------ ----------------------- ----------------------- ----------------------
-  Unit Testing/Integration Testing     Developer Workstation   Purposely created       Developer
-  Automated Unit/Integration testing   Build/Integration       Purposely created       Automated CI process
-  System Integration Testing           TEST                    Purposely Created       BA, Tester
+**Usage** **Environment** **Type of Test Data** **User**
 
- 
- In Test Environments Needs we have defined which environments will be
+---
+
+Unit Testing/Integration Testing Developer Workstation Purposely created Developer
+Automated Unit/Integration testing Build/Integration Purposely created Automated CI process
+System Integration Testing TEST Purposely Created BA, Tester
+
+In Test Environments Needs we have defined which environments will be
 required to have the unit test data:
 
-  **Type of Testing**          **Environment(s)**   **Integrated with Back end**   **Who**                        **Description**
-  ---------------------------- -------------------- ------------------------------ ------------------------------ -----------------
-  Integration Testing          Integration Test      Yes                           Developers                      
-  System Integration Testing   TEST                 Yes                            BA, Tester, Business Testers    
+**Type of Testing** **Environment(s)** **Integrated with Back end** **Who** **Description**
 
- 
+---
 
- 
+Integration Testing Integration Test  Yes Developers  
+System Integration Testing TEST Yes BA, Tester, Business Testers
 
 Functional Test Strategy
 
@@ -2172,7 +2057,7 @@ this particular feature work?".
 Definition
 
 Testing based on an analysis of the specification of the functionality
-of a component or system. 
+of a component or system.
 
 In functional testing the testing of the functions of component or
 system is done. It refers to activities that verify a specific action or
@@ -2183,11 +2068,11 @@ as our test cases.
 
 Objectives
 
--   The main objective of functional testing is to verify that each
-    function of the software application operates in accordance with
-    the written acceptance (requirement) specifications.
+- The main objective of functional testing is to verify that each
+  function of the software application operates in accordance with
+  the written acceptance (requirement) specifications.
 
-```{=html}
+````{=html}
 <!-- --```
 -   Functional testing is to verify whether your product meets
     the *intended* functional acceptance criteria mentioned in your
@@ -7690,7 +7575,7 @@ Current list:
 
 -   Roland.gov
 
-  **BCeID Account Information**   
+  **BCeID Account Information**
   ------------------------------- --------------------------------------------------------------
   Registration Date:              **June 5, 2019**
   Account Type:                   **Basic BCeID**
@@ -7701,7 +7586,7 @@ Current list:
 
 *From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx
 
-  **BCeID Account Information**   
+  **BCeID Account Information**
   ------------------------------- --------------------------------------------------------------
   Registration Date:              **June 6, 2019**
   Account Type:                   **Basic BCeID**
@@ -7712,7 +7597,7 @@ Current list:
 
 *From \<<https://www.test.bceid.ca/register/basic/confirmation.aspx
 
-  **BCeID Account Information**   
+  **BCeID Account Information**
   ------------------------------- --------------------------------------------------------------
   Registration Date:              **June 10, 2019**
   Account Type:                   **Basic BCeID**
@@ -7904,7 +7789,7 @@ An effective UAT Team has the following roles:
     will provide bug fixes for the issues that were found and needed
     to be fixed.
 
- 
+
 
 Activities:
 -----------
@@ -9529,3 +9414,4 @@ with the strategy and plan (only up to October 31th).
 There are also some videos (unlisted on youtube, I have the link on SP).
 
 The materials and videos can be used for onboarding new people.
+````
