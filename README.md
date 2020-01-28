@@ -1485,27 +1485,21 @@ On a regular basis:
 
 ### Test Design
 
-In the design of our regression test suite we have to consider
-criticality, time available and the amount of value/comfort the tests
-add. An inclusion of all the tests that the test team has developed is
-typically not a very efficient way of structuring the regression test.
-The risk is that a lot of time will be spend on designing/automating
-tests that add very little value.
+In the design of our regression test suite we have to consider criticality, time available and the amount of value/comfort the tests add. An inclusion of all the tests that the test team has developed is typically not a very efficient way of structuring the regression test. The risk is that a lot of time will be spend on designing/automating tests that add very little value.
 
-We use the following guideline to determine the **minimal** degree of
-coverage in our regression test:
+We use the following guideline to determine the **minimal** degree of coverage in our regression test:
 
-  **Category**                                 **Degree of Coverage**   **Description**
-  -------------------------------------------- ------------------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Smoke test                                   100%                     A smoke test as the start of a regression test suite is highly advisable, we will re-use smoke test artifacts.
-  Test cases which have failed in the past                              It is good practice to include \"troublesome\" test cases into the regression suite as experience has taught that trouble will, on occasion, emerge again.
-  *Critical errors*                            100%                      
-  *Moderate or minor errors*                   10% to 20%                
-  Test cases for basic functionality           5% to 10%                In regression tests there should be an under-emphasis on basic functionality. In our case, it does not make sense to create extensive regressions tests for out-of-the-box (OOTB) iValua functionality. Examples of basic tests are: navigation, link following, using the OOTB portal functionality, login, logout etc.
-  Test cases for complex features              25% to 50%               Complex features have a large potential for the introduction of unintentional errors when changes are applied. The chance of finding regression errors is therefore higher and adding these test cases to the test suite adds values.
-  Test cases for heavily used features         25% to 50%               Heavily used features have greater user visibility and we need to make sure that no unforeseen errors sneak in.
-  Test cases for business-critical features    50% to 100%              Business critical features deal with finances and personal information. Failure of these features would cause data corruption, information breach or could leave the members data incomplete or incorrect.
-  Bad fix test cases                           100%                     Bad fix is the term for a defect that was fixed but after re-test was still found in error. It is good practice to include these in the regression test suite.
+| Category | Degree of Coverage | Description
+| --- | --- | ---
+| Smoke test | 100% | A smoke test as the start of a regression test suite is highly advisable, we will re-use smoke test artifacts.
+| Test cases which have failed in the past | Depends | It is good practice to include "troublesome" test cases into the regression suite as experience has taught that trouble will, on occasion, emerge again.
+| Critical errors | 100% | 
+| Moderate or minor errors | 10% to 20% | 
+| Test cases for basic functionality | 5% to 10% | In regression tests there should be an under-emphasis on basic functionality. In our case, it does not make sense to create extensive regressions tests for out-of-the-box (OOTB) iValua functionality. Examples of basic tests are: navigation, link following, using the OOTB portal functionality, login, logout etc.
+| Test cases for complex features | 25% to 50% | Complex features have a large potential for the introduction of unintentional errors when changes are applied. The chance of finding regression errors is therefore higher and adding these test cases to the test suite adds values.
+| Test cases for heavily used features | 25% to 50% | Heavily used features have greater user visibility and we need to make sure that no unforeseen errors sneak in.
+| Test cases for business-critical features  | 50% to 100% | Business critical features deal with finances and personal information. Failure of these features would cause data corruption, information breach or could leave the members data incomplete or incorrect.
+| Bad fix test cases | 100% | Bad fix is the term for a defect that was fixed but after re-test was still found in error. It is good practice to include these in the regression test suite.
 
 In our test management tool (TestRail) we will categorize and document all our test cases so that candidacy for the regression test suite can easily be identified and understood.
 
@@ -1514,303 +1508,143 @@ In our test management tool (TestRail) we will categorize and document all our t
 Regression test cases are obtained from the following sources:
 
 -   Manual Test cases developed by the testers
-
 -   Exploratory Test session results
-
 -   Failed Test cases
-
 -   Bad fix test cases
-
 -   Developer input
-
 -   Business Analyst input
-
 -   Test Automation input
 
 **Increasing coverage**
 
-With test automation, we can, over time, increase the coverage beyond
-the mentioned minimal coverage for our regression test suite.
+With test automation, we can, over time, increase the coverage beyond the mentioned minimal coverage for our regression test suite.
 
-When considering expanding the regression test suite we will consider
-the following:
+When considering expanding the regression test suite we will consider the following:
 
--   Does the new test case add unique value? (untested area, new
-    functionality, new high risk realization)
-
+-   Does the new test case add unique value? (untested area, new functionality, new high risk realization)
 -   Is the new test the \"best\" test for the goal we need to achieve.
-
--   How much time will the new test add to the execution of the
-    regression test suite?
-
--   What are the requirements for the test case to run in the regression
-    test suite context? (order of execution, test data needed,
-    date/time requirements etc.)
-
--   Do we have time to create test automation? If not how can we
-    mitigate the risk of not doing it?
+-   How much time will the new test add to the execution of the regression test suite?
+-   What are the requirements for the test case to run in the regression test suite context? (order of execution, test data needed, date/time requirements etc.)
+-   Do we have time to create test automation? If not how can we mitigate the risk of not doing it?
 
 **Regression Test Suite Maintenance**
 
-A common problem with regression test suites is that they become stale
-and new team members often do not understand why certain tests are even
-in the suite. It is not wise to consider the regression test suite a
-static entity that will deliver value indefinitely.
+A common problem with regression test suites is that they become stale and new team members often do not understand why certain tests are even in the suite. It is not wise to consider the regression test suite a static entity that will deliver value indefinitely.
 
-There are several factors that diminish the effectiveness of the
-regression test suites:
+There are several factors that diminish the effectiveness of the regression test suites:
 
--   The most important among them is when enhancements to the test suite
-    (addition of tests to the test suites) get out of sync with
-    respect to the enhancements to the product. When features get
-    added to the product as part of a Release, there might not be an
-    equal amount of tests added to adequately test the new
-    functionality implemented in the Release. This in effect reduces
-    the functionality coverage achieved by the test suite. 
-
--   Another factor that affects the **effectiveness** of the test suites
-    is when tests get added to the suite with a short-term
-    perspective. One typical scenario is the case where
-    testers/developers add tests to quickly test a particular
-    functionality or a small part of the feature that is being
-    developed for the current Release or to test a least significant
-    part of a feature or module, mostly as part of their unit testing
-    efforts. Later, these tests, if not removed from the test suite,
-    become a liability because of the improper and insufficient
-    scenarios they test. 
-
--   A related factor affecting the test suite is the presence
-    of** redundant tests**. There are many scenarios by which a test
-    suite can end up with redundant tests or with two sets of tests
-    that validate almost the same or similar functionality. Testers
-    might add new tests to validate a feature, even when the same
-    could be achieved by modifying some of the existing
-    tests/framework. There might be a case where a feature gets
-    implemented across Releases. When this happens, the corresponding
-    tests also get staggered across Releases. It could happen that the
-    regression test suite would then contain many small tests, each
-    testing trivial parts of the feature, making the test suite
-    bulky. 
-
--   In most cases, as the product goes on adding new features, the
-    regression **test suite gets heavy** due to the tests that get
-    added to it over a period of time. This will pose new problems.
-    The entire test set might take a longer time now to complete all
-    tests. This will mean that defect identification takes more time,
-    and so also the defect verification after a fix. For example, if
-    it takes a week for the testers to complete all the automated
-    tests for a Release, then it is worth spending time to analyze new
-    ways and means of lessening the time taken for execution and
-    analysis of these tests. 
+-   The most important among them is when enhancements to the test suite (addition of tests to the test suites) get out of sync with respect to the enhancements to the product. When features get added to the product as part of a Release, there might not be an equal amount of tests added to adequately test the new functionality implemented in the Release. This in effect reduces the functionality coverage achieved by the test suite. 
+-   Another factor that affects the **effectiveness** of the test suites is when tests get added to the suite with a short-term
+    perspective. One typical scenario is the case where testers/developers add tests to quickly test a particular functionality or a small part of the feature that is being developed for the current Release or to test a least significant part of a feature or module, mostly as part of their unit testing efforts. Later, these tests, if not removed from the test suite,
+    become a liability because of the improper and insufficient scenarios they test. 
+-   A related factor affecting the test suite is the presence of **redundant tests**. There are many scenarios by which a test
+    suite can end up with redundant tests or with two sets of tests that validate almost the same or similar functionality. Testers might add new tests to validate a feature, even when the same could be achieved by modifying some of the existing
+    tests/framework. There might be a case where a feature gets implemented across Releases. When this happens, the corresponding
+    tests also get staggered across Releases. It could happen that the regression test suite would then contain many small tests, each testing trivial parts of the feature, making the test suite bulky. 
+-   In most cases, as the product goes on adding new features, the regression **test suite gets heavy** due to the tests that get
+    added to it over a period of time. This will pose new problems. The entire test set might take a longer time now to complete all tests. This will mean that defect identification takes more time, and so also the defect verification after a fix. For example, if it takes a week for the testers to complete all the automated tests for a Release, then it is worth spending time to analyze new ways and means of lessening the time taken for execution and analysis of these tests. 
 
 **Summary**
 
-The following factors are the common causes for diminishing
-effectiveness of the regression test suites:
+The following factors are the common causes for diminishing effectiveness of the regression test suites:
 
 -   Decrease in functionality coverage
-
 -   Tests that get added to the suite with a short-term perspective
-
 -   Presence of redundant tests in the test suites
-
 -   Decrease in test execution time due to presence of many tests
 
  We will counter the above factors by:
 
--   Implementing a good tracking mechanism between the feature and its
-    corresponding tests in TestRail
-
+-   Implementing a good tracking mechanism between the feature and its corresponding tests in TestRail
 -   Monitoring addition of tests to the tests suite
-
 -   Optimizing tests when they get bulky
-
--   Evaluating different Regression Test Selection strategies to avoid
-    time and effort overrun for a Release, but maintaining the minimal
-    coverage guidelines
-
+-   Evaluating different Regression Test Selection strategies to avoid time and effort overrun for a Release, but maintaining the minimal coverage guidelines
 -   Periodically cleaning of tests and test suite
+-   Planning and explore changes in the regression test suite framework if there are major changes in the product focus (reacting as part of our agile methodology)
+-   Using metrics to evaluate the effectiveness of the test suite (defect find/miss rates, run time etc.)
 
--   Planning and explore changes in the regression test suite framework
-    if there are major changes in the product focus (reacting as part
-    of our agile methodology)
+### Test Execution
 
--   Using metrics to evaluate the effectiveness of the test suite
-    (defect find/miss rates, run time etc.)
-
-Test Execution
-
-Manual regression testing will take place in the regular test
-environment and will be scheduled in per build, based on our analysis.
+Manual regression testing will take place in the regular test environment and will be scheduled in per build, based on our analysis.
 
 The automated regression tests will be executed:
 
 -   As part of the build and release process
-
 -   Any time a build is placed in an environment
-
--   Any time any change is introduced in an environment (code,
-    configuration, system etc.)
-
+-   Any time any change is introduced in an environment (code, configuration, system etc.)
 -   In the Test environments
 
-A fully developed regression test suite is **not** intended to run when
-the application is released in the production environment.
+A fully developed regression test suite is **not** intended to run when the application is released in the production environment.
 
-Data Requirements
+### Data Requirements
 
-The regression test would need similar test data to what was already
-identified for existing tests or it will need to be created. See Test
-Environments Needs
+The regression test would need similar test data to what was already identified for existing tests or it will need to be created. See Test Environments Needs
 
-The regression test data would work with its own set of accounts etc.
-This to avoid any cross-contamination with data that is used by other
-users, developers and testers. This own set of data is critical to the
-stability of the automated regression test runs.
+The regression test data would work with its own set of accounts etc. This to avoid any cross-contamination with data that is used by other users, developers and testers. This own set of data is critical to the stability of the automated regression test runs.
 
-Infrastructure Requirements
+### Infrastructure Requirements
 
-Manual regression testing will take place in the regular TEST
-environment.
+Manual regression testing will take place in the regular TEST environment. Automated regressions test will also utilize the TEST environment.
+It is also conceivable that portions of the regressions test run in Dev and on the developers' workstations. The earlier a regression issu can be detected the better it is. 
 
-Automated regressions test will also utilize the TEST environment.
+## Performance Test Strategy
 
- 
+This section provides an overview of the test approach that will be undertaken for Performance Testing.
 
- 
+The [risk analysis](files/PPRPerformanceRisks.xlsx) show the identified risk for PPR and based on that offers a suggested approach for performance testing.
 
-Performance Test Strategy
+### Definition
 
-June 25, 2019
+Performance testing is a type of testing intended to determine the responsiveness, throughput, reliability, and/or scalability of a system under a given workload.
 
-9:44 AM
-
-This section provides an overview of the test approach that will be
-undertaken for Performance Testing.
-
-The risk analysis is attached to this page.
-
-\<\<PPR Performance Risks Worksheet.xlsx\
-Definition
-
-Performance testing is a type of testing intended to determine the
-responsiveness, throughput, reliability, and/or scalability of a system
-under a given workload.
-
-Objectives
+### Objectives
 
 -   Assess production readiness
-
 -   Evaluate against performance criteria
-
 -   Find the source of performance problems
-
 -   Support system tuning
 
-Expected Benefits
+### Expected Benefits
 
 -   Confidence that the solution will support the anticipated user load
-
 -   Right-sizing of the infrastructure to limit the capital outlay
-
 -   Find errors that can only be found with the solution under load
-
 -   Validation infrastructure choices
 
-Responsibilities
+## Security Test Strategy
 
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+This section provides an overview of the test approach that will be undertaken for Security Testing. We will follow the OWASP Testing Guide, that can be found [here](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents).
 
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                            X                        
-  Test Automation Specialist   X                                
-  Developer                                    X                
-  Developer Lead                               X                
-  Solution Architect                                   X        
-  Release Manager                                              X
-  Project Manager                                              X
+Security testing is a highly specialized task and the project will depend on an external vendor to deliver. 
 
-* *
+### Definition
 
- 
+A security test is a method of evaluating the security of a computer system or network by methodically validating and verifying the effectiveness of application security controls. 
 
- 
+### Objectives
 
-Security Test Strategy
+-   Actively analyze the application for any weaknesses, technical flaws, or vulnerabilities. Any security issues that are found will be presented to the system owner, together with an assessment of the impact, a proposal for mitigation or a technical solution.
+-   Seek to eliminate the risk of exposing member data to non-authorized parties.
 
-June 25, 2019
-
-9:44 AM
-
-This section provides an overview of the test approach that will be
-undertaken for Security Testing. We will follow the OWASP Testing Guide,
-that can be
-found [here](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents).
-
-Security testing is a highly specialized task and the project will
-depend on an external vendor to deliver. 
-
-Definition
-
-A security test is a method of evaluating the security of a computer
-system or network by methodically validating and verifying the
-effectiveness of application security controls. 
-
-Objectives
-
--   Actively analyze the application for any weaknesses, technical
-    flaws, or vulnerabilities. Any security issues that are found will
-    be presented to the system owner, together with an assessment of
-    the impact, a proposal for mitigation or a technical solution.
-
--   Seek to eliminate the risk of exposing member data to non-authorized
-    parties.
-
-Expected Benefits
+### Expected Benefits
 
 -   Improved security
-
 -   Increased level of confidence with the solution
-
 -   Due diligence has been executed
-
 -   Clear identification of remaining risks
-
 -   Recommendations for improvements
 
-Responsibilities
-
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
-
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead/External Party     X                                
-  Test Automation Specialist                   X                
-  Developer                                    X                
-  Developer Lead               X                                
-  Solution Architect                                   X        
-  Release Manager                                              X
-  Project Manager                      X                        
-
-Scope
+### Scope
 
 The system scope of the security test is:
 
--   PPR installation
-
+-   PPR installation/Infrastructure configuration
 -   PPR Implementation
-
 -   Integration with external services
-
 -   Installation/Configuration of the solution
+-   Installation and configuration of the physical/virtual infrastructure
 
--   Installation and configuration of the physical/virtual
-    infrastructure
-
-Approach
+# Approach
 
 At a high level the following activities will be executed during the
 delivery of security testing:
