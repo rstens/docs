@@ -1198,315 +1198,107 @@ For PPR we distinguish between 3 different categories of activities which could 
     will also validate and re-test defect fixes on earlier found issues. At the end of the last Sprint, the team will be in a position to accept the solution. UAT during the later sprints will be a one month full-time effort.
 3.  **User Experience Focus Groups**: This activity is the responsibility of PPR BA/UX Team and will involve engaging with the community to obtain their feedback on the new solution. These sessions will start once several pieces of functionality can be demonstrated.
 
-**Difference in the UAT experience between a traditional project and PPR**
+**UAT Experience Differences between a traditional project and PPR**
 
-+----------------+----------------+----------------+----------------+
-| ** **          | **Traditional  | **PPR**        | **PPR**        |
-|                | Project**      |                |                |
-|                |                | **During       | **Before       |
-|                |                | Sprints**      | Release**      |
-+================+================+================+================+
-| **Readiness    | ** **          | ** **          | ** **          |
-| for Test       |                |                |                |
-| Design**       |                |                |                |
-+----------------+----------------+----------------+----------------+
-|                | Business       | User Stories   | User Stories   |
-|                | Requirements   | and acceptance | and acceptance |
-|                | are available  | criteria have  | criteria have  |
-|                | and approved   | gone through   | largely        |
-|                |                | reviews. They  | stabilized.    |
-|                |                | can (and often | Changes in     |
-|                |                | will) still    | scope,         |
-|                |                | change. This   | functionality  |
-|                |                | means that UAT | and objectives |
-|                |                | testers will   | can still be   |
-|                |                | potentially    | possible. UAT  |
-|                |                | have to rework | testers have a |
-|                |                | test design.   | more stable    |
-|                |                | The user       | set of         |
-|                |                | stories        | information to |
-|                |                | targeted for   | base their     |
-|                |                | delivery in    | tests and test |
-|                |                | the sprint     | scenarios on.  |
-|                |                | will be of a   |                |
-|                |                | good-enough    |                |
-|                |                | state to       |                |
-|                |                | progress with  |                |
-|                |                | test design.   |                |
-+----------------+----------------+----------------+----------------+
-| **Readiness    | ** **          | ** **          | ** **          |
-| for            |                |                |                |
-| Execution**    |                |                |                |
-+----------------+----------------+----------------+----------------+
-|                | Application is | Application is | Most of the    |
-|                | fully          | only partly    | application    |
-|                | developed      | developed,     | will be        |
-|                |                | gaps are still | present and    |
-|                |                | present.       | complete but   |
-|                |                | Application    | the later      |
-|                |                | might not yet  | sprints will   |
-|                |                | be fully       | still add new  |
-|                |                | integrated     | functionality. |
-|                |                | with back-end  |                |
-|                |                | or external    |                |
-|                |                | services.      |                |
-|                |                | Security,      |                |
-|                |                | Roles etc. are |                |
-|                |                | still at a     |                |
-|                |                | development    |                |
-|                |                | team level.    |                |
-+----------------+----------------+----------------+----------------+
-|                | Unit Testing,  | Unit and       | Most of the    |
-|                | Integration    | Integration    | Unit and       |
-|                | Testing &      | testing will   | Integration    |
-|                | System Testing | be complete,   | testing will   |
-|                | is completed   | but System     | be complete    |
-|                |                | testing will   | and System     |
-|                |                | happen in      | testing will   |
-|                |                | parallel.      | be largely     |
-|                |                |                | complete but   |
-|                |                |                | not finalized. |
-|                |                |                | UAT will need  |
-|                |                |                | to happen in   |
-|                |                |                | parallel.      |
-+----------------+----------------+----------------+----------------+
-|                | No             | There will be  | There will be  |
-|                | Showstoppers,  | showstoppers   | showstoppers   |
-|                | High, Medium   | and open       | and open       |
-|                | defects from   | defects, but   | defects, but   |
-|                | testing left   | towards the    | towards the    |
-|                | open           | end of the     | end of the     |
-|                |                | sprint they    | sprint they    |
-|                |                | will be        | will be        |
-|                |                | resolved (or   | resolved (or   |
-|                |                | fixes will be  | fixes will be  |
-|                |                | postponed)     | postponed). At |
-|                |                |                | the end of the |
-|                |                |                | sprint it is   |
-|                |                |                | determined if  |
-|                |                |                | any of the     |
-|                |                |                | open items     |
-|                |                |                | require        |
-|                |                |                | re-planning or |
-|                |                |                | deferral.      |
-+----------------+----------------+----------------+----------------+
-|                | Regression     | Regression     | Regression     |
-|                | Testing has    | testing for    | will be        |
-|                | completed      | the sprint     | ongoing, UAT   |
-|                |                | will still be  | needs to be    |
-|                |                | ongoing.       | executed in    |
-|                |                |                | parallel.      |
-+----------------+----------------+----------------+----------------+
-|                | Staging is     | Staging is not | Staging will   |
-|                | ready          | yet ready,     | be ready. Data |
-|                |                | testing will   | for testing    |
-|                |                | happen in the  | needs to be    |
-|                |                | TEST           | identified in  |
-|                |                | environment.   | Staging.       |
-|                |                | Data for       |                |
-|                |                | testing needs  |                |
-|                |                | to be          |                |
-|                |                | identified in  |                |
-|                |                | TEST or needs  |                |
-|                |                | to be created  |                |
-|                |                | for the UAT    |                |
-|                |                | team.          |                |
-+----------------+----------------+----------------+----------------+
-| **UAT Done**   | ** **          | ** **          | ** **          |
-+----------------+----------------+----------------+----------------+
-|                | All UAT Tests  | Work planned   | Work planned   |
-|                | have been      | for the Sprint | for the Sprint |
-|                | executed       | has been       | has been       |
-|                |                | executed.      | executed and   |
-|                |                |                | the UAT goals  |
-|                |                |                | have been met. |
-+----------------+----------------+----------------+----------------+
-|                | No open        | No open        | No open        |
-|                | issues/defects | issues, all    | issues, all    |
-|                |                | issues are     | issues are     |
-|                |                | closed or      | closed,        |
-|                |                | deferred to a  | deferred to a  |
-|                |                | next sprint.   | future round   |
-|                |                |                | or considered  |
-|                |                |                | acceptable.    |
-+----------------+----------------+----------------+----------------+
+|  | Traditional Project | PPR During Sprints | PPR Before Release |
+| --- | --- | --- | --- |
+| **Readiness for Test Design** | | | 
+| | Business Requirements are available and approved | User Stories and acceptance criteria have gone through reviews. They can (and often will) still change. This means that UAT testers will potentially have to rework test design. The user stories targeted for delivery in the sprint will be of a good-enough state to progress with test design. | User Stories and acceptance criteria have largely stabilized. Changes in scope, functionality and objectives can still be possible. UAT testers have a more stable set of information to base their tests and test scenarios on.
+| **Readiness for Execution** | | | 
+| | Application is fully developed | Application is only partly developed, gaps are still present. Application might not yet be fully integrated with back-end or external services. Security, Roles etc. are still at a development team level. | Most of the application will be present and complete but the later sprints will still add new functionality.
+| | Unit Testing, Integration Testing & System Testing is completed | Unit and Integration testing will be complete, but System testing will happen in parallel. | Most of the Unit and Integration testing will be complete and System testing will be largely complete but not finalized. UAT will need to happen in parallel.
+| | No Showstoppers, High, Medium defects from testing left open | There will be showstoppers and open defects, but towards the end of the sprint they will be resolved (or fixes will be postponed) | There will be showstoppers and open defects, but towards the end of the sprint they will be resolved (or fixes will be postponed). At the end of the sprint it is determined if any of the open items require re-planning or deferral.
+| | Regression Testing has completed | Regression testing for the sprint will still be ongoing. | Regression will be ongoing, UAT needs to be executed in parallel.
+| | Staging is ready | Staging is not yet ready, testing will happen in the TEST environment. Data for testing needs to be identified in TEST or needs to be created for the UAT team. | Staging will be ready. Data for testing needs to be identified in Staging.
+| **UAT Done** | | | 
+| | All UAT Tests have been executed, No open issues/defects | Work planned for the Sprint has been executed. No open issues, all issues are closed or deferred to a next sprint. | Work planned for the Sprint has been executed and the UAT goals have been met. No open issues, all issues are closed, deferred to a future round or considered acceptable.
 
 Early involvement of UAT has significant benefits to the project as user/business perspective is valuable and increases the success of the project.
 
 ### Test Design
 
-Test design is a hybrid of standard test cases and exploratory sessions.
-Exploratory sessions will be in focus for verification and validation in
-the earlier Sprints to help with the higher levels of ongoing change. In
-the later sprints, test cases will be used.
+Test design is a hybrid of standard test cases and exploratory sessions. Exploratory sessions will be in focus for verification and validation in the earlier Sprints to help with the higher levels of ongoing change. In the later sprints, test cases will be used.
 
 Exploratory sessions focus on:
 
 -   Business End-to-End process
-
 -   Business Process Variation
-
 -   User Experience
-
 -   Content and Document Validation
-
 -   Reporting
 
 Test Cases focus on:
 
 -   Business End-to-End process
-
 -   Business Process Variation
-
 -   Business Process Alignment
-
 -   Content and Document Validation
-
 -   Reporting
 
-Both Test Cases and exploratory sessions are recorded in the Zephyr test
-management tool. Test cases will typically not contain detailed
-navigational steps. UAT test design progress and status will be reported
-by the Test Lead.
+Both Test Cases and exploratory sessions are recorded in the Zephyr test management tool. Test cases will typically not contain detailed navigational steps. UAT test design progress and status will be reported by the Test Lead.
 
-UAT test cases will be incorporated into the automated testing suite if
-they prove to be viable automation candidates. With the multiple
-iterations that the different sprint provide, this will help the UAT
-testers focus on new tests and new exploratory sessions and not on
-regression testing previously executed tests.
+UAT test cases will be incorporated into the automated testing suite if they prove to be viable automation candidates. With the multiple iterations that the different sprint provide, this will help the UAT testers focus on new tests and new exploratory sessions and not on regression testing previously executed tests.
 
-Test Execution
+### Test Execution
 
-In the context of PPR we do have an extra challenge with regards to the
-end users of the system. As some of our end users are not internal to
-the organization, a different strategy was conceived to solicit their
-input. This will be the User Experience Focus Groups that will be held
-several times during the development of the PPR system. This activity
-is **not** in scope for the core test team.
+In the context of PPR we do have an extra challenge with regards to the end users of the system. As some of our end users are not internal to the organization, a different strategy was conceived to solicit their input. This will be the User Experience Focus Groups that will be held several times during the development of the PPR system. This activity is **not** in scope for the core test team.
 
- 
+| Activity | When | Who | Responsibility
+| --- | --- | --- | ---
+| Verification and Validation | During Sprints | Business Testers |  PPR Team
+| UAT (consolidation) | Before Release | Business Testers | PPR Team
+| User Experience Focus Groups | 2/3 Times during sprints | Typical clients, staff | PPR Team
 
-+----------------+----------------+----------------+----------------+
-| **Activity**   | **When**       | **Who**        | **Re           |
-|                |                |                | sponsibility** |
-+================+================+================+================+
-| Verification   | During Sprints | Business       | PPR Team       |
-| and Validation | (last 7/       | Testers        |                |
-|                |                |                |                |
-|                | 8 days)        |                |                |
-+----------------+----------------+----------------+----------------+
-| UAT            | Before Release | Business       | PPR Team       |
-| (              |                | Testers        |                |
-| consolidation) |                |                |                |
-+----------------+----------------+----------------+----------------+
-| User           | 2/3 Times      | Typical        | PPR Team       |
-| Experience     | during sprints | clients,       |                |
-| Focus Groups   |                | suppliers,     |                |
-|                |                | buyers         |                |
-+----------------+----------------+----------------+----------------+
 
-Data Requirements
+### Data Requirements
 
-  **Usage**                      **Environment**   **Type of Test Data**   **User**                  **Comments**
-  ------------------------------ ----------------- ----------------------- ------------------------- -------------------------------------------------------------------------
-  User Acceptance Testing        TEST              Test data               Business Analysts/Users    
-  User Experience Focus Groups   TEST              Test data               Buyers/Suppliers          The team will facilitate access during the user experience focus groups
+| Usage | Environment | Type of Test Data | User | Comments |
+|--- |--- |--- |--- |--- 
+| User Acceptance Testing | TEST | Test data | Business Analysts/Users    |
+| User Experience Focus Groups | TEST | Test data | Typical Clients, staff | The team will facilitate access during the user experience focus groups
 
-Infrastructure Requirements
-
-  **Type of Testing**            **Environment(s)**   **Integrated with Back end**   **Who**                         **Description**
-  ------------------------------ -------------------- ------------------------------ ------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  User Acceptance Testing        TEST                 Yes                            Testers (User/Business Focus)   The UAT will require a system that contains masked/de-identified production data. The staging environment will be close to an exact copy of production, providing the UAT testers with realistic experience.
-  User Experience Focus Groups   TEST                 Yes                            Buyers/Suppliers                Temporary access to participating members will be provided.
-
- 
-
- 
+| Type of Testing | Environment(s) | Integrated with Back end | Who | Description
+| --- | --- | --- | --- | ---
+| User Acceptance Testing | TEST | Yes | Testers (User/Business Focus) | The UAT will require a system that contains production data. The staging/prod environment will be close to an exact copy of production, providing the UAT testers with realistic experience.
+| User Experience Focus Groups | TEST | Yes | Clients, staff | Temporary access to participating members will be provided.
 
 ## Smoke Test Strategy
 
-This section provides an overview of the test approach that we will
-deploy for Smoke Testing.  
+This section provides an overview of the test approach that we will deploy for Smoke Testing.  
 
-A frequent characteristic of a smoke test is that it runs quickly, often
-in the order of a few minutes, giving the benefit of quicker feedback
-and faster turnaround than the running of full test suites which can
-take hours or even days. Smoke testing performed on a particular build
-is also known as a build verification test. A daily build and smoke test
-is among industry best practices. Smoke testing is also done by testers
-before accepting a build for further testing. Microsoft claims that
-after code reviews, \"smoke testing is the most cost-effective method
-for identifying and fixing defects in software\". 
+A frequent characteristic of a smoke test is that it runs quickly, often in the order of a few minutes, giving the benefit of quicker feedback and faster turnaround than the running of full test suites which can take hours or even days. Smoke testing performed on a particular build is also known as a build verification test. A daily build and smoke test is among industry best practices. Smoke testing is also done by testers before accepting a build for further testing. Microsoft claims that after code reviews, \"smoke testing is the most cost-effective method for identifying and fixing defects in software\". 
 
-One can perform smoke tests either manually or using an automated tool.
-In the case of automated tools, the tests are often initiated by the
-same process that generates the build itself.
+One can perform smoke tests either manually or using an automated tool. In the case of automated tools, the tests are often initiated by the same process that generates the build itself.
 
- 
+>**Smoke Test Origin**
+> From the electronics industry: The term \"smoke test\" refers to powering on a device simply to make sure it doesn\'t start smoking
+(indicating a major problem).
 
-***Smoke Test Origin***
+### Definition
 
-*From the electronics industry: The term \"smoke test\" refers to
-powering on a device simply to make sure it doesn\'t start smoking
-(indicating a major problem).*
+A subset of all defined/planned test cases that cover the main functionality of a component or system, to ascertain that the most
+crucial functions of a program work, but not bothering with finer details.
 
-Definition
-
-A subset of all defined/planned test cases that cover the main
-functionality of a component or system, to ascertain that the most
-crucial functions of a program work, but not bothering with finer
-details.
-
-Objectives
+### Objectives
 
 -   To assess if the installed application is operational
-
 -   To prevent the team from wasting time on a non functional build
-
 -   To quickly identify issues with a newly installed application
 
-Expected Benefits
+### Expected Benefits
 
 -   Save time and improve efficiency
-
 -   As smoke tests are typically automated, they can be run as part of
     the build and release process
-
 -   Early detection of obvious issues
-
 -   Prevention of wasted cycles because of releasing a non functional
     build
 
-Responsibilities
+### Scope
 
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+A good smoke test addresses the key capabilities of the provided build. By verifying these key capabilities, we\'ll gain a good insight into the configuration (and eventual problems) of the build.
 
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                            X                        
-  Test Analyst (Agile)                         X                
-  Business Tester                                               
-  Test Automation Specialist   X                                
-  Business Analyst                                              
-  Business Lead                                                 
-  Developer                                    X                
-  Developer Lead                               X                
-  Portal Architect                                              
-  Release Manager                              X                
-  Project Manager                                              X
-
-Both the Test Lead and DevOps have a strong vested interest in a strong,
-consistent and quick smoke test.
-
-Scope
-
-A good smoke test addresses the key capabilities of the provided build.
-By verifying these key capabilities, we\'ll gain a good insight into the
-configuration (and eventual problems) of the build.
-
-The following table indicates the types of test, order and what
-information we will be able to infer from the result.
+The following table indicates the types of test, order and what  information we will be able to infer from the result.
 
 +-------+----------+----------+----------+----------+----------+
 | ** ** | **Test** | **Inf    | **Inf    | **Action | **       |
@@ -2030,9 +1822,7 @@ coverage in our regression test:
   Test cases for business-critical features    50% to 100%              Business critical features deal with finances and personal information. Failure of these features would cause data corruption, information breach or could leave the members data incomplete or incorrect.
   Bad fix test cases                           100%                     Bad fix is the term for a defect that was fixed but after re-test was still found in error. It is good practice to include these in the regression test suite.
 
-In our test management tool (Zephyr) we will categorize and document all
-our test cases so that candidacy for the regression test suite can
-easily be identified and understood.
+In our test management tool (TestRail) we will categorize and document all our test cases so that candidacy for the regression test suite can easily be identified and understood.
 
 **Source of regression test cases**
 
@@ -2144,7 +1934,7 @@ effectiveness of the regression test suites:
  We will counter the above factors by:
 
 -   Implementing a good tracking mechanism between the feature and its
-    corresponding tests in Zephyr
+    corresponding tests in TestRail
 
 -   Monitoring addition of tests to the tests suite
 
@@ -3028,14 +2818,14 @@ delivered.
                   Build execution flow                                             For test automation execution run smoothly, we create an execution order/flow that consists of start up, data initiation, application initiation, test case execution, application shutdown, data shutdown and execution shutdown activities. If set up right, such a flow allows for easy improvements and extensions.
                   Recovery Scenarios                                               Test automation runs fail, this is a fact of life. In order to prepare for such an event we need to be clear on what we need to do and how to recover. This could involve a data restore or deletion.
                   Add to function libraries                                        Identified general functions are built and added to the functional libraries.
-                  Tools Extensions                                                 BDDStack offers some extensions that are configured in order to have BDDStack connect with JIRA. This way the tool can send information on failed test cases directly into JIRA. We configure the tool to connect with Zephyr and report test results into our central test management tool Zephyr.
+                  Tools Extensions                                                 BDDStack offers some extensions that are configured in order to have BDDStack connect with JIRA. This way the tool can send information on failed test cases directly into JIRA. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
                   Repository Management                                            We could use the repository management functions in BDDStack and integrate this with the a version control system like GitHub. BCGov is maintaining an area on GitHub, this area is actively used by many projects.
                   Documentation                                                    We document the set up, the configuration, the extension configuration and general system requirements. The intent is to document to such a degree that this set up can be replicated in the future.
   **Execution**   ** **                                                            ** **
                   Create new Test environment                                      For every test run we need to either create or refresh our test environment to be guaranteed of a fresh start.
                   Deploy Test Suite                                                Identify the test suite we need to run in BDDStack. This can either be done through the tool or by scripted invocation. The latter would happen in case of fully automated build and test.
                   Execute Test Scripts                                             Test scripts are executed by the test automation tool engine and the scripts point to one of our test environments.
-                  Results reporting                                                The tool collects all the results and communicate these to Zephyr. (To be build)
+                  Results reporting                                                The tool collects all the results and communicate these to TestRail. (To be build)
                   Defect Management                                                Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with JIRA to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
   **Maintain**    ** **                                                            ** **
                   Update Assets                                                    Test automation keeps on working well if the assets (scripts, functions, actions) are kept up-to-date, clean and efficient.
@@ -3160,7 +2950,7 @@ June 26, 2019
 
 1:32 PM
 
-Testing Status will be available continuously from JIRA and Zephyr, this
+Testing Status will be available continuously from JIRA and TestRail, this
 status is meant for day-to-day management. Self-serve for immediate
 questions and/or concerns is intended for team members and project
 management. 
@@ -3171,7 +2961,7 @@ Weekly reports are intended for project management and client.
 
 **Caveat**
 Weekly reports represent a snapshot at the time of generation. Online
-status through JIRA and Zephyr might no longer reflect the weekly
+status through JIRA and TestRail might no longer reflect the weekly
 report as this information is always current. In case of concerns, it
 is always recommended to contact the project manager for
 clarification.
@@ -3188,17 +2978,17 @@ Key Guidelines
 
 -   Dashboards showing test and defect status will be available in JIRA
 
--   All reporting will be automatically generated from Zephyr and JIRA
+-   All reporting will be automatically generated from TestRail and JIRA
 
 -   Weekly reports will summarize and condense the automatic reports
-    from Zephyr and JIRA
+    from TestRail and JIRA
 
 Key Caveats
 
 -   Weekly reports will have a very short useful lifespan giving the
     high pace of change in an agile project
 
--   On demand reports from Zephyr are only available through the test
+-   On demand reports from TestRail are only available through the test
     team
 
 -   Continuous status dashboard might lack the context required for
@@ -3215,7 +3005,7 @@ Planned reports
 |                |               |                | will be on     |
 |                |               |                | SharePoint     |
 +----------------+---------------+----------------+----------------+
-| Test Run       | On Demand     | Test Lead      | Zephyr offers  |
+| Test Run       | On Demand     | Test Lead      | TestRail offers  |
 | Results        |               |                | a continues    |
 |                |               |                | view on        |
 |                |               |                | progress. An   |
@@ -3646,12 +3436,12 @@ Key Guidelines
 
 -   Reporting will be done on progress on plan and coverage
 
--   All tests and results will be documented in Zephyr
+-   All tests and results will be documented in TestRail
 
 -   Dashboards showing the test progress and results will be available
     in Jira
 
--   All reporting will be automatically generated from Zephyr/Jira
+-   All reporting will be automatically generated from TestRail/Jira
 
 Key Caveats
 
@@ -3938,8 +3728,8 @@ June 27, 2019
 |                 | videos, and     |                 |           |
 |                 | file sharing.   |                 |           |
 +-----------------+-----------------+-----------------+-----------+
-| **Zephyr**      | Web-based Test  | Testers will    | BC Gov    |
-|                 | Management tool | use Zephyr to   |           |
+| **TestRail**      | Web-based Test  | Testers will    | BC Gov    |
+|                 | Management tool | use TestRail to   |           |
 |                 | integrated with | execute their   |           |
 |                 | JIRA.           | assigned test   |           |
 |                 |                 | cases, report   |           |
@@ -3949,7 +3739,7 @@ June 27, 2019
 | suite**         | bundled         | early test case |           |
 |                 | productivity    | development     |           |
 |                 | software used   | (for upload to  |           |
-|                 | to create, edit | Zephyr),        |           |
+|                 | to create, edit | TestRail),        |           |
 |                 | test documents. | general         |           |
 |                 |                 | utility.        |           |
 +-----------------+-----------------+-----------------+-----------+
@@ -4067,7 +3857,7 @@ Training Needs
   JIRA Introduction             All team members                                 Introduction to our project management system.
   JIRA - Defect Management      All team members                                 The defect management process for PPR as supported by JIRA.
   Project Onboarding/Training   All team members                                  
-  Zephyr                        Testers                                          The test management tool that allows for collaboration, planning, execution and reporting.
+  TestRail                        Testers                                          The test management tool that allows for collaboration, planning, execution and reporting.
 
  
 
@@ -4496,7 +4286,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 +----------------+----------------+----------------+----------------+
 | **Test         | -   All test   | Yes/Roland     |                |
 | Management     |     plans    |                |                |
-| (Zephyr)**     |     are      |                |                |
+| (TestRail)**     |     are      |                |                |
 |                |                |                |                |
 |                |    finalized |                |                |
 |                |     and      |                |                |
@@ -6220,7 +6010,7 @@ Tuesday, June 11, 2019
 
 -   JIRA Training
 
--   Zephyr Training
+-   TestRail Training
 
 -   Define Test Scope training
 
@@ -7249,7 +7039,7 @@ Late hiring of me.
 
  
 
--   No w Zephyr set up
+-   No w TestRail set up
 
 -   No documenting testing
 
@@ -7283,7 +7073,7 @@ Test
 
 -   Most of them where covered some deferred
 
--   Zephyr - Create a test case for every BBB item - seemed impossible
+-   TestRail - Create a test case for every BBB item - seemed impossible
 
 -   Broke up the workflow in 3-4 major test cases
 
