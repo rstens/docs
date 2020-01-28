@@ -958,129 +958,53 @@ But the specific step of functional testing completely focuses on functionality 
 
 ### Data Requirements
 
-**Usage** **Environment** **Type of Test Data** **User** **Comments**
-
----
-
-Functional Testing DEV/TEST Test Data + Valid IDIR Testers (Agile)
+| Usage              | Environment | Type of Test Data              | User            |
+| ------------------ | ----------- | ------------------------------ | --------------- |
+| Functional Testing | DEV/TEST    | Test Data + Valid IDIR/Test ID | Testers (Agile) |
 
 Infrastructure Requirements
 
-+-------------+-------------+-------------+-------------+-------------+
-| **Type of | **Envir | * | **Who** | **De |
-| Testing** | onment(s)\*\* | *Integrated | | scription** |
-| | | with Back | | |
-| | | end** | | |
-+=============+=============+=============+=============+=============+
-| Functional | DEV/TEST | No | Agile | Functional |
-| Testing | | | Testers | Testing has |
-| | | | | different |
-| | | | | aspects to |
-| | | | | it, first |
-| | | | | we\'ll have |
-| | | | | the |
-| | | | | \'tr |
-| | | | | aditional\' |
-| | | | | test cases |
-| | | | | and |
-| | | | | scripts, |
-| | | | | but we will |
-| | | | | also engage |
-| | | | | in |
-| | | | | exploratory |
-| | | | | testing. |
-| | | | | |
-| | | | | This type |
-| | | | | of testing |
-| | | | | can |
-| | | | | co-exist |
-| | | | | with |
-| | | | | Automated |
-| | | | | Functional |
-| | | | | Testing as |
-| | | | | long as we |
-| | | | | keep a |
-| | | | | clear data |
-| | | | | separation |
-| | | | | between the |
-| | | | | 2 |
-| | | | | activities. |
-+-------------+-------------+-------------+-------------+-------------+
+| Type of Testing    | Environment(s) | Integrated with Back end | Who           | Description                                                                                                                                                                                                                                                                                         |
+| ------------------ | -------------- | ------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Functional Testing | DEV/TEST       | No                       | Agile Testers | Functional Testing has different aspects to it, first we'll have the 'traditional' test cases and scripts, but we will also engage in exploratory testing. This type of testing can co-exist with Automated Functional Testing as long as we keep a clear data separation between the 2 activities. |
 
-Exploratory Testing Strategy
+### Exploratory Testing Strategy
 
-June 25, 2019
+This section provides an overview of the exploratory test approach for the PPR project.
 
-11:26 AM
+Exploratory testing is a style of software testing that emphasizes the personal freedom and responsibility of the individual tester to continually optimize the quality of his/her work by treating test-related learning, test design, test execution, and test result interpretation as mutually supportive activities that run in parallel
+throughout the project. This completely aligns with the agile project approach and has proven a very good fit for common agile scenarios like change, refinements and course correction.
 
-This section provides an overview of the exploratory test approach for
-the PPR project.
+#### Definition
 
-Exploratory testing is a style of software testing that emphasizes the
-personal freedom and responsibility of the individual tester to
-continually optimize the quality of his/her work by treating
-test-related learning, test design, test execution, and test result
-interpretation as mutually supportive activities that run in parallel
-throughout the project. This completely aligns with the agile project
-approach and has proven a very good fit for common agile scenarios like
-change, refinements and course correction.
+Exploratory testing is an approach to software testing that is concisely described as simultaneous learning, test design and test execution.
 
-Definition
-
-Exploratory testing is an approach to software testing that is concisely
-described as simultaneous learning, test design and test execution.
-
-Objectives
+#### Objectives
 
 - Find defects quickly
-
 - React to quickly changing system
-
-- Define the basis for test automation and further exploratory test
-  sessions
-
+- Define the basis for test automation and further exploratory test sessions
 - Identify missed or unclear requirements
 
-Expected Benefits
+#### Expected Benefits
 
 - Less initial test preparation is needed
-
 - Important defects are found quickly
+- Test execution is more intellectually stimulating than execution of scripted tests
+- Opens the possibility for deductive reasoning based on the results of previous observations
+- Exploration throughout testing continuously challenges the System Under Test with new scenarios
 
-- Test execution is more intellectually stimulating than execution of
-  scripted tests
+#### Scope
 
-- Opens the possibility for deductive reasoning based on the results
-  of previous results
+While the software is being tested, the tester learns things that together with experience and creativity generates new value-added tests to run. Exploratory testing is often thought of as a black box testing
+technique. Instead, those who have studied it consider it a test approach that can be applied to any test technique, at any stage in the development process. The key is not the test technique nor the item
+being tested or reviewed; the key is the cognitive engagement of the tester, and the tester\'s responsibility for managing time.
 
-- Exploration throughout testing continuously challenges the System
-  Under Test with new scenarios
+The scope for exploratory testing is largely functional testing, but has great benefit for business process testing as well.
 
-Responsibilities
+#### Approach
 
-See Functional Test Strategy
-
-Scope
-
-While the software is being tested, the tester learns things that
-together with experience and creativity generates new value-added tests
-to run. Exploratory testing is often thought of as a black box testing
-technique. Instead, those who have studied it consider it a test
-approach that can be applied to any test technique, at any stage in the
-development process. The key is not the test technique nor the item
-being tested or reviewed; the key is the cognitive engagement of the
-tester, and the tester\'s responsibility for managing his or her time.
-
-The scope for exploratory testing is largely functional testing, but has
-great benefit for business process testing as well.
-
-Approach
-
-_One of the criticisms of exploratory testing is that it can be purely
-ad-hoc, uncontrolled, non-traceable. Indeed if the approach is left
-undefined this would be a certainty. The answer to this is to instill a
-lightweight process call Session-Based Test Management (SBTM), a method
-for measuring and managing exploratory testing._
+One of the criticisms of exploratory testing is that it can be purely ad-hoc, uncontrolled, non-traceable. Indeed if the approach is left undefined this would be a certainty. The answer to this is to instill a lightweight process call Session-Based Test Management (SBTM), a method for measuring and managing exploratory testing.
 
 **_SBTM by James and Jon Bach_**
 
