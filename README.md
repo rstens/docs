@@ -1271,13 +1271,11 @@ A frequent characteristic of a smoke test is that it runs quickly, often in the 
 One can perform smoke tests either manually or using an automated tool. In the case of automated tools, the tests are often initiated by the same process that generates the build itself.
 
 >**Smoke Test Origin**
-> From the electronics industry: The term \"smoke test\" refers to powering on a device simply to make sure it doesn\'t start smoking
-(indicating a major problem).
+> From the electronics industry: The term \"smoke test\" refers to powering on a device simply to make sure it doesn\'t start smoking (indicating a major problem).
 
 ### Definition
 
-A subset of all defined/planned test cases that cover the main functionality of a component or system, to ascertain that the most
-crucial functions of a program work, but not bothering with finer details.
+A subset of all defined/planned test cases that cover the main functionality of a component or system, to ascertain that the most crucial functions of a program work, but not bothering with finer details.
 
 ### Objectives
 
@@ -1300,180 +1298,26 @@ A good smoke test addresses the key capabilities of the provided build. By verif
 
 The following table indicates the types of test, order and what  information we will be able to infer from the result.
 
-+-------+----------+----------+----------+----------+----------+
-| ** ** | **Test** | **Inf    | **Inf    | **Action | **       |
-|       |          | ormation | ormation | needed** | Impact** |
-|       |          | obtained | obtained |          |          |
-|       |          | if**     | if**     | **if     |          |
-|       |          |          |          | Failed** |          |
-|       |          | **OK**   | **       |          |          |
-|       |          |          | Failed** |          |          |
-+=======+==========+==========+==========+==========+==========+
-| 1     | Open URL | Web      | System   | I        | Testing  |
-|       |          | portion  | is down  | mmediate | cannot   |
-|       |          | of       |          | es       | proceed  |
-|       |          | system   |          | calation |          |
-|       |          | works,   |          | to fix   |          |
-|       |          | un       |          |          |          |
-|       |          | derlying |          |          |          |
-|       |          | database |          |          |          |
-|       |          | is       |          |          |          |
-|       |          | c        |          |          |          |
-|       |          | onnected |          |          |          |
-+-------+----------+----------+----------+----------+----------+
-| 2     | Log in   | Authen   | Authen   | I        | Testing  |
-|       |          | tication | tication | mmediate | cannot   |
-|       |          | m        | m        | es       | proceed  |
-|       |          | echanism | echanism | calation |          |
-|       |          | works    | is       | to fix   |          |
-|       |          |          | bro      |          |          |
-|       |          |          | ken/disc |          |          |
-|       |          |          | onnected |          |          |
-|       |          |          | or       |          |          |
-|       |          |          | mis-co   |          |          |
-|       |          |          | nfigured |          |          |
-+-------+----------+----------+----------+----------+----------+
-| 3     | Search   | Database | Portal   | Review   | Testing  |
-|       | for      | is       | database | and fix  | cannot   |
-|       | inf      | c        | and/or   | problem  | proceed  |
-|       | ormation | onnected | search   |          |          |
-|       | in the   | and      | m        |          |          |
-|       | portal   | contains | echanism |          |          |
-|       |          | se       | is       |          |          |
-|       |          | archable | broke    |          |          |
-|       |          | data     | n/mis-co |          |          |
-|       |          |          | nfigured |          |          |
-+-------+----------+----------+----------+----------+----------+
-| 4     | Navigate | Funct    | Funct    | Review   | Testing  |
-|       | to key   | ionality | ionality | and add  | can only |
-|       | functi   | is       | is       | funct    | p        |
-|       | onality, | present  | missing, | ionality | artially |
-|       | most     | in the   | code was | to build | proceed  |
-|       | i        | right    | not      |          | but will |
-|       | mportant | l        | added or |          | be       |
-|       | funct    | ocation, | confi    |          | hampered |
-|       | ionality | code is  | guration |          |          |
-|       | first    | present  | was not  |          |          |
-|       |          |          | updated  |          |          |
-|       |          |          | to point |          |          |
-|       |          |          | to the   |          |          |
-|       |          |          | new code |          |          |
-+-------+----------+----------+----------+----------+----------+
-| 5     | Use    | Funct    | Fails  | Review   | Testing  |
-|       | key    | ionality | on:    | and fix  | can only |
-|       | funct  | b        |          | problem  | p        |
-|       | ionality | asically | -        |          | artially |
-|       | in the | works.   |  Search: |          | proceed  |
-|       | f      | Back-end |        |          | but will |
-|       | ollowing | is       | Database |          | be       |
-|       | order  | c        |     or |          | hampered |
-|       | as     | onnected |        |          |          |
-|       | simple | and      | back-end |          |          |
-|       | as     | ope      |        |          |          |
-|       | p      | rational |  systems |          |          |
-|       | ossible: |          |          |          |          |
-|       |          |          |    not |          |          |
-|       | -        |          |     c  |          |          |
-|       |   Search |          | onnected |          |          |
-|       |          |          |          |          |          |
-|       | -        |          | -        |          |          |
-|       |   Select |          |  Select: |          |          |
-|       |          |          |          |          |          |
-|       | -        |          |    Inf |          |          |
-|       |   Create |          | ormation |          |          |
-|       |          |          |        |          |          |
-|       | -        |          | selected |          |          |
-|       |   Update |          |     is |          |          |
-|       |          |          |          |          |          |
-|       | -        |          |    not |          |          |
-|       |   Delete |          |          |          |          |
-|       |          |          | shown, |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  problem |          |          |
-|       |          |          |     in |          |          |
-|       |          |          |          |          |          |
-|       |          |          |  funct |          |          |
-|       |          |          | ionality |          |          |
-|       |          |          |          |          |          |
-|       |          |          | -   Crea |          |          |
-|       |          |          | te: Data |          |          |
-|       |          |          |     is |          |          |
-|       |          |          |          |          |          |
-|       |          |          |    not |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  stored, |          |          |
-|       |          |          |        |          |          |
-|       |          |          | database |          |          |
-|       |          |          |     or |          |          |
-|       |          |          |          |          |          |
-|       |          |          | rights |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  problem |          |          |
-|       |          |          |          |          |          |
-|       |          |          | -        |          |          |
-|       |          |          |  Update: |          |          |
-|       |          |          |          |          |          |
-|       |          |          |   Data |          |          |
-|       |          |          |     is |          |          |
-|       |          |          |          |          |          |
-|       |          |          |    not |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  stored, |          |          |
-|       |          |          |        |          |          |
-|       |          |          | database |          |          |
-|       |          |          |     or |          |          |
-|       |          |          |          |          |          |
-|       |          |          | rights |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  problem |          |          |
-|       |          |          |          |          |          |
-|       |          |          | -        |          |          |
-|       |          |          |  Delete: |          |          |
-|       |          |          |        |          |          |
-|       |          |          | Database |          |          |
-|       |          |          |     or |          |          |
-|       |          |          |          |          |          |
-|       |          |          | rights |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  problem |          |          |
-|       |          |          |          |          |          |
-|       |          |          | -   With |          |          |
-|       |          |          |          |          |          |
-|       |          |          |    all |          |          |
-|       |          |          |          |          |          |
-|       |          |          |    the |          |          |
-|       |          |          |          |          |          |
-|       |          |          | above: |          |          |
-|       |          |          |          |          |          |
-|       |          |          |  issue |          |          |
-|       |          |          |          |          |          |
-|       |          |          |   with |          |          |
-|       |          |          |        |          |          |
-|       |          |          | back-end |          |          |
-|       |          |          |        |          |          |
-|       |          |          |  systems |          |          |
-+-------+----------+----------+----------+----------+----------+
-| 6     | Trigger  | External | External | Review   | Testing  |
-|       | key      | systems  | systems  | and fix  | cannot   |
-|       | int      | are up   | are      | problem  | proceed  |
-|       | egration | and      | either   |          |          |
-|       | points   | running  | down,    |          |          |
-|       | with     | and      | not      |          |          |
-|       | external | co       | c        |          |          |
-|       | systems  | nfigured | onnected |          |          |
-|       |          | c        | or not   |          |          |
-|       |          | orrectly | co       |          |          |
-|       |          |          | nfigured |          |          |
-|       |          |          | c        |          |          |
-|       |          |          | orrectly |          |          |
-+-------+----------+----------+----------+----------+----------+
+| | Test | Information obtained if OK | Information obtained if Failed | Action needed if Failed | Impact
+| --- | --- | --- | --- | --- | ---
+| 1 | Open URL | Web portion of system works, underlying database is connected | System is down | Immediate escalation to fix | Testing cannot proceed
+| 2 | Log in | Authentication mechanism works | Authentication mechanism is broken/disconnected or mis-configured | Immediate escalation to fix | Testing cannot proceed
+| 3 | Search for information in the portal | Database is connected and contains searchable data | Portal database and/or search mechanism is broken/mis-configured | Review and fix problem | Testing cannot proceed
+| 4 | Navigate to key functionality, most important functionality first | Functionality is present in the right location, code is present | Functionality is missing, code was not added or configuration was not updated to point to the new code | Review and add functionality to build | Testing can only partially proceed but will be hampered
+| 5 | Use key functionality in the following order as simple as possible: | Functionality basically works. Back-end is connected and operational | Fails on: | Review and fix problem | Testing can only partially proceed but will be hampered
+| | Search | | Search: Database or back-end systems not connected | | 
+| | Select | | Select: Information selected is not shown, problem in functionality | | 
+| | Create | | Create: Data is not stored, database or rights problem | | 
+| | Update | | Update: Data is not stored, database or rights problem | | 
+| | Delete | | Delete: Database or rights problem | | 
+| | | | With all the above: issue with back-end systems | | 
+| 6 | Trigger key integration points with external systems | External systems are up and running and configured correctly | External systems are either down, not connected or not configured correctly | Review and fix problem | Testing cannot proceed
 
-Typically a failed smoke test means that the build does not get accepted
-into testing (or release) until the found issues have been addressed. A
-failed smoke test is a critical priority item to address as following
-activities are now halted.
 
-Approach
+
+Typically a failed smoke test means that the build does not get accepted into testing (or release) until the found issues have been addressed. A failed smoke test is a critical priority item to address as following activities are now halted.
+
+### Approach
 
 We will start building our smoke test (both automated and manual checks)
 as soon as code is built.
@@ -1481,324 +1325,165 @@ as soon as code is built.
 The smoke test will consist of:
 
 -   Selected Unit and Integration Tests
-
 -   Selected automated functional tests
-
 -   Custom (smoke test only) automated tests and checks
-
 -   Manual inspection
 
 Smoke test has the following characteristics:
 
 -   The duration will not be longer than 10 minutes, preferably shorter
-
--   It is highly repeatable as it build to avoid dependencies on
-    existing data, previous transaction etc.
-
+-   It is highly repeatable as it build to avoid dependencies on existing data, previous transaction etc.
 -   It is to the point and superficial
-
--   It does not tell us anything about the quality of the functionality
-    (merely that it is there and seems to function)
-
+-   It does not tell us anything about the quality of the functionality (merely that it is there and seems to function)
 -   It is mostly automated (as close to 100% as possible)
-
 -   It will change based on demand, lessons learned, risk etc.
 
 When new configuration is added to the build, we will:
 
 -   Investigate what this code does and what minimally needs to work
-
--   Review the existing unit test scripts for candidacy for the smoke
-    test
-
+-   Review the existing unit test scripts for candidacy for the smoke test
 -   Identify functional scripts that need to be created and build them
-
 -   Integrate the new scripts into the smoke test
 
-As part of the sprint end phase we will review the smoke test scripts to
-make sure that we have the slimmest and most effective approach that can
-be carried forward into the next sprint.
+As part of the sprint end phase we will review the smoke test scripts to make sure that we have the slimmest and most effective approach that can be carried forward into the next sprint.
 
-Test Design
+### Test Design
 
 See scope for the type of tests that we will have to design.
 
 Characteristics of the tests are:
 
--   Simple: these are not major functional tests, these tests skim the
-    surface
-
+-   Simple: these are not major functional tests, these tests skim the surface
 -   Independent: each test should be able to run as an independent unit
-
 -   Fast: each individual test should run no longer than a few seconds
-
--   Easy to understand: the test objective must be clear and easy to
-    understand
-
+-   Easy to understand: the test objective must be clear and easy to understand
 -   Automated: automation is essential for success
+-   Parameterized: to provide flexibility in running them against a variety of environments (like build, test, staging and production)
 
--   Parameterized: to provide flexibility in running them against a
-    variety of environments (like build, test, staging and production)
-
-Test case aim to isolate:
+Test cases aim to isolate:
 
 -   Environmental Issues
-
 -   Configuration issues
-
 -   System Issues
-
 -   Installation Issues
-
 -   Inter-connectivity/integration issues
-
 -   Build issues
-
 -   Application Issues
 
-Test Execution
+### Test Execution
 
 The smoke tests will be executed:
 
 -   As part of the build process and release process
-
 -   Any time a build is placed in an environment
+-   Any time any change is introduced in an environment (code, configuration, system etc.)
 
--   Any time any change is introduced in an environment (code,
-    configuration, system etc.)
-
-A fully developed smoke test suite can also be (re-)used when the
-application is released in production.
+A fully developed smoke test suite can also be (re-)used when the application is released in production.
 
 In that case, the following caveats must be taken into account:
+-   Typically we would need to forego, writing, updating or deleting information (unless specific test accounts are available for exactly this purpose)
+-   The smoke test will not be a replacement for the business user production-ready check
 
--   Typically we would need to forego, writing, updating or deleting
-    information (unless specific test accounts are available for
-    exactly this purpose)
+### Data Requirements
 
--   The smoke test will not be a replacement for the business user
-    production-ready check
+The smoke test would need test data that was already identified for the existing re-purposed tests or will need to be created. See Test Environments Needs
 
-Data Requirements
-
-The smoke test would need test data that was already identified for the
-existing re-purposed tests or will need to be created. See Test
-Environments Needs
-
-Infrastructure Requirements
+### Infrastructure Requirements
 
 Smoke test will utilize the QA Automation infrastructure.
 
- 
+## Regression Test Strategy
 
- 
-
-Regression Test Strategy
-
-June 25, 2019
-
-9:44 AM
-
-This section provides an overview of the test approach that will be
-undertaken for Regression Testing. Automated regression testing is
-essential to agile projects, with sprints moving forward rapidly and
-with a searchlight focus on specific functionality, it is unlikely that
-the team will have time to spend time regression testing previously
+This section provides an overview of the test approach that will be undertaken for Regression Testing. Automated regression testing is essential to agile projects, with sprints moving forward rapidly and with a searchlight focus on specific functionality, it is unlikely that the team will have time to spend time regression testing previously
 developed functionality. Test automation needs to fill that gap. 
 
-Definition
+### Definition
 
-Regression testing is a type of software testing that seeks to uncover
-problems, or regressions, in existing functional and non-functional
-areas of a system after changes such as enhancements, patches or
-configuration changes, have been made to them.
+Regression testing is a type of software testing that seeks to uncover problems, or regressions, in existing functional and non-functional areas of a system after changes such as enhancements, patches or configuration changes, have been made to them.
 
 Regression testing is guided by the following principle: 
 
- 
+> **Regression Test Principle**
+> **Basic assumption(s):**
+> -   Systems need to be tested for regression errors after changes.
+> -   The scope of the regression test is dependent on risk.
+>
+> **Test Principle:**
+> -   Systems will be regression tested to mitigate risk on unintended errors after changes.
+> -   Regression tests will be automated where appropriate.
 
-**Regression Test Principle**
-**Basic assumption(s):**
+### Objectives
 
--   Systems need to be tested for regression errors after changes.
+-   Ensure that defects have not been introduced or uncovered in unchanged areas of the software, as a result of changes made
+-   Create confidence in the solution by making sure that \"everything     still works\"
+-   Through automation relieve the testers from manually running regression tests
 
--   The scope of the regression test is dependent on risk.
-
-**Test Principle:**
-
--   Systems will be regression tested to mitigate risk on unintended
-    errors after changes.
-
--   Regression tests will be automated where appropriate.
-
-Objectives
-
--   Ensure that defects have not been introduced or uncovered in
-    unchanged areas of the software, as a result of changes made
-
--   Create confidence in the solution by making sure that \"everything
-    still works\"
-
--   Through automation relieve the testers from manually running
-    regression tests
-
-Expected Benefits
+### Expected Benefits
 
 -   Confidence in the solution
-
 -   Support the agile process
-
--   Build a regression test suite that can be used for the lifetime of
-    the solution
-
- 
+-   Build a regression test suite that can be used for the lifetime of the solution
 
 **Regression testing will not...**
 
--   Find new functionality defects
-
+-   Find defects in new functionality 
 -   Find many defects
 
-The effort versus effectivity in finding defects ratio is lopsided in
-regression testing, which is often the reason why manual regression
-testing is cut short, optimized or even ignored.
+The effort versus effectivity in finding defects ratio is lopsided in regression testing, which is often the reason why manual regression testing is cut short, optimized or even ignored.
 
-Responsibilities
+### Scope
 
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
-
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                            X                        
-  Test Analyst (Agile)                         X                
-  Business Tester                              X                
-  Test Automation Specialist   X                                
-  Business Analyst                                     X        
-  Business Lead                                        X        
-  Developer                                            X        
-  Developer Lead                                       X        
-  Solution Architect                                   X        
-  Release Manager                                              X
-  Project Manager                                              X
-
-Scope
-
-The scope of regression testing is significantly larger than for smoke
-testing. This does not mean that we\'ll (re-)test everything in our
-regressions tests (automated or not), we want to be effective, frugal
-and smart about our choice for the scope of our regression tests.
+The scope of regression testing is significantly larger than for smoke testing. This does not mean that we\'ll (re-)test everything in our regressions tests (automated or not), we want to be effective, frugal and smart about our choice for the scope of our regression tests.
 
 Guidelines for scope:
 
 -   Focus on functionality and not design
-
 -   Identify unique tests, do not repeat tests
-
--   Code changes are important but data changes (variations) need to be
-    considered too
-
+-   Code changes are important but data changes (variations) need to be considered too
 -   Write regression tests for important bug fixes
 
 See also the Test Design section for guidance on coverage.
 
-Approach
+### Approach
 
-Regression testing exists because of modifications to the application
-code, system and configuration. But testing modifications involves more
-than just regression testing.
+Regression testing exists because of modifications to the application code, system and configuration. But testing modifications involves more than just regression testing.
 
-How do we test a modification?  The answer is that four types of testing
-are needed:
+How do we test a modification?  The answer is that four types of testing are needed:
 
-**The unit test**, where the developer who is making the modification
-checks his or her work.  This testing concerns the internal changes to
-the source code, data structures, and stored data values. 
-**The modification test**, also called the localized change test. 
-This testing is done on the fully integrated, new version of the
-system, and it addresses only the modifications. It can be done by a
-black-box feature tester, and is driven by the change request or
-defect report which describes the intended change. In this phase, the
-goal is to test the direct modifications to the user features.  The
-externally visible changes are based on the internal changes to the
-source code, data structures, and stored data values, but these
-internal changes are usually hidden from the black-box feature
-testers.  The scope of this testing may include changes to the system
-and user documentation, impact on system performance, changes to
-system controls like password authentication, etc.
-**The regional impact test.**  This level of testing goes beyond
-checking the modification itself, and tests in the perceived
-high-impact region around the change.  The black-box feature tester
-needs to have some understanding of the system, what connects to what,
-in order to identify the likely high-impact region.  This testing is a
-compromise: it goes beyond testing just the modification, but falls
-far short of a full-blown regression test.  In this phase, the goal is
-to test the areas that are likely to be highly influenced by the
-change(s) , e.g., the immediate modules which directly call to, or are
-directly called by, the module that has been changed. 
-**The regression test.**  The regression test is broader than the
-modification test or the regional impact test, and its purpose is to
-find unintended and unforeseen side effects of the modification.  In
-regression testing, existing test cases are re-run in areas which
-should not have been affected by the modification, to see if they
-still work the same way as before.  Most regression testing is
-deliberately executed with the complete regression test suite, not
-just focused on where the modification has occurred. In this phase,
-the goal is to re-test the entire system after a change or set of
-changes, to ensure that features which were not intended to change
-still work the same way as before. This extensive re-test is needed if
-there is a concern about unintended side effects of the planed
-changes.  These side effects can include failures in parts of the
-system which seemingly are unrelated to the change, changes in the way
-features work, and the re-surfacing of old defects that supposedly had
-been eradicated.
+1. **The unit test**, where the developer who is making the modification checks his or her work.  This testing concerns the internal changes to the source code, data structures, and stored data values. 
+2. **The modification test**, also called the localized change test. This testing is done on the fully integrated, new version of the system, and it addresses only the modifications. It can be done by a black-box feature tester, and is driven by the change request or defect report which describes the intended change. In this phase, the goal is to test the direct modifications to the user features.  The externally visible changes are based on the internal changes to the source code, data structures, and stored data values, but these internal changes are usually hidden from the black-box feature testers.  The scope of this testing may include changes to the system and user documentation, impact on system performance, changes to system controls like password authentication, etc.
+3. **The regional impact test.**  This level of testing goes beyond checking the modification itself, and tests in the perceived
+high-impact region around the change.  The black-box feature tester needs to have some understanding of the system, what connects to what, in order to identify the likely high-impact region.  This testing is a compromise: it goes beyond testing just the modification, but falls far short of a full-blown regression test.  In this phase, the goal is to test the areas that are likely to be highly influenced by the change(s) , e.g., the immediate modules which directly call to, or are directly called by, the module that has been changed. 
+4. **The regression test.**  The regression test is broader than the modification test or the regional impact test, and its purpose is to find unintended and unforeseen side effects of the modification.  In regression testing, existing test cases are re-run in areas which should not have been affected by the modification, to see if they still work the same way as before.  Most regression testing is deliberately executed with the complete regression test suite, not just focused on where the modification has occurred. In this phase, the goal is to re-test the entire system after a change or set of changes, to ensure that features which were not intended to change still work the same way as before. This extensive re-test is needed if there is a concern about unintended side effects of the planned changes.  These side effects can include failures in parts of the system which seemingly are unrelated to the change, changes in the way features work, and the re-surfacing of old defects that supposedly had been eradicated.
 
 **Who is responsible for each type of modification test?**
 
-  **Type of Test**       **Responsible**                     **Manual/Automated?**
-  ---------------------- ----------------------------------- ---------------------------------------------------------------------------------------
-  Unit Test              Developer                           First manual but later automated as part of the automated unit test suite
-  Modification Test      Tester                              Focus on manual, but potentially migrating into the automated regression test suite
-  Regional Impact Test   Tester                              Focus on manual, but potentially migrating into the automated regression test suite
-  Regression Test        Tester/Test Automation Specialist   Focus on automated testing, but individual test cases will start as manual test cases
+| Type of Test | Responsible | Manual/Automated? |
+| --- | --- |--- |
+| Unit Test | Developer | First manual but later automated as part of the automated unit test suite |
+| Modification Test | Tester | Focus on manual, but potentially migrating into the automated regression test suite |
+| Regional Impact Test | Tester | Focus on manual, but potentially migrating into the automated regression test suite |
+| Regression Test | Tester/Test Automation Specialist | Focus on automated testing, but individual test cases will start as manual test cases |
 
 **Steps**
 
-The team will take the following steps to develop a regression test
-suite. Please see Test Design for the categories of tests that will be
-included in the regression test suite.
+The team will take the following steps to develop a regression test suite. Please see Test Design for the categories of tests that will be included in the regression test suite.
 
-1.  Analyze requirements and develop tests for business criticality,
-    complexity and frequent use. These tests will be marked as
-    regression test candidates.
-
-2.  Review (on an ongoing basis, basically every build) new and updated
-    functionality and configuration. This will most likely result in
-    tests that need to be added to the suite
-
+1.  Analyze requirements and develop tests for business criticality, complexity and frequent use. These tests will be marked as  regression test candidates.
+2.  Review (on an ongoing basis, basically every build) new and updated functionality and configuration. This will most likely result in tests that need to be added to the suite
 3.  Identify critical defects, test fails and bad fixes for inclusion
-
-4.  From the exploratory testing sessions identify regression test
-    candidates
-
+4.  From the exploratory testing sessions identify regression test candidates
 5.  Document and first manual test all new tests
-
-6.  Automate identified tests and include them in the automated testing
-    suite
-
+6.  Automate identified tests and include them in the automated testing suite
 7.  Run the automated regression test suite
-
 8.  Review results and investigate and escalate any found issues
 
 On a regular basis:
-
 -   Review suite effectiveness
-
 -   Add new tests
-
 -   Optimize execution
 
-Test Design
+### Test Design
 
 In the design of our regression test suite we have to consider
 criticality, time available and the amount of value/comfort the tests
