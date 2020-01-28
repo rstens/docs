@@ -1006,411 +1006,134 @@ The scope for exploratory testing is largely functional testing, but has great b
 
 One of the criticisms of exploratory testing is that it can be purely ad-hoc, uncontrolled, non-traceable. Indeed if the approach is left undefined this would be a certainty. The answer to this is to instill a lightweight process call Session-Based Test Management (SBTM), a method for measuring and managing exploratory testing.
 
-**_SBTM by James and Jon Bach_**
+#### Planning
 
-**Description**
+Testers using session-based testing can adjust their testing daily to fit the needs of the project. Charters can be added or dropped over time as tests are executed and/or requirements change.
 
-Exploratory testing is unscripted, unrehearsed testing. Its
-effectiveness depends on several intangibles: the skill of the tester,
-their intuition, their experience, and their ability to follow hunches.
-But it\'s these intangibles that often confound test managers when it
-comes to being accountable for the results. For example, at the end of
-the day, when the manager asks for status from an exploratory tester,
-they may get an answer like \"Oh, y\'know\... I tested some functions
-here and there, just looking around.\" And even though the tester may
-have filed several bugs, the manager may have no idea what they did to
-find them. Even if the manager was skilled to ask the right questions
-about what the tester did, the tester may have forgotten the details or
-may not be able to describe their thinking out loud, on-the-fly.
+#### Test Design
 
-We had this problem when doing exploratory testing for a client. We
-wanted to be accountable for our work. We wanted to give status reports
-that reflected what we actually did. We wanted to show that we could be
-creative, skilled explorers, yet produce a detailed map of our travels.
+Exploratory testing is test design on the fly, but that does not mean it is random.
 
-**How it\'s done**
+Most exploratory testing is driven by a set of simple heuristics (A process or method enabling a person to discover or learn something for themselves).
 
-We invented Session-Based Test Management as a way to make those
-intangibles more tangible. It can be thought of as structured
-exploratory testing, which may seem like a contradiction-in-terms, but
-\"structure\" does not mean the testing is pre-scripted. It means we
-have a set of expectations for what kind of work will be done and how it
-will be reported. As in a recording studio, this work is done in
-\"sessions.\" Sessions range from 45 minutes to several hours, but no
-matter the length, it is time spent testing against a charter for the
-session. The nuts-and-bolts of sessions are described in further detail
-in an **article** Jonathan Bach wrote for [STQE
-magazine.](http://www.satisfice.com/articles/sbtm.pdf)
-
-At the end of a session, the tester hands in a session report, tagged
-with important information about what they did.
-
-**Session metrics**
-
-The session metrics are the primary means to express the status of the
-exploratory test process. They contain the following elements:
-
-- Number of sessions completed
-
-- Number of problems found
-
-- Function areas covered
-
-- Percentage of session time spent setting up for testing
-
-- Percentage of session time spent testing
-
-- Percentage of session time spent investigating problems
-
-**Debriefings**
-
-At the end of each session, the tester and manager get together to talk
-about it. We\'ve discovered that the value of SBTM relies on the ability
-of the test manager to talk with the tester about the work that was
-done, so to help the tester and manager make the most out of that
-meeting (which takes about 15-20 minutes), we\'ve compiled
-a checklist of questions.
-
-**SBTM Approach**
-
-**Mission**
-
-The mission in Session Based Test Management identifies the purpose of
-the session, helping to focus the session while still allowing for
-exploration of the system under test.
-
-**Charter**
-
-A charter is a goal or agenda for a test session. Charters are created
-by the test team prior to the start of testing, but they may be added or
-changed at any time. Often charters are created from a specification,
-test plan, or by examining results from previous sessions. The charters
-are stored and tracked in Zephyr.
-
-**Session**
-
-An uninterrupted period of time spent testing, ideally lasting 45
-minutes to two hours. Each session is focused on a charter, but testers
-can also explore new opportunities or issues during this time. The
-tester creates and executes tests based on ideas, heuristics or whatever
-frameworks to guide them and records their progress. This might be
-through the use of written notes, video capture tools or by whatever
-method as deemed appropriate by the tester.
-
-**Session report**
-
-The session report records the test session in Zephyr. This includes:
-
-- Charter
-
-- Area tested
-
-- Detailed notes on how testing was conducted
-
-- A list of any defects found
-
-- A list of issues (open questions, product or project concerns), in
-  JIRA
-
-- Any files/data the tester used or created to support their testing
-
-- Percentage of the session spent on the charter versus investigating
-  new opportunities
-
-- Percentage of the session spent on:
-
-- Testing - creating and executing tests
-
-- Bug investigation / reporting
-
-- Session setup or other non-testing activities
-
-- Session Start time and duration
-
-Debrief
-
-A debrief is a short discussion between the lead and tester (or testers)
-about the session report. We use the acronym PROOF to help structure
-this debriefing.
-
-PROOF stands for:
-
-- **P**ast. What happened during the session?
-
-- **R**esults. What was achieved during the session?
-
-- **O**bstacles. What got in the way of good testing?
-
-- **O**utlook. What still needs to be done?
-
-- **F**eelings. How does the tester feel about all this?
-
-Parsing results
-
-With a standardized Session Report in Zephyr we have access to
-aggregated data for reporting and metrics. This allows reporting on the
-number of sessions per area or a breakdown of time spent on testing, bug
-investigation, and setup / other activities.
-
-Planning
-
-Testers using session-based testing can adjust their testing daily to
-fit the needs of the project. Charters can be added or dropped over time
-as tests are executed and/or requirements change.
-
-Test Design
-
-Exploratory testing is test design on the fly, but that does not mean it
-is random.
-
-Most exploratory testing is driven by a set of simple heuristics (A
-process or method enabling a person to discover or learn something for
-themselves).
-
-As testing is the process of asking questions of the solution. For
-example, the following questions can be asked during exploratory test
-sessions:
+As testing is the process of asking questions of the solution. For example, the following questions can be asked during exploratory test sessions:
 
 - **Product**
 
   - What is this product?
-
   - What can I control and observe?
-
   - What should I test?
 
 - **Tests**
 
   - What would constitute a diversified and practical test strategy?
-
-  - How can I improve my understanding of how well or poorly this
-    product works?
-
+  - How can I improve my understanding of how well or poorly this product works?
   - If there were an important problem here, how would I uncover it?
-
   - What document to load?
-
   - Which button to push?
-
   - What number to enter?
-
   - How powerful is this test?
-
-  - What have I learned from this test that helps me perform
-    powerful new tests?
-
+  - What have I learned from this test that helps me perform powerful new tests?
   - What just happened? How do I examine that more closely?
 
 - **Problems**
-
   - What quality criteria matter?
-
   - What kinds of problems might I find in this product?
-
   - Is what I see, here, a problem? If so, why?
-
   - How important is this problem? Why should it be fixed?
 
-Test Execution
+#### Test Execution
 
-Exploratory Tests can be executed during all test activities (except for
-test automation) but will mostly be used by the agile testers and the
-user acceptance testers.
+Exploratory Tests can be executed during all test activities (except for test automation) but will mostly be used by the agile testers and the user acceptance testers.
 
-Data Requirements
+#### Data Requirements
 
-The data required is dependent on where the exploratory test is
-executed. Please see Test Data Strategy for the different environments
-and type of test data.
+The data required is dependent on where the exploratory test is executed. Please see Test Data Strategy for the different environments and type of test data.
 
-Infrastructure Requirements
+#### Infrastructure Requirements
 
 The infrastructure required for exploratory testing is:
 
 - Test Environment
+- ZenHub
+- TestRail
 
-- JIRA
+## System Test Strategy
 
-- Zephyr
+This section provides an overview of the test approach that will be undertaken for System Testing. System testing occurs at 100% integration, i.e., once all the components in the system planned for the specific sprint have been integrated together.
 
-System Test Strategy
+### Definition
 
-June 25, 2019
+The process of testing an integrated system to verify that it meets specified requirements.  During System Testing, the features and requirements of the product as defined are tested.  Only after it has been determined that the product meets a predetermined quality level, should the product system integration testing begin. The integration of systems and packages; interfaces to external organizations (e.g. addressing integration with existing applications - purchased
+packages and legacy, internally developed software - as well as effective security, infrastructure, performance, and network support/optimization) is tested.
 
-9:44 AM
-
-This section provides an overview of the test approach that will be
-undertaken for System Testing. System testing occurs at 100%
-integration, i.e., once all the components in the system planned for the
-specific sprint have been integrated together.
-
-Definition
-
-The process of testing an integrated system to verify that it meets
-specified requirements.  During System Testing, the features and
-requirements of the product as defined are tested.  Only after it has
-been determined that the product meets a predetermined quality level,
-should the product system integration testing begin. The integration of
-systems and packages; interfaces to external organizations
-(e.g. addressing integration with existing applications - purchased
-packages and legacy, internally developed software - as well as
-effective security, infrastructure, performance, and network
-support/optimization) is tested.
-
-Objectives
+### Objectives
 
 - Verify the fully integrated system works correctly
-
 - Verify non-functional requirements specified for the system
-
 - Verify end-to-end functionality including all integration points
+- Verify Business flows
 
-Expected Benefits
+### Expected Benefits
 
 - Correctly working and behaving system
-
 - System conforms to the non-functional requirements
-
 - System is proven ready for deployment
 
-Responsibilities
-
-**Role ** **R** **A** **S** **C** **I**
-
----
-
-Test Lead   X      
-Test Analyst (Agile) X        
-Business Tester     X    
-Test Automation Specialist     X    
-Business Analyst       X  
-Business Lead       X  
-Developer     X    
-Developer Lead         X
-Solution Architect       X  
-Release Manager     X    
-Project Manager         X
-
-Scope
+### Scope
 
 - Business End-to-End testing:
-
-  - _Testing a business process from its start through all steps
-    until a conclusion has been reached. This could involve
-    accessing multiple systems._
-
+  - _Testing a business process from its start through all steps until a conclusion has been reached. This could involve accessing multiple systems._
 - System Integration testing
-
-  - _Testing the system\'s capability to operate and integrate with
-    other systems._
-
+  - _Testing the system\'s capability to operate and integrate with other systems._
 - Browser compatibility testing
-
-  - _Testing with the browsers that need to be supported.
-    See Browser/OS Matrix and _
-
+  - _Testing with the browsers that need to be supported._
 - Functional Testing
-
 - Usability testing
-
   - _Testing system usability from a user\'s perspective._
-
-````{=html}
-<!-- --```
 -   Security testing (Roles and Access)
-
 -   Exploratory testing
-
 -   Regression testing
-
-```{=html}
-<!-- --```
 -   Installation testing
-
-    -   *Verification of the installation procedure for Staging and
-        Production.*
-
+    - _Verification of the installation procedure for Staging and Production._
 -   Recovery testing and failover testing
-
-    -   *Testing forced failure of the system in a variety of ways to
-        verify that recovery is properly performed.*
-
+    - _Testing forced failure of the system in a variety of ways to verify that recovery is properly performed._
 -   Accessibility testing
-
-    -   *Accessibility testing is a subset of usability testing where in
-        the users under consideration are people with all abilities
-        and disabilities.*
-
-```{=html}
-<!-- --```
+    - _Accessibility testing is a subset of usability testing where in the users under consideration are people with all abilities and disabilities._
 -   Automated Testing
 
-Approach
+### Approach
 
-System Testing activities should only progress once it is established
-that the system functions as intended. Functional Testing plays a major
-role in this assessment. System testing also requires a fully integrated
-system. For PPR that means that the functionality that is delivered in
-the sprint is completely integrated with all components that it needs.
-If not all components are available because they are planned for a later
-sprint, full system integration testing for that functionality needs to
-be planned for a later sprint.
+System Testing activities should only progress once it is established that the system functions as intended. Functional Testing plays a major role in this assessment. System testing also requires a fully integrated system. For PPR that means that the functionality that is delivered in the sprint is completely integrated with all components that it needs. If not all components are available because they are planned for a later sprint, full system integration testing for that functionality needs to be planned for a later sprint.
 
-Not all system testing scope will be able to be executed in the earlier
-sprints. Some activities might simply be a waste of time if planned too
-soon. The following table indicates the targeted tests in early sprints
-(the first 5) and later sprints:
+Not all system testing scope will be able to be executed in the earlier sprints. Some activities might simply be a waste of time if planned too soon. The following table indicates the targeted tests in early sprints (the first 5) and later sprints:
 
-+----------------------------------+----------------------------------+
-| **Activity**                     | **When**                         |
-+==================================+==================================+
+| Activity                     | When                         |
+| --- | --- |
 | Business End-to-End testing      | All Sprints                      |
-|                                  |                                  |
-|                                  |                                  |
-+----------------------------------+----------------------------------+
 | System Integration testing       | All Sprints                      |
-+----------------------------------+----------------------------------+
-| Browser compatibility testing    | Early Sprints for quick look,    |
-|                                  | then final test at later sprints |
-+----------------------------------+----------------------------------+
+| Browser compatibility testing    | Early Sprints for quick look, then final test at later sprints    |
 | Functional Testing               | Early Sprints                    |
-+----------------------------------+----------------------------------+
-| Usability testing                | Later Sprints, input from user   |
-|                                  | experience sessions              |
-+----------------------------------+----------------------------------+
-| Security testing (Roles and      | Later Sprints                    |
-| Access)                          |                                  |
-+----------------------------------+----------------------------------+
+| Usability testing                | Later Sprints, input from user experience sessions    |
+| Security testing (Roles and  Access)    | Later Sprints                    |
 | Exploratory testing              | All Sprints                      |
-+----------------------------------+----------------------------------+
 | Regression testing               | All Sprints                      |
-+----------------------------------+----------------------------------+
 | Installation testing             | Later Sprints                    |
-+----------------------------------+----------------------------------+
-| Recovery testing and failover    | Later Sprints                    |
-| testing                          |                                  |
-+----------------------------------+----------------------------------+
-| Accessibility testing (TBD)      | Later Sprints                    |
-+----------------------------------+----------------------------------+
+| Recovery testing and failover testing    | Later Sprints                    |
+| Accessibility testing | Later Sprints                    |
 | Automated Testing                | All Sprints                      |
-+----------------------------------+----------------------------------+
 
-A detailed plan per sprint indicates what is in scope for that sprint.
+Per sprint we'll plan what is in scope for that sprint.
 
-Test Design
+### Test Design
 
-Similar approach as with Functional Test Strategy. The design for System
-Integration test differs in scope as we are evaluating the system
-holistically and not on individual functionalities.
+Similar approach as with Functional Test Strategy. The design for System Integration test differs in scope as we are evaluating the system holistically and not on individual functionalities.
 
-Test Execution
+### Test Execution
 
-System Integration Testing will be executed by the agile testers. During
-execution in the early sprints, user acceptance testers will be
-operating in the same environment pursuing their acceptance testing
-goals.
+System Integration Testing will be executed by the agile testers. During execution in the early sprints, user acceptance testers will be operating in the same environment pursuing their acceptance testing goals.
 
-Data Requirements
+### Data Requirements
 
   **Usage**                    **Environment**   **Type of Test Data**                                                                                     **User**      **Comments**
   ---------------------------- ----------------- --------------------------------------------------------------------------------------------------------- ------------- --------------
