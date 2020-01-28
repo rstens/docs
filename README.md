@@ -464,7 +464,7 @@ At the Defect Triage, each defect should be discussed; even those that are rated
 - Test Lead determines when the meeting is held. *Do not hold meetings
   because they are on the calendar if you have nothing to discuss!*
 - The Test Lead facilitates the meeting.
-- The Test Lead documents the decisions in JIRA during the meeting.
+- The Test Lead documents the decisions in ZenHub during the meeting.
 - An efficient triage meeting should take no longer than 30 minutes
   and should be finished as soon as possible.
 - Participants actively and respectfully contribute.
@@ -1651,11 +1651,11 @@ delivery of security testing:
 
   **Activity**               **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   **Participants**
   -------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -----------------------
-  Discovery                  The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                CGI, PPR
-  Vulnerability Scan         Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               PPR, CGI, Province
-  Vulnerability Assessment   This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       PPR, CGI, Province
-  Security Assessment        Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to.                                                                                                                                                                                                                                                                                                                   PPR, CGI, Province
-  Penetration Test           Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage.   PPR, CGI, Province
+  Discovery                  The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                , PPR
+  Vulnerability Scan         Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               PPR, , Province
+  Vulnerability Assessment   This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       PPR, , Province
+  Security Assessment        Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to.                                                                                                                                                                                                                                                                                                                   PPR, , Province
+  Penetration Test           Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage.   PPR, , Province
 
 Additionally the following activities could form part of the engagement
 but technically fall outside of the security testing scope:
@@ -1676,437 +1676,187 @@ but technically fall outside of the security testing scope:
 
 **Security related activities by the development and release team**
 
-The following are
-the [OWASP](https://www.owasp.org/index.php/Main_Page) guidelines for
-the development and release team activities:
+Please review the [OWASP](https://www.owasp.org/index.php/Main_Page) guidelines for the development and release team activities:
 
- 
 
-**OWASP Guidelines**
+### OWASP Guidelines 
 
- 
+#### Phase 1: Before Development Begins
 
-**Phase 1: Before Development Begins**
+##### Phase 1.1: Define a SDLC
 
- 
+Before application development starts an adequate SDLC must be defined where security is inherent at each stage.
 
-**Phase 1.1: Define a SDLC**
+##### Phase 1.2: Review Policies and Standards
 
-Before application development starts an adequate SDLC must be defined
-where security is inherent at each stage.
+Ensure that there are appropriate policies, standards, and documentation in place. Documentation is extremely important as it gives development teams guidelines and policies that they can follow.
 
- 
+*People can only do the right thing if they know what the right thing is.*
 
-**Phase 1.2: Review Policies and Standards**
+If the application is to be developed in Java, it is essential that there is a Java secure coding standard. If the application is to use cryptography, it is essential that there is a cryptography standard. No policies or standards can cover every situation that the development team will face. By documenting the common and predictable issues, there will be fewer decisions that need to be made during the development process.
 
-Ensure that there are appropriate policies, standards, and documentation
-in place. Documentation is extremely important as it gives development
-teams guidelines and policies that they can follow.
+##### Phase 1.3: Develop Measurement and Metrics Criteria and Ensure Traceability
 
-*People can only do the right thing if they know what the right thing
-is.*
+Before development begins, plan the measurement program. By defining criteria that need to be measured, it provides visibility into defects in both the process and product. It is essential to define the metrics before development begins, as there may be a need to modify the process in order to capture the data.
 
-If the application is to be developed in Java, it is essential that
-there is a Java secure coding standard. If the application is to use
-cryptography, it is essential that there is a cryptography standard. No
-policies or standards can cover every situation that the development
-team will face. By documenting the common and predictable issues, there
-will be fewer decisions that need to be made during the development
-process.
+#### Phase 2: During Definition and Design
+##### Phase 2.1: Review Security Requirements
 
- 
+Security requirements define how an application works from a security perspective. It is essential that the security requirements are tested. Testing in this case means testing the assumptions that are made in the requirements and testing to see if there are gaps in the requirements definitions.
 
-**Phase 1.3: Develop Measurement and Metrics Criteria and Ensure
-Traceability**
-
-Before development begins, plan the measurement program. By defining
-criteria that need to be measured, it provides visibility into defects
-in both the process and product. It is essential to define the metrics
-before development begins, as there may be a need to modify the process
-in order to capture the data.
-
- 
-
-**Phase 2: During Definition and Design**
-
- 
-
-**Phase 2.1: Review Security Requirements**
-
-Security requirements define how an application works from a security
-perspective. It is essential that the security requirements are tested.
-Testing in this case means testing the assumptions that are made in the
-requirements and testing to see if there are gaps in the requirements
-definitions.
-
-For example, if there is a security requirement that states that users
-must be registered before they can get access to the whitepapers section
-of a website, does this mean that the user must be registered with the
-system or should the user be authenticated? Ensure that requirements are
-as unambiguous as possible.
+For example, if there is a security requirement that states that users must be registered before they can get access to the whitepapers section of a website, does this mean that the user must be registered with the system or should the user be authenticated? Ensure that requirements are as unambiguous as possible.
 
 When looking for requirements gaps, consider looking at security
 mechanisms such as:
 
 -   User Management
-
 -   Authentication
-
 -   Authorization
-
 -   Data Confidentiality
-
 -   Integrity
-
 -   Accountability
-
 -   Session Management
-
 -   Transport Security
-
 -   Tiered System Segregation
+-   Legislative and standards compliance (including Privacy, Government and Industry standards)
 
--   Legislative and standards compliance (including Privacy, Government
-    and Industry standards)
+##### Phase 2.2: Review Design and Architecture
 
- 
+Applications should have a documented design and architecture. This documentation can include models, textual documents, and other similar artifacts. It is essential to test these artifacts to ensure that the design and architecture enforce the appropriate level of security as defined in the requirements.
 
-**Phase 2.2: Review Design and Architecture**
-
-Applications should have a documented design and architecture. This
-documentation can include models, textual documents, and other similar
-artifacts. It is essential to test these artifacts to ensure that the
-design and architecture enforce the appropriate level of security as
-defined in the requirements.
-
-Identifying security flaws in the design phase is not only one of the
-most cost-efficient places to identify flaws, but can be one of the most
-effective places to make changes. For example, if it is identified that
-the design calls for authorization decisions to be made in multiple
-places, it may be appropriate to consider a central authorization
-component. If the application is performing data validation at multiple
-places, it may be appropriate to develop a central validation framework
-(ie, fixing input validation in one place, rather than in hundreds of
-places, is far cheaper). If weaknesses are discovered, they should be
+Identifying security flaws in the design phase is not only one of the most cost-efficient places to identify flaws, but can be one of the most effective places to make changes. For example, if it is identified that the design calls for authorization decisions to be made in multiple places, it may be appropriate to consider a central authorization component. If the application is performing data validation at multiple places, it may be appropriate to develop a central validation framework (ie, fixing input validation in one place, rather than in hundreds of places, is far cheaper). If weaknesses are discovered, they should be
 given to the system architect for alternative approaches. 
 
- 
+##### Phase 2.3: Create and Review Models
 
-**Phase 2.3: Create and Review Models**
+Once the design and architecture is complete, build models that describe how the application works. In some cases, these may already be available. Use these models to confirm with the systems designers an exact understanding of how the application works. If weaknesses are discovered, they should be given to the system architect for alternative approaches. 
 
-Once the design and architecture is complete, build models that describe
-how the application works. In some cases, these may already be
-available. Use these models to confirm with the systems designers an
-exact understanding of how the application works. If weaknesses are
-discovered, they should be given to the system architect for alternative
-approaches. 
+##### Phase 2.4: Create and Review Threat Models
 
- 
+Armed with design and architecture reviews explaining exactly how the system works, undertake a threat modeling exercise. Develop realistic threat scenarios. Analyze the design and architecture to ensure that these threats have been mitigated, accepted by the
+business, or assigned to a third party, such as an insurance firm. When identified threats have no mitigation strategies, revisit the design and architecture with the systems architect to modify the design. 
 
-**Phase 2.4: Create and Review Threat Models**
+#### Phase 3: During Development
 
-Armed with design and architecture reviews and the UML models explaining
-exactly how the system works, undertake a threat modeling exercise.
-Develop realistic threat scenarios. Analyze the design and architecture
-to ensure that these threats have been mitigated, accepted by the
-business, or assigned to a third party, such as an insurance firm. When
-identified threats have no mitigation strategies, revisit the design and
-architecture with the systems architect to modify the design. 
+Theoretically, development is the implementation of a design. However, in the real world, many design decisions are made during code development. These are often smaller decisions that were either too detailed to be described in the design, or issues where no policy or standard guidance was offered. If the design and architecture were not adequate, the developer will be faced with many decisions. If there were insufficient policies and standards, the developer will be faced with even more decisions. 
 
- 
+##### Phase 3.1: Code Walk Through (a Unit Test Activity)
 
-**Phase 3: During Development**
+The security team should perform a code walk through with the developers, and in some cases, the system architects. A code walk
+through is a high-level walk through of the code where the developers can explain the logic and flow of the implemented code. It allows the code review team to obtain a general understanding of the code, and allows the developers to explain why certain things were developed the way they were.
 
-Theoretically, development is the implementation of a design. However,
-in the real world, many design decisions are made during code
-development. These are often smaller decisions that were either too
-detailed to be described in the design, or issues where no policy or
-standard guidance was offered. If the design and architecture were not
-adequate, the developer will be faced with many decisions. If there were
-insufficient policies and standards, the developer will be faced with
-even more decisions. 
+The purpose is not to perform a code review, but to understand at a high level the flow, the layout, and the structure of the code that makes up the application. 
 
- 
+##### Phase 3.2: Code Reviews (a Unit Test Activity)
 
-**Phase 3.1: Code Walk Through (a [Unit Test
-Activity](http://localhost:8090/display/TQA/5.1+Unit+Test+Strategy))**
+Armed with a good understanding of how the code is structured and why certain things were coded the way they were, the tester can now examine the actual code for security defects.
 
-The security team should perform a code walk through with the
-developers, and in some cases, the system architects. A code walk
-through is a high-level walk through of the code where the developers
-can explain the logic and flow of the implemented code. It allows the
-code review team to obtain a general understanding of the code, and
-allows the developers to explain why certain things were developed the
-way they were.
+Static code reviews validate the code against a set of checklists, including:
 
-The purpose is not to perform a code review, but to understand at a high
-level the flow, the layout, and the structure of the code that makes up
-the application. 
+-   Business requirements for availability, confidentiality, and integrity.
+-   OWASP Guide or Top 10 Checklists for technical exposures (depending on the depth of the review).
+-   Specific issues relating to the language or framework in use.
+-   Any industry specific requirements, such as COPPA, ISO/IEC 27002, APRA, HIPAA, Visa Merchant guidelines, or other regulatory regimes.
 
- 
+In terms of return on resources invested (mostly time), static code reviews produce far higher quality returns than any other security review method and rely least on the skill of the reviewer. However, they are not a silver bullet and need to be considered carefully within a full-spectrum testing regime.
 
-**Phase 3.2: Code Reviews (a [Unit Test
-Activity](http://localhost:8090/display/TQA/5.1+Unit+Test+Strategy))**
+For more details on OWASP checklists, please refer to [OWASP Guide for Secure Web Applications](https://www.owasp.org/index.php/OWASP_Guide_Project), or the latest edition of the [OWASP Top 10](https://www.owasp.org/index.php/OWASP_Top_10).
 
-Armed with a good understanding of how the code is structured and why
-certain things were coded the way they were, the tester can now examine
-the actual code for security defects.
+#### Phase 4: During Deployment (Security Testing)
+##### Phase 4.1: Application Penetration Testing
 
-Static code reviews validate the code against a set of checklists,
-including:
+Having tested the requirements, analyzed the design, and performed code review, it might be assumed that all issues have been caught. Hopefully this is the case, but penetration testing the application after it has been deployed provides a last check to ensure that nothing has been missed. 
 
--   Business requirements for availability, confidentiality, and
-    integrity.
+##### Phase 4.2: Configuration Management Testing
 
--   OWASP Guide or Top 10 Checklists for technical exposures (depending
-    on the depth of the review).
+The application penetration test should include the checking of how the infrastructure was deployed and secured. While the application may be secure, a small aspect of the configuration could still be at a default install stage and vulnerable to exploitation.
 
--   Specific issues relating to the language or framework in use, such
-    as the Scarlet paper for PHP or Microsoft Secure Coding checklists
-    for ASP.NET.
+#### Phase 5: Maintenance and Operations
 
--   Any industry specific requirements, such as Sarbanes-Oxley 404,
-    COPPA, ISO/IEC 27002, APRA, HIPAA, Visa Merchant guidelines, or
-    other regulatory regimes.
+##### Phase 5.1: Conduct Operational Management Reviews
 
-In terms of return on resources invested (mostly time), static code
-reviews produce far higher quality returns than any other security
-review method and rely least on the skill of the reviewer. However, they
-are not a silver bullet and need to be considered carefully within a
-full-spectrum testing regime.
+There needs to be a process in place which details how the operational side of both the application and infrastructure is managed.
 
-For more details on OWASP checklists, please refer to [OWASP Guide for
-Secure Web
-Applications](https://www.owasp.org/index.php/OWASP_Guide_Project), or
-the latest edition of the [OWASP Top
-10](https://www.owasp.org/index.php/OWASP_Top_10).
+##### Phase 5.2: Conduct Periodic Health Checks
 
- 
+Monthly or quarterly health checks should be performed on both the application and infrastructure to ensure no new security risks have been introduced and that the level of security is still intact.
 
-**Phase 4: During Deployment (Security Testing)**
+##### Phase 5.3: Ensure Change Verification
 
- 
-
-**Phase 4.1: Application Penetration Testing**
-
-Having tested the requirements, analyzed the design, and performed code
-review, it might be assumed that all issues have been caught. Hopefully
-this is the case, but penetration testing the application after it has
-been deployed provides a last check to ensure that nothing has been
-missed. 
-
- 
-
-**Phase 4.2: Configuration Management Testing**
-
-The application penetration test should include the checking of how the
-infrastructure was deployed and secured. While the application may be
-secure, a small aspect of the configuration could still be at a default
-install stage and vulnerable to exploitation.
-
- 
-
-**Phase 5: Maintenance and Operations**
-
- 
-
-**Phase 5.1: Conduct Operational Management Reviews**
-
-There needs to be a process in place which details how the operational
-side of both the application and infrastructure is managed.
-
- 
-
-**Phase 5.2: Conduct Periodic Health Checks**
-
-Monthly or quarterly health checks should be performed on both the
-application and infrastructure to ensure no new security risks have been
-introduced and that the level of security is still intact.
-
- 
-
-**Phase 5.3: Ensure Change Verification**
-
-After every change has been approved and tested in the QA environment
-and deployed into the production environment, it is vital that the
-change is checked to ensure that the level of security has not been
-affected by the change. This should be integrated into the change
-management process.
+After every change has been approved and tested in the QA environmentand deployed into the production environment, it is vital that the change is checked to ensure that the level of security has not been affected by the change. This should be integrated into the change management process.
 
 Process and Schedule for Secure Code reviews and Tests
 
--   A ticket in JIRA will be created for each sprint, and will document
-    the security tasks to be completed for that sprint.
-
--   Additionally, in every second sprint, there will be a dedicated 1-2
-    day(s) session to review code for secure code and update if
-    required.
-
--   Appropriate compliance will be achieved before the January release
-    date.
+-   A ticket in ZenHub will be created for each sprint, and will document the security tasks to be completed for that sprint.
+-   Additionally, in every second sprint, there will be a dedicated 1-2 day(s) session to review code for secure code and update if required.
+-   Appropriate compliance will be achieved before the January release date.
 
 Schedule and tools that will be used:
 
 -   Vulnerability scanner
-
-    -   OWASP ZAP scanner; schedule TBD
-
+    -   OWASP ZAP scanner; Manual and Automated
 -   Penetration testing
-
     -   Two penetration tests, two weeks before go-live
-
 -   Manual testing
-
     -   Manual; Weekly
 
-Test Execution
+### Test Execution
 
 Security Testing can be executed as part of the sprint test process.
 
-The security testing execution will have to be done well before the
-release date once the full integrated and configured system becomes
-available.
+The security testing execution will have to be done well before the release date once the full integrated and configured system becomes available.
 
-Data Requirements
+### Data Requirements
 
-Security testing will be executed in the staging environment containing
-full size data.
+Security testing will be executed in the staging environment containing full size data.
 
-Infrastructure Requirements
+### Infrastructure Requirements
 
-The staging environment needs to be configured exactly as the intended
-production environment.
+The staging environment needs to be configured exactly as the intended production environment.
 
 This means that the following is identical:
 
 -   Data Size and complexity
-
 -   Application Configuration
-
 -   System Configuration
-
 -   Authentication mechanisms
-
--   Tools and utilities that will be run on the platforms during
-    production
-
+-   Tools and utilities that will be run on the platforms during production
 -   Levels of encryption
 
- 
+## Test Automation Strategy
 
- 
+This section provides an overview of our test automation approach. 
 
-Test Automation Strategy
+In agile projects, test automation is essential to build, integrate, test and deploy an application with production-like quality every day. Agile projects have limited time to conduct existing regression tests manually so they depend on accurate automated regression testing in order to maintain effective progress. Test automation is seen as a key enabler for Agile projects, especially when practices like continuous integration are used. It also enables the test team to test aspects of the application that could either be very cumbersome or not possible in a manual test.
 
-June 25, 2019
+### Definition
 
-10:34 AM
+Automated software testing is a process in which software tools execute pre-scripted tests on a software application before it is released into production.
 
-his section provides an overview of our test automation approach. 
+### Objectives
 
-In agile projects, test automation is essential to build, integrate,
-test and deploy an application with production-like quality every day.
-Agile projects have limited time to conduct existing regression tests
-manually so they depend on accurate automated regression testing in
-order to maintain effective progress. Test automation is seen as a key
-enabler for Agile projects, especially when practices like continuous
-integration are used. It also enables the test team to test aspects of
-the application that could either be very cumbersome or not possible in
-a manual test.
-
-Definition
-
-Automated software testing is a process in which software tools execute
-pre-scripted tests on a software application before it is released into
-production.
-
-Objectives
-
-The objective of automated testing is to simplify as much of the testing
-effort as possible with a minimum set of scripts. Automated testing
-tools are capable of executing tests, reporting outcomes and comparing
-results with earlier test runs. Tests carried out with these tools can
-be run repeatedly, at any time of day.
+The objective of automated testing is to simplify as much of the testing effort as possible with a minimum set of scripts. Automated testing tools are capable of executing tests, reporting outcomes and comparing results with earlier test runs. Tests carried out with these tools can be run repeatedly, at any time of day.
 
 Specifically test automation aims to:
 
--   Automate all Unit and Integration tests, so that they can be run as
-    part of the automated build process (CI) (Not applicable to PPR)
-
--   Provide automated functional tests, that will be used to regression
-    test the solution on a ongoing basis
-
--   Provide in depth testing in cases where a large amount of variants
-    need to be tested
-
+-   Automate **all** Unit and Integration tests, so that they can be run as part of the automated build process (CI)
+-   Provide automated functional tests, that will be used to regression test the solution on a ongoing basis
+-   Provide in depth testing in cases where a large amount of variants need to be tested
 -   Enable performance testing
 
 Expected Benefits
 
 The following benefits are expected from test automation:
-
 -   Consistent Functional Regression Testing
-
 -   Consistent and frequent smoke testing
-
 -   Prove that new changes did not break the application
-
 -   Consistency and predictability of results
-
 -   Ability to test more variants efficiently
-
 -   Ability to do more testing in the same amount of time
+-   Free up the testers to focus on complex test situations and expand on the test design
+-   Build up of a body of tests that will repeatedly runs over the lifetime of the application
 
--   Free up the testers to focus on complex test situations and expand
-    on the test design
-
--   Build up of a body of tests that will repeatedly runs over the
-    lifetime of the application
-
-Responsibilities
-
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
-
-+----------------------------+-------+-------+-------+-------+-------+
-| **Role **                  | **R** | **A** | **S** | **C** | **I** |
-+============================+=======+=======+=======+=======+=======+
-| Test Lead                  |       |  X    |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Test Analyst (Agile)       |       |       | X     |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Business Tester            |       |       |       |       | X     |
-+----------------------------+-------+-------+-------+-------+-------+
-| Test Automation Specialist | X     |       |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Business Analyst           |       |       |       | X     |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Business Lead              |       |       |       | X     |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Developer                  | X     |       |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Developer Lead             |       |  X    |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Solution Architect         |       |       | X     |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Release Manager            |       |       |       |       | X     |
-+----------------------------+-------+-------+-------+-------+-------+
-| Subject Matter Expert      |       |       |       |   X   |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Auditor                    |       |       |       |       | X     |
-|                            |       |       |       |       |       |
-|                            |       |       |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-| Project Manager            |       |       |       |       |  X    |
-|                            |       |       |       |       |       |
-|                            |       |       |       |       |       |
-+----------------------------+-------+-------+-------+-------+-------+
-
-Even though developer and test automation specialist are responsible, we
-will aim to include all agile testers in the development of test
-automation.
-
-Scope
+### Scope
 
 The scope of test automation in an agile project is potentially wide:
 
@@ -2337,7 +2087,7 @@ delivered.
                   Build execution flow                                             For test automation execution run smoothly, we create an execution order/flow that consists of start up, data initiation, application initiation, test case execution, application shutdown, data shutdown and execution shutdown activities. If set up right, such a flow allows for easy improvements and extensions.
                   Recovery Scenarios                                               Test automation runs fail, this is a fact of life. In order to prepare for such an event we need to be clear on what we need to do and how to recover. This could involve a data restore or deletion.
                   Add to function libraries                                        Identified general functions are built and added to the functional libraries.
-                  Tools Extensions                                                 BDDStack offers some extensions that are configured in order to have BDDStack connect with JIRA. This way the tool can send information on failed test cases directly into JIRA. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
+                  Tools Extensions                                                 BDDStack offers some extensions that are configured in order to have BDDStack connect with ZenHub. This way the tool can send information on failed test cases directly into ZenHub. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
                   Repository Management                                            We could use the repository management functions in BDDStack and integrate this with the a version control system like GitHub. BCGov is maintaining an area on GitHub, this area is actively used by many projects.
                   Documentation                                                    We document the set up, the configuration, the extension configuration and general system requirements. The intent is to document to such a degree that this set up can be replicated in the future.
   **Execution**   ** **                                                            ** **
@@ -2345,7 +2095,7 @@ delivered.
                   Deploy Test Suite                                                Identify the test suite we need to run in BDDStack. This can either be done through the tool or by scripted invocation. The latter would happen in case of fully automated build and test.
                   Execute Test Scripts                                             Test scripts are executed by the test automation tool engine and the scripts point to one of our test environments.
                   Results reporting                                                The tool collects all the results and communicate these to TestRail. (To be build)
-                  Defect Management                                                Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with JIRA to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
+                  Defect Management                                                Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with ZenHub to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
   **Maintain**    ** **                                                            ** **
                   Update Assets                                                    Test automation keeps on working well if the assets (scripts, functions, actions) are kept up-to-date, clean and efficient.
                   Archive Test Suite                                               Test Suites are valuable assets and are kept carefully as part of good practice but also for restore/recovery purposes.
@@ -2414,9 +2164,6 @@ Test automation execution can and will also be manually triggered by:
 
     -   Run any test suite or subset when the need is there
 
-![](media/image4.jpeg){width="10.113194444444444in"
-height="3.8520833333333333in"}
-
 Data Requirements
 
 Test Automation needs data that:
@@ -2469,7 +2216,7 @@ June 26, 2019
 
 1:32 PM
 
-Testing Status will be available continuously from JIRA and TestRail, this
+Testing Status will be available continuously from ZenHub and TestRail, this
 status is meant for day-to-day management. Self-serve for immediate
 questions and/or concerns is intended for team members and project
 management. 
@@ -2480,7 +2227,7 @@ Weekly reports are intended for project management and client.
 
 **Caveat**
 Weekly reports represent a snapshot at the time of generation. Online
-status through JIRA and TestRail might no longer reflect the weekly
+status through ZenHub and TestRail might no longer reflect the weekly
 report as this information is always current. In case of concerns, it
 is always recommended to contact the project manager for
 clarification.
@@ -2495,12 +2242,12 @@ Objectives
 
 Key Guidelines
 
--   Dashboards showing test and defect status will be available in JIRA
+-   Dashboards showing test and defect status will be available in ZenHub
 
--   All reporting will be automatically generated from TestRail and JIRA
+-   All reporting will be automatically generated from TestRail and ZenHub
 
 -   Weekly reports will summarize and condense the automatic reports
-    from TestRail and JIRA
+    from TestRail and ZenHub
 
 Key Caveats
 
@@ -2809,7 +2556,7 @@ We will use the following severity definition:
                        A technical correct implementation of a business requirement does not meet the business needs
                        A new requirement has been identified during testing
 
-JIRA will be configured to contain the severity field.
+ZenHub will be configured to contain the severity field.
 
 Symptoms versus Severity
 
@@ -2859,11 +2606,11 @@ a severity \"Critical\", but a database crash would.
                                    Preferred                                  X                                                                                                          
                                    Optional                                   O                                                                                                          
 
-JIRA will be configured to contain the symptoms field.
+ZenHub will be configured to contain the symptoms field.
 
 Priority
 
-For priority we will use the standard JIRA priorities (with the standard
+For priority we will use the standard ZenHub priorities (with the standard
 explanation):
 
   **Priority Level**   **Description**
@@ -3188,8 +2935,8 @@ June 27, 2019
 +-----------------+-----------------+-----------------+-----------+
 | **Tool**        | **Description** | **Usage**       | **Resp.** |
 +=================+=================+=================+===========+
-| **JIRA**        | Project and     | The team uses   | BC Gov    |
-|                 | issue tracking  | JIRA as their   |           |
+| **ZenHub**        | Project and     | The team uses   | BC Gov    |
+|                 | issue tracking  | ZenHub as their   |           |
 |                 | software        | agile work      |           |
 |                 | development     | management and  |           |
 |                 | tool used by    | documentation   |           |
@@ -3250,7 +2997,7 @@ June 27, 2019
 | **TestRail**      | Web-based Test  | Testers will    | BC Gov    |
 |                 | Management tool | use TestRail to   |           |
 |                 | integrated with | execute their   |           |
-|                 | JIRA.           | assigned test   |           |
+|                 | ZenHub.           | assigned test   |           |
 |                 |                 | cases, report   |           |
 |                 |                 | results         |           |
 +-----------------+-----------------+-----------------+-----------+
@@ -3373,8 +3120,8 @@ Training Needs
   Agile Workshop                All Team members, SMEs and other participants.   Several workshops have already been conducted, but so far, the testers were not involved.
   Testing Fundamentals          Testers                                          A level setting training, to allow everybody to start at the same point with the same information.
   Exploratory Testing           Testers                                          A major technique that will be embedded in our session-based testing (SBT) approach. Training Materials are available.
-  JIRA Introduction             All team members                                 Introduction to our project management system.
-  JIRA - Defect Management      All team members                                 The defect management process for PPR as supported by JIRA.
+  ZenHub Introduction             All team members                                 Introduction to our project management system.
+  ZenHub - Defect Management      All team members                                 The defect management process for PPR as supported by ZenHub.
   Project Onboarding/Training   All team members                                  
   TestRail                        Testers                                          The test management tool that allows for collaboration, planning, execution and reporting.
 
@@ -3485,7 +3232,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     Tests    |                |                |
 |                |     Pass     |                |                |
 +----------------+----------------+----------------+----------------+
-| **Functional   | -   All        | Yes/CGI &      | Minimum level  |
+| **Functional   | -   All        | Yes/ &      | Minimum level  |
 | Test**         |     priority | Province       | of done.       |
 |                |     1 and 1  |                | Failed test    |
 |                |     test     |                | cases of lower |
@@ -3553,7 +3300,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |                |                |                |
 |                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
-| **Regression   | -   All        | Yes/CGI and    | This activity  |
+| **Regression   | -   All        | Yes/ and    | This activity  |
 | Test**         |                | Province       | needs to be    |
 |                |   identified |                | successful. A  |
 |                |                |                | regression     |
@@ -3578,7 +3325,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                | -   Closed     |                |                |
 |                |     (fixed)  |                |                |
 +----------------+----------------+----------------+----------------+
-| **Security     | -   Security   | Yes/CGI and    | It might be    |
+| **Security     | -   Security   | Yes/ and    | It might be    |
 | Test**         |     testing  | Province       | that security  |
 |                |     has been |                | testing is not |
 |                |                |                | a planned      |
@@ -3610,7 +3357,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **Integration  | -   All test   | Yes/PPR,    | As the         |
-| Test**         |     cases    | CGI and        | integration    |
+| Test**         |     cases    |  and        | integration    |
 |                |     Pass     | Province       | components are |
 |                |                |                | the key        |
 |                | -   All test   |                | enabler for    |
@@ -3639,7 +3386,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
 | **System       | -   All        | Yes/PPR,    |                |
-| Test**         |     priority | CGI            |                |
+| Test**         |     priority |             |                |
 |                |     1 and 2  |                |                |
 |                |     test     |                |                |
 |                |     cases    |                |                |
@@ -3689,7 +3436,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     allowed  |                |                |
 +----------------+----------------+----------------+----------------+
 | **Performance  | -   All        | Yes/PPR &   | It might be    |
-| Test**         |     priority | CGI            | that           |
+| Test**         |     priority |             | that           |
 |                |     1 and 2  |                | performance    |
 |                |                |                | testing is not |
 |                |  performance |                | a planned      |
@@ -4961,7 +4708,7 @@ June 19, 2019
 
 -   Define Defect Priority
 
--   Add new CGI Users: Done?
+-   Add new  Users: Done?
 
 -   Set up components and leads
 
@@ -4982,7 +4729,7 @@ June 19, 2019
 
 -   Tag Backlog defects
 
--   Schedule Deployments CGI Test Env
+-   Schedule Deployments  Test Env
 
 -   Retro: Testing and Process
 
@@ -5248,7 +4995,7 @@ An effective UAT Team has the following roles:
     provide guidance to the BC Bid team and will communicate with
     Business Leadership if needed.
 
--   System Integrator - CGI - These are the developers of the system and
+-   System Integrator -  - These are the developers of the system and
     will provide bug fixes for the issues that were found and needed
     to be fixed.
 
@@ -5527,7 +5274,7 @@ Tuesday, June 11, 2019
 
 -   Basic UAT Training
 
--   JIRA Training
+-   ZenHub Training
 
 -   TestRail Training
 
@@ -6600,7 +6347,7 @@ Test
 
 -   The concept of test cases were going away (more exploratory Testing)
 
--   CGI deems the project team as the users
+-    deems the project team as the users
 
 -   Need to make a picture
 
