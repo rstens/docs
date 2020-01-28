@@ -1846,679 +1846,281 @@ The following benefits are expected from test automation:
 ### Scope
 
 The scope of test automation in an agile project is potentially wide:
+| Activity | Test Automation Activity | Description | Responsibility
+| --- | --- | --- | ---
+| Unit Testing | Automated Unit Tests + Coverage | Developers create Unit test scripts that they initially will execute on their own workstation. These scripts are also executed as part on the continuous integration and build processes. These tests will also yield test coverage results and the test results for later consumption. | Developers, DevOps
+| Integration Testing | Automated Unit Tests | Developers create Unit test scripts that they initially will execute on their own workstation. These scripts will differ from the unit test scripts as these scripts will assume the integration of the unit under test with other units. These scripts are also executed as part on the continuous integration and build processes. | Developers, DevOps
+| | Automated Tests | Developers create test scripts that they initially will execute on their own workstation. These scripts differ from the unit test scripts and the earlier mentioned integration test scripts as these scripts test the integration with external systems. These scripts are also executed as part on the continuous integration and build processes. | Developers, DevOps
+| Functional Testing | Automated Functional Tests | The test automation specialist develops automated functional tests based on the test design and test ideas developed by the test group. The automated functional tests are used to create automated regression test suites that are repeatedly run during the sprints and the lifetime of the application. | Test Automation Specialist
+| | Automated Functional Tests | The test automation specialist develops automated high volume/many variants functional tests based on the test design and test ideas developed by the test group. These tests are typically not candidates for the regression test suite as they are meant for intensive time consuming in depth tests | Test Automation Specialist
+| | Automated Functional Tests | The test automation specialist develops automated functional smoke tests based on the test design and test ideas developed by the test group. These tests are used on an ongoing basis during the sprints and the lifetime of the application. | Test Automation Specialist
+| Performance Testing | Performance Test | The test automation specialist develops user simulation scripts that will be used for performance and load testing. | Test Automation Specialist
 
-+----------------+----------------+----------------+----------------+
-| **Activity**   | **Test         | *              | **Re           |
-|                | Automation     | *Description** | sponsibility** |
-|                | Activity**     |                |                |
-+================+================+================+================+
-| **Unit         | Automated      | Developers     | Developers,    |
-| Testing**      | jUnit Tests    | create jUnit   | DevOps         |
-|                |                | test scripts   |                |
-|                |                | that they      |                |
-|                |                | initially will |                |
-|                |                | execute on     |                |
-|                |                | their own      |                |
-|                |                | workstation.   |                |
-|                |                |                |                |
-|                |                | These scripts  |                |
-|                |                | are also       |                |
-|                |                | executed as    |                |
-|                |                | part on the    |                |
-|                |                | continuous     |                |
-|                |                | integration    |                |
-|                |                | and build      |                |
-|                |                | processes.     |                |
-+----------------+----------------+----------------+----------------+
-| **Integration  | Automated      | Developers     | Developers,    |
-| Testing**      | jUnit Tests    | create jUnit   | DevOps         |
-|                |                | test scripts   |                |
-|                |                | that they      |                |
-|                |                | initially will |                |
-|                |                | execute on     |                |
-|                |                | their own      |                |
-|                |                | workstation.   |                |
-|                |                | These scripts  |                |
-|                |                | will differ    |                |
-|                |                | from the unit  |                |
-|                |                | test scripts   |                |
-|                |                | as these       |                |
-|                |                | scripts will   |                |
-|                |                | assume         |                |
-|                |                | the            |                |
-|                |                |  **integration |                |
-|                |                | of the unit    |                |
-|                |                | under test     |                |
-|                |                | with other     |                |
-|                |                | units**.       |                |
-|                |                |                |                |
-|                |                | These scripts  |                |
-|                |                | are also       |                |
-|                |                | executed as    |                |
-|                |                | part on the    |                |
-|                |                | continuous     |                |
-|                |                | integration    |                |
-|                |                | and build      |                |
-|                |                | processes.     |                |
-+----------------+----------------+----------------+----------------+
-|                | Automated      | Developers     | Developers,    |
-|                | jUnit Tests    | create jUnit   | DevOps         |
-|                |                | test scripts   |                |
-|                |                | that they      |                |
-|                |                | initially will |                |
-|                |                | execute on     |                |
-|                |                | their own      |                |
-|                |                | workstation.   |                |
-|                |                | These scripts  |                |
-|                |                | differ from    |                |
-|                |                | the unit test  |                |
-|                |                | scripts and    |                |
-|                |                | the earlier    |                |
-|                |                | mentioned      |                |
-|                |                | integration    |                |
-|                |                | test scripts   |                |
-|                |                | as these       |                |
-|                |                | scripts test   |                |
-|                |                | the            |                |
-|                |                | ** integration |                |
-|                |                | with external  |                |
-|                |                | systems** (the |                |
-|                |                | BCPC back end  |                |
-|                |                | and facilities |                |
-|                |                | like Address   |                |
-|                |                | Complete).     |                |
-|                |                | These scripts  |                |
-|                |                | are also       |                |
-|                |                | executed as    |                |
-|                |                | part on the    |                |
-|                |                | continuous     |                |
-|                |                | integration    |                |
-|                |                | and build      |                |
-|                |                | processes.     |                |
-+----------------+----------------+----------------+----------------+
-| **Functional   | Automated      | The test       | Test           |
-| Testing**      | Functional     | automation     | Automation     |
-|                | Tests          | specialist     | Specialist     |
-|                |                | develo         |                |
-|                |                | ps **automated |                |
-|                |                | functional     |                |
-|                |                | tests** based  |                |
-|                |                | on the test    |                |
-|                |                | design and     |                |
-|                |                | test ideas     |                |
-|                |                | developed by   |                |
-|                |                | the test       |                |
-|                |                | group. The     |                |
-|                |                | automated      |                |
-|                |                | functional     |                |
-|                |                | tests are used |                |
-|                |                | to             |                |
-|                |                | crea           |                |
-|                |                | te **automated |                |
-|                |                | regression     |                |
-|                |                | test** suites  |                |
-|                |                | that are       |                |
-|                |                | repeatedly run |                |
-|                |                | during the     |                |
-|                |                | sprints and    |                |
-|                |                | the lifetime   |                |
-|                |                | of the         |                |
-|                |                | application.   |                |
-+----------------+----------------+----------------+----------------+
-|                | Automated      | The test       | Test           |
-|                | Functional     | automation     | Automation     |
-|                | Tests          | specialist     | Specialist     |
-|                |                | develops       |                |
-|                |                | au             |                |
-|                |                | tomated** high |                |
-|                |                | volume/many    |                |
-|                |                | variants       |                |
-|                |                | functional     |                |
-|                |                | tests** based  |                |
-|                |                | on the test    |                |
-|                |                | design and     |                |
-|                |                | test ideas     |                |
-|                |                | developed by   |                |
-|                |                | the test       |                |
-|                |                | group. These   |                |
-|                |                | tests are      |                |
-|                |                | typically not  |                |
-|                |                | candidates for |                |
-|                |                | the regression |                |
-|                |                | test suite as  |                |
-|                |                | they are meant |                |
-|                |                | for intensive  |                |
-|                |                | time consuming |                |
-|                |                | in depth tests |                |
-+----------------+----------------+----------------+----------------+
-|                | Automated      | The test       | Test           |
-|                | Functional     | automation     | Automation     |
-|                | Tests          | specialist     | Specialist     |
-|                |                | develo         |                |
-|                |                | ps **automated |                |
-|                |                | functional     |                |
-|                |                | smoke          |                |
-|                |                | tests** based  |                |
-|                |                | on the test    |                |
-|                |                | design and     |                |
-|                |                | test ideas     |                |
-|                |                | developed by   |                |
-|                |                | the test       |                |
-|                |                | group. These   |                |
-|                |                | tests are used |                |
-|                |                | on an ongoing  |                |
-|                |                | basis during   |                |
-|                |                | the sprints    |                |
-|                |                | and the        |                |
-|                |                | lifetime of    |                |
-|                |                | the            |                |
-|                |                | application.   |                |
-+----------------+----------------+----------------+----------------+
-| **Performance  | Performance    | The test       | Test           |
-| Testing**      | Test           | automation     | Automation     |
-|                |                | specialist     | Specialist     |
-|                |                | develops user  |                |
-|                |                | simulation     |                |
-|                |                | scripts that   |                |
-|                |                | will be used   |                |
-|                |                | for            |                |
-|                |                | performance    |                |
-|                |                | and load       |                |
-|                |                | testing.       |                |
-+----------------+----------------+----------------+----------------+
+### Approach
 
-Approach
-
-Test automation forms the core of the test exercise and is, as mentioned
-before, a key enabler for the agile project. That is why a large amount
-of test activity is geared towards feeding the test automation
-development.
+Test automation forms the core of the test exercise and is, as mentioned before, a key enabler for the agile project. That is why a large amount of test activity is geared towards feeding the test automation development.
 
 The following activities feed into test automation development:
 
-  **Activity**                                            **Participant**                                **Delivers**
-  ------------------------------------------------------- ---------------------------------------------- ------------------------------------------------
-  Detailed Technical Design/Code                          Developers                                     Automated Unit Tests
-  Test Design - Based on Acceptance Criteria and others   Testers, Business Analysts                     Key scope to be automated
-  Exploratory Testing                                     Testers                                        Test Ideas for automation
-  Test Design System and Non-functional requirements      Testers, Development Team, Business analysts   Key scope to be automated
-  Variant Testing Needs                                   Testers                                        Additional scope to be automated
-  Smoke Test Definition                                   Testers, Developers, DevOps                    Key activity to be automated
-  Regression Test definition                              Testers                                        Minimum need for the automated regression test
+| Activity | Participant | Delivers |
+| --- | --- | ---
+| Detailed Technical Design/Code | Developers | Automated Unit Tests
+| Test Design - Based on Acceptance Criteria and others | Testers, Business Analysts | Key scope to be automated
+| Exploratory Testing | Testers | Test Ideas for automation
+| Test Design System and Non-functional requirements | Testers, Development Team, Business analysts | Key scope to be automated
+| Variant Testing Needs | Testers | Additional scope to be automated
+| Smoke Test Definition | Testers, Developers, DevOps | Key activity to be automated
+| Regression Test definition | Testers | Minimum need for the automated regression test
 
-The goal is to have value added automation, not to automate for the sake
-of automation. We need to balance run time, complexity and value
-delivered.
+The goal is to have value added automation, not to automate for the sake of automation. We need to balance run time, complexity and value delivered.
 
-**Approach for Functional Test Automation**
-
- 
-
-  **Phase**       **Activity**                                                     **Description**
-  --------------- ---------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Plan**        ** **                                                            ** **
-                  Review Application road map                                      Understand what is included in the sprint\'s scope and what items we definitely have to address.
-                  Review manual test cases (see above for other sources as well)   The testers start to create manual test cases and these will provide the test ideas for the test automation.
-                  Verify Testability                                               Not all manual tests can be automated, tests that depend on human visual processing for instance are impossible to automate. An example of a category of tests that cannot be automated is usability testing.
-                  Selection of Automation Candidates                               Once the inventory of potential candidates has been reviewed, we are able to select the test automation candidates.
-                  Define Test Strategy/Plan                                        Then we create the automation plan, this set up the general guidelines, the structure and the planned time needed.
-  **Design**      ** **                                                            ** **
-                  Re-factor manual tests to be ready for automation                Manual tests are often not yet fit for test automation and need to be reworked to achieve the same objective but now in an automated form. It is a common pitfall in test automation to try to exactly replicate the manual tests.
-                  Framework design/approach                                        A test automation framework is an integrated system that sets the rules of automation of a specific product. This system integrates the function libraries, test data sources, object details and various reusable modules. These components act as small building blocks which need to be assembled to represent a business process. The framework provides the basis of test automation and simplifies the automation effort.
-                  Plan reusable libraries and actions                              Identification of re-usable components and actions greatly improves the efficiency of the test automation effort. We strive towards a situation where most of our tests can be defined by variable data and the test automation framework will be able to execute.
-                  Define other abstraction layers                                  Specialized automated functions like direct database queries, connection to external systems etc. can be abstracted for easier use in the test automation scripts.
-                  Data Management Plan                                             We define how we handle the data needed for our test automation runs. To be able to repeatedly run our test automation suites, we handle our test data in a very organized way. This includes upload of test data, delete of data, restore/refresh activities, date forwarding/retarding etc.
-  **Develop**     ** **                                                            ** **
-                  Create Test scripts                                              Our scripts are created in BDDStack, we use Groovy + Selenium as the programming language as it offers better features with regards to web testing.
-                  Data Management                                                  Test data management is to be automated as well and we develop the scripts and batch jobs to do so.
-                  Build execution flow                                             For test automation execution run smoothly, we create an execution order/flow that consists of start up, data initiation, application initiation, test case execution, application shutdown, data shutdown and execution shutdown activities. If set up right, such a flow allows for easy improvements and extensions.
-                  Recovery Scenarios                                               Test automation runs fail, this is a fact of life. In order to prepare for such an event we need to be clear on what we need to do and how to recover. This could involve a data restore or deletion.
-                  Add to function libraries                                        Identified general functions are built and added to the functional libraries.
-                  Tools Extensions                                                 BDDStack offers some extensions that are configured in order to have BDDStack connect with ZenHub. This way the tool can send information on failed test cases directly into ZenHub. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
-                  Repository Management                                            We could use the repository management functions in BDDStack and integrate this with the a version control system like GitHub. BCGov is maintaining an area on GitHub, this area is actively used by many projects.
-                  Documentation                                                    We document the set up, the configuration, the extension configuration and general system requirements. The intent is to document to such a degree that this set up can be replicated in the future.
-  **Execution**   ** **                                                            ** **
-                  Create new Test environment                                      For every test run we need to either create or refresh our test environment to be guaranteed of a fresh start.
-                  Deploy Test Suite                                                Identify the test suite we need to run in BDDStack. This can either be done through the tool or by scripted invocation. The latter would happen in case of fully automated build and test.
-                  Execute Test Scripts                                             Test scripts are executed by the test automation tool engine and the scripts point to one of our test environments.
-                  Results reporting                                                The tool collects all the results and communicate these to TestRail. (To be build)
-                  Defect Management                                                Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with ZenHub to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
-  **Maintain**    ** **                                                            ** **
-                  Update Assets                                                    Test automation keeps on working well if the assets (scripts, functions, actions) are kept up-to-date, clean and efficient.
-                  Archive Test Suite                                               Test Suites are valuable assets and are kept carefully as part of good practice but also for restore/recovery purposes.
-                  Maintain Test Suite(s)                                           Test suite maintenance involves adding new scripts, re-ordering scripts and pruning scripts that are no longer needed.
-                  Regression TestSuite                                             Maintenance on the regression test suite is ongoing and the suite would typically grow over time. Please refer to the regression test strategy for a discussion on the activities that involved in the creation and maintenance of regression test suites.
+#### Approach for Functional Test Automation
+| Phase | Activity | Description
+| --- | --- | ---
+| **Plan** | | 
+| | Review Application road map | Understand what is included in the sprint's scope and what items we definitely have to address.
+| | Review manual test cases (see above for other sources as well) | The testers start to create manual test cases and these will provide the test ideas for the test automation.
+| | Verify Testability | Not all manual tests can be automated, tests that depend on human visual processing for instance are impossible to automate. An example of a category of tests that cannot be automated is usability testing.
+| | Selection of Automation Candidates | Once the inventory of potential candidates has been reviewed, we are able to select the test automation candidates.
+| | Define Test Strategy/Plan | Then we create the automation plan, this set up the general guidelines, the structure and the planned time needed.
+| **Design** | | 
+| | Re-factor manual tests to be ready for automation | Manual tests are often not yet fit for test automation and need to be reworked to achieve the same objective but now in an automated form. It is a common pitfall in test automation to try to exactly replicate the manual tests.
+| | Framework design/approach | A test automation framework is an integrated system that sets the rules of automation of a specific product. This system integrates the function libraries, test data sources, object details and various reusable modules. These components act as small building blocks which need to be assembled to represent a business process. The framework provides the basis of test automation and simplifies the automation effort.
+| | Plan reusable libraries and actions | Identification of re-usable components and actions greatly improves the efficiency of the test automation effort. We strive towards a situation where most of our tests can be defined by variable data and the test automation framework will be able to execute.
+| | Define other abstraction layers | Specialized automated functions like direct database queries, connection to external systems etc. can be abstracted for easier use in the test automation scripts.
+| | Data Management Plan | We define how we handle the data needed for our test automation runs. To be able to repeatedly run our test automation suites, we handle our test data in a very organized way. This includes upload of test data, delete of data, restore/refresh activities, date forwarding/retarding etc.
+| **Develop** | | 
+| | Create Test scripts | Our scripts are created in BDDStack, we use Groovy + Selenium as the programming language as it offers better features with regards to web testing.
+| | Data Management | Test data management is to be automated as well and we develop the scripts and batch jobs to do so.
+| | Build execution flow | For test automation execution run smoothly, we create an execution order/flow that consists of start up, data initiation, application initiation, test case execution, application shutdown, data shutdown and execution shutdown activities. If set up right, such a flow allows for easy improvements and extensions.
+| | Recovery Scenarios | Test automation runs fail, this is a fact of life. In order to prepare for such an event we need to be clear on what we need to do and how to recover. This could involve a data restore or deletion.
+| | Add to function libraries | Identified general functions are built and added to the functional libraries.
+| | Tools Extensions | BDDStack offers some extensions that are configured in order to have BDDStack connect with JIRA. This way the tool can send information on failed test cases directly into JIRA. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
+| | Repository Management | We could use the repository management functions in BDDStack and integrate this with the a version control system like GitHub. BCGov is maintaining an area on GitHub, this area is actively used by many projects.
+| | Documentation | We document the set up, the configuration, the extension configuration and general system requirements. The intent is to document to such a degree that this set up can be replicated in the future.
+| **Execution** | | 
+| | Create new Test environment | For every test run we need to either create or refresh our test environment to be guaranteed of a fresh start.
+| | Deploy Test Suite | Identify the test suite we need to run in BDDStack. This can either be done through the tool or by scripted invocation. The latter would happen in case of fully automated build and test.
+| | Execute Test Scripts | Test scripts are executed by the test automation tool engine and the scripts point to one of our test environments.
+| | Results reporting | The tool collects all the results and communicate these to TestRail.
+| | Defect Management | Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with JIRA to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
+| **Maintain** | | 
+| | Update Assets | Test automation keeps on working well if the assets (scripts, functions, actions) are kept up-to-date, clean and efficient.
+| | Archive Test Suite | Test Suites are valuable assets and are kept carefully as part of good practice but also for restore/recovery purposes.
+| | Maintain Test Suite(s) | Test suite maintenance involves adding new scripts, re-ordering scripts and pruning scripts that are no longer needed.
+| | Regression TestSuite | Maintenance on the regression test suite is ongoing and the suite would typically grow over time. Please refer to the regression test strategy for a discussion on the activities that involved in the creation and maintenance of regression test suites.
 
 Test automation will create several Automated test Suites, they are:
 
 -   Regression Test Suite
-
 -   Smoke Test Suite
+-   Functional Test Suite, containing additional tests, in-depth tests and multiple variations tests
 
--   Functional Test Suite, containing additional tests, in-depth tests
-    and multiple variations tests
+### Test Design
 
-Test Design
+Test automation will leverage existing test design from the testers and others as mentioned above.
 
-Test automation will leverage existing test design from the testers and
-others as mentioned above.
+However, there are additions to the test design that automation can and will make. These additions are:
 
-However, there are additions to the test design that automation can and
-will make. These additions are:
+-   **Repetition**: Automated tests can repeat certain actions for a long time. This could potentially trigger errors that are hard or even impossible to find when doing manual tests.
+-   Variations: Once an automated test has been defined it can be fed with data variations offering the unique possibility to completely explore all possibilities. This is something that a manual tester would simply not have the time for.
+-   **Stress**: Automated tests can put quite a bit of stress on a system, particularly if several suites are run in parallel.
+-   **Low value tests**: Once an automated test is defined it can be run over and over for almost no effort and cost. That means that even low value tests (tests that a manual tester would skip) could be included in the test suite.
+-   **Extended Checking**: An automated test can include system calls to different platforms (database, external systems) to check if the result observed is correct. A manual tester would spend significantly more time doing the same.
 
--   Repetition: Automated tests can repeat certain actions for a long
-    time. This could potentially trigger errors that are hard or even
-    impossible to find when doing manual tests.
-
--   Variations: Once an automated test has been defined it can be fed
-    with data variations offering the unique possibility to completely
-    explore all possibilities. This is something that a manual tester
-    would simply not have the time for.
-
--   Stress: Automated tests can put quite a bit of stress on a system,
-    particularly if several suites are run in parallel.
-
--   Low value tests: Once an automated test is defined it can be run
-    over and over for almost no effort and cost. That means that even
-    low value tests (tests that a manual tester would skip) could be
-    included in the test suite.
-
--   Extended Checking: An automated test can include system calls to
-    different platforms (database, external systems) to check if the
-    result observed is correct. A manual tester would spend
-    significantly more time doing the same.
-
-Test Execution
+### Test Execution
 
 Test automation execution can and will also be manually triggered by:
 
 -   Test Automation Specialist to:
-
     -   Test the Test Suite (during development of the test suites)
-
-    -   Run specialized automated tests that are not part of the Smoke
-        test or regression test suite
-
+    -   Run specialized automated tests that are not part of the Smoke test or regression test suite
     -   Run any test suite when the need is there
 
 -   Agile Tester to:
-
-    -   Test a specific Test Script (during development of the test
-        script)
-
-    -   Run specialized automated tests that are not part of the Smoke
-        test or regression test suite
-
+    -   Test a specific Test Script (during development of the test script)
+    -   Run specialized automated tests that are not part of the Smoke test or regression test suite
     -   Run any test suite or subset when the need is there
 
-Data Requirements
+![alt text](images/testautomation.png "Integrating Test Automation in sprint")
+
+### Data Requirements
 
 Test Automation needs data that:
 
--   Is uniquely designed/selected for the type of test automation. This
-    means that we need sets for: Unit Testing, Regression Testing,
-    Smoke Testing and any other test suites.
+-   Is uniquely designed/selected for the type of test automation. This means that we need sets for: Unit Testing, Regression Testing, Smoke Testing and any other test suites.
+-   Is restorable so that the test automation can run with the same data in the same state over and over.
+-   Many PPR business functions are date dependent, to obtain repeatability of test execution we need to create our data from     scratch to that we can control the order of activities.
+-   Will *only* be used for its intended purpose. This means that we need separate data sets for development of test     automation and test execution.
 
--   Is restorable so that the test automation can run with the same data
-    in the same state over and over.
-
--   Many PPR business functions are date dependent, to obtain
-    repeatability of test execution we need to create our data from
-    scratch to that we can control the order of activities.
-
--   Will **[*only* ]{.underline}**be used for its intended purpose. This
-    means that we need separate data sets for development of test
-    automation and test execution.
-
-Infrastructure Requirements
+### Infrastructure Requirements
 
 The following infrastructure needs to be present:
 
--   1 QA Workstation Configured
+- 1 QA Workstation Configured
+- Test Environment(s)
 
- 
+## Management Strategies
 
- 
+This section describes the different test management strategies and approaches.
 
- 
+### Status Reporting Strategy
 
-Management Strategies
+Testing Status will be available continuously from ZenHub and TestRail, this status is meant for day-to-day management. Self-serve for immediate questions and/or concerns is intended for team members and project management. 
 
-June 26, 2019
+Weekly reports are intended for project management and client. 
 
-1:31 PM
+> **Caveat**
+> Weekly reports represent a snapshot at the time of generation. Online status through ZenHub and TestRail might no longer reflect the weekly report as this information is always current. In case of concerns, it is always recommended to contact the product owner for clarification.
 
-This section describes the different test management strategies and
-approaches.
-
-* *
-
- 
-
- 
-
-Status Reporting Strategy
-
-June 26, 2019
-
-1:32 PM
-
-Testing Status will be available continuously from ZenHub and TestRail, this
-status is meant for day-to-day management. Self-serve for immediate
-questions and/or concerns is intended for team members and project
-management. 
-
-Weekly reports are intended for project management and client.
-
- 
-
-**Caveat**
-Weekly reports represent a snapshot at the time of generation. Online
-status through ZenHub and TestRail might no longer reflect the weekly
-report as this information is always current. In case of concerns, it
-is always recommended to contact the project manager for
-clarification.
-
-Objectives
+### Objectives
 
 -   Provide continuous insight in the test status
-
 -   Identify issues and opportunities for improvement
-
 -   Provide progress reports
 
-Key Guidelines
+### Key Guidelines
 
 -   Dashboards showing test and defect status will be available in ZenHub
-
 -   All reporting will be automatically generated from TestRail and ZenHub
+-   Weekly reports will summarize and condense the automatic reports from TestRail and ZenHub
 
--   Weekly reports will summarize and condense the automatic reports
-    from TestRail and ZenHub
+### Key Caveats
 
-Key Caveats
+-   Weekly reports will have a very short "freshness" giving the high pace of change in an agile project
+-   On demand reports from TestRail are only available through the test team
+-   Continuous status dashboard might lack the context required for proper interpretation by non-project members
 
--   Weekly reports will have a very short useful lifespan giving the
-    high pace of change in an agile project
+### Planned reports
 
--   On demand reports from TestRail are only available through the test
-    team
+| Report Name | Frequency | Role Responsibility | Comment
+| --- | --- | --- | ---
+| Status Report | Weekly | Test Lead | This report will be on SharePoint
+| Test Run Results | On Demand | Test Lead | TestRail offers a continues view on progress. An extract will be incorporated in the weekly status report.
+| | | | Test run results will include results from:
+| | | | Build Verification Test (BVT) runs
+| | | | Automated Unit tests
+| | | | Automated Functional tests
+| | | | Exploratory Testing Sessions
+| | | | Other Manual Testing
+| | | | User Acceptance Testing
+| Test Activity Wrapup | Sprint End | Test Lead | Summarization of results, lessons learned and tasks that will need to be scheduled for a later sprint.
 
--   Continuous status dashboard might lack the context required for
-    proper interpretation by non-project members
-
-Planned reports
-
-+----------------+---------------+----------------+----------------+
-| **Report       | **Frequency** | **Role         | **Comment**    |
-| Name**         |               | Re             |                |
-|                |               | sponsibility** |                |
-+================+===============+================+================+
-| Status Report  | Weekly        | Test Lead      | This report    |
-|                |               |                | will be on     |
-|                |               |                | SharePoint     |
-+----------------+---------------+----------------+----------------+
-| Test Run       | On Demand     | Test Lead      | TestRail offers  |
-| Results        |               |                | a continues    |
-|                |               |                | view on        |
-|                |               |                | progress. An   |
-|                |               |                | extract will   |
-|                |               |                | be             |
-|                |               |                | incorporated   |
-|                |               |                | in the weekly  |
-|                |               |                | status report. |
-|                |               |                |                |
-|                |               |                | Test run       |
-|                |               |                | results will   |
-|                |               |                | include        |
-|                |               |                | results from:  |
-|                |               |                |                |
-|                |               |                | -   Build      |
-|                |               |                |                |
-|                |               |                | Verification |
-|                |               |                |     Test     |
-|                |               |                |     (BVT)    |
-|                |               |                |     runs     |
-|                |               |                |                |
-|                |               |                | -   Automated  |
-|                |               |                |     Unit     |
-|                |               |                |     tests    |
-|                |               |                |                |
-|                |               |                | -   Automated  |
-|                |               |                |                |
-|                |               |                |   Functional |
-|                |               |                |     tests    |
-|                |               |                |                |
-|                |               |                | -              |
-|                |               |                |    Exploratory |
-|                |               |                |     Testing  |
-|                |               |                |     Sessions |
-|                |               |                |                |
-|                |               |                | -   Other      |
-|                |               |                |     Manual   |
-|                |               |                |     Testing  |
-|                |               |                |                |
-|                |               |                | -   User       |
-|                |               |                |                |
-|                |               |                |   Acceptance |
-|                |               |                |     Testing  |
-+----------------+---------------+----------------+----------------+
-| Test Activity  | Sprint End    | Test Lead      | Summarization  |
-| Wrapup         |               |                | of results,    |
-|                |               |                | lessons        |
-|                |               |                | learned and    |
-|                |               |                | tasks that     |
-|                |               |                | will need to   |
-|                |               |                | be scheduled   |
-|                |               |                | for a later    |
-|                |               |                | sprint.        |
-+----------------+---------------+----------------+----------------+
-
- 
-
- 
-
-Test Data Strategy
-
-June 26, 2019
-
-1:32 PM
+## Test Data Strategy
 
 Testing depends on the availability of high quality test data.
 
 Test data needs to conform to the following characteristics:
-
 -   It is meaningful
-
 -   It allows the tests to be executed
+-   It can be adapted/changed/copied and deleted to support multiple test cycles
+-   It allows for time and date shifting 
+-   It does not unnecessarily expose the testers to private and/or sensitive data
 
--   It can be adapted/changed/copied and deleted to support multiple
-    test cycles
+> **Test Data Principle**
+> 
+> **Basic assumption(s):**
+>
+> -   Testing uses test data.
+> -   Testing owns the test data.
+> -   High quality, dedicated test data is available.
+> -   Developers are responsible for the creation of Unit Test Data.
+>
+> **Test Principle:**
+> -   The test environments contain either fictional test data or masked/de-identified production data.
+> -   The Business/User Acceptance Test environment contains production data or masked/de-identified production data.
+> -   Production data will not be used for testing outside of PPR.
 
--   It allows for time and date shifting
+### Test Data Usage
 
--   It does not unnecessarily expose the testers to private and/or
-    sensitive data
+| Usage | Environment | Type of Test Data | User
+| --- | --- | --- | ---
+| Developer Testing | DEV | Purposely created | Developer
+| Functional Testing | TEST | Subset of masked data and purposely created test data (Set 1) | Testers (Agile)
+| Automated Functional Testing | TEST | Subset of masked data and purposely created test data, but using a different and stable subset of data (Set 2) | Test Automation Specialist
+| System Integration Testing | TEST | Subset of masked data and purposely created test data, but using a different and stable subset of data (Set 3) | All testing
+| Performance Testing | TEST | Full size data | Test Automation Specialist
+| User Acceptance Testing | Staging | Production data | Business Testers
 
- 
 
-**Test Data Principle**
- 
-**Basic assumption(s):**
+## Defect Management Strategy
 
--   Testing uses test data.
-
--   Testing owns the test data.
-
--   High quality, dedicated test data is available.
-
--   Developers are responsible for the creation of Unit Test Data.
-
-**Test Principle:**
-
--   The test environments contain either fictional test data or
-    masked/de-identified production data.
-
--   The Business/User Acceptance Test environment contains production
-    data or masked/de-identified production data.
-
--   Production data will not be used for testing outside of PPR.
-
-Test Data Usage
-
-  **Usage**                      **Environment**   **Type of Test Data**                                                                                            **User**                     **Comments**
-  ------------------------------ ----------------- ---------------------------------------------------------------------------------------------------------------- ---------------------------- --------------
-  Developer Testing              DEV               Purposely created                                                                                                Developer                     
-  Functional Testing             TEST              Subset of masked data and purposely created test data (Set 1)                                                    Testers (Agile)               
-  Automated Functional Testing   TEST              Subset of masked data and purposely created test data, but using a different and stable subset of data (Set 2)   Test Automation Specialist    
-  System Integration Testing     TEST              Subset of masked data and purposely created test data, but using a different and stable subset of data (Set 3)   All testing                   
-  Performance Testing            TEST              Full size masked data                                                                                            Test Automation Specialist    
-  User Acceptance Testing        Staging           Masked/de-identified production data                                                                             Business Testers             * *
-
- 
-
- 
-
-Defect Management Strategy
-
-June 26, 2019
-
-1:32 PM
-
-Defect reports are the main output from the testing process, they
-represent a significant investment and are essential in understanding
-the state of the system under test (SUT). Solid defect management has
-proven to be the key success factor in complex projects and provides key
-progress and quality information.
+Defect reports are the main output from the testing process, they represent a significant investment and are essential in understanding
+the state of the system under test (SUT). Solid defect management has proven to be the key success factor in complex projects and provides key progress and quality information.
 
 We will adhere to our defined defect management principles:
 
- 
+> **Basic assumption(s):**
+>
+> -   Defects need to be managed.
+> -   There will be *one* defect management tool used during analysis, design, development and testing.
+> -   The defect management tool, user procedures and reviews will enforce consistent, high quality defect reporting.
+>
+> **Test Principle:**
+>
+> -   Defect Management will follow the standard defect management process.
+> -   All defects will be reported in and managed by a central defect management tool.
+> -   All personnel involved in the creation, roll-out and sustainment of a solution will have access to the central tool and will be able to review the project\'s defects.
 
-**Basic assumption(s):**
-
--   Defects need to be managed.
-
--   There will be *one* defect management tool used during analysis,
-    design, development and testing.
-
--   The defect management tool, user procedures and reviews will enforce
-    consistent, high quality defect reporting.
-
-**Test Principle:**
-
--   Defect Management will follow the standard defect management
-    process.
-
--   All defects will be reported in and managed by a central defect
-    management tool.
-
--   All personnel involved in the creation, roll-out and sustainment of
-    a solution will have access to the central tool and will be able
-    to review the project\'s defects.
-
-Objectives
+### Objectives
 
 -   Provide documentation on detected defects
-
 -   Provide insight in the state of the application under test
-
 -   Manage defects through defined process
 
 Key Guidelines
 
 -   Each defect report contains one defect
-
 -   Everybody can write a defect report
-
 -   Everybody can comment on a defect report
-
 -   The test lead is the facilitator of the defect management process
-
--   All defects are reviewed, categorized and assigned, this is a
-    cooperative exercise
-
+-   All defects are reviewed, categorized and assigned, this is a cooperative exercise
 -   Defect management has several specific roles defined
-
 -   Defect reports are written with the notion that:
-
 -   They might not be fixed right now
-
 -   The developer might not be on site
-
 -   The test data might not be available
-
 -   The business context might not be familiar to a developer 
 
 Key Caveats
-
--   The number of defect reports is not immediately correlated with the
-    quality of the SUT
-
+-   The number of defect reports is not immediately correlated with the quality of the SUT
 -   Not all defects will be fixed at the end of a sprint
+-   Not all defects are valid, unique or worth the project\'s time, they will be closed with reasoning included
+-   A defect observed without a defect report is a missed opportunity for improvement
+-   Defect volumes are not to be used to assess tester and developer productivity
 
--   Not all defects are valid, unique or worth the project\'s time, they
-    will be closed with reasoning included
+## Rating Defects
 
--   A defect observed without a defect report is a missed opportunity
-    for improvement
-
--   Defect volumes are not to be used to assess tester and developer
-    productivity
-
- 
-
- 
-
-Rating Defects
-
-June 26, 2019
-
-1:43 PM
-
-Categorizing and rating defects is often a topic of contention and
-discussion. It is important to avoid unnecessary churn on this topic and
-we do that by very clearly defining the rating process.
+Categorizing and rating defects is often a topic of contention and discussion. It is important to avoid unnecessary churn on this topic and we do that by very clearly defining the rating process.
 
 There are three elements involved in the rating of defects, they are:
 
 -   **Symptom**: What happened? What went wrong?
-
--   **Severity**: How does the found defect impact the functionality,
-    quality, risk etc.
-
+-   **Severity**: How does the found defect impact the functionality, quality, risk etc.
 -   **Priority**: How quickly does this defect need to be fixed
 
-By defining how symptoms relate to severity and who is responsible for
-the setting symptom, severity and priority, we will have a process that
-adds value to the development effort.
+By defining how symptoms relate to severity and who is responsible for the setting symptom, severity and priority, we will have a process that adds value to the development effort.
 
-A defined process does not mean that we can forego the \"apply reason\"
-rule, in this case the process is meant for consistency and guidance.
+A defined process does not mean that we can forego the \"apply reason\" rule, in this case the process is meant for consistency and guidance.
 
 Who is responsible for setting\....?
 
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
+[RASCI](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix#RASCI)
 
-  ** **                 **Symptom**   **Severity**   **Priority**
-  --------------------- ------------- -------------- --------------
-  **Tester**            **R**         **R**          C
-  **Test Lead**         A             A              S
-  **Developer**         C             C              C
-  **Dev.Lead**          S             S              S
-  **Project Manager**   I             I              A
-  **Business Lead**     S             S              **R**
-  **Release Manager**   S             S              **R**
-  **Product Owner**     I             I              C
+  |  | Symptom | Severity | Priority
+  | --- | :---: | :---: | :---:
+  | **Tester** | **R** | **R** | C
+  | **Test Lead**  |       A    |         A   |           S
+  | **Developer**   |      C     |        C    |          C
+  | **Dev.Lead**     |     S      |       S     |         S
+  | **Project Manager** |  I       |      I      |        A
+  | **Business Lead**   |  S        |     S       |       **R**
+  | **Release Manager**  | S         |    S        |     **R**
+  | **Product Owner**    | I          |   I         |     C
 
-By clearly separating symptom, severity and priority setting
-responsibilities, we will be able to put the right responsibility with
-the right team members. We now could potentially have a critical
-severity issue that gets the lowest priority or vice versa a low
-criticality item that gets the highest priority.
+By clearly separating symptom, severity and priority setting responsibilities, we will be able to put the right responsibility with the right team members. We now could potentially have a critical severity issue that gets the lowest priority or vice versa a low criticality item that gets the highest priority.
 
-Severity
+### Severity
 
 We will use the following severity definition:
 
@@ -2543,9 +2145,7 @@ We will use the following severity definition:
                        A technical correct implementation of a business requirement does not meet the business needs
                        A new requirement has been identified during testing
 
-ZenHub will be configured to contain the severity field.
-
-Symptoms versus Severity
+### Symptoms versus Severity
 
 A very good practice is to define a connection between found symptoms
 and the severity that will be used. For instance a typo would never get
