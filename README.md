@@ -1423,11 +1423,7 @@ Infrastructure Requirements
 
  
 
-Smoke Test Strategy
-
-June 25, 2019
-
-9:44 AM
+## Smoke Test Strategy
 
 This section provides an overview of the test approach that we will
 deploy for Smoke Testing.  
