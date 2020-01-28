@@ -1135,163 +1135,70 @@ System Integration Testing will be executed by the agile testers. During execut
 
 ### Data Requirements
 
-  **Usage**                    **Environment**   **Type of Test Data**                                                                                     **User**      **Comments**
-  ---------------------------- ----------------- --------------------------------------------------------------------------------------------------------- ------------- --------------
-  System Integration Testing   TEST              Subset of masked data and purposely created test data, but using a different and stable subset of data.   All testing    
+| Usage | Environment | Type of Test Data | User | Comments
+| --- | --- | --- | --- | ---
+| System Integration Testing | TEST | Subset of masked data and purposely created test data, but using a different and stable subset of data. | All testing |
 
-Infrastructure Requirements
+### Infrastructure Requirements
 
-+-------------+-------------+-------------+-------------+-------------+
-| **Type of   | **Envir     | *           | **Who**     | **De        |
-| Testing**   | onment(s)** | *Integrated |             | scription** |
-|             |             | with Back   |             |             |
-|             |             | end**       |             |             |
-+=============+=============+=============+=============+=============+
-| [System /   | TEST        | Yes         | Agile       | In this     |
-| Intersystem |             |             | Testers     | environment |
-| Te          |             |             |             | we will be  |
-| sting](http |             |             |             | able to     |
-| ://localhos |             |             |             | test the    |
-| t:8090/disp |             |             |             | full end to |
-| lay/TQA/5.4 |             |             |             | end         |
-| +System+Tes |             |             |             | integration |
-| t+Strategy) |             |             |             | including   |
-|             |             |             |             | back end    |
-|             |             |             |             | services.   |
-+-------------+-------------+-------------+-------------+-------------+
+| Type of Testing Environment(s) | Integrated with Back end | Who | Description
+| --- | --- | --- | ---
+| System / Intersystem Testing | TEST | Yes |Agile Testers | In this environment we will be able to test the full end to end integration including back end services. |
 
- 
+## User Acceptance Test Strategy
 
- 
+This section provides an overview of the test approach that will be undertaken for User Acceptance Testing (UAT). This process obtains confirmation by Testers/Business Analysts, from the business, that a system meets mutually agreed-upon requirements. 
 
-User Acceptance Test Strategy
+### Definition
 
-June 25, 2019
+Formal verification/validation with respect to user needs, requirements and business processes conducted to determine whether or not a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system.
 
-9:44 AM
+UAT is one of the final stages of a project and often occurs before a client or customer accepts the new system.
 
-This section provides an overview of the test approach that will be
-undertaken for User Acceptance Testing (UAT). This process obtains
-confirmation by Testers/Business Analysts, from the business, that a
-system meets mutually agreed-upon requirements. 
-
-Definition
-
-Formal verification/validation with respect to user needs, requirements
-and business processes conducted to determine whether or not a system
-satisfies the acceptance criteria and to enable the user, customers or
-other authorized entity to determine whether or not to accept the
-system.
-
-UAT is one of the final stages of a project and often occurs before a
-client or customer accepts the new system.
-
-Objectives
+### Objectives
 
 -   Verify that the user acceptance criteria are met
-
 -   Verify that the system will serve its intended purpose.
-
 -   Verify that the application is ready to be deployed
 
-Expected Benefits
+### Expected Benefits
 
 -   Compliance with the business requirements will be clear.
-
--   Functionality/business logic problems that earlier testing might
-    have missed will be identified.
-
+-   Functionality/business logic problems that earlier testing might have missed will be identified.
 -   Determination on how "done" the system is.
-
 -   System ownership acceptance by the business.
-
 -   Improve/establish confidence with the new solution.
 
-Responsibilities
+### Scope
 
-[RASCI
-Legend](onenote:RASCI%20Legend.one#section-id={75397548-6BE0-46FB-80CC-551FBC2B6C97}&end&base-path=https://citz.sp.gov.bc.ca/sites/Shared/Project/BidR/PPR/CONTRACT%20%20SCHEDULE/Testing/Resources/Testing%20Notes)
-
-  **Role **                    **R**   **A**   **S**   **C**   **I**
-  ---------------------------- ------- ------- ------- ------- -------
-  Test Lead                                    X                
-  Test Analyst (Agile)                         X                
-  Business Tester              X                                
-  Test Automation Specialist                   X                
-  Business Analyst                             X                
-  UAT Lead                             X                        
-  Business Lead                                X                
-  Developer                                    X                
-  Developer Lead                                               X
-  Solution Architect                                           X
-  Release Manager                              X                
-  Project Manager                                              X
-
-Scope
-
-UAT adds value to the test and validation process when it focuses on the
-topics that have not been evaluated before with a user-centric focus.
+UAT adds value to the test and validation process when it focuses on the topics that have not been evaluated before with a user-centric focus.
 
 UAT focuses on:
-
 -   Business Process Validation
-
 -   Business Scenario variations validation
-
 -   Alignment with internal business processes
-
 -   Validation of Portal Documentation and Content 
-
 -   User Experience evaluation
-
 -   Business Effectiveness assessment
-
 -   Reporting validation
 
 UAT does **not** need to focus on:
-
 -   Technical correctness of functionality
-
--   Access Rules and implementation in the solution (a review would
-    still be welcome)
-
+-   Access Rules and implementation in the solution (a review would still be welcome)
 -   In-screen validations
 
-In other words: All the testing that has been performed by the
-developers and testers.
+In other words: All the testing that has been performed by the developers and testers.
 
-Approach
+### Approach
 
-For PPR we distinguish between 3 different categories of activities
-which could be characterized as UAT. These are:
+For PPR we distinguish between 3 different categories of activities which could be characterized as UAT. These are:
 
-1.  **Early Sprints Verification and Validation**: During the first
-    sprints, UAT related activities will be limited to verification
-    and validation based on user stories and functional acceptance
-    criteria. This activity also allows the UAT group a more gradual
-    introduction into the application, the testing work and the
-    requirements. These sessions will allow the UAT team to refine
-    their approach, engage with the team and start to give feedback.
-    During this, the team would not be required to create a formal UAT
-    approval. During the early sprints, the UAT testers will only be
-    participating for the last 7/8 working days of the sprint. 
+1.  **Early Sprints Verification and Validation**: During the first sprints, UAT related activities will be limited to verification and validation based on user stories and functional acceptance     criteria. This activity also allows the UAT group a more gradual introduction into the application, the testing work and the requirements. These sessions will allow the UAT team to refine their approach, engage with the team and start to give feedback. During this, the team would not be required to create a formal UAT approval. During the early sprints, the UAT testers will only be participating for 1 or 2 days towards the end of the sprint. 
+2.  **Later Sprints UAT**: The last 3 Sprints, become more like a regular, end-of-project, UAT. The UAT team has now prepared their test cases and scenarios and is prepared to execute these. They
+    will also validate and re-test defect fixes on earlier found issues. At the end of the last Sprint, the team will be in a position to accept the solution. UAT during the later sprints will be a one month full-time effort.
+3.  **User Experience Focus Groups**: This activity is the responsibility of PPR BA/UX Team and will involve engaging with the community to obtain their feedback on the new solution. These sessions will start once several pieces of functionality can be demonstrated.
 
-2.  **Later Sprints UAT**: The last 3 Sprints, become more like a
-    regular, end-of-project, UAT. The UAT team has now prepared their
-    test cases and scenarios and is prepared to execute these. They
-    will also validate and re-test defect fixes on earlier found
-    issues. At the end of the last Sprint, the team will be in a
-    position to accept the solution. UAT during the later sprints will
-    be a one month full-time effort (full sprint length).
-
-3.  **User Experience Focus Groups**: This activity is the
-    responsibility of PPR BA Team and will involve engaging with the
-    member community to obtain their feedback on the new solution.
-    These sessions will start once several pieces of functionality
-    have been developed and can demonstrated.
-
-**Difference in the UAT experience between a traditional project and
-PPR**
+**Difference in the UAT experience between a traditional project and PPR**
 
 +----------------+----------------+----------------+----------------+
 | ** **          | **Traditional  | **PPR**        | **PPR**        |
@@ -1424,11 +1331,9 @@ PPR**
 |                |                |                | acceptable.    |
 +----------------+----------------+----------------+----------------+
 
-Early involvement of UAT has significant benefits to the project as
-user/business perspective is valuable and increases the success of the
-project.
+Early involvement of UAT has significant benefits to the project as user/business perspective is valuable and increases the success of the project.
 
-Test Design
+### Test Design
 
 Test design is a hybrid of standard test cases and exploratory sessions.
 Exploratory sessions will be in focus for verification and validation in
