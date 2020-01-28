@@ -2328,7 +2328,7 @@ Scope
 
 The system scope of the security test is:
 
--   iValua installation
+-   PPR installation
 
 -   PPR Implementation
 
@@ -2346,11 +2346,11 @@ delivery of security testing:
 
   **Activity**               **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   **Participants**
   -------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -----------------------
-  Discovery                  The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                CGI, iValua
-  Vulnerability Scan         Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               iValua, CGI, Province
-  Vulnerability Assessment   This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       iValua, CGI, Province
-  Security Assessment        Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to.                                                                                                                                                                                                                                                                                                                   iValua, CGI, Province
-  Penetration Test           Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage.   iValua, CGI, Province
+  Discovery                  The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                CGI, PPR
+  Vulnerability Scan         Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               PPR, CGI, Province
+  Vulnerability Assessment   This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       PPR, CGI, Province
+  Security Assessment        Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to.                                                                                                                                                                                                                                                                                                                   PPR, CGI, Province
+  Penetration Test           Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage.   PPR, CGI, Province
 
 Additionally the following activities could form part of the engagement
 but technically fall outside of the security testing scope:
@@ -3533,7 +3533,7 @@ a severity \"Critical\", but a database crash would.
                                    Data is exposed to unauthorized parties    X                                        X                                                                 
                                    Data is lost                                                                        X                                                                 
   **Standards **                   Compliance, BCGov UI                                                                                                    X               O             
-                                   Compliance, iValua                                                                                                      X               O             
+                                   Compliance, PPR                                                                                                      X               O             
                                    Compliance, Web                                                                                           X             O                             
                                    Compliance, Windows                                                                 X                     O                                           
                                    Compliance, Security Policy                                                                                             X               O             
@@ -4170,7 +4170,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |                | Re             |                |
 |                |                | sponsibility** |                |
 +================+================+================+================+
-| **Unit Test**  | -   All Unit   | No/iValua      |                |
+| **Unit Test**  | -   All Unit   | No/PPR      |                |
 |                |     Tests    |                |                |
 |                |     are      |                |                |
 |                |                |                |                |
@@ -4304,7 +4304,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     (on the  |                |                |
 |                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
-| **Integration  | -   All test   | Yes/iValua,    | As the         |
+| **Integration  | -   All test   | Yes/PPR,    | As the         |
 | Test**         |     cases    | CGI and        | integration    |
 |                |     Pass     | Province       | components are |
 |                |                |                | the key        |
@@ -4333,7 +4333,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     (on the  |                |                |
 |                |     backlog) |                |                |
 +----------------+----------------+----------------+----------------+
-| **System       | -   All        | Yes/iValua,    |                |
+| **System       | -   All        | Yes/PPR,    |                |
 | Test**         |     priority | CGI            |                |
 |                |     1 and 2  |                |                |
 |                |     test     |                |                |
@@ -4383,7 +4383,7 @@ at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-de
 |                |     defects  |                |                |
 |                |     allowed  |                |                |
 +----------------+----------------+----------------+----------------+
-| **Performance  | -   All        | Yes/iValua &   | It might be    |
+| **Performance  | -   All        | Yes/PPR &   | It might be    |
 | Test**         |     priority | CGI            | that           |
 |                |     1 and 2  |                | performance    |
 |                |                |                | testing is not |
@@ -6430,7 +6430,7 @@ July 9, 2019
 |          |                                                  |
 |          |     -   Compliance, BCGov UI                     |
 |          |                                                  |
-|          |     -   Compliance, iValua                       |
+|          |     -   Compliance, PPR                       |
 |          |                                                  |
 |          |     -   Compliance, Web                          |
 |          |                                                  |
@@ -7365,7 +7365,7 @@ Deb:
 
 -   J,M and Deb do validation
 
--   Deployment creates \"Tag\" ivalua deployment package
+-   Deployment creates \"Tag\" PPR deployment package
 
 -   Then into dev env. (2 dev environments? 1 for development, 1 for
     maintenance prod aligned. (hot fixes))
@@ -7376,7 +7376,7 @@ Deb:
 
 -   Tags get version numbers
 
--   Rollbacks are possible - by iValua
+-   Rollbacks are possible - by PPR
 
 -   Is tag number visible in front-end? V in bar
 
@@ -7395,12 +7395,12 @@ Deb:
 -   Deb is checking if a set up can be stored for restore later.
     (Training)
 
--   iValua rolls out in prod
+-   PPR rolls out in prod
 
 -   Discussion needed between Pascal and Tlel for hot fix updates, who
     does what.
 
--   New version from iValua - documented in .... (PMP?)
+-   New version from PPR - documented in .... (PMP?)
 
  
  
