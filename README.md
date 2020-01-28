@@ -1644,40 +1644,27 @@ The system scope of the security test is:
 -   Installation/Configuration of the solution
 -   Installation and configuration of the physical/virtual infrastructure
 
-# Approach
+### Approach
 
 At a high level the following activities will be executed during the
 delivery of security testing:
 
-  **Activity**               **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   **Participants**
-  -------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -----------------------
-  Discovery                  The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                , PPR
-  Vulnerability Scan         Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               PPR, , Province
-  Vulnerability Assessment   This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       PPR, , Province
-  Security Assessment        Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to.                                                                                                                                                                                                                                                                                                                   PPR, , Province
-  Penetration Test           Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage.   PPR, , Province
+ | Activity | Description | Participants
+| --- | --- | ---
+| Discovery  | The purpose of this stage is to identify systems within scope and the services in use. It is not intended to discover vulnerabilities, but version detection may highlight deprecated versions of software / firmware and thus indicate potential vulnerabilities. | PPR
+| Vulnerability Scan | Following the discovery stage this looks for known security issues by using automated tools to match conditions with known vulnerabilities. The reported risk level is set automatically by the tool with no manual verification or interpretation. | PPR
+| Vulnerability Assessment | This uses discovery and vulnerability scanning to identify security vulnerabilities and places the findings into the context of the environment under test. | PPR
+| Security Assessment | Builds upon Vulnerability Assessment by adding manual verification to confirm exposure, but does not include the exploitation of vulnerabilities to gain further access. Verification could be in the form of authorized access to a system to confirm system settings and involve examining logs, system responses, error messages, codes, etc. A Security Assessment is looking to gain a broad coverage of the systems under test but not the depth of exposure that a specific vulnerability could lead to. | PPR
+| Penetration Test | Penetration test simulates an attack by a malicious party. Building on the previous stages and involves exploitation of found vulnerabilities to gain further access. Using this approach will result in an understanding of the ability of an attacker to gain access to confidential information, affect data integrity or availability of a service and the respective impact. Each test is approached using a consistent and complete methodology in a way that allows the tester to use their problem solving abilities, the output from a range of tools and their own knowledge of networking and systems to find vulnerabilities that would/ could not be identified by automated tools. This approach looks at the depth of attack as compared to the Security Assessment approach that looks at the broader coverage. | PPR
 
-Additionally the following activities could form part of the engagement
-but technically fall outside of the security testing scope:
+Additionally the following activities could form part of the engagement but technically fall outside of the security testing scope:
 
--   **Security Audit** - Driven by an Audit / Risk function to look at a
-    specific control or compliance issue. Characterised by a narrow
-    scope, this type of engagement could make use of any of the
-    earlier approaches discussed (vulnerability assessment, security
-    assessment, penetration test).
-
--   **Security Review** - Verification that industry or internal
-    security standards have been applied to system components or
-    product. This is typically completed through gap analysis and
-    utilises build / code reviews or by reviewing design documents and
-    architecture diagrams. This activity does not utilize any of the
-    earlier approaches (Vulnerability Assessment, Security Assessment,
-    Penetration Test, Security Audit)
+-   **Security Audit** - Driven by an Audit / Risk function to look at a specific control or compliance issue. Characterised by a narrow scope, this type of engagement could make use of any of the  earlier approaches discussed (vulnerability assessment, security assessment, penetration test).
+-   **Security Review** - Verification that industry or internal security standards have been applied to system components or
+    product. This is typically completed through gap analysis and utilises build / code reviews or by reviewing design documents and architecture diagrams. This activity does not utilize any of the earlier approaches (Vulnerability Assessment, Security Assessment, Penetration Test, Security Audit)
 
 **Security related activities by the development and release team**
-
 Please review the [OWASP](https://www.owasp.org/index.php/Main_Page) guidelines for the development and release team activities:
-
 
 ### OWASP Guidelines 
 
