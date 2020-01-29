@@ -2063,6 +2063,7 @@ The following activities feed into test automation development:
 The goal is to have value added automation, not to automate for the sake of automation. We need to balance run time, complexity and value delivered.
 
 ####  20.4.1. <a name='ApproachforFunctionalTestAutomation'></a>Approach for Functional Test Automation
+
 | Phase | Activity | Description
 | --- | --- | ---
 | **Plan** | | 
