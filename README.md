@@ -2034,6 +2034,7 @@ The following benefits are expected from test automation:
 ###  20.3. <a name='Scope-1'></a>Scope
 
 The scope of test automation in an agile project is potentially wide:
+
 | Activity | Test Automation Activity | Description | Responsibility
 | --- | --- | --- | ---
 | Unit Testing | Automated Unit Tests + Coverage | Developers create Unit test scripts that they initially will execute on their own workstation. These scripts are also executed as part on the continuous integration and build processes. These tests will also yield test coverage results and the test results for later consumption. | Developers, DevOps
