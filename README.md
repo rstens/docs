@@ -2306,495 +2306,113 @@ The project and QA owns the Test environments.
 
 ## Definition of Done for Testing (DoD)
 
-At the highest level the DoD  for testing is when:
-
-**"All planned testing tasks have been completed and no open defects are remaining.**
+At the highest level the DoD  for testing is when: **"All planned testing tasks have been completed and no open defects are remaining.**
 
 How do we determine Done?
 
-To arrive at such a high level conclusion we would need to understand
-our level of \"done\" for individual activities. The following is a list
-(checklist, some would say) that we\'ll use for assessing our level of
-\"done\" for the different testing activities.
+To arrive at such a high level conclusion we would need to understand our level of \"done\" for individual activities. The following is a list
+(checklist, some would say) that we\'ll use for assessing our level of \"done\" for the different testing activities.
 
-**What is it?**
+### What is it?
 
-Definition of done is crucial to a highly functioning Scrum team. The
-following are characteristics that we look for in our definition of done
-for testing. Verifying that our DoD meets these criteria will ensure
-that we are truly done with testing, not only in terms of functionality
-but in terms of quality as well.
+Definition of done is crucial to a highly functioning Scrum team. The following are characteristics that we look for in our definition of done
+for testing. Verifying that our DoD meets these criteria will ensure that we are truly done with testing, not only in terms of functionality but in terms of quality as well.
 
- 
+*DoD is a checklist of valuable activities required to produce software.*
 
-*DoD is a checklist of valuable activities required to produce
-software.*
-
-Definition of Done is a simple list of activities (writing code, coding
-comments, unit testing, integration testing, release notes, design
-documents, etc.) that add verifiable/demonstrable value to the product.
-Focusing on value-added steps allows the team to focus on what must be
-completed in order to build software while eliminating wasteful
-activities that only complicate software development efforts.
-
- 
+Definition of Done is a simple list of activities (writing code, coding comments, unit testing, integration testing, release notes, design
+documents, etc.) that add verifiable/demonstrable value to the product. Focusing on value-added steps allows the team to focus on what must be
+completed in order to build software while eliminating wasteful activities that only complicate software development efforts.
 
 *DoD is the primary reporting mechanism for team members.*
 
-Reporting in its simplest form is the ability to say, "This feature is
-done." After all, a feature or Product Backlog Item is either done or it
-is not-done. DoD is a simple artifact that adds clarity to the
-"Feature's done" statement.  Using DoD as a reference for this
-conversation a team member can effectively update other team members and
-the product owner. 
-
- 
+Reporting in its simplest form is the ability to say, "This feature is done." After all, a feature or Product Backlog Item is either done or it
+is not-done. DoD is a simple artifact that adds clarity to the "Feature's done" statement.  Using DoD as a reference for this conversation a team member can effectively update other team members and the product owner. 
 
 *DoD is informed by reality.*
 
-Actual results, statistics and observations from the test process drives
-the DoD.
-
- 
+Actual results, statistics and observations from the test process drives the DoD.
 
 *DoD is not static.*
 
-The DoD changes over time. Organizational support and the team's ability
-to remove impediments may enable the inclusion of additional activities
-into the DoD for features or sprints.
-
- 
+The DoD changes over time. Organizational support and the team's ability to remove impediments may enable the inclusion of additional activities
+into the DoD for features or sprints. 
 
 *DoD is an auditable checklist.*
 
-Features/stories are broken down into tasks both during sprint planning
-and also within a sprint, these include the testing tasks. The DoD is
-used to validate whether all major tasks are accounted for (hours
-remaining). Also, after a feature or sprint is done, DoD is used as a
-checklist to verify whether all necessary value-added activities were
-completed.
+Features/stories are broken down into tasks both during sprint planning and also within a sprint, these include the testing tasks. The DoD is used to validate whether all major tasks are accounted for (hours remaining). Also, after a feature or sprint is done, DoD is used as a checklist to verify whether all necessary value-added activities were completed.
 
-This definition of done is independent of the user acceptance criteria
-(functional acceptance) for a feature and the focus on the test
-activities. Definition of done is informed by reality where it captures
-activities that can be realistically committed by the test team to be
-completed at each sprint.
+This definition of done is independent of the user acceptance criteria (functional acceptance) for a feature and the focus on the test activities. Definition of done is informed by reality where it captures activities that can be realistically committed by the test team to be completed at each sprint.
 
-\- See more
-at: <https://www.scrumalliance.org/community/articles/2008/september/what-is-definition-of-done-(dod)#sthash.mCx6mHl7.dpuf
- 
+| Test Activity | Done when: | PPR Relevance/ Responsibility | Comment
+| --- | --- | --- | ---
+| **Unit Test** | All Unit Tests are automated | Developers | 
+|  | All Unit Tests Pass | | 
+| **Functional Test** | All priority 1 and 1 test cases Pass | PPR Team | Minimum level of done. Failed test cases of lower priority will have to be added to the project backlog.
+|  | All priority 1 and 2 test cases have been automated | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **User Acceptance Test** | All priority 1 and 2 test cases Pass | PPR Team & Business Users | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **Regression Test** | All identified regression test cases have been automated | PPR Team | This activity needs to be successful. A regression test suite will contain a subset of all other tests.
+|  | All test cases Pass | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+| **Security Test** | Security testing has been performed | PPR Team, Province | It might be that security testing is not a planned activity in every sprint.
+|  | All critical defects have been fixed | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **Integration Test** | All test cases Pass | Developers | As the integration components are the key enabler for the built functionality, we do need a full pass and automation.
+|  | All test cases have been automated | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **System Test** | All priority 1 and 2 test cases Pass | PPR Team | 
+|  | All priority 1 and 2 test scenarios have been automated | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **Smoke Test** | Smoke test passes 100% | PPR Team | A failed smoke test would mean that the solution does not run.
+|  | No open/deferred defects allowed | | 
+| **Performance Test** | All priority 1 and 2 performance goals are reached | Yes/iValua & CGI | It might be that performance testing is not a planned activity in every sprint.
+|  | Performance Test Scripts have been created and executed | | 
+|  | All resulting defects are: | | 
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **Test Automation** | All test automation tasks have been executed resulting in: | Maybe | Test automation is a key enabler, which will allow the project to keep moving forward through the sprints. If not finished the project will incur issues and challenges during later sprints and/or post release maintenance.
+|  | Automated Functional/Integration Tests | | 
+|  | Automated System Tests | | 
+|  | Automated Regression Test | | 
+|  | Scripted performance tests | | 
+|  | Updated test automation run book | | 
+| **Defects** | All defects have been reviewed and addressed | Yes/ ALL | At the end of the sprint there will be no open (new, in progress, re-opened, failed) defects.
+|  | All resulting defects are: | | Defects are either closed (no action necessary) or deferred and entered in the project backlog. The deferral is decided by the team.
+|  | Closed (fixed) | | 
+|  | Closed (not relevant) | | 
+|  | Deferred (on the backlog) | | 
+| **Test Management (Zephyr)** | All test plans are finalized and closed | Yes | 
+|  | All reports have been generated | | 
+|  | The activities for the current milestone have concluded | | 
+|  | The work for this cycle has been locked and archived | | 
+| **Documentation** | Test Documentation has been updated | Yes/Province Team | 
+| **Project Backlog** | The project backlog is updated with items that emanated from testing | Yes/Scrum Master | 
+|  | The team has agreed on the new testing items in the backlog | | 
 
-+----------------+----------------+----------------+----------------+
-| **Test         | **Done when:** | **PPR          | **Comment**    |
-| Activity**     |                | Relevance/     |                |
-|                |                | Re             |                |
-|                |                | sponsibility** |                |
-+================+================+================+================+
-| **Unit Test**  | -   All Unit   | No/PPR      |                |
-|                |     Tests    |                |                |
-|                |     are      |                |                |
-|                |                |                |                |
-|                |    automated |                |                |
-|                |                |                |                |
-|                | -   All Unit   |                |                |
-|                |     Tests    |                |                |
-|                |     Pass     |                |                |
-+----------------+----------------+----------------+----------------+
-| **Functional   | -   All        | Yes/ &      | Minimum level  |
-| Test**         |     priority | Province       | of done.       |
-|                |     1 and 1  |                | Failed test    |
-|                |     test     |                | cases of lower |
-|                |     cases    |                | priority will  |
-|                |     Pass     |                | have to be     |
-|                |                |                | added to the   |
-|                | -   All        |                | project        |
-|                |     priority |                | backlog.       |
-|                |     1 and 2  |                |                |
-|                |     test     |                |                |
-|                |     cases    |                |                |
-|                |     have     |                |                |
-|                |     been     |                |                |
-|                |                |                |                |
-|                |    automated |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |                |                |                |
-|                |      (fixed) |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |         (not |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |   -   Deferred |                |                |
-|                |         (on  |                |                |
-|                |         the  |                |                |
-|                |                |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **User         | -   All        | Yes/Province   |                |
-| Acceptance     |     priority |                |                |
-| Test**         |     1 and 2  |                |                |
-|                |     test     |                |                |
-|                |     cases    |                |                |
-|                |     Pass     |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |                |                |                |
-|                |      (fixed) |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |         (not |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |   -   Deferred |                |                |
-|                |         (on  |                |                |
-|                |         the  |                |                |
-|                |                |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **Regression   | -   All        | Yes/ and    | This activity  |
-| Test**         |                | Province       | needs to be    |
-|                |   identified |                | successful. A  |
-|                |                |                | regression     |
-|                |   regression |                | test suite     |
-|                |     test     |                | will contain a |
-|                |     cases    |                | subset of all  |
-|                |     have     |                | other tests.   |
-|                |     been     |                |                |
-|                |                |                |                |
-|                |    automated |                |                |
-|                |                |                |                |
-|                | -   All test   |                |                |
-|                |     cases    |                |                |
-|                |     Pass     |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                | -   Closed     |                |                |
-|                |     (fixed)  |                |                |
-+----------------+----------------+----------------+----------------+
-| **Security     | -   Security   | Yes/ and    | It might be    |
-| Test**         |     testing  | Province       | that security  |
-|                |     has been |                | testing is not |
-|                |                |                | a planned      |
-|                |    performed |                | activity in    |
-|                |                |                | every sprint.  |
-|                | -   All        |                |                |
-|                |     critical |                |                |
-|                |     defects  |                |                |
-|                |     have     |                |                |
-|                |     been     |                |                |
-|                |     fixed    |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                | -   Closed     |                |                |
-|                |     (fixed)  |                |                |
-|                |                |                |                |
-|                | -   Closed     |                |                |
-|                |     (not     |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                | -   Deferred   |                |                |
-|                |     (on the  |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **Integration  | -   All test   | Yes/PPR,    | As the         |
-| Test**         |     cases    |  and        | integration    |
-|                |     Pass     | Province       | components are |
-|                |                |                | the key        |
-|                | -   All test   |                | enabler for    |
-|                |     cases    |                | the built      |
-|                |     have     |                | functionality, |
-|                |     been     |                | we do need a   |
-|                |                |                | full pass and  |
-|                |    automated |                | automation.    |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                | -   Closed     |                |                |
-|                |     (fixed)  |                |                |
-|                |                |                |                |
-|                | -   Closed     |                |                |
-|                |     (not     |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                | -   Deferred   |                |                |
-|                |     (on the  |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **System       | -   All        | Yes/PPR,    |                |
-| Test**         |     priority |             |                |
-|                |     1 and 2  |                |                |
-|                |     test     |                |                |
-|                |     cases    |                |                |
-|                |     Pass     |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |     priority |                |                |
-|                |     1 and 2  |                |                |
-|                |     test     |                |                |
-|                |                |                |                |
-|                |    scenarios |                |                |
-|                |     have     |                |                |
-|                |     been     |                |                |
-|                |                |                |                |
-|                |    automated |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |                |                |                |
-|                |      (fixed) |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |         (not |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |   -   Deferred |                |                |
-|                |         (on  |                |                |
-|                |         the  |                |                |
-|                |                |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **Smoke Test** | -   Smoke test | Yes/All        | A failed smoke |
-|                |     passes   |                | test would     |
-|                |     100%     |                | mean that the  |
-|                |                |                | solution does  |
-|                | -   No         |                | not run.       |
-|                |              |                |                |
-|                |  open/deferred |                |                |
-|                |     defects  |                |                |
-|                |     allowed  |                |                |
-+----------------+----------------+----------------+----------------+
-| **Performance  | -   All        | Yes/PPR &   | It might be    |
-| Test**         |     priority |             | that           |
-|                |     1 and 2  |                | performance    |
-|                |                |                | testing is not |
-|                |  performance |                | a planned      |
-|                |     goals    |                | activity in    |
-|                |     are      |                | every sprint.  |
-|                |     reached  |                |                |
-|                |                |                |                |
-|                | -              |                |                |
-|                |    Performance |                |                |
-|                |     Test     |                |                |
-|                |     Scripts  |                |                |
-|                |     have     |                |                |
-|                |     been     |                |                |
-|                |     created  |                |                |
-|                |     and      |                |                |
-|                |     executed |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |                |                |                |
-|                |    resulting |                |                |
-|                |     defects  |                |                |
-|                |     are:     |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |                |                |                |
-|                |      (fixed) |                |                |
-|                |                |                |                |
-|                |     -   Closed |                |                |
-|                |         (not |                |                |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |   -   Deferred |                |                |
-|                |         (on  |                |                |
-|                |         the  |                |                |
-|                |                |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **Test         | -   All test   | Maybe          | Test           |
-| Automation**   |                |                | automation is  |
-|                |   automation |                | a key enabler, |
-|                |     tasks    |                | which will     |
-|                |     have     |                | allow the      |
-|                |     been     |                | project to     |
-|                |     executed |                | keep moving    |
-|                |                |                | forward        |
-|                |    resulting |                | through the    |
-|                |     in:      |                | sprints. If    |
-|                |                |                | not finished   |
-|                |                |                | the project    |
-|                |  -   Automated |                | will incur     |
-|                |                |                | issues and     |
-|                |     Function |                | challenges     |
-|                | al/Integration |                | during later   |
-|                |                |                | sprints and/or |
-|                |        Tests |                | post release   |
-|                |                |                | maintenance.   |
-|                |                |                |                |
-|                |  -   Automated |                |                |
-|                |                |                |                |
-|                |       System |                |                |
-|                |                |                |                |
-|                |        Tests |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |  -   Automated |                |                |
-|                |                |                |                |
-|                |   Regression |                |                |
-|                |         Test |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |   -   Scripted |                |                |
-|                |                |                |                |
-|                |  performance |                |                |
-|                |                |                |                |
-|                |        tests |                |                |
-|                |                |                |                |
-|                |                |                |                |
-|                |    -   Updated |                |                |
-|                |         test |                |                |
-|                |                |                |                |
-|                |   automation |                |                |
-|                |         run  |                |                |
-|                |         book |                |                |
-+----------------+----------------+----------------+----------------+
-| **Defects**    | -   *          | Yes/ ALL       | At the end of  |
-|                | *All** defects |                | the sprint     |
-|                |     have     |                | there will be  |
-|                |     been     |                | no open (new,  |
-|                |     reviewed |                | in progress,   |
-|                |     and      |                | re-opened,     |
-|                |                |                | failed)        |
-|                |    addressed |                | defects.       |
-|                |                |                |                |
-|                | -   All        |                | Defects are    |
-|                |                |                | either closed  |
-|                |    resulting |                | (no action     |
-|                |     defects  |                | necessary) or  |
-|                |     are:     |                | deferred and   |
-|                |                |                | entered in the |
-|                | -   Closed     |                | project        |
-|                |     (fixed)  |                | backlog. The   |
-|                |                |                | deferral is    |
-|                | -   Closed     |                | decided by the |
-|                |     (not     |                | team.          |
-|                |                |                |                |
-|                |    relevant) |                |                |
-|                |                |                |                |
-|                | -   Deferred   |                |                |
-|                |     (on the  |                |                |
-|                |     backlog) |                |                |
-+----------------+----------------+----------------+----------------+
-| **Test         | -   All test   | Yes/Roland     |                |
-| Management     |     plans    |                |                |
-| (TestRail)**     |     are      |                |                |
-|                |                |                |                |
-|                |    finalized |                |                |
-|                |     and      |                |                |
-|                |     closed   |                |                |
-|                |                |                |                |
-|                | -   All        |                |                |
-|                |     reports  |                |                |
-|                |     have     |                |                |
-|                |     been     |                |                |
-|                |                |                |                |
-|                |    generated |                |                |
-|                |                |                |                |
-|                | -   The        |                |                |
-|                |                |                |                |
-|                |   activities |                |                |
-|                |     for the  |                |                |
-|                |     current  |                |                |
-|                |                |                |                |
-|                |    milestone |                |                |
-|                |     have     |                |                |
-|                |                |                |                |
-|                |    concluded |                |                |
-|                |                |                |                |
-|                | -   The work   |                |                |
-|                |     for this |                |                |
-|                |     cycle    |                |                |
-|                |     has been |                |                |
-|                |     locked   |                |                |
-|                |     and      |                |                |
-|                |     archived |                |                |
-+----------------+----------------+----------------+----------------+
-| **D            | -   Test       | Yes/Province   |                |
-| ocumentation** |              | Team           |                |
-|                |  Documentation |                |                |
-|                |     has been |                |                |
-|                |     updated  |                |                |
-+----------------+----------------+----------------+----------------+
-| **Project      | -   The        | Yes/Scrum      |                |
-| Backlog**      |     project  | Master         |                |
-|                |     backlog  |                |                |
-|                |     is       |                |                |
-|                |     updated  |                |                |
-|                |     with     |                |                |
-|                |     items    |                |                |
-|                |     that     |                |                |
-|                |     emanated |                |                |
-|                |     from     |                |                |
-|                |     testing  |                |                |
-|                |                |                |                |
-|                | -   The team   |                |                |
-|                |     has      |                |                |
-|                |     agreed   |                |                |
-|                |     on the   |                |                |
-|                |     new      |                |                |
-|                |     testing  |                |                |
-|                |     items in |                |                |
-|                |     the      |                |                |
-|                |     backlog  |                |                |
-+----------------+----------------+----------------+----------------+
+## Continuous Improvement Process (CIP)
 
- 
-Continuous Improvement Process (CIP)
+A  **continuous improvement process** (abbreviated as CIP), is an ongoing effort to improve products, services, or processes. These efforts can seek \"incremental\" improvement over time or \"breakthrough\" improvement all at once.
 
-A  **continuous improvement process** (abbreviated as CIP), is an
-ongoing effort to improve products, services, or processes. These
-efforts can seek \"incremental\" improvement over time or
-\"breakthrough\" improvement all at once.
-
-In an agile project CIP is a permanent mindset, where every sprint
-intends to include improvements of what was done in the previous
-sprint(s). This is most clear in the defined review
-and retrospective events for each sprint.
-
- 
+In an agile project CIP is a permanent mindset, where every sprint intends to include improvements of what was done in the previous sprint(s). This is most clear in the defined review and retrospective events for each sprint.
 
 +----------------+----------------+--------------+----------------+
 | **Event**      | *              | **Duration** | **Frequency**  |
@@ -2859,115 +2477,10 @@ and retrospective events for each sprint.
 |                | sprints        |              |                |
 +----------------+----------------+--------------+----------------+
 
-In the Test Closure Process we indicate that we will collect information
-to feed into CIP.
+In the Test Closure Process we indicate that we will collect information to feed into CIP.
 
-An output of the two above mentioned events is an updated Agile practice
-status. This has value but is at a high level and does not completely
-address specific testing related processes.
+An output of the two above mentioned events is an updated Agile practice status. This has value but is at a high level and does not completely address specific testing related processes.
 
-For evaluating the testing activities and suggest potential
-improvements, we will use the following checklist to collect feedback
-for every sprint retrospective:
+For evaluating the testing activities and suggest potential improvements, we will use the following checklist to collect feedback for every sprint retrospective:
 
- 
-
-+----------------+----------------+----------------+----------------+
-| ** **          | **Issues?**    | *              | **Suggested    |
-|                |                | *Description** | Change         |
-|                |                |                | /Improvement** |
-+================+================+================+================+
-| **General**    |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Scope of work  | **N/A**        |                |                |
-|                |                |                |                |
-|                | **NO ISSUES**  |                |                |
-|                |                |                |                |
-|                | **SOME         |                |                |
-|                | CONCERNS**     |                |                |
-|                |                |                |                |
-|                | **NEEDS        |                |                |
-|                | IMPROVEMENT**  |                |                |
-|                |                |                |                |
-|                | **BRIGHT       |                |                |
-|                | IDEA**         |                |                |
-+----------------+----------------+----------------+----------------+
-| Planning       | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Resourcing     | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| **Process**    |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test           | **N/A**        |                |                |
-| Initiation     |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Planning  | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Design    | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Execution | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Closure   | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Status         | **N/A**        |                |                |
-| Reporting      |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Results   | **N/A**        |                |                |
-| Reporting      |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Defect         | **N/A**        |                |                |
-| Management     |                |                |                |
-+----------------+----------------+----------------+----------------+
-| **Test         |                |                |                |
-| Activities**   |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Unit Testing   | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Integration    | **N/A**        |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Functional     | **N/A**        |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| System Testing | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| User           | **N/A**        |                |                |
-| Acceptance     |                |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Smoke Testing  | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Regression     | **N/A**        |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Performance    | **N/A**        |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Security       | **N/A**        |                |                |
-| Testing        |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test           | **N/A**        |                |                |
-| Automation     |                |                |                |
-+----------------+----------------+----------------+----------------+
-| **Tool         |                |                |                |
-| s/Data/Other** |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Data      | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Test           | **N/A**        |                |                |
-| Environments   |                |                |                |
-+----------------+----------------+----------------+----------------+
-| Test Tools     | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-| Other          | **N/A**        |                |                |
-+----------------+----------------+----------------+----------------+
-
-**Legend:**
-
-**NO ISSUES**
-
-**SOME CONCERNS**
-
-**NEEDS IMPROVEMENT**
-
-**BRIGHT IDEA**
+![alt text](images/review.png "Review Worksheet")
