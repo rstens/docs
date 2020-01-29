@@ -1,3 +1,191 @@
+<!-- vscode-markdown-toc -->
+* 1. [Content](#Content)
+* 2. [Key Scope Statements](#KeyScopeStatements)
+* 3. [Risks, Dependencies, Assumptions and Constraints](#RisksDependenciesAssumptionsandConstraints)
+	* 3.1. [Dependencies](#Dependencies)
+	* 3.2. [Assumptions](#Assumptions)
+	* 3.3. [Constraints](#Constraints)
+* 4. [Test Process Introduction](#TestProcessIntroduction)
+	* 4.1. [Testing Pyramid](#TestingPyramid)
+	* 4.2. [First Layer](#FirstLayer)
+	* 4.3. [Second Layer](#SecondLayer)
+	* 4.4. [Third layer](#Thirdlayer)
+	* 4.5. [Test Processes](#TestProcesses)
+* 5. [Test Initiation Process](#TestInitiationProcess)
+	* 5.1. [Objectives](#Objectives)
+	* 5.2. [Description](#Description)
+	* 5.3. [Steps](#Steps)
+* 6. [Test Planning Process](#TestPlanningProcess)
+	* 6.1. [Objective](#Objective)
+	* 6.2. [Test Design Process](#TestDesignProcess)
+	* 6.3. [Objective](#Objective-1)
+	* 6.4. [Description](#Description-1)
+	* 6.5. [Challenges of Test Design in an Agile Environment](#ChallengesofTestDesigninanAgileEnvironment)
+	* 6.6. [Test Basis](#TestBasis)
+	* 6.7. [Test Case Design](#TestCaseDesign)
+	* 6.8. [Test Case Design Techniques\*](#TestCaseDesignTechniques)
+	* 6.9. [Process](#Process)
+	* 6.10. [Test Case Rating](#TestCaseRating)
+	* 6.11. [Test Case Rating Review](#TestCaseRatingReview)
+* 7. [Test Execution Process](#TestExecutionProcess)
+	* 7.1. [Objective](#Objective-1)
+	* 7.2. [Description](#Description-1)
+	* 7.3. [Automated Test Execution Process](#AutomatedTestExecutionProcess)
+	* 7.4. [The Manual Test Execution Process](#TheManualTestExecutionProcess)
+	* 7.5. [Requirements for Test Execution](#RequirementsforTestExecution)
+* 8. [Defect Management Process](#DefectManagementProcess)
+	* 8.1. [Objective](#Objective-1)
+	* 8.2. [Description](#Description-1)
+	* 8.3. [Output](#Output)
+* 9. [Defect Triage Meeting Guidelines](#DefectTriageMeetingGuidelines)
+	* 9.1. [Frequency](#Frequency)
+	* 9.2. [Scope of the meeting](#Scopeofthemeeting)
+	* 9.3. [Common Triage Meeting Guidelines](#CommonTriageMeetingGuidelines)
+	* 9.4. [Agenda for a Triage Meeting](#AgendaforaTriageMeeting)
+		* 9.4.1. [Outcome](#Outcome)
+* 10. [Test Closure Process](#TestClosureProcess)
+	* 10.1. [Objective](#Objective-1)
+	* 10.2. [Pre-requisites](#Pre-requisites)
+	* 10.3. [Description](#Description-1)
+	* 10.4. [Output](#Output-1)
+* 11. [Unit Test Strategy](#UnitTestStrategy)
+	* 11.1. [Definition](#Definition)
+	* 11.2. [Objectives](#Objectives-1)
+	* 11.3. [Expected Benefits](#ExpectedBenefits)
+	* 11.4. [Responsibilities](#Responsibilities)
+	* 11.5. [Scope](#Scope)
+		* 11.5.1. [Approach](#Approach)
+	* 11.6. [Test Design](#TestDesign)
+	* 11.7. [Test Execution](#TestExecution)
+	* 11.8. [Data Requirements](#DataRequirements)
+* 12. [Integration Test Strategy](#IntegrationTestStrategy)
+	* 12.1. [Definition](#Definition-1)
+	* 12.2. [Objectives](#Objectives-1)
+	* 12.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 12.4. [Scope](#Scope-1)
+	* 12.5. [Approach](#Approach-1)
+	* 12.6. [Test Design](#TestDesign-1)
+	* 12.7. [Test Execution](#TestExecution-1)
+	* 12.8. [Data Requirements](#DataRequirements-1)
+* 13. [Functional Test Strategy](#FunctionalTestStrategy)
+	* 13.1. [Definition](#Definition-1)
+		* 13.1.1. [Objectives](#Objectives-1)
+	* 13.2. [Scope](#Scope-1)
+	* 13.3. [Approach](#Approach-1)
+	* 13.4. [Test Design](#TestDesign-1)
+	* 13.5. [Test Case Design Techniques](#TestCaseDesignTechniques-1)
+		* 13.5.1. [Checklists](#Checklists)
+	* 13.6. [Test Execution](#TestExecution-1)
+	* 13.7. [Data Requirements](#DataRequirements-1)
+	* 13.8. [Exploratory Testing Strategy](#ExploratoryTestingStrategy)
+		* 13.8.1. [Definition](#Definition-1)
+		* 13.8.2. [Objectives](#Objectives-1)
+		* 13.8.3. [Expected Benefits](#ExpectedBenefits-1)
+		* 13.8.4. [Scope](#Scope-1)
+		* 13.8.5. [Approach](#Approach-1)
+		* 13.8.6. [Planning](#Planning)
+		* 13.8.7. [Test Design](#TestDesign-1)
+		* 13.8.8. [Test Execution](#TestExecution-1)
+		* 13.8.9. [Data Requirements](#DataRequirements-1)
+		* 13.8.10. [Infrastructure Requirements](#InfrastructureRequirements)
+* 14. [System Test Strategy](#SystemTestStrategy)
+	* 14.1. [Definition](#Definition-1)
+	* 14.2. [Objectives](#Objectives-1)
+	* 14.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 14.4. [Scope](#Scope-1)
+	* 14.5. [Approach](#Approach-1)
+	* 14.6. [Test Design](#TestDesign-1)
+	* 14.7. [Test Execution](#TestExecution-1)
+	* 14.8. [Data Requirements](#DataRequirements-1)
+	* 14.9. [Infrastructure Requirements](#InfrastructureRequirements-1)
+* 15. [User Acceptance Test Strategy](#UserAcceptanceTestStrategy)
+	* 15.1. [Definition](#Definition-1)
+	* 15.2. [Objectives](#Objectives-1)
+	* 15.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 15.4. [Scope](#Scope-1)
+	* 15.5. [Approach](#Approach-1)
+	* 15.6. [Test Design](#TestDesign-1)
+	* 15.7. [Test Execution](#TestExecution-1)
+	* 15.8. [Data Requirements](#DataRequirements-1)
+* 16. [Smoke Test Strategy](#SmokeTestStrategy)
+	* 16.1. [Definition](#Definition-1)
+	* 16.2. [Objectives](#Objectives-1)
+	* 16.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 16.4. [Scope](#Scope-1)
+	* 16.5. [Approach](#Approach-1)
+	* 16.6. [Test Design](#TestDesign-1)
+	* 16.7. [Test Execution](#TestExecution-1)
+	* 16.8. [Data Requirements](#DataRequirements-1)
+	* 16.9. [Infrastructure Requirements](#InfrastructureRequirements-1)
+* 17. [Regression Test Strategy](#RegressionTestStrategy)
+	* 17.1. [Definition](#Definition-1)
+	* 17.2. [Objectives](#Objectives-1)
+	* 17.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 17.4. [Scope](#Scope-1)
+	* 17.5. [Approach](#Approach-1)
+	* 17.6. [Test Design](#TestDesign-1)
+	* 17.7. [Test Execution](#TestExecution-1)
+	* 17.8. [Data Requirements](#DataRequirements-1)
+	* 17.9. [Infrastructure Requirements](#InfrastructureRequirements-1)
+* 18. [Performance Test Strategy](#PerformanceTestStrategy)
+	* 18.1. [Definition](#Definition-1)
+	* 18.2. [Objectives](#Objectives-1)
+	* 18.3. [Expected Benefits](#ExpectedBenefits-1)
+* 19. [Security Test Strategy](#SecurityTestStrategy)
+	* 19.1. [Definition](#Definition-1)
+	* 19.2. [Objectives](#Objectives-1)
+	* 19.3. [Expected Benefits](#ExpectedBenefits-1)
+	* 19.4. [Scope](#Scope-1)
+	* 19.5. [Approach](#Approach-1)
+	* 19.6. [OWASP Guidelines](#OWASPGuidelines)
+		* 19.6.1. [Phase 1: Before Development Begins](#Phase1:BeforeDevelopmentBegins)
+		* 19.6.2. [Phase 2: During Definition and Design](#Phase2:DuringDefinitionandDesign)
+		* 19.6.3. [Phase 3: During Development](#Phase3:DuringDevelopment)
+		* 19.6.4. [Phase 4: During Deployment (Security Testing)](#Phase4:DuringDeploymentSecurityTesting)
+		* 19.6.5. [Phase 5: Maintenance and Operations](#Phase5:MaintenanceandOperations)
+	* 19.7. [Test Execution](#TestExecution-1)
+	* 19.8. [Data Requirements](#DataRequirements-1)
+	* 19.9. [Infrastructure Requirements](#InfrastructureRequirements-1)
+* 20. [Test Automation Strategy](#TestAutomationStrategy)
+	* 20.1. [Definition](#Definition-1)
+	* 20.2. [Objectives](#Objectives-1)
+	* 20.3. [Scope](#Scope-1)
+	* 20.4. [Approach](#Approach-1)
+		* 20.4.1. [Approach for Functional Test Automation](#ApproachforFunctionalTestAutomation)
+	* 20.5. [Test Design](#TestDesign-1)
+	* 20.6. [Test Execution](#TestExecution-1)
+	* 20.7. [Data Requirements](#DataRequirements-1)
+	* 20.8. [Infrastructure Requirements](#InfrastructureRequirements-1)
+* 21. [Management Strategies](#ManagementStrategies)
+	* 21.1. [Status Reporting Strategy](#StatusReportingStrategy)
+	* 21.2. [Objectives](#Objectives-1)
+	* 21.3. [Key Guidelines](#KeyGuidelines)
+	* 21.4. [Key Caveats](#KeyCaveats)
+	* 21.5. [Planned reports](#Plannedreports)
+* 22. [Test Data Strategy](#TestDataStrategy)
+	* 22.1. [Test Data Usage](#TestDataUsage)
+* 23. [Defect Management Strategy](#DefectManagementStrategy)
+	* 23.1. [Objectives](#Objectives-1)
+* 24. [Rating Defects](#RatingDefects)
+	* 24.1. [Severity](#Severity)
+	* 24.2. [Symptoms versus Severity](#SymptomsversusSeverity)
+	* 24.3. [Priority](#Priority)
+* 25. [Test Results Strategy](#TestResultsStrategy)
+	* 25.1. [Objectives](#Objectives-1)
+	* 25.2. [Key Guidelines](#KeyGuidelines-1)
+	* 25.3. [Key Caveats](#KeyCaveats-1)
+* 26. [Test Environment Needs](#TestEnvironmentNeeds)
+* 27. [Test Tool Needs](#TestToolNeeds)
+* 28. [Definition of Done for Testing (DoD)](#DefinitionofDoneforTestingDoD)
+	* 28.1. [What is it?](#Whatisit)
+* 29. [Continuous Improvement Process (CIP)](#ContinuousImprovementProcessCIP)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
 # Introduction
 
 The Test Strategy for the PPR project aims to lay the appropriate QA and Test management foundation by implementing the tools, processes and governance to support the release plan for PPR.
@@ -14,7 +202,7 @@ This approach does not preclude us from applying a level of rigor and good testi
 
 For our project we are working with a set of Testing Principles, which contain good (some would say best) practices for QA and testing.
 
-## Content
+##  1. <a name='Content'></a>Content
 
 The Test Strategy addresses the following topics in detail:
 
@@ -43,15 +231,15 @@ The Test Strategy addresses the following topics in detail:
 - Responsibilities, Staffing, and Training Needs
 - Continuous Improvement Process (CIP)
 
-## Key Scope Statements
+##  2. <a name='KeyScopeStatements'></a>Key Scope Statements
 
 - The Test Strategy describes an approach for QA and Testing activities during the project with the intent to provide a foundation and guidance for future process improvement and alignment at PPR.
 - Test planning will commence ASAP and focused test plans will be implemented on a Sprint by Sprint basis.
 - Test plans will continue to evolve throughout the life of the PPR project.
 
-# Risks, Dependencies, Assumptions and Constraints
+##  3. <a name='RisksDependenciesAssumptionsandConstraints'></a>Risks, Dependencies, Assumptions and Constraints
 
-## Dependencies
+###  3.1. <a name='Dependencies'></a>Dependencies
 
 |     | Dependency Between | Potential Impact of Dependency | Owners |
 | :-: | ------------------ | ------------------------------ | ------ |
@@ -59,7 +247,7 @@ The Test Strategy addresses the following topics in detail:
 |  2  |                    |                                |        |       |
 |  3  |                    |                                |        |
 
-## Assumptions
+###  3.2. <a name='Assumptions'></a>Assumptions
 
 |     | Assumption to be proven                                                                                                                           | Impact of Assumption being incorrect    | Status | Owners |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------ | ------ |
@@ -67,7 +255,7 @@ The Test Strategy addresses the following topics in detail:
 | 2   | Technical Environment(s) will be available in time, in order to set up test automation tools chains, test management tools and process automation | Schedule, Capability, Quality, Coverage |        |
 | 3   | PPR Team will need to be trained in testing fundamentals, Agile process, test process, tools, defect management.                                  | Preparation                             |        |
 
-## Constraints
+###  3.3. <a name='Constraints'></a>Constraints
 
 |     | Constraints         | Impact of Constraint on testing effort                                                                                                                     | Owners | Update                                                                                                           |
 | :-: | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
@@ -91,9 +279,9 @@ An agile context would perhaps suggest foregoing any process. This is not the ca
 
 In the following chapters we describe a set of processes to guide our approach. It is certain that these processes will evolve during the first few sprints until the best fit for PPR is found.
 
-# Test Process Introduction
+##  4. <a name='TestProcessIntroduction'></a>Test Process Introduction
 
-## Testing Pyramid
+###  4.1. <a name='TestingPyramid'></a>Testing Pyramid
 
 ![Machine generated alternative text: User Acceptance Testing Automated
 Testing Exploratory Testing Manual Testing Unit/lntegration Testing
@@ -101,13 +289,13 @@ Testing Exploratory Testing Manual Testing Unit/lntegration Testing
 
 The pyramid gives an indication of the relative importance of the different test activities and the dependencies. We\'ll discuss this pyramid from the bottom upwards.
 
-## First Layer
+###  4.2. <a name='FirstLayer'></a>First Layer
 
 The basis for all testing is intensive unit testing (and integration testing) during development. Unit testing has the potential of eradicating most of the easy to find defects and many more complex ones. As almost every defect found after unit testing needs about the same amount of time in documentation, discussion and tracking, it would make sense to clear out the \"easy\" defects as soon as possible. It has been proven in practice and widely documented that a solid unit test effort has the largest impact on overall solution quality.
 
 Unit testing is the sturdy foundation of our testing pyramid.
 
-## Second Layer
+###  4.3. <a name='SecondLayer'></a>Second Layer
 
 The next layer is a trifecta of 3 types of testing:
 
@@ -119,13 +307,13 @@ Both Exploratory Testing and Manual (Functional) Testing are pre-cursors for
 
 As the pyramid indicates, automated testing will grow in scope during the sprint and exploratory testing and manual testing will shrink in scope. At the end of the sprint, the objective is that no more manual or exploratory tests are required for the Sprint\'s deliverables.
 
-## Third layer
+###  4.4. <a name='Thirdlayer'></a>Third layer
 
 User Acceptance testing follows the previous activities and build on the information already obtained. Contrary to popular belief, user acceptance testing is not so much a testing activity as a verification/confirmation one. The activities in user acceptance are complementary to the previous testing activities and not a repeat.
 
 The verification and validation of fit to business and ability to support the business processes (be it the application ones or the manual ones) will lead to the ability to answer the question: \"Would this new solution be able to support us and our clients in the work that we need to do?\".
 
-## Test Processes
+###  4.5. <a name='TestProcesses'></a>Test Processes
 
 After the Test Initiation each of the test activities contains the following processes:
 
@@ -138,11 +326,11 @@ After the Test Initiation each of the test activities contains the following p
 
 These process are described to provide guidance to the team. It is expected that processes will change, mature and otherwise evolve during the course of the sprints and the project.
 
-### Test Initiation Process
+##  5. <a name='TestInitiationProcess'></a>Test Initiation Process
 
 Test Initiation is the first stage of software testing life-cycle process. In this stage, the Test Strategy information will be created. This is a business level document which informs the Managers, Developers and Testers about the testing process, the approach and direction.
 
-**Objectives**
+###  5.1. <a name='Objectives'></a>Objectives
 
 - Create clarity and direction on:
   - Test processes
@@ -152,7 +340,7 @@ Test Initiation is the first stage of software testing life-cycle process. In th
   - Tools and infrastructure
   - Obtain team buy-in/approval
 
-**Description**
+###  5.2. <a name='Description'></a>Description
 
 During the test initiation process we consult, discuss and review.
 
@@ -165,7 +353,7 @@ We need to find the balance between:
 
 The test initiation for PPR will yield a large amount of guidance that at this phase seems to be needed. The actual project experience will adjust to what is actually needed and used. Still we are stating a clear starting point to develop understanding and to obtain agreement.
 
-**Steps**
+###  5.3. <a name='Steps'></a>Steps
 
 | Step                 | Participant(s)                                     | Description                                                     |
 | -------------------- | -------------------------------------------------- | --------------------------------------------------------------- |
@@ -175,7 +363,7 @@ The test initiation for PPR will yield a large amount of guidance that at this p
 | Review               | Test Lead, Business, Client, Testers, Project Team | Broad review leading up to be ready for approval.               |
 | Approval             | Client/Sponsor                                     | Based on endorsements obtained from the review process.         |
 
-### Test Planning Process
+##  6. <a name='TestPlanningProcess'></a>Test Planning Process
 
 Test Planning determines the scope, approach, resources and schedule of testing activities within the sprint.
 
@@ -187,7 +375,7 @@ Test planning is essential in:
 
 Test planning spans our Test Initiation, Test Planning and Test Design processes. Detailed Test plans will be created at Sprint planning time before and refined during the sprint.
 
-**Objective**
+###  6.1. <a name='Objective'></a>Objective
 
 - Define Scope
 - Define Test Approach (based on the Test Strategy set out here)
@@ -219,29 +407,29 @@ This is the activity that describes the \"who, what, when, where, and how\" of t
 |  9  | Build Test Matrix                                                             | The Test requirement coverage matrix is build up during the definition of the suites, and the individual test scripts/cases. The integration between JIRA and Zephyr and the project's practice to capture requirements and acceptance criteria allows the project to build up such a matrix in an efficient way as it is a natural outcome of the way we work with our tools.                                                                                                         | Traceability matrix is present and will allow for management of progress and coverage | This will be developed, maintained and pruned during the sprint.                                                                                                                                                                                               |
 | 10  | Determine Test Schedules                                                      | Based on test objectives, planned availability of testable functionality, resources, test data and test design readiness, we will create our initial test schedule.                                                                                                                                                                                                                                                                                                                    | Defined schedule will allow us to start the effort with reasonable confidence.        | First cut at pre-Sprint during the planning. The test schedule will be subject to review and change during the in-sprint planning exercises.                                                                                                                   |
 
-### Test Design Process
+###  6.2. <a name='TestDesignProcess'></a>Test Design Process
 
 - Test design is the act of identifying the appropriate tests.
 
 Designing efficient tests is an analytic process that requires information, skills, communication, a critical eye and an awareness of
 constraints and risks.
 
-### Objective
+###  6.3. <a name='Objective-1'></a>Objective
 
 - Obtain efficient test cases
 - Obtain full coverage for all functionality and processes with Test
   cases
 - Obtain a basis for test automation
 
-### Description
+###  6.4. <a name='Description-1'></a>Description
 
 Testing software is a real challenge, because there are so many types of test cases that come in so many different shapes and sizes. The truth is, there is no "one size fits all" method for software testing. Our project lends itself to a more casual, exploratory approach, where agile test cases are helpful. But with our strong test automation drive and with an eye for existing practices at PPR, we will design test cases that will combine the exploratory testing, manual test case and test automation aspects. Documenting software test cases is required when you have to conform to specific business rules. The project may have legal compliance requirements, or there may even be contractual obligations to provide documentary evidence of exactly what you tested. In that scenario, you obviously need detailed test cases. The PPR application will be in use for years, a set of well-thought-out agile test cases will provide value for money because they'll be reused again and again. They will even form the basis for automated tests.
 
-### Challenges of Test Design in an Agile Environment
+###  6.5. <a name='ChallengesofTestDesigninanAgileEnvironment'></a>Challenges of Test Design in an Agile Environment
 
 In cases where the project team is adopting an agile approach (i.e. features are designed in an iterative fashion) there is no clear picture for the application during any one sprint. Generally we find that the initial goal at the start of development changes as backlogs are revised (i.e. the sprint requirements change). Writing a lot of agile test cases then is going to be less effective because you'll have to rewrite them completely within a few builds. You might opt for a checklist approach instead and combine exploratory testing with a simple list of compatibility requirements that don't need to be spelled out in full. It may even be possible for testers simply to refer to the original user stories that informed the design or talk directly to the customer to find a basis for their testing. In PPR, we will adopt a hybrid approach where much of the actual business design, user stories and acceptance criteria have been developed and reviewed before the Sprint. This will allow testing to leverage the created information to help with the test design.
 
-### Test Basis
+###  6.6. <a name='TestBasis'></a>Test Basis
 
 The test basis is the information available (or to be acquired) that we base our tests on.
 
@@ -258,7 +446,7 @@ For PPR our test base is:
 - Constraints, Risks and Changes
 - Creativity and the drive to create efficient tests
 
-### Test Case Design
+###  6.7. <a name='TestCaseDesign'></a>Test Case Design
 
 Test case design is based on:
 
@@ -267,7 +455,7 @@ Test case design is based on:
 - The expected behavior of the feature
 - The constraints imposed on the behavior of that feature
 
-### Test Case Design Techniques\*
+###  6.8. <a name='TestCaseDesignTechniques'></a>Test Case Design Techniques\*
 
 Of all the test case design techniques which are available, the most effective for the PPR project are:
 
@@ -284,7 +472,7 @@ Of all the test case design techniques which are available, the most effective f
   - Checklists
   - Risk analysis and prioritization.
 
-### Process
+###  6.9. <a name='Process'></a>Process
 
 Test Design approach is indicated by the following steps:
 
@@ -307,7 +495,7 @@ These steps will be repeated several times based on the following triggers:
 - Scope changes
 - Bug Fixes
 
-### Test Case Rating
+###  6.10. <a name='TestCaseRating'></a>Test Case Rating
 
 Test case rating or priority setting is important for the following
 reasons:
@@ -345,15 +533,15 @@ The rating that the spreadsheet will come up with is the standard *test case pr
 |        High        | Mandatory to test, key functionality or higher risk test case. Would typically not be de-scoped even under pressure.   |
 |      Critical      | Mandatory. Without this test case the risk exists that critical functionality is not working correctly.                |
 
-### Test Case Rating Review
+###  6.11. <a name='TestCaseRatingReview'></a>Test Case Rating Review
 
 The ratings can be changed after review at the end of every Sprint or when ever it is deemed needed. As test case rating is a tool, we need to make sure that we keep our tool sharp and relevant.
 
-## Test Execution Process
+##  7. <a name='TestExecutionProcess'></a>Test Execution Process
 
 Test execution is the process of executing the code (running the application) and comparing the expected and actual results.
 
-### Objective
+###  7.1. <a name='Objective-1'></a>Objective
 
 - Obtain application Quality Status information
 - Find defects
@@ -363,7 +551,7 @@ Test execution is the process of executing the code (running the application)
 > Verification - "Have we built the product right?" and 
 > Validation - "Have we built the right product?"
 
-### Description
+###  7.2. <a name='Description-1'></a>Description
 
 In the project there are 5 groups/mechanisms involved with test execution. They are:
 
@@ -374,13 +562,13 @@ In the project there are 5 groups/mechanisms involved with test execution. They 
 5.  Test Automation Specialist - Other automated system testing (e.g. performance, security, accessibility scans etc.) in the Test(OpenShift) environment
 6.  User Acceptance Testers - UAT in the Prod (OpenShift) environment
 
-### Automated Test Execution Process
+###  7.3. <a name='AutomatedTestExecutionProcess'></a>Automated Test Execution Process
 
 The process is described in the following chart that shows the different systems, activities and parties involved:
 
 > **tbd**
 
-### The Manual Test Execution Process
+###  7.4. <a name='TheManualTestExecutionProcess'></a>The Manual Test Execution Process
 
 The manual and exploratory test execution steps are as follows:
 
@@ -391,7 +579,7 @@ The manual and exploratory test execution steps are as follows:
 |                                  Exploratory Testing                                  | Once a targeted functionality becomes initially available. The exact exploratory test will not be repeated, but variations on it can be in case of changes. Exploratory testing is also meant to generate ideas for test automation. | Agile Testers                |
 |                                User Acceptance Testing                                |                      In the last 50% of the Sprint and close to the release date, user acceptance testers will manually execute their test cases and scenarios. In case of defects, they would need to repeat.                       | Tester/Business Analyst/User |
 
-### Requirements for Test Execution
+###  7.5. <a name='RequirementsforTestExecution'></a>Requirements for Test Execution
 
 For manual test execution, the following needs to present:
 
@@ -406,13 +594,13 @@ For automated test execution, the following needs to be present:
 - Automated Unit Test and/or Functional Test Scripts have been created, debugged and incorporated into the test framework
 - Test Data is present/identified
 
-## Defect Management Process
+##  8. <a name='DefectManagementProcess'></a>Defect Management Process
 
-### Objective
+###  8.1. <a name='Objective-1'></a>Objective
 
 Define the defect management process to support efficient handling and documentation of defects found during sprints.
 
-### Description
+###  8.2. <a name='Description-1'></a>Description
 
 Documented defects are the main output of the testing team, it is this information that will allow the team to achieve its goals and identify anything that might need to be added to the backlog.
 
@@ -433,17 +621,17 @@ Defect Management Workflow
 
 > TBD for PRR - We might end up with a very light defect management process more
 
-### Output
+###  8.3. <a name='Output'></a>Output
 
 Managed defects.
 
-## Defect Triage Meeting Guidelines
+##  9. <a name='DefectTriageMeetingGuidelines'></a>Defect Triage Meeting Guidelines
 
 > This process might be a bit too heavy handed for PRR, but the guidelines for discussing an deciding on defects are applicable.
 
 A defect triage is a meeting/review initiated by the Test Lead/Scrum Master and attended by the leads. The objective of the meeting is to prioritize and track the defects to be addressed, ensuring timely and accurate resolution.  The triage will also be the time where testers readiness for the new build is communicated.
 
-### Frequency
+###  9.1. <a name='Frequency'></a>Frequency
 
 A Defect Triage should be held as needed during the sprints. The frequency and the number of occurrences will vary, but is typically based on:
 
@@ -451,13 +639,13 @@ A Defect Triage should be held as needed during the sprints. The frequency and t
 - the overall sprint schedule and
 - the current status of the sprint.
 
-### Scope of the meeting
+###  9.2. <a name='Scopeofthemeeting'></a>Scope of the meeting
 
 The defects that will be discussed are all the defects which have the status "New Issue".
 
 At the Defect Triage, each defect should be discussed; even those that are rated at a lower severity or ones that are deemed "simple".
 
-### Common Triage Meeting Guidelines
+###  9.3. <a name='CommonTriageMeetingGuidelines'></a>Common Triage Meeting Guidelines
 
 - The Test Lead/Scrum Master makes sure the right people are present.
   Nota Bene: Not all are needed all the time!
@@ -483,7 +671,7 @@ The priority of defects to be discussed are:
 
 - The triage meeting will also discuss readiness of testing for the new build in Test.
 
-### Agenda for a Triage Meeting
+###  9.4. <a name='AgendaforaTriageMeeting'></a>Agenda for a Triage Meeting
 
 **Introduction (2 minutes)**
 
@@ -544,18 +732,18 @@ ROLES & RESPONSIBILITIES of individuals in Defect Triage
 - Explains the level of complexity and the risk associated with each
   defect being presented at the Defect Triage
 
-#### Outcome
+####  9.4.1. <a name='Outcome'></a>Outcome
 
 Team is aligned on the severity and priority of defects discussed during the Defect Triage
 
-## Test Closure Process
+##  10. <a name='TestClosureProcess'></a>Test Closure Process
 
-### Objective
+###  10.1. <a name='Objective-1'></a>Objective
 
 Determine \"done-ness\".
 Wrap up the sprint\'s testing effort, consolidate results and report on outcome.
 
-### Pre-requisites
+###  10.2. <a name='Pre-requisites'></a>Pre-requisites
 
 **Before** closing the sprint test we determine if:
 
@@ -565,7 +753,7 @@ Wrap up the sprint\'s testing effort, consolidate results and report on outcome.
 4.  All test cases have been executed unless known and agreed upon
 5.  All defects have been addressed
 
-### Description
+###  10.3. <a name='Description-1'></a>Description
 
 During the project, every sprint will go through a test closure. In the test closure we determine that we are indeed finished and what activities are still outstanding to secure our test artifacts and
 results. Any outstanding work items will need to be discussed and decided upon.
@@ -589,7 +777,7 @@ The decision can be one of the following:
     d. Test data
     e. Relevant emails
 
-### Output
+###  10.4. <a name='Output-1'></a>Output
 
 **Test Closure Report**
 
@@ -622,11 +810,11 @@ follows:
 
 ![alt text](images/rating.png "Test Category Rating")
 
-## Unit Test Strategy
+##  11. <a name='UnitTestStrategy'></a>Unit Test Strategy
 
 Great no-nonsense article on [Unit Testing](https://blog.stevensanderson.com/2009/08/24/writing-great-unit-tests-best-and-worst-practises/).
 
-### Definition
+###  11.1. <a name='Definition'></a>Definition
 
 A unit test, as Agile teams understand the term, is a short program fragment written and maintained by the developers on the product team, which exercises some narrow part of the product\'s source code and checks the results.
 
@@ -646,7 +834,7 @@ Unit testing is guided by the following principle:
 - Developers will create a automated unit test for each component they produce.
 - The Unit Test scripts are documented and stored for re-use and reference.
 
-### Objectives
+###  11.2. <a name='Objectives-1'></a>Objectives
 
 Unit Testing aims to:
 
@@ -655,7 +843,7 @@ Unit Testing aims to:
 - Prevent defects being passed on to the next activity.
 - Allow for capturing the specifications for a unit and test against thoses specifications.
 
-### Expected Benefits
+###  11.3. <a name='ExpectedBenefits'></a>Expected Benefits
 
 - A team relying on automated unit tests can expect to reap some of the benefits of test-driven/supported development, in particular a decrease in defects caused by regression errors.
 - Early and frequent testing is a pattern common to successful delivery of working software.
@@ -664,17 +852,17 @@ Unit Testing aims to:
 > **To Note**
 > Agile development has led to a strong emphasis, among developers, on the use of automated checking procedures, and this has tended to marginalize other forms of testing, in particular that done by professional testers. Yet this work (which some Agile teams call \"exploratory\" testing) is no less important in an Agile context.
 
-### Responsibilities
+###  11.4. <a name='Responsibilities'></a>Responsibilities
 
 Unit testing is the responsibility of the developers in the team.
 
-### Scope
+###  11.5. <a name='Scope'></a>Scope
 
 **Unit, Component and Module Test Scope**
 
 In Agile projects the test scope is determined by the content of each sprint. Each user story in the sprint will consist of one or more software components, units and or modules and these will have one or (typically) more unit tests each.
 
-#### Approach
+####  11.5.1. <a name='Approach'></a>Approach
 
 This section provides an overview of the test approach that will be undertaken for Unit Testing.
 
@@ -741,7 +929,7 @@ The corollaries of this rule include:
 
 ![alt text](images/unittest.png "Where do unit tests sit?")
 
-### Test Design
+###  11.6. <a name='TestDesign'></a>Test Design
 
 For our unit test design we will be deploying multiple techniques and approaches in order to maximize our effectiveness.
 
@@ -758,13 +946,13 @@ For our unit test design we will be deploying multiple techniques and approaches
 
 The unit testing deliverables of the test design stage include unit test scripts, mock objects, and test data. These deliverables will be uploaded in the version control system and subsequently connected to the delivered code units/components.
 
-### Test Execution
+###  11.7. <a name='TestExecution'></a>Test Execution
 
 The outcome of a unit test is binary: either \"pass\" if the program\'s behavior is consistent with the recorded expectations, or \"fail\" otherwise. Developers will typically write a large number of unit tests (corresponding to a large number of program behaviors of interest), called a \"test suite\".
 
 Unit tests will first be executed on the developers workstation as part of the development process. Once development is deemed done, the code is updated in the version control system and the changes will be incorporated in the automated build and unit test process that will run multiple times a day.
 
-### Data Requirements
+###  11.8. <a name='DataRequirements'></a>Data Requirements
 
 As per definition in Test Data Strategy unit testing requires the following types of test data:
 
@@ -786,7 +974,7 @@ Test data for unit testing needs to be:
 
 If these requirements are met, a truly effective automated unit test solution can be brought into place. If the requirements are *not* met, it is very likely that the automated test solution will require significant maintenance and upkeep in later sprints effectively negating the benefits that automated unit testing can bring.
 
-## Integration Test Strategy
+##  12. <a name='IntegrationTestStrategy'></a>Integration Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for Integration Testing. In unit testing we are testing the individual components, which are then combined in large building blocks or assemblages. By frequently testing potential interactions (good or bad), the team will position itself to quickly deal with any issues found.
 
@@ -799,40 +987,40 @@ The term \"integration testing\" is used to mean three different things:
 In all the above three types of integration tests, the objective is to ensure that components link and work together.  The focus is on the effectiveness of functional interactions and compatibility at the
 interfaces.  Integration testing is an interim level of testing that occurs between unit testing and systems testing, and where groupings of components are tested.
 
-### Definition
+###  12.1. <a name='Definition-1'></a>Definition
 
 Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.
 
-### Objectives
+###  12.2. <a name='Objectives-1'></a>Objectives
 
 - Verify whether all the components/unit within assemblages interact correctly, for example across procedure calls or processes.
 - Verify the \"building blocks\" and add verified assemblages are added to a verified base which is then used to support the integration testing of further assemblages.
 - Verify interactions with external systems.
 
-### Expected Benefits
+###  12.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 - Individual system components work correctly within Registries infrastructure
 - External functionality works as expected
 - REST-full layer operates according to specification
 
-### Scope
+###  12.4. <a name='Scope-1'></a>Scope
 
 Full System Integration will be tested during System(-Integration) Testing.
 
-### Approach
+###  12.5. <a name='Approach-1'></a>Approach
 
 Integration tests are related to Unit tests and we\'ll use similar mechanisms and approaches to test.
 With integration tests we expand the scope of the test to include multiple components. During unit testing we want to isolate the component, in integration testing we want to have the unit connect to and work with other components. For this type of integration testing, the structure of the unit test scripts can be re-purposed and updated to reflect that actual data and results are coming back from the components it is integrated with.
 
-### Test Design
+###  12.6. <a name='TestDesign-1'></a>Test Design
 
 Test Design approach follows the Unit Test approach. As stated above, integration testing is performed to ensure that the units operate correctly when they are combined together, as parts in a working (but perhaps incomplete) application.  Integration testing usually proceeds from small subassemblies, containing only a few components, to larger ones containing many components.  Large complex products can go through many repetitive build-and-test cycles before they are fully integrated.
 
-### Test Execution
+###  12.7. <a name='TestExecution-1'></a>Test Execution
 
 Execution will follow the same path and frequency of the automated unit tests.
 
-### Data Requirements
+###  12.8. <a name='DataRequirements-1'></a>Data Requirements
 
 As per definition in Test Data Strategy integration testing requires the following types of test data:
 
@@ -849,19 +1037,19 @@ In Test Environments Needs we have defined which environments will be required
 | Integration Testing        | Developer Workstation, Dev, Test | Yes                      | Developers                   |
 | System Integration Testing | Test                             | Yes                      | BA, Tester, Business Testers |
 
-## Functional Test Strategy
+##  13. <a name='FunctionalTestStrategy'></a>Functional Test Strategy
 
 This section provides an overview of the test approach for Functional Testing.
 
 Functional testing is a large testing effort in our project. Functional tests tend to answer the questions like "can the user do this?" or "does this particular feature work?".
 
-### Definition
+###  13.1. <a name='Definition-1'></a>Definition
 
 Testing based on an analysis of the specification of the functionality of a component or system.
 
 In functional testing the testing of the functions of component or system is done. It refers to activities that verify a specific action or function of the code. This is typically described in a requirements specification or in a functional specification. For PPR we use the Acceptance Criteria (not to be confused with user acceptance criteria) that are defined as part of our user stories, as our test cases.
 
-#### Objectives
+####  13.1.1. <a name='Objectives-1'></a>Objectives
 
 - The main objective of functional testing is to verify that each function of the software application operates in accordance with the written acceptance (requirement) specifications.
 - Functional testing is to verify whether your product meets the *intended* functional acceptance criteria mentioned in your user story documentation.
@@ -876,7 +1064,7 @@ Expected Benefits
 - Basic usability is ensured
 - Defects are found
 
-### Scope
+###  13.2. <a name='Scope-1'></a>Scope
 
 Since a sprint works on a limited and different scope at the time, the actual scope for functional testing can vary. The following list would be our typical tests.
 
@@ -900,7 +1088,7 @@ Functional Testing typically includes the following:
 - Negative Tests
 - Web Content and configuration
 
-### Approach
+###  13.3. <a name='Approach-1'></a>Approach
 
 Testing functionality can be done from two perspectives:
 
@@ -911,7 +1099,7 @@ Testing functionality can be done from two perspectives:
 
 For PPR we deploy both perspectives to functionality testing. However, the emphasis will be initially on requirements-based testing (we would also include checklists, web standards etc.). Business process testing will come after the requirements have been tested and basic functionality is deemed acceptable. This approach is used to focus the testing effort.
 
-### Test Design
+###  13.4. <a name='TestDesign-1'></a>Test Design
 
 Our test design consists of the following high level categories of test
 cases:
@@ -921,7 +1109,7 @@ cases:
 - Negative tests: We think of all possible things that a user may do wrong in the system and make sure that a correct indication is displayed and no permanent damage is done to the system or its data.
 - Date dependent Tests: PPR is date dependent and a specific category of test cases is necessary
 
-### Test Case Design Techniques
+###  13.5. <a name='TestCaseDesignTechniques-1'></a>Test Case Design Techniques
 
 Of all the test case design techniques which are available, the most effective for the functional testing are:
 
@@ -937,11 +1125,11 @@ Of all the test case design techniques which are available, the most effective f
   - Checklists
   - Risk analysis and prioritization
 
-#### Checklists
+####  13.5.1. <a name='Checklists'></a>Checklists
 
 After each sprint the test team collects lessons learned and compiles these into checklists for future reference when developing test cases.
 
-### Test Execution
+###  13.6. <a name='TestExecution-1'></a>Test Execution
 
 Functional Testing is recognized as a separate activity that precedes
 system and user acceptance testing (See below), however other test
@@ -956,7 +1144,7 @@ activities below will also contain certain types of Functional tests.
 
 But the specific step of functional testing completely focuses on functionality and making sure that system under test is in good enough shape to continue with the next step: system testing.
 
-### Data Requirements
+###  13.7. <a name='DataRequirements-1'></a>Data Requirements
 
 | Usage              | Environment | Type of Test Data              | User            |
 | ------------------ | ----------- | ------------------------------ | --------------- |
@@ -968,25 +1156,25 @@ Infrastructure Requirements
 | ------------------ | -------------- | ------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Functional Testing | DEV/TEST       | No                       | Agile Testers | Functional Testing has different aspects to it, first we'll have the 'traditional' test cases and scripts, but we will also engage in exploratory testing. This type of testing can co-exist with Automated Functional Testing as long as we keep a clear data separation between the 2 activities. |
 
-### Exploratory Testing Strategy
+###  13.8. <a name='ExploratoryTestingStrategy'></a>Exploratory Testing Strategy
 
 This section provides an overview of the exploratory test approach for the PPR project.
 
 Exploratory testing is a style of software testing that emphasizes the personal freedom and responsibility of the individual tester to continually optimize the quality of his/her work by treating test-related learning, test design, test execution, and test result interpretation as mutually supportive activities that run in parallel
 throughout the project. This completely aligns with the agile project approach and has proven a very good fit for common agile scenarios like change, refinements and course correction.
 
-#### Definition
+####  13.8.1. <a name='Definition-1'></a>Definition
 
 Exploratory testing is an approach to software testing that is concisely described as simultaneous learning, test design and test execution.
 
-#### Objectives
+####  13.8.2. <a name='Objectives-1'></a>Objectives
 
 - Find defects quickly
 - React to quickly changing system
 - Define the basis for test automation and further exploratory test sessions
 - Identify missed or unclear requirements
 
-#### Expected Benefits
+####  13.8.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 - Less initial test preparation is needed
 - Important defects are found quickly
@@ -994,7 +1182,7 @@ Exploratory testing is an approach to software testing that is concisely describ
 - Opens the possibility for deductive reasoning based on the results of previous observations
 - Exploration throughout testing continuously challenges the System Under Test with new scenarios
 
-#### Scope
+####  13.8.4. <a name='Scope-1'></a>Scope
 
 While the software is being tested, the tester learns things that together with experience and creativity generates new value-added tests to run. Exploratory testing is often thought of as a black box testing
 technique. Instead, those who have studied it consider it a test approach that can be applied to any test technique, at any stage in the development process. The key is not the test technique nor the item
@@ -1002,15 +1190,15 @@ being tested or reviewed; the key is the cognitive engagement of the tester, and
 
 The scope for exploratory testing is largely functional testing, but has great benefit for business process testing as well.
 
-#### Approach
+####  13.8.5. <a name='Approach-1'></a>Approach
 
 One of the criticisms of exploratory testing is that it can be purely ad-hoc, uncontrolled, non-traceable. Indeed if the approach is left undefined this would be a certainty. The answer to this is to instill a lightweight process call Session-Based Test Management (SBTM), a method for measuring and managing exploratory testing.
 
-#### Planning
+####  13.8.6. <a name='Planning'></a>Planning
 
 Testers using session-based testing can adjust their testing daily to fit the needs of the project. Charters can be added or dropped over time as tests are executed and/or requirements change.
 
-#### Test Design
+####  13.8.7. <a name='TestDesign-1'></a>Test Design
 
 Exploratory testing is test design on the fly, but that does not mean it is random.
 
@@ -1042,15 +1230,15 @@ As testing is the process of asking questions of the solution. For example, the 
   - Is what I see, here, a problem? If so, why?
   - How important is this problem? Why should it be fixed?
 
-#### Test Execution
+####  13.8.8. <a name='TestExecution-1'></a>Test Execution
 
 Exploratory Tests can be executed during all test activities (except for test automation) but will mostly be used by the agile testers and the user acceptance testers.
 
-#### Data Requirements
+####  13.8.9. <a name='DataRequirements-1'></a>Data Requirements
 
 The data required is dependent on where the exploratory test is executed. Please see Test Data Strategy for the different environments and type of test data.
 
-#### Infrastructure Requirements
+####  13.8.10. <a name='InfrastructureRequirements'></a>Infrastructure Requirements
 
 The infrastructure required for exploratory testing is:
 
@@ -1058,29 +1246,29 @@ The infrastructure required for exploratory testing is:
 - ZenHub
 - TestRail
 
-## System Test Strategy
+##  14. <a name='SystemTestStrategy'></a>System Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for System Testing. System testing occurs at 100% integration, i.e., once all the components in the system planned for the specific sprint have been integrated together.
 
-### Definition
+###  14.1. <a name='Definition-1'></a>Definition
 
 The process of testing an integrated system to verify that it meets specified requirements.  During System Testing, the features and requirements of the product as defined are tested.  Only after it has been determined that the product meets a predetermined quality level, should the product system integration testing begin. The integration of systems and packages; interfaces to external organizations (e.g. addressing integration with existing applications - purchased
 packages and legacy, internally developed software - as well as effective security, infrastructure, performance, and network support/optimization) is tested.
 
-### Objectives
+###  14.2. <a name='Objectives-1'></a>Objectives
 
 - Verify the fully integrated system works correctly
 - Verify non-functional requirements specified for the system
 - Verify end-to-end functionality including all integration points
 - Verify Business flows
 
-### Expected Benefits
+###  14.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 - Correctly working and behaving system
 - System conforms to the non-functional requirements
 - System is proven ready for deployment
 
-### Scope
+###  14.4. <a name='Scope-1'></a>Scope
 
 - Business End-to-End testing:
   - _Testing a business process from its start through all steps until a conclusion has been reached. This could involve accessing multiple systems._
@@ -1102,7 +1290,7 @@ packages and legacy, internally developed software - as well as effective securi
     - _Accessibility testing is a subset of usability testing where in the users under consideration are people with all abilities and disabilities._
 -   Automated Testing
 
-### Approach
+###  14.5. <a name='Approach-1'></a>Approach
 
 System Testing activities should only progress once it is established that the system functions as intended. Functional Testing plays a major role in this assessment. System testing also requires a fully integrated system. For PPR that means that the functionality that is delivered in the sprint is completely integrated with all components that it needs. If not all components are available because they are planned for a later sprint, full system integration testing for that functionality needs to be planned for a later sprint.
 
@@ -1125,43 +1313,43 @@ Not all system testing scope will be able to be executed in the earlier sprints.
 
 Per sprint we'll plan what is in scope for that sprint.
 
-### Test Design
+###  14.6. <a name='TestDesign-1'></a>Test Design
 
 Similar approach as with Functional Test Strategy. The design for System Integration test differs in scope as we are evaluating the system holistically and not on individual functionalities.
 
-### Test Execution
+###  14.7. <a name='TestExecution-1'></a>Test Execution
 
 System Integration Testing will be executed by the agile testers. During execution in the early sprints, user acceptance testers will be operating in the same environment pursuing their acceptance testing goals.
 
-### Data Requirements
+###  14.8. <a name='DataRequirements-1'></a>Data Requirements
 
 | Usage | Environment | Type of Test Data | User | Comments
 | --- | --- | --- | --- | ---
 | System Integration Testing | TEST | Subset of masked data and purposely created test data, but using a different and stable subset of data. | All testing |
 
-### Infrastructure Requirements
+###  14.9. <a name='InfrastructureRequirements-1'></a>Infrastructure Requirements
 
 | Type of Testing Environment(s) | Integrated with Back end | Who | Description
 | --- | --- | --- | ---
 | System / Intersystem Testing | TEST | Yes |Agile Testers | In this environment we will be able to test the full end to end integration including back end services. |
 
-## User Acceptance Test Strategy
+##  15. <a name='UserAcceptanceTestStrategy'></a>User Acceptance Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for User Acceptance Testing (UAT). This process obtains confirmation by Testers/Business Analysts, from the business, that a system meets mutually agreed-upon requirements. 
 
-### Definition
+###  15.1. <a name='Definition-1'></a>Definition
 
 Formal verification/validation with respect to user needs, requirements and business processes conducted to determine whether or not a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system.
 
 UAT is one of the final stages of a project and often occurs before a client or customer accepts the new system.
 
-### Objectives
+###  15.2. <a name='Objectives-1'></a>Objectives
 
 -   Verify that the user acceptance criteria are met
 -   Verify that the system will serve its intended purpose.
 -   Verify that the application is ready to be deployed
 
-### Expected Benefits
+###  15.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 -   Compliance with the business requirements will be clear.
 -   Functionality/business logic problems that earlier testing might have missed will be identified.
@@ -1169,7 +1357,7 @@ UAT is one of the final stages of a project and often occurs before a client or 
 -   System ownership acceptance by the business.
 -   Improve/establish confidence with the new solution.
 
-### Scope
+###  15.4. <a name='Scope-1'></a>Scope
 
 UAT adds value to the test and validation process when it focuses on the topics that have not been evaluated before with a user-centric focus.
 
@@ -1189,7 +1377,7 @@ UAT does **not** need to focus on:
 
 In other words: All the testing that has been performed by the developers and testers.
 
-### Approach
+###  15.5. <a name='Approach-1'></a>Approach
 
 For PPR we distinguish between 3 different categories of activities which could be characterized as UAT. These are:
 
@@ -1215,7 +1403,7 @@ For PPR we distinguish between 3 different categories of activities which could 
 
 Early involvement of UAT has significant benefits to the project as user/business perspective is valuable and increases the success of the project.
 
-### Test Design
+###  15.6. <a name='TestDesign-1'></a>Test Design
 
 Test design is a hybrid of standard test cases and exploratory sessions. Exploratory sessions will be in focus for verification and validation in the earlier Sprints to help with the higher levels of ongoing change. In the later sprints, test cases will be used.
 
@@ -1239,7 +1427,7 @@ Both Test Cases and exploratory sessions are recorded in the Zephyr test manag
 
 UAT test cases will be incorporated into the automated testing suite if they prove to be viable automation candidates. With the multiple iterations that the different sprint provide, this will help the UAT testers focus on new tests and new exploratory sessions and not on regression testing previously executed tests.
 
-### Test Execution
+###  15.7. <a name='TestExecution-1'></a>Test Execution
 
 In the context of PPR we do have an extra challenge with regards to the end users of the system. As some of our end users are not internal to the organization, a different strategy was conceived to solicit their input. This will be the User Experience Focus Groups that will be held several times during the development of the PPR system. This activity is **not** in scope for the core test team.
 
@@ -1250,7 +1438,7 @@ In the context of PPR we do have an extra challenge with regards to the end user
 | User Experience Focus Groups | 2/3 Times during sprints | Typical clients, staff | PPR Team
 
 
-### Data Requirements
+###  15.8. <a name='DataRequirements-1'></a>Data Requirements
 
 | Usage | Environment | Type of Test Data | User | Comments |
 |--- |--- |--- |--- |--- 
@@ -1262,7 +1450,7 @@ In the context of PPR we do have an extra challenge with regards to the end user
 | User Acceptance Testing | TEST | Yes | Testers (User/Business Focus) | The UAT will require a system that contains production data. The staging/prod environment will be close to an exact copy of production, providing the UAT testers with realistic experience.
 | User Experience Focus Groups | TEST | Yes | Clients, staff | Temporary access to participating members will be provided.
 
-## Smoke Test Strategy
+##  16. <a name='SmokeTestStrategy'></a>Smoke Test Strategy
 
 This section provides an overview of the test approach that we will deploy for Smoke Testing.  
 
@@ -1273,17 +1461,17 @@ One can perform smoke tests either manually or using an automated tool. In the c
 >**Smoke Test Origin**
 > From the electronics industry: The term \"smoke test\" refers to powering on a device simply to make sure it doesn\'t start smoking (indicating a major problem).
 
-### Definition
+###  16.1. <a name='Definition-1'></a>Definition
 
 A subset of all defined/planned test cases that cover the main functionality of a component or system, to ascertain that the most crucial functions of a program work, but not bothering with finer details.
 
-### Objectives
+###  16.2. <a name='Objectives-1'></a>Objectives
 
 -   To assess if the installed application is operational
 -   To prevent the team from wasting time on a non functional build
 -   To quickly identify issues with a newly installed application
 
-### Expected Benefits
+###  16.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 -   Save time and improve efficiency
 -   As smoke tests are typically automated, they can be run as part of
@@ -1292,7 +1480,7 @@ A subset of all defined/planned test cases that cover the main functionality of 
 -   Prevention of wasted cycles because of releasing a non functional
     build
 
-### Scope
+###  16.4. <a name='Scope-1'></a>Scope
 
 A good smoke test addresses the key capabilities of the provided build. By verifying these key capabilities, we\'ll gain a good insight into the configuration (and eventual problems) of the build.
 
@@ -1317,7 +1505,7 @@ The following table indicates the types of test, order and what  information we 
 
 Typically a failed smoke test means that the build does not get accepted into testing (or release) until the found issues have been addressed. A failed smoke test is a critical priority item to address as following activities are now halted.
 
-### Approach
+###  16.5. <a name='Approach-1'></a>Approach
 
 We will start building our smoke test (both automated and manual checks)
 as soon as code is built.
@@ -1347,7 +1535,7 @@ When new configuration is added to the build, we will:
 
 As part of the sprint end phase we will review the smoke test scripts to make sure that we have the slimmest and most effective approach that can be carried forward into the next sprint.
 
-### Test Design
+###  16.6. <a name='TestDesign-1'></a>Test Design
 
 See scope for the type of tests that we will have to design.
 
@@ -1370,7 +1558,7 @@ Test cases aim to isolate:
 -   Build issues
 -   Application Issues
 
-### Test Execution
+###  16.7. <a name='TestExecution-1'></a>Test Execution
 
 The smoke tests will be executed:
 
@@ -1384,20 +1572,20 @@ In that case, the following caveats must be taken into account:
 -   Typically we would need to forego, writing, updating or deleting information (unless specific test accounts are available for exactly this purpose)
 -   The smoke test will not be a replacement for the business user production-ready check
 
-### Data Requirements
+###  16.8. <a name='DataRequirements-1'></a>Data Requirements
 
 The smoke test would need test data that was already identified for the existing re-purposed tests or will need to be created. See Test Environments Needs
 
-### Infrastructure Requirements
+###  16.9. <a name='InfrastructureRequirements-1'></a>Infrastructure Requirements
 
 Smoke test will utilize the QA Automation infrastructure.
 
-## Regression Test Strategy
+##  17. <a name='RegressionTestStrategy'></a>Regression Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for Regression Testing. Automated regression testing is essential to agile projects, with sprints moving forward rapidly and with a searchlight focus on specific functionality, it is unlikely that the team will have time to spend time regression testing previously
 developed functionality. Test automation needs to fill that gap. 
 
-### Definition
+###  17.1. <a name='Definition-1'></a>Definition
 
 Regression testing is a type of software testing that seeks to uncover problems, or regressions, in existing functional and non-functional areas of a system after changes such as enhancements, patches or configuration changes, have been made to them.
 
@@ -1412,13 +1600,13 @@ Regression testing is guided by the following principle: 
 > -   Systems will be regression tested to mitigate risk on unintended errors after changes.
 > -   Regression tests will be automated where appropriate.
 
-### Objectives
+###  17.2. <a name='Objectives-1'></a>Objectives
 
 -   Ensure that defects have not been introduced or uncovered in unchanged areas of the software, as a result of changes made
 -   Create confidence in the solution by making sure that \"everything     still works\"
 -   Through automation relieve the testers from manually running regression tests
 
-### Expected Benefits
+###  17.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 -   Confidence in the solution
 -   Support the agile process
@@ -1431,7 +1619,7 @@ Regression testing is guided by the following principle: 
 
 The effort versus effectivity in finding defects ratio is lopsided in regression testing, which is often the reason why manual regression testing is cut short, optimized or even ignored.
 
-### Scope
+###  17.4. <a name='Scope-1'></a>Scope
 
 The scope of regression testing is significantly larger than for smoke testing. This does not mean that we\'ll (re-)test everything in our regressions tests (automated or not), we want to be effective, frugal and smart about our choice for the scope of our regression tests.
 
@@ -1444,7 +1632,7 @@ Guidelines for scope:
 
 See also the Test Design section for guidance on coverage.
 
-### Approach
+###  17.5. <a name='Approach-1'></a>Approach
 
 Regression testing exists because of modifications to the application code, system and configuration. But testing modifications involves more than just regression testing.
 
@@ -1483,7 +1671,7 @@ On a regular basis:
 -   Add new tests
 -   Optimize execution
 
-### Test Design
+###  17.6. <a name='TestDesign-1'></a>Test Design
 
 In the design of our regression test suite we have to consider criticality, time available and the amount of value/comfort the tests add. An inclusion of all the tests that the test team has developed is typically not a very efficient way of structuring the regression test. The risk is that a lot of time will be spend on designing/automating tests that add very little value.
 
@@ -1563,7 +1751,7 @@ The following factors are the common causes for diminishing effectiveness of the
 -   Planning and explore changes in the regression test suite framework if there are major changes in the product focus (reacting as part of our agile methodology)
 -   Using metrics to evaluate the effectiveness of the test suite (defect find/miss rates, run time etc.)
 
-### Test Execution
+###  17.7. <a name='TestExecution-1'></a>Test Execution
 
 Manual regression testing will take place in the regular test environment and will be scheduled in per build, based on our analysis.
 
@@ -1576,57 +1764,57 @@ The automated regression tests will be executed:
 
 A fully developed regression test suite is **not** intended to run when the application is released in the production environment.
 
-### Data Requirements
+###  17.8. <a name='DataRequirements-1'></a>Data Requirements
 
 The regression test would need similar test data to what was already identified for existing tests or it will need to be created. See Test Environments Needs
 
 The regression test data would work with its own set of accounts etc. This to avoid any cross-contamination with data that is used by other users, developers and testers. This own set of data is critical to the stability of the automated regression test runs.
 
-### Infrastructure Requirements
+###  17.9. <a name='InfrastructureRequirements-1'></a>Infrastructure Requirements
 
 Manual regression testing will take place in the regular TEST environment. Automated regressions test will also utilize the TEST environment.
 It is also conceivable that portions of the regressions test run in Dev and on the developers' workstations. The earlier a regression issu can be detected the better it is. 
 
-## Performance Test Strategy
+##  18. <a name='PerformanceTestStrategy'></a>Performance Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for Performance Testing.
 
 The [risk analysis](files/PPRPerformanceRisks.xlsx) show the identified risk for PPR and based on that offers a suggested approach for performance testing.
 
-### Definition
+###  18.1. <a name='Definition-1'></a>Definition
 
 Performance testing is a type of testing intended to determine the responsiveness, throughput, reliability, and/or scalability of a system under a given workload.
 
-### Objectives
+###  18.2. <a name='Objectives-1'></a>Objectives
 
 -   Assess production readiness
 -   Evaluate against performance criteria
 -   Find the source of performance problems
 -   Support system tuning
 
-### Expected Benefits
+###  18.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 -   Confidence that the solution will support the anticipated user load
 -   Right-sizing of the infrastructure to limit the capital outlay
 -   Find errors that can only be found with the solution under load
 -   Validation infrastructure choices
 
-## Security Test Strategy
+##  19. <a name='SecurityTestStrategy'></a>Security Test Strategy
 
 This section provides an overview of the test approach that will be undertaken for Security Testing. We will follow the OWASP Testing Guide, that can be found [here](https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents).
 
 Security testing is a highly specialized task and the project will depend on an external vendor to deliver. 
 
-### Definition
+###  19.1. <a name='Definition-1'></a>Definition
 
 A security test is a method of evaluating the security of a computer system or network by methodically validating and verifying the effectiveness of application security controls. 
 
-### Objectives
+###  19.2. <a name='Objectives-1'></a>Objectives
 
 -   Actively analyze the application for any weaknesses, technical flaws, or vulnerabilities. Any security issues that are found will be presented to the system owner, together with an assessment of the impact, a proposal for mitigation or a technical solution.
 -   Seek to eliminate the risk of exposing member data to non-authorized parties.
 
-### Expected Benefits
+###  19.3. <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 -   Improved security
 -   Increased level of confidence with the solution
@@ -1634,7 +1822,7 @@ A security test is a method of evaluating the security of a computer system or n
 -   Clear identification of remaining risks
 -   Recommendations for improvements
 
-### Scope
+###  19.4. <a name='Scope-1'></a>Scope
 
 The system scope of the security test is:
 
@@ -1644,7 +1832,7 @@ The system scope of the security test is:
 -   Installation/Configuration of the solution
 -   Installation and configuration of the physical/virtual infrastructure
 
-### Approach
+###  19.5. <a name='Approach-1'></a>Approach
 
 At a high level the following activities will be executed during the
 delivery of security testing:
@@ -1666,9 +1854,9 @@ Additionally the following activities could form part of the engagement but tech
 **Security related activities by the development and release team**
 Please review the [OWASP](https://www.owasp.org/index.php/Main_Page) guidelines for the development and release team activities:
 
-### OWASP Guidelines 
+###  19.6. <a name='OWASPGuidelines'></a>OWASP Guidelines 
 
-#### Phase 1: Before Development Begins
+####  19.6.1. <a name='Phase1:BeforeDevelopmentBegins'></a>Phase 1: Before Development Begins
 
 ##### Phase 1.1: Define a SDLC
 
@@ -1686,7 +1874,7 @@ If the application is to be developed in Java, it is essential that there is a J
 
 Before development begins, plan the measurement program. By defining criteria that need to be measured, it provides visibility into defects in both the process and product. It is essential to define the metrics before development begins, as there may be a need to modify the process in order to capture the data.
 
-#### Phase 2: During Definition and Design
+####  19.6.2. <a name='Phase2:DuringDefinitionandDesign'></a>Phase 2: During Definition and Design
 ##### Phase 2.1: Review Security Requirements
 
 Security requirements define how an application works from a security perspective. It is essential that the security requirements are tested. Testing in this case means testing the assumptions that are made in the requirements and testing to see if there are gaps in the requirements definitions.
@@ -1723,7 +1911,7 @@ Once the design and architecture is complete, build models that describe how the
 Armed with design and architecture reviews explaining exactly how the system works, undertake a threat modeling exercise. Develop realistic threat scenarios. Analyze the design and architecture to ensure that these threats have been mitigated, accepted by the
 business, or assigned to a third party, such as an insurance firm. When identified threats have no mitigation strategies, revisit the design and architecture with the systems architect to modify the design. 
 
-#### Phase 3: During Development
+####  19.6.3. <a name='Phase3:DuringDevelopment'></a>Phase 3: During Development
 
 Theoretically, development is the implementation of a design. However, in the real world, many design decisions are made during code development. These are often smaller decisions that were either too detailed to be described in the design, or issues where no policy or standard guidance was offered. If the design and architecture were not adequate, the developer will be faced with many decisions. If there were insufficient policies and standards, the developer will be faced with even more decisions. 
 
@@ -1749,7 +1937,7 @@ In terms of return on resources invested (mostly time), static code reviews prod
 
 For more details on OWASP checklists, please refer to [OWASP Guide for Secure Web Applications](https://www.owasp.org/index.php/OWASP_Guide_Project), or the latest edition of the [OWASP Top 10](https://www.owasp.org/index.php/OWASP_Top_10).
 
-#### Phase 4: During Deployment (Security Testing)
+####  19.6.4. <a name='Phase4:DuringDeploymentSecurityTesting'></a>Phase 4: During Deployment (Security Testing)
 ##### Phase 4.1: Application Penetration Testing
 
 Having tested the requirements, analyzed the design, and performed code review, it might be assumed that all issues have been caught. Hopefully this is the case, but penetration testing the application after it has been deployed provides a last check to ensure that nothing has been missed. 
@@ -1758,7 +1946,7 @@ Having tested the requirements, analyzed the design, and performed code review, 
 
 The application penetration test should include the checking of how the infrastructure was deployed and secured. While the application may be secure, a small aspect of the configuration could still be at a default install stage and vulnerable to exploitation.
 
-#### Phase 5: Maintenance and Operations
+####  19.6.5. <a name='Phase5:MaintenanceandOperations'></a>Phase 5: Maintenance and Operations
 
 ##### Phase 5.1: Conduct Operational Management Reviews
 
@@ -1787,17 +1975,17 @@ Schedule and tools that will be used:
 -   Manual testing
     -   Manual; Weekly
 
-### Test Execution
+###  19.7. <a name='TestExecution-1'></a>Test Execution
 
 Security Testing can be executed as part of the sprint test process.
 
 The security testing execution will have to be done well before the release date once the full integrated and configured system becomes available.
 
-### Data Requirements
+###  19.8. <a name='DataRequirements-1'></a>Data Requirements
 
 Security testing will be executed in the staging environment containing full size data.
 
-### Infrastructure Requirements
+###  19.9. <a name='InfrastructureRequirements-1'></a>Infrastructure Requirements
 
 The staging environment needs to be configured exactly as the intended production environment.
 
@@ -1810,17 +1998,17 @@ This means that the following is identical:
 -   Tools and utilities that will be run on the platforms during production
 -   Levels of encryption
 
-## Test Automation Strategy
+##  20. <a name='TestAutomationStrategy'></a>Test Automation Strategy
 
 This section provides an overview of our test automation approach. 
 
 In agile projects, test automation is essential to build, integrate, test and deploy an application with production-like quality every day. Agile projects have limited time to conduct existing regression tests manually so they depend on accurate automated regression testing in order to maintain effective progress. Test automation is seen as a key enabler for Agile projects, especially when practices like continuous integration are used. It also enables the test team to test aspects of the application that could either be very cumbersome or not possible in a manual test.
 
-### Definition
+###  20.1. <a name='Definition-1'></a>Definition
 
 Automated software testing is a process in which software tools execute pre-scripted tests on a software application before it is released into production.
 
-### Objectives
+###  20.2. <a name='Objectives-1'></a>Objectives
 
 The objective of automated testing is to simplify as much of the testing effort as possible with a minimum set of scripts. Automated testing tools are capable of executing tests, reporting outcomes and comparing results with earlier test runs. Tests carried out with these tools can be run repeatedly, at any time of day.
 
@@ -1843,7 +2031,7 @@ The following benefits are expected from test automation:
 -   Free up the testers to focus on complex test situations and expand on the test design
 -   Build up of a body of tests that will repeatedly runs over the lifetime of the application
 
-### Scope
+###  20.3. <a name='Scope-1'></a>Scope
 
 The scope of test automation in an agile project is potentially wide:
 | Activity | Test Automation Activity | Description | Responsibility
@@ -1856,7 +2044,7 @@ The scope of test automation in an agile project is potentially wide:
 | | Automated Functional Tests | The test automation specialist develops automated functional smoke tests based on the test design and test ideas developed by the test group. These tests are used on an ongoing basis during the sprints and the lifetime of the application. | Test Automation Specialist
 | Performance Testing | Performance Test | The test automation specialist develops user simulation scripts that will be used for performance and load testing. | Test Automation Specialist
 
-### Approach
+###  20.4. <a name='Approach-1'></a>Approach
 
 Test automation forms the core of the test exercise and is, as mentioned before, a key enabler for the agile project. That is why a large amount of test activity is geared towards feeding the test automation development.
 
@@ -1874,7 +2062,7 @@ The following activities feed into test automation development:
 
 The goal is to have value added automation, not to automate for the sake of automation. We need to balance run time, complexity and value delivered.
 
-#### Approach for Functional Test Automation
+####  20.4.1. <a name='ApproachforFunctionalTestAutomation'></a>Approach for Functional Test Automation
 | Phase | Activity | Description
 | --- | --- | ---
 | **Plan** | | 
@@ -1916,7 +2104,7 @@ Test automation will create several Automated test Suites, they are:
 -   Smoke Test Suite
 -   Functional Test Suite, containing additional tests, in-depth tests and multiple variations tests
 
-### Test Design
+###  20.5. <a name='TestDesign-1'></a>Test Design
 
 Test automation will leverage existing test design from the testers and others as mentioned above.
 
@@ -1928,7 +2116,7 @@ However, there are additions to the test design that automation can and will mak
 -   **Low value tests**: Once an automated test is defined it can be run over and over for almost no effort and cost. That means that even low value tests (tests that a manual tester would skip) could be included in the test suite.
 -   **Extended Checking**: An automated test can include system calls to different platforms (database, external systems) to check if the result observed is correct. A manual tester would spend significantly more time doing the same.
 
-### Test Execution
+###  20.6. <a name='TestExecution-1'></a>Test Execution
 
 Test automation execution can and will also be manually triggered by:
 
@@ -1944,7 +2132,7 @@ Test automation execution can and will also be manually triggered by:
 
 ![alt text](images/testautomation.png "Integrating Test Automation in sprint")
 
-### Data Requirements
+###  20.7. <a name='DataRequirements-1'></a>Data Requirements
 
 Test Automation needs data that:
 
@@ -1953,18 +2141,18 @@ Test Automation needs data that:
 -   Many PPR business functions are date dependent, to obtain repeatability of test execution we need to create our data from     scratch to that we can control the order of activities.
 -   Will *only* be used for its intended purpose. This means that we need separate data sets for development of test     automation and test execution.
 
-### Infrastructure Requirements
+###  20.8. <a name='InfrastructureRequirements-1'></a>Infrastructure Requirements
 
 The following infrastructure needs to be present:
 
 - 1 QA Workstation Configured
 - Test Environment(s)
 
-## Management Strategies
+##  21. <a name='ManagementStrategies'></a>Management Strategies
 
 This section describes the different test management strategies and approaches.
 
-### Status Reporting Strategy
+###  21.1. <a name='StatusReportingStrategy'></a>Status Reporting Strategy
 
 Testing Status will be available continuously from ZenHub and TestRail, this status is meant for day-to-day management. Self-serve for immediate questions and/or concerns is intended for team members and project management. 
 
@@ -1973,25 +2161,25 @@ Weekly reports are intended for project management and client. 
 > **Caveat**
 > Weekly reports represent a snapshot at the time of generation. Online status through ZenHub and TestRail might no longer reflect the weekly report as this information is always current. In case of concerns, it is always recommended to contact the product owner for clarification.
 
-### Objectives
+###  21.2. <a name='Objectives-1'></a>Objectives
 
 -   Provide continuous insight in the test status
 -   Identify issues and opportunities for improvement
 -   Provide progress reports
 
-### Key Guidelines
+###  21.3. <a name='KeyGuidelines'></a>Key Guidelines
 
 -   Dashboards showing test and defect status will be available in ZenHub
 -   All reporting will be automatically generated from TestRail and ZenHub
 -   Weekly reports will summarize and condense the automatic reports from TestRail and ZenHub
 
-### Key Caveats
+###  21.4. <a name='KeyCaveats'></a>Key Caveats
 
 -   Weekly reports will have a very short "freshness" giving the high pace of change in an agile project
 -   On demand reports from TestRail are only available through the test team
 -   Continuous status dashboard might lack the context required for proper interpretation by non-project members
 
-### Planned reports
+###  21.5. <a name='Plannedreports'></a>Planned reports
 
 | Report Name | Frequency | Role Responsibility | Comment
 | --- | --- | --- | ---
@@ -2006,7 +2194,7 @@ Weekly reports are intended for project management and client. 
 | | | | User Acceptance Testing
 | Test Activity Wrapup | Sprint End | Test Lead | Summarization of results, lessons learned and tasks that will need to be scheduled for a later sprint.
 
-## Test Data Strategy
+##  22. <a name='TestDataStrategy'></a>Test Data Strategy
 
 Testing depends on the availability of high quality test data.
 
@@ -2031,7 +2219,7 @@ Test data needs to conform to the following characteristics:
 > -   The Business/User Acceptance Test environment contains production data or masked/de-identified production data.
 > -   Production data will not be used for testing outside of PPR.
 
-### Test Data Usage
+###  22.1. <a name='TestDataUsage'></a>Test Data Usage
 
 | Usage | Environment | Type of Test Data | User
 | --- | --- | --- | ---
@@ -2043,7 +2231,7 @@ Test data needs to conform to the following characteristics:
 | User Acceptance Testing | Staging | Production data | Business Testers
 
 
-## Defect Management Strategy
+##  23. <a name='DefectManagementStrategy'></a>Defect Management Strategy
 
 Defect reports are the main output from the testing process, they represent a significant investment and are essential in understanding
 the state of the system under test (SUT). Solid defect management has proven to be the key success factor in complex projects and provides key progress and quality information.
@@ -2062,7 +2250,7 @@ We will adhere to our defined defect management principles:
 > -   All defects will be reported in and managed by a central defect management tool.
 > -   All personnel involved in the creation, roll-out and sustainment of a solution will have access to the central tool and will be able to review the project\'s defects.
 
-### Objectives
+###  23.1. <a name='Objectives-1'></a>Objectives
 
 -   Provide documentation on detected defects
 -   Provide insight in the state of the application under test
@@ -2089,7 +2277,7 @@ Key Caveats
 -   A defect observed without a defect report is a missed opportunity for improvement
 -   Defect volumes are not to be used to assess tester and developer productivity
 
-## Rating Defects
+##  24. <a name='RatingDefects'></a>Rating Defects
 
 Categorizing and rating defects is often a topic of contention and discussion. It is important to avoid unnecessary churn on this topic and we do that by very clearly defining the rating process.
 
@@ -2120,7 +2308,7 @@ Who is responsible for setting\....?
 
 By clearly separating symptom, severity and priority setting responsibilities, we will be able to put the right responsibility with the right team members. We now could potentially have a critical severity issue that gets the lowest priority or vice versa a low criticality item that gets the highest priority.
 
-### Severity
+###  24.1. <a name='Severity'></a>Severity
 
 We will use the following severity definition:
 
@@ -2145,7 +2333,7 @@ We will use the following severity definition:
 | 	| A technical correct implementation of a business requirement does not meet the business needs
 | 	| A new requirement has been identified during testing
 
-### Symptoms versus Severity
+###  24.2. <a name='SymptomsversusSeverity'></a>Symptoms versus Severity
 
 A very good practice is to define a connection between found symptoms and the severity that will be used. For instance a typo would never get
 a severity \"Critical\", but a database crash would.
@@ -2190,7 +2378,7 @@ a severity \"Critical\", but a database crash would.
 
 
 
-### Priority
+###  24.3. <a name='Priority'></a>Priority
 
 TBD - Aigne with ZenHub
 
@@ -2202,7 +2390,7 @@ TBD - Aigne with ZenHub
 | Low       |          Minor problem or easily worked around.
 | Lowest     |         Trivial problem with little or no impact on progress
 
-## Test Results Strategy
+##  25. <a name='TestResultsStrategy'></a>Test Results Strategy
 
 The value of test results to a project is that they provide an insight in the readiness/completeness of the system under test (SUT).
 
@@ -2234,25 +2422,25 @@ We are guided by the following testing principles:
 > -   Quality Tests are executed by the quality testers.
 > -   Acceptance Tests are executed by the Acceptance testers and Business Users.
 
-### Objectives
+###  25.1. <a name='Objectives-1'></a>Objectives
 
 -   Provide continuous insight in the state of the application under test
 -   Detect trends, failure and fix rates to allow management of the test process
 -   Provide progress reports
 
-### Key Guidelines
+###  25.2. <a name='KeyGuidelines-1'></a>Key Guidelines
 -   Each test will be connected to a Requirement/User Story
 -   Reporting will be done on progress on plan and coverage
 -   All tests and results will be documented in TestRail
 -   Dashboards showing the test progress and results will be available in ZenHub
 -   All reporting will be automatically generated from TestRail/ZenHub
 
-### Key Caveats
+###  25.3. <a name='KeyCaveats-1'></a>Key Caveats
 
 -   High quality test reporting depends on consistent and disciplined usage of the test management tool and ZenHub
 -   With continuous reporting, confusion can emerge about the readiness of a testing activity or cycle
 
-## Test Environment Needs
+##  26. <a name='TestEnvironmentNeeds'></a>Test Environment Needs
 
 The test environment needs definition is governed by the test environment principle:
 
@@ -2289,7 +2477,7 @@ The project and QA owns the Test environments.
 | Security Testing | Staging | TBD | Security testing/Penetration will need an environment that is either production (before it is actually live) or an environment that is close to identical as production.
 | User Acceptance Testing | Staging | Testers (User/Business Focus) | The UAT will require a system that contains masked/de-identified production data.
 
-## Test Tool Needs
+##  27. <a name='TestToolNeeds'></a>Test Tool Needs
 
 | Tool | Description | Usage | Resp.
 | --- | --- | --- | ---
@@ -2304,7 +2492,7 @@ The project and QA owns the Test environments.
 | **PostMan/NewMan** | API Testing Tool | Testing | TBD
 
 
-## Definition of Done for Testing (DoD)
+##  28. <a name='DefinitionofDoneforTestingDoD'></a>Definition of Done for Testing (DoD)
 
 At the highest level the DoD  for testing is when: **"All planned testing tasks have been completed and no open defects are remaining.**
 
@@ -2313,7 +2501,7 @@ How do we determine Done?
 To arrive at such a high level conclusion we would need to understand our level of \"done\" for individual activities. The following is a list
 (checklist, some would say) that we\'ll use for assessing our level of \"done\" for the different testing activities.
 
-### What is it?
+###  28.1. <a name='Whatisit'></a>What is it?
 
 Definition of done is crucial to a highly functioning Scrum team. The following are characteristics that we look for in our definition of done
 for testing. Verifying that our DoD meets these criteria will ensure that we are truly done with testing, not only in terms of functionality but in terms of quality as well.
@@ -2408,7 +2596,7 @@ This definition of done is independent of the user acceptance criteria (function
 | **Project Backlog** | The project backlog is updated with items that emanated from testing | Yes/Scrum Master | 
 |  | The team has agreed on the new testing items in the backlog | | 
 
-## Continuous Improvement Process (CIP)
+##  29. <a name='ContinuousImprovementProcessCIP'></a>Continuous Improvement Process (CIP)
 
 A  **continuous improvement process** (abbreviated as CIP), is an ongoing effort to improve products, services, or processes. These efforts can seek \"incremental\" improvement over time or \"breakthrough\" improvement all at once.
 
