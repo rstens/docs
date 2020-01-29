@@ -2124,610 +2124,191 @@ By clearly separating symptom, severity and priority setting responsibilities, w
 
 We will use the following severity definition:
 
-  **Severity Level**   **Description**
-  -------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Severity 1:**      **Cannot use any part of System until the problem is fixed.**
-  **Critical**         Unable to proceed with the test.  
-                       Severity 1 usually means a major, critical business function or process is broken and no workarounds can be identified.
-  **Severity 2:**      **Can use the system, but a 'workaround' is required.**
-  **High**             Test is severely restricted due to a defect encountered for which there is no acceptable circumvention. 
-                       The application executes, but wrong results are encountered, or problems are discovered which significantly affect product operation or the test to be conducted. 
-                       A fix is required in order to proceed with this function.  A work-around may exist but its use is unsatisfactory.  
-  **Severity 3:**      **Can use the system and testing may proceed.**
-  **Medium**           Able to proceed with limited function which is not crucial to the test. 
-                       There may be discrepancies between product operation and the product documentation. Additionally, any problem that is caused by extreme or unlikely circumstances (such as environments or operator sequences) provided a straightforward workaround exists and there is no unrecoverable data loss. 
-                       The existence of the problem may cause user dissatisfaction.  
-  **Severity 4:**      **Shortcoming with no immediate impact to test. **
-  **Low**              Discrepancies are found that are of insignificant nature and do not affect satisfactory operation or usability of the product (examples may include improper presentation of menus, messages, prompts, minor functional deviations that can be easily avoided).
-                       General documentation problems or cosmetic problems. 
-  **Severity 5:**      **Identified needed enhancement**
-  **Enhancement**      A previously unrecognized feature or requirement needs to be added
-                       A technical correct implementation of a business requirement does not meet the business needs
-                       A new requirement has been identified during testing
+  | Severity Level	| Description
+| ---	| ---
+| **Severity 1:**	| Cannot use any part of System until the problem is fixed.
+| ***Critical***	| Unable to proceed with the test.  
+| 	| Severity 1 usually means a major, critical business function or process is broken and no workarounds can be identified.
+| **Severity 2:**	| Can use the system, but a ‘workaround’ is required.
+| ***High***	| Test is severely restricted due to a defect encountered for which there is no acceptable circumvention. 
+| 	| The application executes, but wrong results are encountered, or problems are discovered which significantly affect product operation or the test to be conducted. 
+| 	| A fix is required in order to proceed with this function.  A work-around may exist but its use is unsatisfactory.  
+| **Severity 3:**	| Can use the system and testing may proceed.
+| ***Medium***	| Able to proceed with limited function which is not crucial to the test. 
+| 	| There may be discrepancies between product operation and the product documentation. Additionally, any problem that is caused by extreme or unlikely circumstances (such as environments or operator sequences) provided a straightforward workaround exists and there is no unrecoverable data loss. 
+| 	| The existence of the problem may cause user dissatisfaction.  
+| **Severity 4:**	| Shortcoming with no immediate impact to test. 
+| ***Low***	| Discrepancies are found that are of insignificant nature and do not affect satisfactory operation or usability of the product (examples may include improper presentation of menus, messages, prompts, minor functional deviations that can be easily avoided).
+| 	| General documentation problems or cosmetic problems. 
+| **Severity 5:**	| Identified needed enhancement
+| ***Enhancement***	| A previously unrecognized feature or requirement needs to be added
+| 	| A technical correct implementation of a business requirement does not meet the business needs
+| 	| A new requirement has been identified during testing
 
 ### Symptoms versus Severity
 
-A very good practice is to define a connection between found symptoms
-and the severity that will be used. For instance a typo would never get
+A very good practice is to define a connection between found symptoms and the severity that will be used. For instance a typo would never get
 a severity \"Critical\", but a database crash would.
 
-  **Symptom / Severity Matrix **                                              ** **                                    **Severity **                                                     
-  -------------------------------- ------------------------------------------ ---------------------------------------- --------------------- ------------- --------------- ------------ ----------------
-  ** **                            **Symptom **                               **Immediately escalate to test lead **   **5-Catastrophic **   **4-High **   **3-Medium **   **2-Low **   **1-Minimal **
-  **General **                     System Crash with data loss                X                                        X                                                                 
-                                   System Crash without data loss             X                                        X                                                                 
-                                   Enhancement Request                                                                                                                                  X 
-                                   General failure                            X                                        X                                                                 
-                                   Installation/deployment Failure            X                                                              X             O                             
-  **Application **                 Incorrect operation                                                                                       X             O                             
-                                   Report Incorrect (printing)                                                                               X             O                             
-                                   Report Incorrect (information)                                                                            X             O                             
-                                   Requirement, incorrect                                                                                                                               X 
-                                   Requirement, missing                                                                                                                                 X 
-                                   Requirement, new                                                                                                                                     X 
-                                   Security/Access violation or error         X                                        X                     O                                           
-                                   Slow performance                                                                                          X             O                             
-  **Data **                        Data cannot be stored                                                               X                     O                                           
-                                   Data is corrupted or clipped                                                        X                     O                                           
-                                   Data is exposed to unauthorized parties    X                                        X                                                                 
-                                   Data is lost                                                                        X                                                                 
-  **Standards **                   Compliance, BCGov UI                                                                                                    X               O             
-                                   Compliance, PPR                                                                                                      X               O             
-                                   Compliance, Web                                                                                           X             O                             
-                                   Compliance, Windows                                                                 X                     O                                           
-                                   Compliance, Security Policy                                                                                             X               O             
-  **Usability **                   Behaviour, unexpected                                                                                                   X               O             
-                                   Behaviour, unfriendly                                                                                                   X               O             
-                                   Navigation                                                                                                              X               O             
-                                   Presentation                                                                                                            X               O             
-                                   Spelling/label                                                                                                          X               O             
-                                   Wording, business/technical                                                                                             X               O             
-                                   Wording, grammatical                                                                                                    X               O             
-  **Web **                         Broken Link                                                                                               X                                           
-                                   Misplaced element                                                                                                       X               O             
-                                   Display issue                                                                                             X             O                             
-                                   Browser incompatibility                                                                                   X             O                             
-                                   Mobile browser incompatibility                                                                                          O               X             
-                                                                                                                                                                                         
-  **Legend **                                                                                                                                                                            
-                                   Preferred                                  X                                                                                                          
-                                   Optional                                   O                                                                                                          
+| Defect - Symptom / Severity Matrix | Symptom | Immediately escalate to test lead | Severity: 1-Critical | Severity: 2-High | Severity 3-Medium | Severity: 4-Low | Severity: 5-Enhancement
+| --- | --- | --- | --- | --- | --- | --- | ---
+| **General** | System Crash with data loss | X | X |  |  |  | 
+| | System Crash without data loss | X | X |  |  |  | 
+| | Enhancement Request |  |  |  |  |  | X
+| | General failure | X | X |  |  |  | 
+| | Installation/deployment Failure | X |  | X | O |  | 
+| **Application** | Incorrect operation |  |  | X | O |  | 
+| | Report Incorrect (printing) |  |  | X | O |  | 
+| | Report Incorrect (information) |  |  | X | O |  | 
+| | Requirement, incorrect |  |  |  |  |  | X
+| | Requirement, missing |  |  |  |  |  | X
+| | Requirement, new |  |  |  |  |  | X
+| | Security/Access violation or error |  X | X | O |  |  | 
+| | Slow performance |  |  | X | O |  | 
+| **Data** | Data cannot be stored |  | X | 0 |  |  | 
+| | Data is corrupted or clipped |  | X | O |  |  | 
+| | Data is exposed to unauthorized parties | X  | X |  |  |  | 
+| | Data is lost |  | X |  |  |  | 
+| **Standards** | Compliance, WEB |  |  |  | X | O | 
+| | Compliance, Provincial Standards |  |  |  | X | O | 
+| | Compliance, Business Procedures |  |  | X | O |  | 
+| | Compliance, Policy |  | X | O |  |  | 
+| | Compliance, Accessibility |  |  |  | X | O | 
+| **Usability** | Behaviour, unexpected |  |  |  | X | O | 
+| | Behaviour, unfriendly |  |  |  | X | O | 
+| | Navigation |  |  |  | X | O | 
+| | Presentation |  |  |  | X | O | 
+| | Spelling/label |  |  |  | X | O | 
+| | Wording, business/technical |  |  |  | X | O | 
+| | Wording, grammatical |  |  |  | X | O | 
+| **Web** | Broken Link |  |  | X |  |  | 
+| | Browser problems |  |  |  | X | O | 
+| | Misplaced element |  |  | X | O |  | 
+| **Legend** |  |  |  |  |  |  | 
+| | Preferred    | X |  |  |  |  | 
+| | Optional    | O |  |  |  |  | 
 
-ZenHub will be configured to contain the symptoms field.
 
-Priority
 
-For priority we will use the standard ZenHub priorities (with the standard
-explanation):
+### Priority
 
-  **Priority Level**   **Description**
-  -------------------- ------------------------------------------------------
-   Highest             This problem will block progress.
-   High                Serious problem that could block progress.
-   Medium              Has the potential to affect progress.
-   Low                 Minor problem or easily worked around.
-   Lowest              Trivial problem with little or no impact on progress
+TBD - Aigne with ZenHub
 
- 
+| Priority Level | Description
+| --- | ---
+| Highest |            This problem will block progress.
+|   High    |            Serious problem that could block progress.
+|  Medium   |           Has the potential to affect progress.
+| Low       |          Minor problem or easily worked around.
+| Lowest     |         Trivial problem with little or no impact on progress
 
- 
+## Test Results Strategy
 
-Test Results Strategy
-
-June 26, 2019
-
-1:32 PM
-
-The value of test results to a project is that they provide an insight
-in the readiness/completeness of the system under test (SUT).
+The value of test results to a project is that they provide an insight in the readiness/completeness of the system under test (SUT).
 
 Test Results will be used to provide information on:
-
 -   Coverage: How much of the application was tested?
-
 -   Requirement/Acceptance Criteria Traceability
-
 -   Test Plan Progress: How far has the plan progressed?
-
 -   Failure Rate: How many tests failed?
-
 -   Fix Rate: How many of earlier fails now pass
 
 We are guided by the following testing principles:
 
- 
+> **Traceability Principle**
+> **Basic assumption(s):**
+> -   All requirements must be tested.
+> -   Test progress must be measured against coverage of requirements.
+>
+> **Test Principle:**
+> -   Testers will map all test cases back to requirements to ensure they have all been covered by test cases.
+> -   Test Lead will report progress based on requirements coverage.
 
-**Traceability Principle**
+> **Test Execution Principle**
+> **Basic assumption(s):**
+> -   Tests need to be executed.
+> -   The right resources need to execute the tests.
+>
+> **Test Principle:**
+> -   Unit Tests are executed by developers.
+> -   Quality Tests are executed by the quality testers.
+> -   Acceptance Tests are executed by the Acceptance testers and Business Users.
 
- 
+### Objectives
 
-**Basic assumption(s):**
-
--   All requirements must be tested.
-
--   Test progress must be measured against coverage of requirements.
-
-**Test Principle:**
-
--   Testers will map all test cases back to requirements to ensure they
-    have all been covered by test cases.
-
--   Test Lead will report progress based on requirements coverage.
-
- 
-
-**Test Execution Principle**
-
-**Basic assumption(s):**
-
--   Tests need to be executed.
-
--   The right resources need to execute the tests.
-
-**Test Principle:**
-
--   Unit Tests are executed by developers.
-
--   Quality Tests are executed by the quality testers.
-
--   Acceptance Tests are executed by the Acceptance testers and Business
-    Users.
-
-Objectives
-
--   Provide continuous insight in the state of the application under
-    test
-
--   Detect trends, failure and fix rates to allow management of the test
-    process
-
+-   Provide continuous insight in the state of the application under test
+-   Detect trends, failure and fix rates to allow management of the test process
 -   Provide progress reports
 
-Key Guidelines
-
+### Key Guidelines
 -   Each test will be connected to a Requirement/User Story
-
 -   Reporting will be done on progress on plan and coverage
-
 -   All tests and results will be documented in TestRail
-
--   Dashboards showing the test progress and results will be available
-    in Jira
-
--   All reporting will be automatically generated from TestRail/Jira
-
-Key Caveats
-
--   High quality test reporting depends on consistent and disciplined
-    usage of the test management tool and Jira
-
--   With continuous reporting, confusion can emerge about the readiness
-    of a testing activity or cycle
-
- 
-
- 
-
- 
-
-Test Environment Needs
-
-June 26, 2019
-
-2:01 PM
-
-The test environment needs definition is governed by the test
-environment principle:
-
- 
-
-**Test Environment Principle**
- 
-**Basic assumption(s):**
-
--   All developed and configured software must be tested.
-
--   Test environments are available and configured.
-
--   Multiple projects/activities may need to use the same test
-    environments.
-
--   Usage of the same environment by different project/activity can
-    cause interference.
-
--   Test environment resource conflicts need to be addressed.
-
-**Test Principle:**
-
--   Testing uses dedicated Test Environments.
-
--   The project is responsible for communicating:
-
--   Coordination of test environment usage.
-
--   Facilitating negotiations on usage and planning.
-
--   Facilitating the creation of new test environments.
-
-The project and the internal Testing Services group owns the Test
-environments.
-
- 
-
-+----------------+----------------+----------------+----------------+
-| **Type of      | **En           | **Who**        | *              |
-| Testing**      | vironment(s)** |                | *Description** |
-+================+================+================+================+
-| Developer      | DEV            | Developers,    | Automated Unit |
-| Testing        |                | DevOps         | tests are      |
-|                |                |                | developed by   |
-|                |                |                | the developers |
-|                |                |                | on their own   |
-|                |                |                | workstation    |
-|                |                |                | and these test |
-|                |                |                | scripts get    |
-|                |                |                | submitted with |
-|                |                |                | the code they  |
-|                |                |                | created.       |
-|                |                |                | Subsequently   |
-|                |                |                | the unit tests |
-|                |                |                | will be        |
-|                |                |                | executed       |
-|                |                |                | during the     |
-|                |                |                | continuous     |
-|                |                |                | integration    |
-|                |                |                | process.       |
-+----------------+----------------+----------------+----------------+
-| Smoke Test     | ALL            | Test           | A smoke test   |
-|                |                | Automation     | will be run    |
-|                |                | Specialist     | after moving   |
-|                |                |                | into Test and  |
-|                |                |                | Staging. A     |
-|                |                |                | subset of this |
-|                |                |                | smoke test     |
-|                |                |                | will most      |
-|                |                |                | likely be      |
-|                |                |                | deployed from  |
-|                |                |                | production     |
-|                |                |                | validation as  |
-|                |                |                | well. The      |
-|                |                |                | exact scope    |
-|                |                |                | for this needs |
-|                |                |                | to be          |
-|                |                |                | determined as  |
-|                |                |                | a smoke test   |
-|                |                |                | in production  |
-|                |                |                | cannot create  |
-|                |                |                | data.          |
-+----------------+----------------+----------------+----------------+
-| Functional     | TEST           | Agile Testers  | Functional     |
-| Testing        |                |                | Testing has    |
-|                |                |                | aspects to it, |
-|                |                |                | first we\'ll   |
-|                |                |                | have the       |
-|                |                |                | \              |
-|                |                |                | 'traditional\' |
-|                |                |                | test cases and |
-|                |                |                | scripts, but   |
-|                |                |                | we will also   |
-|                |                |                | engage in      |
-|                |                |                | exploratory    |
-|                |                |                | testing.       |
-|                |                |                |                |
-|                |                |                | This type of   |
-|                |                |                | testing can    |
-|                |                |                | co-exist with  |
-|                |                |                | Automated      |
-|                |                |                | Functional     |
-|                |                |                | Testing as     |
-|                |                |                | long as we     |
-|                |                |                | keep a clear   |
-|                |                |                | data           |
-|                |                |                | separation     |
-|                |                |                | between the 2  |
-|                |                |                | activities.    |
-+----------------+----------------+----------------+----------------+
-| Automated      | TEST           | Test           | Automated      |
-| Functional     |                | Automation     | Functional     |
-| Testing        |                | Specialist     | Testing trails |
-|                |                |                | functional     |
-|                |                |                | testing and    |
-|                |                |                | works on       |
-|                |                |                | automating key |
-|                |                |                | functional     |
-|                |                |                | test cases and |
-|                |                |                | creating new   |
-|                |                |                | automation for |
-|                |                |                | those cases    |
-|                |                |                | where we need  |
-|                |                |                | a large amount |
-|                |                |                | of variants to |
-|                |                |                | be tested.     |
-+----------------+----------------+----------------+----------------+
-| Integration    | TEST           | Developers,    |                |
-| Testing        |                | Solution       |                |
-|                |                | Architect      |                |
-+----------------+----------------+----------------+----------------+
-| System /       | Test           | Agile Testers  | In this        |
-| Intersystem    |                |                | environment we |
-| Testing        |                |                | will be able   |
-|                |                |                | to test the    |
-|                |                |                | full end to    |
-|                |                |                | end            |
-|                |                |                | integration    |
-|                |                |                | including back |
-|                |                |                | end services.  |
-+----------------+----------------+----------------+----------------+
-| Regression     | Test           | Agile Testers, | The output     |
-| Testing        |                | Test           | from the       |
-|                |                | Automation     | functional     |
-|                |                | Specialist     | test           |
-|                |                |                | automation     |
-|                |                |                | will be used   |
-|                |                |                | in the         |
-|                |                |                | integrated     |
-|                |                |                | environment to |
-|                |                |                | run regression |
-|                |                |                | tests.         |
-+----------------+----------------+----------------+----------------+
-| Performance    | Staging        | Test           | Depending on   |
-| Testing        |                | Automation     | identified     |
-|                |                | Specialist     | need and risk  |
-|                |                |                | we will run    |
-|                |                |                | performance    |
-|                |                |                | testing in an  |
-|                |                |                | environment    |
-|                |                |                | that is as     |
-|                |                |                | close to       |
-|                |                |                | production as  |
-|                |                |                | we can get it. |
-+----------------+----------------+----------------+----------------+
-| Security       | Staging        | TBD            | Security       |
-| Testing        |                |                | testi          |
-|                |                |                | ng/Penetration |
-|                |                |                | will need an   |
-|                |                |                | environment    |
-|                |                |                | that is either |
-|                |                |                | production     |
-|                |                |                | (before it is  |
-|                |                |                | actually live) |
-|                |                |                | or an          |
-|                |                |                | environment    |
-|                |                |                | that is close  |
-|                |                |                | to identical   |
-|                |                |                | as production. |
-+----------------+----------------+----------------+----------------+
-| User           | Staging        | Testers        | The UAT will   |
-| Acceptance     |                | (User/Business | require a      |
-| Testing        |                | Focus)         | system that    |
-|                |                |                | contains       |
-|                |                |                | masked         |
-|                |                |                | /de-identified |
-|                |                |                | production     |
-|                |                |                | data.          |
-+----------------+----------------+----------------+----------------+
-
- 
-
- 
-
- 
-
-Test Tool Needs
-
-June 27, 2019
-
-4:32 PM
-
-+-----------------+-----------------+-----------------+-----------+
-| **Tool**        | **Description** | **Usage**       | **Resp.** |
-+=================+=================+=================+===========+
-| **ZenHub**        | Project and     | The team uses   | BC Gov    |
-|                 | issue tracking  | ZenHub as their   |           |
-|                 | software        | agile work      |           |
-|                 | development     | management and  |           |
-|                 | tool used by    | documentation   |           |
-|                 | agile teams to  | tool and its    |           |
-|                 | plan, track,    | issue tracking  |           |
-|                 | release, and    | capabilities    |           |
-|                 | report          | for tracking    |           |
-|                 | software.       | tasks, project  |           |
-|                 |                 | risks, project  |           |
-|                 |                 | issues.         |           |
-|                 |                 |                 |           |
-|                 |                 | The test team   |           |
-|                 |                 | specifically    |           |
-|                 |                 | uses [defect    |           |
-|                 |                 | management](one |           |
-|                 |                 | note:#Defect%20 |           |
-|                 |                 | Management%20Pr |           |
-|                 |                 | ocess&section-i |           |
-|                 |                 | d={3CE1FE52-2D1 |           |
-|                 |                 | E-4E71-85AF-F13 |           |
-|                 |                 | D3A0985E7}&page |           |
-|                 |                 | -id={11524133-F |           |
-|                 |                 | DC5-401B-A19A-7 |           |
-|                 |                 | F2FE67AC0AD}&en |           |
-|                 |                 | d&base-path=htt |           |
-|                 |                 | ps://citz.sp.go |           |
-|                 |                 | v.bc.ca/sites/S |           |
-|                 |                 | hared/Project/B |           |
-|                 |                 | idR/PPR/CONTR |           |
-|                 |                 | ACT%20%20SCHEDU |           |
-|                 |                 | LE/Testing/Reso |           |
-|                 |                 | urces/Testing%2 |           |
-|                 |                 | 0Notes/Test%20S |           |
-|                 |                 | trategy.one) as |           |
-|                 |                 | their main      |           |
-|                 |                 | communication   |           |
-|                 |                 | conduit on      |           |
-|                 |                 | defects and     |           |
-|                 |                 | issues found.   |           |
-+-----------------+-----------------+-----------------+-----------+
-| **SharePoint**  | Team            | The team uses   | BC Gov    |
-|                 | collaboration   | SP as the       |           |
-|                 | software that   | centre of the   |           |
-|                 | allows for      | universe for    |           |
-|                 | teams to        | all             |           |
-|                 | create,         | documentation,  |           |
-|                 | organize, and   | knowledge and   |           |
-|                 | discuss.        | collaboration.  |           |
-+-----------------+-----------------+-----------------+-----------+
-| **Skype for     | Service for     | Team            | BC Gov    |
-| Business**      | internal &      | Collaboration   |           |
-|                 | private chat,   | Tool            |           |
-|                 | instant         |                 |           |
-|                 | messaging,      |                 |           |
-|                 | videos, and     |                 |           |
-|                 | file sharing.   |                 |           |
-+-----------------+-----------------+-----------------+-----------+
-| **TestRail**      | Web-based Test  | Testers will    | BC Gov    |
-|                 | Management tool | use TestRail to   |           |
-|                 | integrated with | execute their   |           |
-|                 | ZenHub.           | assigned test   |           |
-|                 |                 | cases, report   |           |
-|                 |                 | results         |           |
-+-----------------+-----------------+-----------------+-----------+
-| **MS Office     | A collection of | Documentation,  | BC Gov    |
-| suite**         | bundled         | early test case |           |
-|                 | productivity    | development     |           |
-|                 | software used   | (for upload to  |           |
-|                 | to create, edit | TestRail),        |           |
-|                 | test documents. | general         |           |
-|                 |                 | utility.        |           |
-+-----------------+-----------------+-----------------+-----------+
-| **BDDStack**    | Tool            | Functional Test | BC Gov    |
-|                 | to cr           | Automation      |           |
-|                 | eate [automated |                 |           |
-|                 | functional      |                 |           |
-|                 | tes             |                 |           |
-|                 | ts](https://git |                 |           |
-|                 | hub.com/BCDevOp |                 |           |
-|                 | s/BDDStack) for |                 |           |
-|                 | websites, web   |                 |           |
-|                 | apps, and       |                 |           |
-|                 | mobile web      |                 |           |
-|                 | applications.   |                 |           |
-+-----------------+-----------------+-----------------+-----------+
-| **JMeter**      | Performance     | Performance     | TBD       |
-|                 | Test Tool       | Testing         |           |
-+-----------------+-----------------+-----------------+-----------+
-| **OWASP ZAP**   | Security        | Testing         | TBD       |
-|                 | Testing Tool    |                 |           |
-+-----------------+-----------------+-----------------+-----------+
-
- 
-
- 
-
- 
-
-Roles, Responsibilities, Staffing, and Training Needs
-
-June 24, 2019
-
-4:41 PM
-
-The RASCI Matrices are used to describe the participation by various
-roles across the test activities.
-
-**Key Responsibility Definition**
-
-**R**-- Responsible (for process execution/management):  This is the
-person who actually performs the task.
-
-**A** -- Approves/Accountable:  This is the person who is accountable
-for the quality and timeliness of the completion of the task, and is
-frequently the person to whom the responsible person reports.
-
-**S** -- Supports: This is the person who is required to support the
-testing process
-
-**C** -- Consulted: These are the subject matter experts, or other
-people who provide information needed for correct execution of the task.
-
-**I** -- Informed: These are the people who are impacted by the progress
-of the task, and so are advised of milestones or significant
-developments.
-
- 
-
-  **Roles**                         **Unit Test**   **Functional Test**   **User Acceptance Test**   **Regression Test**   **Security Test**   **Integration Test**   **System Test**   **Smoke Test**   **Performance Test**   **Test Automation**
-  --------------------------------- --------------- --------------------- -------------------------- --------------------- ------------------- ---------------------- ----------------- ---------------- ---------------------- ---------------------
-  **Test Lead**                     S               **A**                 S                          **A**                 R                   S                      **A**             **A**            **A**                  **A**
-  **Senior Test Analyst (Agile)**   I               R                     S                          S                                         S                      R                 S                                       S
-  **Test Analyst (Agile)**                          R                     S                          S                                         S                      R                                                         S
-  **Business Tester**                               I                     R                          S                                                                S                                                         I
-  **Test Automation Specialist**    S               S                     S                          R                     S                   S                      S                 R                R                      R
-  **Business Analyst**                              C                     S                          C                                                                C                                                         C
-  **UAT Lead**                                      I                     **A**                      I                     I                   I                      I                 I                I                       
-  **Business Lead**                                 C                     S                          C                                                                C                                                         C
-  **Developer**                     R               S                     S                          C                     S                   R                      S                 S                S                      R
-  **DevOps**                        S                                                                S                                         S                      S                 **A**                                   S
-  **Developer Lead**                **A**           I                     I                          C                     R                   **A**                  I                 S                S                      S
-  **Solution Architect**            C                                     I                          C                     C                   I                      C                                  C                      S
-  **Release Manager**               S               I                     S                          I                     I                   I                      S                 S                I                      I
-  **Subject Matter Expert**                         C                     C                          C                     C                   C                      C                                  C                      C
-  **Auditor**                                       I                     I                          I                     I                                          I                                  I                      I
-  **Project Manager**               I               I                     I                          I                     **A**               I                      I                 I                I                      I
-
- 
-
-Staffing
-
-The following test roles have been identified to support the effort.
-
-The recommended team configuration calls for 4 distinct testing roles,
-these roles are:
-
--   Test Analyst (Agile)
-
--   Senior Test Analyst (Agile)
-
--   Senior Test Automation/Tools Specialist
-
--   Business Tester
-
- 
-
-  **Experience Level**                                                                                                                           
-  ---------------------------------------- ------------------- -------------------- ----------------------------------------------------------- -------------------------
-  **Role**                                 **Years in Role**   **Years with PPR**   **Comment**                                                 **Estimated \# needed**
-  Business Tester                          2+                  2+                   End-User Focus (Black-Box UAT)                              2
-  Test Analyst (Agile)                     2+                  2+                   Exploratory Testing Focus                                   3
-  Senior Test Automation/Tool Specialist   4+                  0+                   Test Engineer                                               1
-  Senior Test Analyst (Agile)              4+                  2+                   Need significant Agile and Exploratory Testing Experience   1
-
- 
-
-Training Needs
-
-  **Topic**                     **Participants**                                 **Comment**
-  ----------------------------- ------------------------------------------------ ------------------------------------------------------------------------------------------------------------------------
-  Agile Workshop                All Team members, SMEs and other participants.   Several workshops have already been conducted, but so far, the testers were not involved.
-  Testing Fundamentals          Testers                                          A level setting training, to allow everybody to start at the same point with the same information.
-  Exploratory Testing           Testers                                          A major technique that will be embedded in our session-based testing (SBT) approach. Training Materials are available.
-  ZenHub Introduction             All team members                                 Introduction to our project management system.
-  ZenHub - Defect Management      All team members                                 The defect management process for PPR as supported by ZenHub.
-  Project Onboarding/Training   All team members                                  
-  TestRail                        Testers                                          The test management tool that allows for collaboration, planning, execution and reporting.
-
- 
-
- 
-
- 
-
-Definition of Done for Testing (DoD)
-
-June 27, 2019
-
-4:45 PM
-
-At the highest level the DoD  for testing is when:** **
-
-**\"All planned testing tasks have been completed and no open defects
-are remaining.\"**
+-   Dashboards showing the test progress and results will be available in ZenHub
+-   All reporting will be automatically generated from TestRail/ZenHub
+
+### Key Caveats
+
+-   High quality test reporting depends on consistent and disciplined usage of the test management tool and ZenHub
+-   With continuous reporting, confusion can emerge about the readiness of a testing activity or cycle
+
+## Test Environment Needs
+
+The test environment needs definition is governed by the test environment principle:
+
+> **Test Environment Principle**
+*> *Basic assumption(s):**
+> -   All developed and configured software must be tested.
+> -   Test environments are available and configured.
+> -   Multiple projects/activities may need to use the same test environments.
+> -   Usage of the same environment by different project/activity can cause interference.
+> -   Test environment resource conflicts need to be addressed.
+>
+> **Test Principle:**
+> -   Testing uses dedicated Test Environments.
+> -   The project is responsible for communicating:
+> -   Coordination of test environment usage.
+> -   Facilitating negotiations on usage and planning.
+> -   Facilitating the creation of new test environments.
+
+The project and QA owns the Test environments.
+
+| Type of Testing | Environment(s) | Who | Description
+| --- | --- | --- | ---
+| Developer Testing | DEV | Developers, DevOps | Automated Unit tests are developed by the developers on their own workstation and these test scripts get submitted with the code they created. Subsequently the unit tests will be executed during the continuous integration process.
+| Smoke Test | ALL | Test Automation Specialist | A smoke test will be run after moving into Test and Staging. A subset of this smoke test will most likely be deployed from production validation as well. The exact scope for this needs to be determined as a smoke test in production cannot create data.
+| Functional Testing | TEST | Agile Testers | Functional Testing has aspects to it, first we'll have the 'traditional' test cases and scripts, but we will also engage in exploratory testing.
+| | | | This type of testing can co-exist with Automated Functional Testing as long as we keep a clear data separation between the 2 activities.
+| Automated Functional Testing | TEST | Test Automation Specialist | Automated Functional Testing trails functional testing and works on automating key functional test cases and creating new automation for those cases where we need a large amount of variants to be tested.
+| Integration Testing | TEST | Developers, Solution Architect | 
+| System / Intersystem Testing | TEST | Agile Testers | In this environment we will be able to test the full end to end integration including back end services.
+| | TEST | | 
+| Regression Testing | TEST | Agile Testers, Test Automation Specialist | The output from the functional test automation will be used in the integrated environment to run regression tests.
+| | TEST | | 
+| Performance Testing | Staging | Test Automation Specialist | Depending on identified need and risk we will run performance testing in an environment that is as close to production as we can get it.
+| Security Testing | Staging | TBD | Security testing/Penetration will need an environment that is either production (before it is actually live) or an environment that is close to identical as production.
+| User Acceptance Testing | Staging | Testers (User/Business Focus) | The UAT will require a system that contains masked/de-identified production data.
+
+## Test Tool Needs
+
+| Tool | Description | Usage | Resp.
+| --- | --- | --- | ---
+| **ZenHub** | Project and issue tracking software development tool used by agile teams to plan, track, release, and report software. | The team uses ZenHub as their agile work management and documentation tool and its issue tracking capabilities for tracking tasks, project risks, project issues. | BC Gov
+| **SharePoint** | Team collaboration software that allows for teams to create, organize, and discuss. | The team uses SP as the centre of the universe for all documentation, knowledge and collaboration. | BC Gov
+| **Skype for Business** | Service for internal & private chat, instant messaging, videos, and file sharing. | Team Collaboration Tool | BC Gov
+| **TestRail** | Web-based Test Management tool integrated with ZenHub. | Testers will use TestRail to execute their assigned test cases, report results | BC Gov
+| **MS Office suite** | A collection of bundled productivity software used to create, edit test documents. | Documentation, early test case development (for upload to TestRail), general utility. | BC Gov
+| **BDDStack** | Tool to create automated functional tests for websites, web apps, and mobile web applications.  | Functional Test Automation | BC Gov
+| **JMeter** | Performance Test Tool | Performance Testing | TBD
+| **OWASP ZAP** | Security Testing Tool | Testing | TBD
+| **PostMan/NewMan** | API Testing Tool | Testing | TBD
+
+
+## Definition of Done for Testing (DoD)
+
+At the highest level the DoD  for testing is when:
+
+**"All planned testing tasks have been completed and no open defects are remaining.**
 
 How do we determine Done?
 
@@ -4173,7 +3754,7 @@ Tuesday, June 11, 2019
 
 2:37 PM
 
-![Machine generated alternative text: Jira Issue Type Relations Issue
+![Machine generated alternative text: ZenHub Issue Type Relations Issue
 Management Risk Assumption Decision Sub-Task Definition Epic Story Test
 Action Defect Task ](media/image6.png){width="13.086805555555555in"
 height="9.252083333333333in"}
@@ -4289,7 +3870,7 @@ June 19, 2019
 
 -   Decision logging in RIDAL: Requires dependencies check
 
--   Have system admin in Jira for Team - requested
+-   Have system admin in ZenHub for Team - requested
 
 -   Define User Story Priority
 
@@ -4897,7 +4478,7 @@ How do the requirements relate to the acceptance criteria?
 
  
 
-Jira Updates made in test
+ZenHub Updates made in test
 
 July 5, 2019
 
@@ -5160,7 +4741,7 @@ August 13, 2019
 3:19 PM
 
 ![Machine generated alternative text: \[881-145) TSL: What requirement C
-Not secure X Statuses- Jira X Publish Workflows - - Minist X test. imb.j
+Not secure X Statuses- ZenHub X Publish Workflows - - Minist X test. imb.j
 ira.i m.gov .bc.ca/secure/project/SelectProjectWorkflowSchemeStep2!
 default.jspa ?draftMig ration - -10503 Current Status 88G Bug Workflow
 IN PROGRESS FIX NOW CLOSED - DO NOT FIX NOT REPRODUCIBLE WAITING FOR
@@ -5817,7 +5398,7 @@ I want to gain some beneficial outcome which furthers the goal\
 **Then** some testable outcome is achieved\
 **And** something else we can check happens too
 
-We\'ll have to describe as follows in Jira (No worries it is all the
+We\'ll have to describe as follows in ZenHub (No worries it is all the
 same, simply different names)
 
  
@@ -5898,7 +5479,7 @@ Late hiring of me.
 
 -   Confidence sheet
 
--   Maybe implement in Jira
+-   Maybe implement in ZenHub
 
  
 
@@ -6097,9 +5678,9 @@ become invalid.
 Exploratory Testing by the BAs
 ==============================
 
-All the sessions are planned out and available in Jira. Testing by the
+All the sessions are planned out and available in ZenHub. Testing by the
 BAs is happening but not in a way that let\'s us monitor progress. In
-other words the facilities in Jira are not used to (even after urging to
+other words the facilities in ZenHub are not used to (even after urging to
 do so) track progress and test results. Testing is on people\'s list but
 I have no ideas what has been done and what is still out there to be
 done.
