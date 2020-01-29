@@ -52,40 +52,41 @@
 	* [Pre-requisites](#Pre-requisites)
 	* [Description](#Description-1)
 	* [Output](#Output-1)
-* [Unit Test Strategy](#UnitTestStrategy)
-	* [Definition](#Definition)
+* [Detailed Test Strategies](#DetailedTestStrategies)
+	* [Unit Test Strategy](#UnitTestStrategy)
+		* [Definition](#Definition)
 	* [Objectives](#Objectives-1)
-	* [Expected Benefits](#ExpectedBenefits)
-	* [Responsibilities](#Responsibilities)
-	* [Scope](#Scope)
+		* [Expected Benefits](#ExpectedBenefits)
+		* [Responsibilities](#Responsibilities)
+		* [Scope](#Scope)
 		* [Approach](#Approach)
-	* [Test Design](#TestDesign)
-	* [Test Execution](#TestExecution)
-	* [Data Requirements](#DataRequirements)
+		* [Test Design](#TestDesign)
+		* [Test Execution](#TestExecution)
+		* [Data Requirements](#DataRequirements)
 * [Integration Test Strategy](#IntegrationTestStrategy)
-	* [Definition](#Definition-1)
-	* [Objectives](#Objectives-1)
-	* [Expected Benefits](#ExpectedBenefits-1)
-	* [Scope](#Scope-1)
-	* [Approach](#Approach-1)
-	* [Test Design](#TestDesign-1)
-	* [Test Execution](#TestExecution-1)
-	* [Data Requirements](#DataRequirements-1)
-* [Functional Test Strategy](#FunctionalTestStrategy)
-	* [Definition](#Definition-1)
-		* [Objectives](#Objectives-1)
-	* [Scope](#Scope-1)
-	* [Approach](#Approach-1)
-	* [Test Design](#TestDesign-1)
-	* [Test Case Design Techniques](#TestCaseDesignTechniques-1)
-		* [Checklists](#Checklists)
-	* [Test Execution](#TestExecution-1)
-	* [Data Requirements](#DataRequirements-1)
-	* [Exploratory Testing Strategy](#ExploratoryTestingStrategy)
 		* [Definition](#Definition-1)
 		* [Objectives](#Objectives-1)
 		* [Expected Benefits](#ExpectedBenefits-1)
 		* [Scope](#Scope-1)
+		* [Approach](#Approach-1)
+		* [Test Design](#TestDesign-1)
+		* [Test Execution](#TestExecution-1)
+		* [Data Requirements](#DataRequirements-1)
+* [Functional Test Strategy](#FunctionalTestStrategy)
+	* [Definition](#Definition-1)
+	* [Objectives](#Objectives-1)
+	* [Scope](#Scope-1)
+	* [Approach](#Approach-1)
+	* [Test Design](#TestDesign-1)
+	* [Test Case Design Techniques](#TestCaseDesignTechniques-1)
+	* [Checklists](#Checklists)
+	* [Test Execution](#TestExecution-1)
+	* [Data Requirements](#DataRequirements-1)
+* [Exploratory Testing Strategy](#ExploratoryTestingStrategy)
+	* [Definition](#Definition-1)
+	* [Objectives](#Objectives-1)
+	* [Expected Benefits](#ExpectedBenefits-1)
+	* [Scope](#Scope-1)
 		* [Approach](#Approach-1)
 		* [Planning](#Planning)
 		* [Test Design](#TestDesign-1)
@@ -801,7 +802,7 @@ This report provides the following details:
   - Not-run test cases
   - Blocked test cases
 
-# Detailed Test Strategies
+## <a name='DetailedTestStrategies'></a>Detailed Test Strategies
 
 This chapter contains the individual test strategies for the different test activities and techniques to be deployed in the PPR project.
 
@@ -814,29 +815,27 @@ follows:
 
 ![alt text](images/rating.png "Test Category Rating")
 
-## <a name='UnitTestStrategy'></a>Unit Test Strategy
+### <a name='UnitTestStrategy'></a>Unit Test Strategy
 
 Great no-nonsense article on [Unit Testing](https://blog.stevensanderson.com/2009/08/24/writing-great-unit-tests-best-and-worst-practises/).
 
-### <a name='Definition'></a>Definition
+#### <a name='Definition'></a>Definition
 
 A unit test, as Agile teams understand the term, is a short program fragment written and maintained by the developers on the product team, which exercises some narrow part of the product\'s source code and checks the results.
 
 Unit testing is guided by the following principle:
 
-**Unit Testing Principle**
-
-**Basic assumption(s):**
-
-- All modules/functions/components/interfaces need to be Unit tested by the developer.
-- Unit tests need to be re-usable, atomic and independent.
-- Unit tests need to cover design specification requirements.
-- Unit Tests need to be implemented as automated tests.
-
-**Test Principle:**
-
-- Developers will create a automated unit test for each component they produce.
-- The Unit Test scripts are documented and stored for re-use and reference.
+> **Unit Testing Principle**
+>
+> **Basic assumption(s):**
+> - All modules/functions/components/interfaces need to be Unit tested by the developer.
+> - Unit tests need to be re-usable, atomic and independent.
+> - Unit tests need to cover design specification requirements.
+> - Unit Tests need to be implemented as automated tests.
+>
+> **Test Principle:**
+> - Developers will create a automated unit test for each component they produce.
+> - The Unit Test scripts are documented and stored for re-use and reference.
 
 ### <a name='Objectives-1'></a>Objectives
 
@@ -847,7 +846,7 @@ Unit Testing aims to:
 - Prevent defects being passed on to the next activity.
 - Allow for capturing the specifications for a unit and test against thoses specifications.
 
-### <a name='ExpectedBenefits'></a>Expected Benefits
+#### <a name='ExpectedBenefits'></a>Expected Benefits
 
 - A team relying on automated unit tests can expect to reap some of the benefits of test-driven/supported development, in particular a decrease in defects caused by regression errors.
 - Early and frequent testing is a pattern common to successful delivery of working software.
@@ -856,11 +855,11 @@ Unit Testing aims to:
 > **To Note**
 > Agile development has led to a strong emphasis, among developers, on the use of automated checking procedures, and this has tended to marginalize other forms of testing, in particular that done by professional testers. Yet this work (which some Agile teams call \"exploratory\" testing) is no less important in an Agile context.
 
-### <a name='Responsibilities'></a>Responsibilities
+#### <a name='Responsibilities'></a>Responsibilities
 
 Unit testing is the responsibility of the developers in the team.
 
-### <a name='Scope'></a>Scope
+#### <a name='Scope'></a>Scope
 
 **Unit, Component and Module Test Scope**
 
@@ -933,7 +932,7 @@ The corollaries of this rule include:
 
 ![alt text](images/unittest.png "Where do unit tests sit?")
 
-### <a name='TestDesign'></a>Test Design
+#### <a name='TestDesign'></a>Test Design
 
 For our unit test design we will be deploying multiple techniques and approaches in order to maximize our effectiveness.
 
@@ -950,13 +949,13 @@ For our unit test design we will be deploying multiple techniques and approaches
 
 The unit testing deliverables of the test design stage include unit test scripts, mock objects, and test data. These deliverables will be uploaded in the version control system and subsequently connected to the delivered code units/components.
 
-### <a name='TestExecution'></a>Test Execution
+#### <a name='TestExecution'></a>Test Execution
 
 The outcome of a unit test is binary: either \"pass\" if the program\'s behavior is consistent with the recorded expectations, or \"fail\" otherwise. Developers will typically write a large number of unit tests (corresponding to a large number of program behaviors of interest), called a \"test suite\".
 
 Unit tests will first be executed on the developers workstation as part of the development process. Once development is deemed done, the code is updated in the version control system and the changes will be incorporated in the automated build and unit test process that will run multiple times a day.
 
-### <a name='DataRequirements'></a>Data Requirements
+#### <a name='DataRequirements'></a>Data Requirements
 
 As per definition in Test Data Strategy unit testing requires the following types of test data:
 
@@ -991,40 +990,40 @@ The term \"integration testing\" is used to mean three different things:
 In all the above three types of integration tests, the objective is to ensure that components link and work together.  The focus is on the effectiveness of functional interactions and compatibility at the
 interfaces.  Integration testing is an interim level of testing that occurs between unit testing and systems testing, and where groupings of components are tested.
 
-### <a name='Definition-1'></a>Definition
+#### <a name='Definition-1'></a>Definition
 
 Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems.
 
-### <a name='Objectives-1'></a>Objectives
+#### <a name='Objectives-1'></a>Objectives
 
 - Verify whether all the components/unit within assemblages interact correctly, for example across procedure calls or processes.
 - Verify the \"building blocks\" and add verified assemblages are added to a verified base which is then used to support the integration testing of further assemblages.
 - Verify interactions with external systems.
 
-### <a name='ExpectedBenefits-1'></a>Expected Benefits
+#### <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 - Individual system components work correctly within Registries infrastructure
 - External functionality works as expected
 - REST-full layer operates according to specification
 
-### <a name='Scope-1'></a>Scope
+#### <a name='Scope-1'></a>Scope
 
 Full System Integration will be tested during System(-Integration) Testing.
 
-### <a name='Approach-1'></a>Approach
+#### <a name='Approach-1'></a>Approach
 
 Integration tests are related to Unit tests and we\'ll use similar mechanisms and approaches to test.
 With integration tests we expand the scope of the test to include multiple components. During unit testing we want to isolate the component, in integration testing we want to have the unit connect to and work with other components. For this type of integration testing, the structure of the unit test scripts can be re-purposed and updated to reflect that actual data and results are coming back from the components it is integrated with.
 
-### <a name='TestDesign-1'></a>Test Design
+#### <a name='TestDesign-1'></a>Test Design
 
 Test Design approach follows the Unit Test approach. As stated above, integration testing is performed to ensure that the units operate correctly when they are combined together, as parts in a working (but perhaps incomplete) application.  Integration testing usually proceeds from small subassemblies, containing only a few components, to larger ones containing many components.  Large complex products can go through many repetitive build-and-test cycles before they are fully integrated.
 
-### <a name='TestExecution-1'></a>Test Execution
+#### <a name='TestExecution-1'></a>Test Execution
 
 Execution will follow the same path and frequency of the automated unit tests.
 
-### <a name='DataRequirements-1'></a>Data Requirements
+#### <a name='DataRequirements-1'></a>Data Requirements
 
 As per definition in Test Data Strategy integration testing requires the following types of test data:
 
@@ -1053,7 +1052,7 @@ Testing based on an analysis of the specification of the functionality of a comp
 
 In functional testing the testing of the functions of component or system is done. It refers to activities that verify a specific action or function of the code. This is typically described in a requirements specification or in a functional specification. For PPR we use the Acceptance Criteria (not to be confused with user acceptance criteria) that are defined as part of our user stories, as our test cases.
 
-#### <a name='Objectives-1'></a>Objectives
+### <a name='Objectives-1'></a>Objectives
 
 - The main objective of functional testing is to verify that each function of the software application operates in accordance with the written acceptance (requirement) specifications.
 - Functional testing is to verify whether your product meets the *intended* functional acceptance criteria mentioned in your user story documentation.
@@ -1129,15 +1128,13 @@ Of all the test case design techniques which are available, the most effective f
   - Checklists
   - Risk analysis and prioritization
 
-#### <a name='Checklists'></a>Checklists
+### <a name='Checklists'></a>Checklists
 
 After each sprint the test team collects lessons learned and compiles these into checklists for future reference when developing test cases.
 
 ### <a name='TestExecution-1'></a>Test Execution
 
-Functional Testing is recognized as a separate activity that precedes
-system and user acceptance testing (See below), however other test
-activities below will also contain certain types of Functional tests.
+Functional Testing is recognized as a separate activity that precedes system and user acceptance testing (See below), however other test activities below will also contain certain types of Functional tests.
 
 | **Test Activity**        | **Functional Test**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **Participant**                           |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
@@ -1160,25 +1157,25 @@ Infrastructure Requirements
 | ------------------ | -------------- | ------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Functional Testing | DEV/TEST       | No                       | Agile Testers | Functional Testing has different aspects to it, first we'll have the 'traditional' test cases and scripts, but we will also engage in exploratory testing. This type of testing can co-exist with Automated Functional Testing as long as we keep a clear data separation between the 2 activities. |
 
-### <a name='ExploratoryTestingStrategy'></a>Exploratory Testing Strategy
+## <a name='ExploratoryTestingStrategy'></a>Exploratory Testing Strategy
 
 This section provides an overview of the exploratory test approach for the PPR project.
 
 Exploratory testing is a style of software testing that emphasizes the personal freedom and responsibility of the individual tester to continually optimize the quality of his/her work by treating test-related learning, test design, test execution, and test result interpretation as mutually supportive activities that run in parallel
 throughout the project. This completely aligns with the agile project approach and has proven a very good fit for common agile scenarios like change, refinements and course correction.
 
-#### <a name='Definition-1'></a>Definition
+### <a name='Definition-1'></a>Definition
 
 Exploratory testing is an approach to software testing that is concisely described as simultaneous learning, test design and test execution.
 
-#### <a name='Objectives-1'></a>Objectives
+### <a name='Objectives-1'></a>Objectives
 
 - Find defects quickly
 - React to quickly changing system
 - Define the basis for test automation and further exploratory test sessions
 - Identify missed or unclear requirements
 
-#### <a name='ExpectedBenefits-1'></a>Expected Benefits
+### <a name='ExpectedBenefits-1'></a>Expected Benefits
 
 - Less initial test preparation is needed
 - Important defects are found quickly
@@ -1186,7 +1183,7 @@ Exploratory testing is an approach to software testing that is concisely describ
 - Opens the possibility for deductive reasoning based on the results of previous observations
 - Exploration throughout testing continuously challenges the System Under Test with new scenarios
 
-#### <a name='Scope-1'></a>Scope
+### <a name='Scope-1'></a>Scope
 
 While the software is being tested, the tester learns things that together with experience and creativity generates new value-added tests to run. Exploratory testing is often thought of as a black box testing
 technique. Instead, those who have studied it consider it a test approach that can be applied to any test technique, at any stage in the development process. The key is not the test technique nor the item
