@@ -25,8 +25,8 @@
 		* [Objective](#Objective-1)
 		* [Description](#Description-1)
 		* [Challenges of Test Design in an Agile Environment](#ChallengesofTestDesigninanAgileEnvironment)
-	* [Test Basis](#TestBasis)
-	* [Test Case Design](#TestCaseDesign)
+		* [Test Basis](#TestBasis)
+		* [Test Case Design](#TestCaseDesign)
 		* [Test Case Design Techniques\*](#TestCaseDesignTechniques)
 		* [Process](#Process)
 		* [Test Case Rating](#TestCaseRating)
@@ -34,9 +34,9 @@
 	* [Test Execution Process](#TestExecutionProcess)
 		* [Objective](#Objective-1)
 		* [Description](#Description-1)
-	* [Automated Test Execution Process](#AutomatedTestExecutionProcess)
-	* [The Manual Test Execution Process](#TheManualTestExecutionProcess)
-	* [Requirements for Test Execution](#RequirementsforTestExecution)
+		* [Automated Test Execution Process](#AutomatedTestExecutionProcess)
+		* [The Manual Test Execution Process](#TheManualTestExecutionProcess)
+		* [Requirements for Test Execution](#RequirementsforTestExecution)
 * [Defect Management Process](#DefectManagementProcess)
 	* [Objective](#Objective-1)
 	* [Description](#Description-1)
@@ -434,7 +434,7 @@ Testing software is a real challenge, because there are so many types of test ca
 
 In cases where the project team is adopting an agile approach (i.e. features are designed in an iterative fashion) there is no clear picture for the application during any one sprint. Generally we find that the initial goal at the start of development changes as backlogs are revised (i.e. the sprint requirements change). Writing a lot of agile test cases then is going to be less effective because you'll have to rewrite them completely within a few builds. You might opt for a checklist approach instead and combine exploratory testing with a simple list of compatibility requirements that don't need to be spelled out in full. It may even be possible for testers simply to refer to the original user stories that informed the design or talk directly to the customer to find a basis for their testing. In PPR, we will adopt a hybrid approach where much of the actual business design, user stories and acceptance criteria have been developed and reviewed before the Sprint. This will allow testing to leverage the created information to help with the test design.
 
-### <a name='TestBasis'></a>Test Basis
+#### <a name='TestBasis'></a>Test Basis
 
 The test basis is the information available (or to be acquired) that we base our tests on.
 
@@ -451,7 +451,7 @@ For PPR our test base is:
 - Constraints, Risks and Changes
 - Creativity and the drive to create efficient tests
 
-### <a name='TestCaseDesign'></a>Test Case Design
+#### <a name='TestCaseDesign'></a>Test Case Design
 
 Test case design is based on:
 
@@ -567,13 +567,13 @@ In the project there are 5 groups/mechanisms involved with test execution. They 
 5.  Test Automation Specialist - Other automated system testing (e.g. performance, security, accessibility scans etc.) in the Test(OpenShift) environment
 6.  User Acceptance Testers - UAT in the Prod (OpenShift) environment
 
-### <a name='AutomatedTestExecutionProcess'></a>Automated Test Execution Process
+#### <a name='AutomatedTestExecutionProcess'></a>Automated Test Execution Process
 
 The process is described in the following chart that shows the different systems, activities and parties involved:
 
 > **tbd**
 
-### <a name='TheManualTestExecutionProcess'></a>The Manual Test Execution Process
+#### <a name='TheManualTestExecutionProcess'></a>The Manual Test Execution Process
 
 The manual and exploratory test execution steps are as follows:
 
@@ -584,7 +584,7 @@ The manual and exploratory test execution steps are as follows:
 |                                  Exploratory Testing                                  | Once a targeted functionality becomes initially available. The exact exploratory test will not be repeated, but variations on it can be in case of changes. Exploratory testing is also meant to generate ideas for test automation. | Agile Testers                |
 |                                User Acceptance Testing                                |                      In the last 50% of the Sprint and close to the release date, user acceptance testers will manually execute their test cases and scenarios. In case of defects, they would need to repeat.                       | Tester/Business Analyst/User |
 
-### <a name='RequirementsforTestExecution'></a>Requirements for Test Execution
+#### <a name='RequirementsforTestExecution'></a>Requirements for Test Execution
 
 For manual test execution, the following needs to present:
 
