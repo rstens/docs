@@ -2083,7 +2083,7 @@ The goal is to have value added automation, not to automate for the sake of auto
 | | Build execution flow | For test automation execution run smoothly, we create an execution order/flow that consists of start up, data initiation, application initiation, test case execution, application shutdown, data shutdown and execution shutdown activities. If set up right, such a flow allows for easy improvements and extensions.
 | | Recovery Scenarios | Test automation runs fail, this is a fact of life. In order to prepare for such an event we need to be clear on what we need to do and how to recover. This could involve a data restore or deletion.
 | | Add to function libraries | Identified general functions are built and added to the functional libraries.
-| | Tools Extensions | BDDStack offers some extensions that are configured in order to have BDDStack connect with JIRA. This way the tool can send information on failed test cases directly into JIRA. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
+| | Tools Extensions | BDDStack offers some extensions that are configured in order to have BDDStack connect with ZenHub. This way the tool can send information on failed test cases directly into ZenHub. We configure the tool to connect with Zephyr and report test results into our central test management tool TestRail.
 | | Repository Management | We could use the repository management functions in BDDStack and integrate this with the a version control system like GitHub. BCGov is maintaining an area on GitHub, this area is actively used by many projects.
 | | Documentation | We document the set up, the configuration, the extension configuration and general system requirements. The intent is to document to such a degree that this set up can be replicated in the future.
 | **Execution** | | 
@@ -2091,7 +2091,7 @@ The goal is to have value added automation, not to automate for the sake of auto
 | | Deploy Test Suite | Identify the test suite we need to run in BDDStack. This can either be done through the tool or by scripted invocation. The latter would happen in case of fully automated build and test.
 | | Execute Test Scripts | Test scripts are executed by the test automation tool engine and the scripts point to one of our test environments.
 | | Results reporting | The tool collects all the results and communicate these to TestRail.
-| | Defect Management | Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with JIRA to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
+| | Defect Management | Once the results are communicated, we review the failures and decide if this is an actual defect or not (a surprising amount of false positives come out of test automation tests runs). If this is a valid defect we use the integration with ZenHub to record the details as obtained by the tool and add our own observation to it. This defect will then start the defect workflow just like any other defect.
 | **Maintain** | | 
 | | Update Assets | Test automation keeps on working well if the assets (scripts, functions, actions) are kept up-to-date, clean and efficient.
 | | Archive Test Suite | Test Suites are valuable assets and are kept carefully as part of good practice but also for restore/recovery purposes.
@@ -2588,7 +2588,7 @@ This definition of done is independent of the user acceptance criteria (function
 |  | Closed (fixed) | | 
 |  | Closed (not relevant) | | 
 |  | Deferred (on the backlog) | | 
-| **Test Management (Zephyr)** | All test plans are finalized and closed | Yes | 
+| **Test Management (TestRail)** | All test plans are finalized and closed | Yes | 
 |  | All reports have been generated | | 
 |  | The activities for the current milestone have concluded | | 
 |  | The work for this cycle has been locked and archived | | 
