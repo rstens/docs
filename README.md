@@ -1,4 +1,5 @@
 <!-- vscode-markdown-toc -->
+* [Repository Contents](#RepositoryContents)
 * [Introduction](#Introduction)
 * [Content](#Content)
 * [Key Scope Statements](#KeyScopeStatements)
@@ -190,6 +191,14 @@
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+
+## <a name='RepositoryContents'></a>Repository Contents
+
+This repository contains documentation and supporting materials:
+
+- **README.md** – comprehensive testing strategy and process documentation.
+- **files/** – spreadsheets supporting test strategies and performance risk evaluation.
+- **images/** – diagrams referenced within the documentation.
 
 ## <a name='Introduction'></a>Introduction
 
